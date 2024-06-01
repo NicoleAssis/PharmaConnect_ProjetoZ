@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -24,12 +26,27 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //abrir a tela de login
-            FrmLogin telaLogin = new FrmLogin();
-            //esconde a tela anterior
+            Cliente obj = new Cliente();
 
-            telaLogin.Show();
-            this.Hide();
+            string msg = txtCPF.Text;
+            MessageBox.Show(msg);
+            int cpfcnpjInt = int.Parse(msg);
+            MessageBox.Show(msg);
+
+            //obj.nome_cliente = txtNome.Text;
+            //obj.nivel_acesso = 2;
+            //obj.senha_cliente = txtSenha.Text;
+            obj.cpf_cnpj_cliente = Int64.Parse(txtCPF.Text);
+
+            //obj.cpf_cnpj_cliente = txtCPF.Text;
+
+
+            //abrir a tela de login
+            //FrmLogin telaLogin = new FrmLogin();
+            ////esconde a tela anterior
+
+            //telaLogin.Show();
+            //this.Hide();
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -89,6 +106,16 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
         {
 
         }
