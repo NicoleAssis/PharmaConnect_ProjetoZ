@@ -111,6 +111,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="projet.conexao\ConnectionFactory.cs" />
+    <Compile Include="projeto.dao\ClienteDAO.cs" />
     <Compile Include="projeto.model\Cliente.cs" />
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>

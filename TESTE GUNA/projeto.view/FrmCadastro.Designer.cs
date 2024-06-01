@@ -120,12 +120,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.Location = new System.Drawing.Point(169, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 36);
+            this.label4.Size = new System.Drawing.Size(141, 33);
             this.label4.TabIndex = 21;
             this.label4.Text = "Cadastro";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -142,7 +142,7 @@
             this.btnCadastrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCadastrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCadastrar.FillColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnCadastrar.Location = new System.Drawing.Point(240, 403);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -162,7 +162,7 @@
             this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
             this.btnEntrar.Location = new System.Drawing.Point(120, 403);
             this.btnEntrar.Name = "btnEntrar";
@@ -199,6 +199,7 @@
             this.txtNome.SelectedText = "";
             this.txtNome.Size = new System.Drawing.Size(330, 38);
             this.txtNome.TabIndex = 26;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             // 
             // txtBase
