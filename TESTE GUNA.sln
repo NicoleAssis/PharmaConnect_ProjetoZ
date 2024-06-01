@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaConnect", "TESTE GUNA\FarmaConnect.csproj", "{D805B58C-D1A5-4276-8087-E577E21A8D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D805B58C-D1A5-4276-8087-E577E21A8D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D805B58C-D1A5-4276-8087-E577E21A8D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D805B58C-D1A5-4276-8087-E577E21A8D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D805B58C-D1A5-4276-8087-E577E21A8D06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3104EE9-AC9E-4E5D-AD21-CBBE01D9F13F}
+	EndGlobalSection
+EndGlobal
