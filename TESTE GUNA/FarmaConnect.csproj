@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="projeto.model\Cliente.cs" />
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
