@@ -38,8 +38,8 @@
             this.checkBoxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntrar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnX
@@ -233,6 +233,25 @@
             this.txtCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCPF_MaskInputRejected);
             this.txtCPF.Click += new System.EventHandler(this.txtCPF_Click);
             // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.BorderRadius = 20;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(110, 404);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
+            this.btnEntrar.Size = new System.Drawing.Size(110, 45);
+            this.btnEntrar.TabIndex = 32;
+            this.btnEntrar.Text = "Entrar";
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
@@ -253,25 +272,6 @@
             this.btnCadastrar.Size = new System.Drawing.Size(110, 45);
             this.btnCadastrar.TabIndex = 33;
             this.btnCadastrar.Text = "Cadastrar";
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEntrar.BorderRadius = 20;
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(110, 404);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
-            this.btnEntrar.Size = new System.Drawing.Size(110, 45);
-            this.btnEntrar.TabIndex = 32;
-            this.btnEntrar.Text = "Entrar";
             // 
             // FrmCadastro
             // 
@@ -313,7 +313,7 @@
         private System.Windows.Forms.CheckBox checkBoxMostrarSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtCPF;
-        public Guna.UI2.WinForms.Guna2Button btnCadastrar;
         public Guna.UI2.WinForms.Guna2Button btnEntrar;
+        public Guna.UI2.WinForms.Guna2Button btnCadastrar;
     }
 }
