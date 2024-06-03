@@ -45,7 +45,7 @@
             this.txtSenha.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.txtSenha.BorderRadius = 10;
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha.DefaultText = "Senha";
+            this.txtSenha.DefaultText = "";
             this.txtSenha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -62,7 +62,7 @@
             this.txtSenha.Padding = new System.Windows.Forms.Padding(2);
             this.txtSenha.PasswordChar = '\0';
             this.txtSenha.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtSenha.PlaceholderText = "";
+            this.txtSenha.PlaceholderText = "Senha";
             this.txtSenha.SelectedText = "";
             this.txtSenha.Size = new System.Drawing.Size(330, 38);
             this.txtSenha.TabIndex = 16;
@@ -75,7 +75,7 @@
             this.txtEmail.BorderColor = System.Drawing.SystemColors.HotTrack;
             this.txtEmail.BorderRadius = 10;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "Email";
+            this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -91,8 +91,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(2);
             this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(330, 38);
             this.txtEmail.TabIndex = 15;
