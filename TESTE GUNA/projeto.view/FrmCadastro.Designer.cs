@@ -33,12 +33,13 @@
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnEntrar = new Guna.UI2.WinForms.Guna2Button();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBase = new Guna.UI2.WinForms.Guna2TextBox();
             this.checkBoxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEntrar = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnX
@@ -129,26 +130,6 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Cadastro";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEntrar.BorderRadius = 20;
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(142, 396);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
-            this.btnEntrar.Size = new System.Drawing.Size(190, 45);
-            this.btnEntrar.TabIndex = 19;
-            this.btnEntrar.Text = "Cadastrar";
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // txtNome
             // 
@@ -252,6 +233,46 @@
             this.txtCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCPF_MaskInputRejected);
             this.txtCPF.Click += new System.EventHandler(this.txtCPF_Click);
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCadastrar.BorderRadius = 20;
+            this.btnCadastrar.BorderThickness = 2;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCadastrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCadastrar.FillColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCadastrar.Location = new System.Drawing.Point(237, 404);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.PressedColor = System.Drawing.Color.Indigo;
+            this.btnCadastrar.Size = new System.Drawing.Size(110, 45);
+            this.btnCadastrar.TabIndex = 33;
+            this.btnCadastrar.Text = "Cadastrar";
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.BorderRadius = 20;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEntrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(110, 404);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
+            this.btnEntrar.Size = new System.Drawing.Size(110, 45);
+            this.btnEntrar.TabIndex = 32;
+            this.btnEntrar.Text = "Entrar";
+            // 
             // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +281,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxMostrarSenha);
@@ -269,7 +292,6 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnEntrar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastro";
@@ -286,11 +308,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label4;
-        public Guna.UI2.WinForms.Guna2Button btnEntrar;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Guna.UI2.WinForms.Guna2TextBox txtBase;
         private System.Windows.Forms.CheckBox checkBoxMostrarSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtCPF;
+        public Guna.UI2.WinForms.Guna2Button btnCadastrar;
+        public Guna.UI2.WinForms.Guna2Button btnEntrar;
     }
 }
