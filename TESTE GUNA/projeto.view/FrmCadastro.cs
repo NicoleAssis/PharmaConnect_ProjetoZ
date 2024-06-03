@@ -8,6 +8,7 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
@@ -26,27 +27,25 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente();
+            Cliente obj = new Cliente
+            {
+                nome_cliente = txtNome.Text,
+                email_cliente = txtEmail.Text,
+                nivel_acesso = 2,
+                senha_cliente = txtSenha.Text,
+                cpf_cnpj_cliente = txtCPF.Text.Replace(",", ".")
+            };
 
-            string msg = txtCPF.Text;
-            MessageBox.Show(msg);
-            int cpfcnpjInt = int.Parse(msg);
-            MessageBox.Show(msg);
-
-            //obj.nome_cliente = txtNome.Text;
-            //obj.nivel_acesso = 2;
-            //obj.senha_cliente = txtSenha.Text;
-            obj.cpf_cnpj_cliente = Int64.Parse(txtCPF.Text);
-
-            //obj.cpf_cnpj_cliente = txtCPF.Text;
+            ClienteDAO dao = new ClienteDAO();
+            dao.CadastrarClienteC1(obj);
 
 
             //abrir a tela de login
-            //FrmLogin telaLogin = new FrmLogin();
+            FrmLogin telaLogin = new FrmLogin();
             ////esconde a tela anterior
 
-            //telaLogin.Show();
-            //this.Hide();
+            telaLogin.Show();
+            this.Hide();
         }
 
         private void btnX_Click(object sender, EventArgs e)

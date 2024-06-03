@@ -8,7 +8,7 @@ namespace TESTE_GUNA.projeto.model
 {
     public class Cliente
     {
-        public int cpf_cnpj_cliente { get; set; }
+        public string cpf_cnpj_cliente { get; set; }
         public string nome_cliente { get; set; }
         public string email_cliente { get; set; }
         public int telefone_cliente { get; set; }

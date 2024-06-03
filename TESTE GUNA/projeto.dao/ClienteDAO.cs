@@ -28,7 +28,7 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-
+       
 
         #region CadastroCliente
 
@@ -39,17 +39,17 @@ namespace TESTE_GUNA.projeto.dao
 
                 //Definindo comando SQL
                 string sql = @"insert into tb_clientes (cpf_cnpj_cliente,nome_cliente,email_cliente,senha_cliente,nivel_acesso )
-                            values(@nomeCliente,@cpfcnpjCliente,@emailCliente,@senhaCliente, @nivelAcesso)";
+                            values(@cpf_cnpj_cliente,@nome_cliente,@email_cliente,@senha_cliente,@nivel_acesso)";
 
 
                 //Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-                executacmd.Parameters.AddWithValue("@nomeCliente", obj.nome_cliente);
-                executacmd.Parameters.AddWithValue("@cpfcnpjCliente", obj.cpf_cnpj_cliente);
-                executacmd.Parameters.AddWithValue("@emailCliente", obj.email_cliente);
-                executacmd.Parameters.AddWithValue("@senhaCliente", obj.senha_cliente);
-                executacmd.Parameters.AddWithValue("@nivelAcesso", obj.nivel_acesso);
+                executacmd.Parameters.AddWithValue("@cpf_cnpj_cliente", obj.cpf_cnpj_cliente);
+                executacmd.Parameters.AddWithValue("@nome_cliente", obj.nome_cliente);
+                executacmd.Parameters.AddWithValue("@email_cliente", obj.email_cliente);
+                executacmd.Parameters.AddWithValue("@senha_cliente", obj.senha_cliente);
+                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
 
 
                 //Abrindo conexao e aplicando sql
