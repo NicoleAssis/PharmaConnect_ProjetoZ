@@ -118,5 +118,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void btnCadastrar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
