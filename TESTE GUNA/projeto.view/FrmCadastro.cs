@@ -112,11 +112,13 @@ namespace TESTE_GUNA.projeto.view
                 cpf_cnpj = txtCPF.Text.Replace(",", ".")
             };
 
+
             ClienteDAO dao = new ClienteDAO();
             dao.CadastrarClienteC1(obj);
-            FrmMessageBox mensagem = new FrmMessageBox();
-            mensagem.Mensagem("Cadastro Efetuado");
-
+            
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.Mensagem("Cadastro Efetuado com Sucesso");
+            frmMessageBox.ShowDialog();
 
             //abrir a tela de login
             FrmLogin telaLogin = new FrmLogin();
@@ -124,6 +126,10 @@ namespace TESTE_GUNA.projeto.view
 
             telaLogin.Show();
             this.Hide();
+
+            new Helpers().LimparTela(this);
+
+
         }
 
 
