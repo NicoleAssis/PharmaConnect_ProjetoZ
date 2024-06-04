@@ -105,11 +105,11 @@ namespace TESTE_GUNA.projeto.view
         {
             Cliente obj = new Cliente
             {
-                nome_cliente = txtNome.Text,
-                email_cliente = txtEmail.Text,
-                nivel_acesso = 2,
-                senha_cliente = txtSenha.Text,
-                cpf_cnpj_cliente = txtCPF.Text.Replace(",", ".")
+                nome = txtNome.Text,
+                email = txtEmail.Text,
+                nivel = 2,
+                senha = txtSenha.Text,
+                cpf_cnpj = txtCPF.Text.Replace(",", ".")
             };
 
             ClienteDAO dao = new ClienteDAO();
