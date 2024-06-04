@@ -46,11 +46,11 @@ namespace TESTE_GUNA.projeto.dao
                 //Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-                executacmd.Parameters.AddWithValue("@cpf_cnpj_cliente", obj.cpf_cnpj_cliente);
-                executacmd.Parameters.AddWithValue("@nome_cliente", obj.nome_cliente);
-                executacmd.Parameters.AddWithValue("@email_cliente", obj.email_cliente);
-                executacmd.Parameters.AddWithValue("@senha_cliente", obj.senha_cliente);
-                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
+                executacmd.Parameters.AddWithValue("@cpf_cnpj_cliente", obj.cpf_cnpj);
+                executacmd.Parameters.AddWithValue("@nome_cliente", obj.nome);
+                executacmd.Parameters.AddWithValue("@email_cliente", obj.email);
+                executacmd.Parameters.AddWithValue("@senha_cliente", obj.senha);
+                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
 
 
                 //Abrindo conexao e aplicando sql
