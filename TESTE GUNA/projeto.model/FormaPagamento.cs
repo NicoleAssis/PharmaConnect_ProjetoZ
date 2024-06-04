@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TESTE_GUNA.projeto.model
 {
-    public class Administrador : Cliente
+    public class FormaPagamento
     {
-        public string cnpj { get; set; }
+        public string nome_formaPagamento { get; set; }
     }
 }
