@@ -27,25 +27,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente
-            {
-                nome_cliente = txtNome.Text,
-                email_cliente = txtEmail.Text,
-                nivel_acesso = 2,
-                senha_cliente = txtSenha.Text,
-                cpf_cnpj_cliente = txtCPF.Text.Replace(",", ".")
-            };
 
-            ClienteDAO dao = new ClienteDAO();
-            dao.CadastrarClienteC1(obj);
-
-
-            //abrir a tela de login
-            FrmLogin telaLogin = new FrmLogin();
-            ////esconde a tela anterior
-
-            telaLogin.Show();
-            this.Hide();
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -117,6 +99,31 @@ namespace TESTE_GUNA.projeto.view
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCadastrar_Click_1(object sender, EventArgs e)
+        {
+            Cliente obj = new Cliente
+            {
+                nome_cliente = txtNome.Text,
+                email_cliente = txtEmail.Text,
+                nivel_acesso = 2,
+                senha_cliente = txtSenha.Text,
+                cpf_cnpj_cliente = txtCPF.Text.Replace(",", ".")
+            };
+
+            ClienteDAO dao = new ClienteDAO();
+            dao.CadastrarClienteC1(obj);
+            FrmMessageBox mensagem = new FrmMessageBox();
+            mensagem.Mensagem("Cadastro Efetuado");
+
+
+            //abrir a tela de login
+            FrmLogin telaLogin = new FrmLogin();
+            ////esconde a tela anterior
+
+            telaLogin.Show();
+            this.Hide();
         }
     }
 }

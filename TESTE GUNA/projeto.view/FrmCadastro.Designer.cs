@@ -272,6 +272,7 @@
             this.btnCadastrar.Size = new System.Drawing.Size(110, 45);
             this.btnCadastrar.TabIndex = 33;
             this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
             // 
             // FrmCadastro
             // 

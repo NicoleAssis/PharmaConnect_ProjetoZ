@@ -14,6 +14,7 @@ using Mysqlx;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -55,7 +56,7 @@ namespace TESTE_GUNA.projeto.dao
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente cadastrado com sucesso!");
+
                 //fechando conexao
                 conexao.Close();
 
