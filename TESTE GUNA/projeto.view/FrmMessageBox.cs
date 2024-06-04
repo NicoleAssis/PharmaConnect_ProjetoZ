@@ -82,5 +82,15 @@ namespace TESTE_GUNA.projeto.view
             btnSimClick = true;
             this.Close();
         }
+
+        private void txtMensagem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmMessageBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

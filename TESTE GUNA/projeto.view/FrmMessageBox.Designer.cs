@@ -102,6 +102,7 @@
             this.txtMensagem.TabIndex = 23;
             this.txtMensagem.Text = "Mensagem Aqui";
             this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtMensagem.Click += new System.EventHandler(this.txtMensagem_Click);
             // 
             // btnX
             // 
@@ -131,6 +132,7 @@
             this.Name = "FrmMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMessageBox";
+            this.Load += new System.EventHandler(this.FrmMessageBox_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
