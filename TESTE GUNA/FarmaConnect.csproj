@@ -116,6 +116,7 @@
     <Compile Include="projeto.model\Cliente.cs" />
     <Compile Include="projeto.model\FormaPagamento.cs" />
     <Compile Include="projeto.model\Fornecedor.cs" />
+    <Compile Include="projeto.model\Helpers.cs" />
     <Compile Include="projeto.model\ItemVenda.cs" />
     <Compile Include="projeto.model\Produto.cs" />
     <Compile Include="projeto.model\Venda.cs" />
