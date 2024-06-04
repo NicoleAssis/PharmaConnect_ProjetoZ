@@ -123,8 +123,23 @@ namespace TESTE_GUNA.projeto.view
         {
             // Abrir a tela de login
 
-            
-            
+            FrmLogin telaLogin = new FrmLogin();
+
+            // Esconder a tela atual
+            this.Hide();
+
+            // Exibir a tela de login
+            telaLogin.Show();
+
+            FrmMessageBox mensagem = new FrmMessageBox();
+
+
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.Mensagem("Cadastrado com sucesso!");
+            frmMessageBox.ShowDialog();
+
+
+
 
 
 
