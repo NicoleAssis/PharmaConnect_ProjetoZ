@@ -40,5 +40,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void lblDepartamento_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

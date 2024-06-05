@@ -132,6 +132,17 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
+        private void btnEntrar_Click_1(object sender, EventArgs e)
+        {
+            // Criar uma instância do formulário de login
+            FrmLogin telaLogin = new FrmLogin();
 
+            // Exibir o formulário de login
+            telaLogin.Show();
+
+            // Ocultar o formulário atual (se necessário)
+            this.Hide();
+
+        }
     }
 }

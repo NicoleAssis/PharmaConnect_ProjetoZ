@@ -250,7 +250,8 @@
             this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
             this.btnEntrar.Size = new System.Drawing.Size(110, 45);
             this.btnEntrar.TabIndex = 32;
-            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.Text = "Login";
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
             // 
             // btnCadastrar
             // 
