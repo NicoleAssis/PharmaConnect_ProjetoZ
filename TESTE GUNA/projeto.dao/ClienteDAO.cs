@@ -103,17 +103,34 @@ namespace TESTE_GUNA.projeto.dao
 
                     string temp = nome;
                     //NIVEIS DE ACESSO
+                    AdmFrmMenu telamenuadm = new AdmFrmMenu();
+                    FrmMenu telamenucliente = new FrmMenu();
+
 
                     if (nivel.Equals(1))
                     {
                         //Administrador
+                        telamenuadm.Show();
+
+
                     }else if (nivel.Equals(1))
                     {
                         //Cliente
+                        telamenucliente.Show();
+
                     }
 
                 }
+                else
+                {
+                    //login errado pq nn resultou em nenhuma conta
+                    MessageBox.Show("Email ou senha incorretos!");
+
+                    Helpers limparTela = new Helpers();
+                    FrmLogin tela = new FrmLogin();
                     return false;
+                }
+                    
             }
             catch (Exception  erro)
             {
