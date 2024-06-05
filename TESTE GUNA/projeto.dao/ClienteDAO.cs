@@ -111,15 +111,16 @@ namespace TESTE_GUNA.projeto.dao
                     {
                         //Administrador
                         telamenuadm.Show();
+                        
 
-
-                    }else if (nivel.Equals(1))
+                    }
+                    else if (nivel.Equals(1))
                     {
                         //Cliente
                         telamenucliente.Show();
-
+                        
                     }
-
+                    return true;
                 }
                 else
                 {
