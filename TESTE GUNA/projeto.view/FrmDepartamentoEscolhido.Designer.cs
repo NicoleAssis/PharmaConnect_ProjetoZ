@@ -31,6 +31,7 @@
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.btnX = new System.Windows.Forms.Button();
             this.scrollDepartamento = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDep = new System.Windows.Forms.Panel();
             this.userControlProduto1 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto2 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto3 = new TESTE_GUNA.projeto.view.UserControlProduto();
@@ -53,13 +54,15 @@
             // lblDepartamento
             // 
             this.lblDepartamento.AutoSize = true;
+            this.lblDepartamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this.lblDepartamento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.lblDepartamento.Location = new System.Drawing.Point(28, 9);
+            this.lblDepartamento.ForeColor = System.Drawing.Color.White;
+            this.lblDepartamento.Location = new System.Drawing.Point(8, 4);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(238, 23);
             this.lblDepartamento.TabIndex = 1;
             this.lblDepartamento.Text = "Departamento Escolhido";
+            this.lblDepartamento.Click += new System.EventHandler(this.lblDepartamento_Click);
             // 
             // btnX
             // 
@@ -102,6 +105,17 @@
             this.scrollDepartamento.Size = new System.Drawing.Size(757, 492);
             this.scrollDepartamento.TabIndex = 22;
             this.scrollDepartamento.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // panelDep
+            // 
+            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
+            this.panelDep.Location = new System.Drawing.Point(0, 0);
+            this.panelDep.Name = "panelDep";
+            this.panelDep.Size = new System.Drawing.Size(772, 35);
+            this.panelDep.TabIndex = 32;
             // 
             // userControlProduto1
             // 
@@ -267,11 +281,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(772, 550);
-            this.Controls.Add(this.scrollDepartamento);
-            this.Controls.Add(this.btnX);
             this.Controls.Add(this.lblDepartamento);
+            this.Controls.Add(this.scrollDepartamento);
+            this.Controls.Add(this.panelDep);
+            this.Controls.Add(this.btnX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(500, 0);
             this.Name = "FrmDepartamentoEscolhido";
@@ -304,5 +319,6 @@
         private UserControlProduto userControlProduto14;
         private UserControlProduto userControlProduto15;
         private UserControlProduto userControlProduto16;
+        private System.Windows.Forms.Panel panelDep;
     }
 }

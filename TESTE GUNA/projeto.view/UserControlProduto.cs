@@ -45,5 +45,23 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void UserControlProduto_Click(object sender, EventArgs e)
+        {
+
+
+            // Redirecionar para a tela de compras
+            FrmCompras telaCompras = new FrmCompras();
+            telaCompras.Show();
+
+            // Esconder o formulário atual (se necessário)
+            this.Hide();
+
+        }
+
+        private void imagemProduto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
