@@ -25,6 +25,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            
             //abrir a tela de cadastro
             FrmCadastro telaCadastro = new FrmCadastro();
             //esconde a tela anterior

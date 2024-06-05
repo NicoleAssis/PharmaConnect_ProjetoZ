@@ -15,6 +15,7 @@ using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.view;
+using System.Diagnostics.Eventing.Reader;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -65,6 +66,60 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+        #endregion
+
+        #region Login Cliente
+        public bool EfetuarLoginCliente(string email, string senha)
+        {
+            try
+            {
+                //criando comando sql
+                string sql = @"select * from tb_clientes                        
+'                               where email_cliente = @email_cliente and senha_cliente = @senha_cliente";
+
+                //Organizando e executando sql
+                MySqlCommand executacmd = new MySqlCommand(@sql, conexao);
+                executacmd.Parameters.AddWithValue("@email_cliente", email);
+                executacmd.Parameters.AddWithValue("@senha_cliente", senha);
+
+                conexao.Open();
+
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+
+                //methodo leitor de dados
+                //se conseguir ler os dados
+                if (reader.Read())
+                {
+                    //pega as info 
+                    string nivel = reader.GetString("nivel_acesso");
+                    string nome = reader.GetString("nome_cliente");
+
+                    MessageBox.Show("Login realizado com sucesso !" +nome +nivel);
+
+                    //criada uma string temporária para nome 
+
+                    string temp = nome;
+                    //NIVEIS DE ACESSO
+
+                    if (nivel.Equals(1))
+                    {
+                        //Administrador
+                    }else if (nivel.Equals(1))
+                    {
+                        //Cliente
+                    }
+
+                }
+                    return false;
+            }
+            catch (Exception  erro)
+            {
+
+                MessageBox.Show("Aconteeu o erro (efetuar login)" + erro);
+                return false;
             }
         }
         #endregion
