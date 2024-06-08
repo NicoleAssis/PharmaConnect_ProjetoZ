@@ -29,7 +29,7 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-       
+
 
         #region CadastroCliente
 
@@ -66,6 +66,22 @@ namespace TESTE_GUNA.projeto.dao
 
                 MessageBox.Show("Erro Identificado:" + erro);
             }
+        }
+        #endregion
+
+        #region Login
+        public bool EfetuarLogin(string email, string senha)
+        {
+            try
+            {
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
         }
         #endregion
     }
