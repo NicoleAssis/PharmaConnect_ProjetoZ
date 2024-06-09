@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -34,19 +36,28 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            string email = txtEmail.Text;
+            string senha = txtSenha.Text;
+
+            ClienteDAO dao = new ClienteDAO();
+
+            if(dao.EfetuarLogin(email, senha)){
+                this.Hide();
+            }
+
             //PARA ACESSAR A TELA DO ADMINISTRADOR
-            if (txtEmail.Text == "1234" && txtSenha.Text == "1234")
-            {
-                AdmFrmMenu telaAdministrador = new AdmFrmMenu();
-                telaAdministrador.Show();
-                this.Hide();
-            }
-            else
-            {
-                FrmMenu telaMenu = new FrmMenu();
-                telaMenu.Show();
-                this.Hide();
-            }
+            //if (txtEmail.Text == "1234" && txtSenha.Text == "1234")
+            //{
+            //    AdmFrmMenu telaAdministrador = new AdmFrmMenu();
+            //    telaAdministrador.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    FrmMenu telaMenu = new FrmMenu();
+            //    telaMenu.Show();
+            //    this.Hide();
+            //}
              
         }
 

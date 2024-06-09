@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient; // Import the correct MySqlConnection
-
+﻿using MySql.Data.MySqlClient; // Import the correct MySqlConnection
+using System;
 using System.Windows.Forms;
-using System.Data;
-using System.Security.Cryptography.X509Certificates;
-using Mysqlx;
-
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
-using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.dao
@@ -74,6 +63,36 @@ namespace TESTE_GUNA.projeto.dao
         {
             try
             {
+
+                //criando sql
+                string sql = @"select * from tb_clientes
+                                where email_cliente = @email and senha_cliente; = @senha";
+
+                //organizar e executar o sql
+
+
+                MySqlCommand executacmd = new MySqlCommand(@sql, conexao);
+                executacmd.Parameters.AddWithValue("@email", email);
+                executacmd.Parameters.AddWithValue("@senha", senha);
+
+                conexao.Open();
+
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+                //Metódo de Leitura
+                if (reader.Read())
+                {
+                    //nivel = reader.GetString("nivel_acesso");
+                    string nome = reader.GetString("nome_cliente");
+
+                    
+
+
+                    MessageBox.Show("Login realizado com sucesso! Bem vendo(a)" + nome );
+
+
+                    return true;
+                }
                 return true;
             }
             catch (Exception)
