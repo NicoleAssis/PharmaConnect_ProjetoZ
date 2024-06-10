@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Org.BouncyCastle.Math;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +10,7 @@ namespace TESTE_GUNA.projeto.model
 {
     public class Cliente
     {
-        public string cpf_cnpj { get; set; }
+        public  long  cpf { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
         public int telefone { get; set; }

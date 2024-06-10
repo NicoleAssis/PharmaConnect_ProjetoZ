@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
+using System.Text.RegularExpressions;
+using static System.Convert;
+using System.Numerics;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -103,29 +106,61 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click_1(object sender, EventArgs e)
         {
-            Cliente obj = new Cliente
-            {
-                nome = txtNome.Text,
-                email = txtEmail.Text,
-                nivel = 2,
-                senha = txtSenha.Text,
-                cpf_cnpj = txtCPF.Text.Replace(",", ".")
-            };
-
+            //Instancei Cliente Dao para executar 
             ClienteDAO dao = new ClienteDAO();
-            dao.CadastrarClienteC1(obj);
-            FrmMessageBox mensagem = new FrmMessageBox();
-            mensagem.Mensagem("Cadastro Efetuado");
+
+            //recebo dados txt
+            string cpf_string = txtCPF.Text;
+            
+            
+            // 1° Validação: CPF
+            bool validacaoCPF = ClienteDAO.isCpf((cpf_string));
+
+            // CPF Validado converte para inteiro 
+            long cpf_inteiro = long.Parse((txtCPF.Text));
+            Console.WriteLine(  cpf_inteiro);
 
 
-            //abrir a tela de login
-            FrmLogin telaLogin = new FrmLogin();
-            ////esconde a tela anterior
 
-            telaLogin.Show();
-            this.Hide();
+
+            //Se CPF Válido
+            if (validacaoCPF)
+            {
+                Cliente obj = new Cliente
+                {
+                    nome = txtNome.Text,
+                    email = txtEmail.Text,
+                    nivel = 2,
+                    senha = txtSenha.Text,
+                    cpf = cpf_inteiro
+                };
+
+                dao.CadastrarClienteC1(obj);
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("Cadastro Efetuado");
+
+
+                //abrir a tela de login
+                FrmLogin telaLogin = new FrmLogin();
+                ////esconde a tela anterior
+
+                new Helpers().LimparTela(this);
+                telaLogin.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("CPF inválido");
+            }
+
+
+
+
         }
 
+        private void btnEntrar_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

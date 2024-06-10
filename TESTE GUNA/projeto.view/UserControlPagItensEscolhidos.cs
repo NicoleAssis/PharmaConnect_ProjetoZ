@@ -38,7 +38,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void labelNome_Click(object sender, EventArgs e)
         {
-            string label;
+            
         }
 
         private void labelQtd_Click(object sender, EventArgs e)

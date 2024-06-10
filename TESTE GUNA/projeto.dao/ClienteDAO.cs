@@ -13,13 +13,63 @@ namespace TESTE_GUNA.projeto.dao
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        //Construtor
         public ClienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
         }
 
 
+        #region Classes Estáticas
+        // Validador Google site  www.macoratti.net/11/09/c_val1.htm
+        #region Validação CPF
 
+        public static bool isCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+
+
+        }
+        #endregion
+
+        #endregion
+
+
+
+
+
+        #region Metodos
         #region CadastroCliente
 
         public void CadastrarClienteC1(Cliente obj)
@@ -28,14 +78,14 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 //Definindo comando SQL
-                string sql = @"insert into tb_clientes (cpf_cnpj_cliente,nome_cliente,email_cliente,senha_cliente,nivel_acesso )
-                            values(@cpf_cnpj_cliente,@nome_cliente,@email_cliente,@senha_cliente,@nivel_acesso)";
+                string sql = @"insert into tb_clientes (cpf_cliente,nome_cliente,email_cliente,senha_cliente,nivel_acesso )
+                            values(@cpf_cliente,@nome_cliente,@email_cliente,@senha_cliente,@nivel_acesso)";
 
 
                 //Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-                executacmd.Parameters.AddWithValue("@cpf_cnpj_cliente", obj.cpf_cnpj);
+                executacmd.Parameters.AddWithValue("@cpf_cliente", obj.cpf);
                 executacmd.Parameters.AddWithValue("@nome_cliente", obj.nome);
                 executacmd.Parameters.AddWithValue("@email_cliente", obj.email);
                 executacmd.Parameters.AddWithValue("@senha_cliente", obj.senha);
@@ -57,6 +107,9 @@ namespace TESTE_GUNA.projeto.dao
             }
         }
         #endregion
+
+        
+
 
         #region Login
         public bool EfetuarLogin(string email, string senha)
@@ -84,24 +137,40 @@ namespace TESTE_GUNA.projeto.dao
                 {
                     //nivel = reader.GetString("nivel_acesso");
                     string nome = reader.GetString("nome_cliente");
+                    int nivel = reader.GetInt32(14);
 
-                    
+                    //Testando dados testados do banco
+                    //MessageBox.Show("Login realizado com sucesso! Bem vindo(a)" + nome +"nivel: "+nivel);
+
+                    FrmMenu menuCliente = new FrmMenu();
+                    AdmFrmMenu menuAdm = new AdmFrmMenu();
 
 
-                    MessageBox.Show("Login realizado com sucesso! Bem vendo(a)" + nome );
+                    if (nivel.Equals(2))
+                    {
+                        menuCliente.Show();
+                    }
+                    else if (nivel.Equals(1))
+                    {
+                        menuAdm.Show();
+
+                    }
 
 
                     return true;
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception erro)
             {
-
+                MessageBox.Show("Aconteceu o erro: " + erro);
                 return false;
             }
-            
+
         }
         #endregion
+
+        #endregion
+
     }
 }
