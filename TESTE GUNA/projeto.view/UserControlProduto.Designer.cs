@@ -36,11 +36,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.imagemProduto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.imagemProduto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagemProduto)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +116,21 @@
             this.panel6.Size = new System.Drawing.Size(98, 2);
             this.panel6.TabIndex = 9;
             // 
+            // imagemProduto
+            // 
+            this.imagemProduto.BackColor = System.Drawing.Color.White;
+            this.imagemProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagemProduto.BackgroundImage")));
+            this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imagemProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imagemProduto.Location = new System.Drawing.Point(0, 0);
+            this.imagemProduto.Margin = new System.Windows.Forms.Padding(7);
+            this.imagemProduto.Name = "imagemProduto";
+            this.imagemProduto.Size = new System.Drawing.Size(98, 117);
+            this.imagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagemProduto.TabIndex = 3;
+            this.imagemProduto.TabStop = false;
+            this.imagemProduto.Click += new System.EventHandler(this.imagemProduto_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
@@ -152,20 +167,6 @@
             this.panel5.Size = new System.Drawing.Size(130, 2);
             this.panel5.TabIndex = 8;
             // 
-            // imagemProduto
-            // 
-            this.imagemProduto.BackColor = System.Drawing.Color.White;
-            this.imagemProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagemProduto.BackgroundImage")));
-            this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imagemProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imagemProduto.Location = new System.Drawing.Point(0, 0);
-            this.imagemProduto.Margin = new System.Windows.Forms.Padding(7);
-            this.imagemProduto.Name = "imagemProduto";
-            this.imagemProduto.Size = new System.Drawing.Size(98, 117);
-            this.imagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagemProduto.TabIndex = 3;
-            this.imagemProduto.TabStop = false;
-            // 
             // UserControlProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +184,7 @@
             this.Name = "UserControlProduto";
             this.Size = new System.Drawing.Size(233, 117);
             this.Load += new System.EventHandler(this.UserControlProduto_Load);
+            this.Click += new System.EventHandler(this.UserControlProduto_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imagemProduto)).EndInit();
             this.ResumeLayout(false);

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
+using System.Diagnostics.Eventing.Reader;
 
 namespace TESTE_GUNA.projeto.dao
 {

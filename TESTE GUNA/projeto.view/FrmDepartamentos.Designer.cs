@@ -53,6 +53,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPrintarDep = new System.Windows.Forms.Panel();
+            this.panelDep = new System.Windows.Forms.Panel();
             this.paneiIconDep = new System.Windows.Forms.Panel();
             this.picBoxSup = new System.Windows.Forms.PictureBox();
             this.picBoxHiper = new System.Windows.Forms.PictureBox();
@@ -62,7 +63,6 @@
             this.picBoxGine = new System.Windows.Forms.PictureBox();
             this.picBoxAnal = new System.Windows.Forms.PictureBox();
             this.picBoxDiab = new System.Windows.Forms.PictureBox();
-            this.panelDep = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panelPrintarDep.SuspendLayout();
+            this.panelDep.SuspendLayout();
             this.paneiIconDep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHiper)).BeginInit();
@@ -83,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxGine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAnal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDiab)).BeginInit();
-            this.panelDep.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -373,7 +373,7 @@
             // 
             // panelPrintarDep
             // 
-            this.panelPrintarDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.panelPrintarDep.BackColor = System.Drawing.Color.White;
             this.panelPrintarDep.Controls.Add(this.panelDep);
             this.panelPrintarDep.Controls.Add(this.paneiIconDep);
             this.panelPrintarDep.Dock = System.Windows.Forms.DockStyle.Right;
@@ -382,8 +382,21 @@
             this.panelPrintarDep.Size = new System.Drawing.Size(776, 550);
             this.panelPrintarDep.TabIndex = 29;
             // 
+            // panelDep
+            // 
+            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelDep.Controls.Add(this.label1);
+            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
+            this.panelDep.Location = new System.Drawing.Point(0, 0);
+            this.panelDep.Name = "panelDep";
+            this.panelDep.Size = new System.Drawing.Size(776, 63);
+            this.panelDep.TabIndex = 31;
+            // 
             // paneiIconDep
             // 
+            this.paneiIconDep.BackColor = System.Drawing.Color.White;
             this.paneiIconDep.Controls.Add(this.picBoxSup);
             this.paneiIconDep.Controls.Add(this.picBoxHiper);
             this.paneiIconDep.Controls.Add(this.picBoxDerm);
@@ -399,111 +412,99 @@
             // 
             // picBoxSup
             // 
-            this.picBoxSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxSup.BackColor = System.Drawing.Color.White;
             this.picBoxSup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxSup.BackgroundImage")));
             this.picBoxSup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxSup.Location = new System.Drawing.Point(549, 194);
             this.picBoxSup.Name = "picBoxSup";
-            this.picBoxSup.Size = new System.Drawing.Size(135, 131);
+            this.picBoxSup.Size = new System.Drawing.Size(174, 152);
             this.picBoxSup.TabIndex = 21;
             this.picBoxSup.TabStop = false;
             this.picBoxSup.Click += new System.EventHandler(this.picBoxSup_Click);
             // 
             // picBoxHiper
             // 
-            this.picBoxHiper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxHiper.BackColor = System.Drawing.Color.White;
             this.picBoxHiper.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxHiper.BackgroundImage")));
             this.picBoxHiper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxHiper.Location = new System.Drawing.Point(378, 194);
             this.picBoxHiper.Name = "picBoxHiper";
-            this.picBoxHiper.Size = new System.Drawing.Size(135, 131);
+            this.picBoxHiper.Size = new System.Drawing.Size(165, 152);
             this.picBoxHiper.TabIndex = 22;
             this.picBoxHiper.TabStop = false;
             this.picBoxHiper.Click += new System.EventHandler(this.picBoxHiper_Click);
             // 
             // picBoxDerm
             // 
-            this.picBoxDerm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxDerm.BackColor = System.Drawing.Color.White;
             this.picBoxDerm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxDerm.BackgroundImage")));
             this.picBoxDerm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxDerm.Location = new System.Drawing.Point(549, 21);
+            this.picBoxDerm.Location = new System.Drawing.Point(558, 21);
             this.picBoxDerm.Name = "picBoxDerm";
-            this.picBoxDerm.Size = new System.Drawing.Size(135, 131);
+            this.picBoxDerm.Size = new System.Drawing.Size(165, 154);
             this.picBoxDerm.TabIndex = 23;
             this.picBoxDerm.TabStop = false;
             this.picBoxDerm.Click += new System.EventHandler(this.picBoxDerm_Click);
             // 
             // picBoxAnativirais
             // 
-            this.picBoxAnativirais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxAnativirais.BackColor = System.Drawing.Color.White;
             this.picBoxAnativirais.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxAnativirais.BackgroundImage")));
             this.picBoxAnativirais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxAnativirais.Location = new System.Drawing.Point(378, 21);
             this.picBoxAnativirais.Name = "picBoxAnativirais";
-            this.picBoxAnativirais.Size = new System.Drawing.Size(135, 131);
+            this.picBoxAnativirais.Size = new System.Drawing.Size(165, 154);
             this.picBoxAnativirais.TabIndex = 25;
             this.picBoxAnativirais.TabStop = false;
             this.picBoxAnativirais.Click += new System.EventHandler(this.picBoxAnativirais_Click);
             // 
             // picBoxAntidepressivos
             // 
-            this.picBoxAntidepressivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxAntidepressivos.BackColor = System.Drawing.Color.White;
             this.picBoxAntidepressivos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxAntidepressivos.BackgroundImage")));
             this.picBoxAntidepressivos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxAntidepressivos.Location = new System.Drawing.Point(207, 21);
+            this.picBoxAntidepressivos.Location = new System.Drawing.Point(195, 21);
             this.picBoxAntidepressivos.Name = "picBoxAntidepressivos";
-            this.picBoxAntidepressivos.Size = new System.Drawing.Size(135, 131);
+            this.picBoxAntidepressivos.Size = new System.Drawing.Size(165, 154);
             this.picBoxAntidepressivos.TabIndex = 27;
             this.picBoxAntidepressivos.TabStop = false;
             this.picBoxAntidepressivos.Click += new System.EventHandler(this.picBoxAntidepressivos_Click);
             // 
             // picBoxGine
             // 
-            this.picBoxGine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxGine.BackColor = System.Drawing.Color.White;
             this.picBoxGine.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxGine.BackgroundImage")));
             this.picBoxGine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxGine.Location = new System.Drawing.Point(207, 194);
+            this.picBoxGine.Location = new System.Drawing.Point(195, 194);
             this.picBoxGine.Name = "picBoxGine";
-            this.picBoxGine.Size = new System.Drawing.Size(135, 131);
+            this.picBoxGine.Size = new System.Drawing.Size(165, 152);
             this.picBoxGine.TabIndex = 24;
             this.picBoxGine.TabStop = false;
             this.picBoxGine.Click += new System.EventHandler(this.picBoxGine_Click);
             // 
             // picBoxAnal
             // 
-            this.picBoxAnal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxAnal.BackColor = System.Drawing.Color.White;
             this.picBoxAnal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxAnal.BackgroundImage")));
             this.picBoxAnal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxAnal.Location = new System.Drawing.Point(36, 21);
+            this.picBoxAnal.Location = new System.Drawing.Point(6, 21);
             this.picBoxAnal.Name = "picBoxAnal";
-            this.picBoxAnal.Size = new System.Drawing.Size(135, 131);
+            this.picBoxAnal.Size = new System.Drawing.Size(165, 154);
             this.picBoxAnal.TabIndex = 26;
             this.picBoxAnal.TabStop = false;
             this.picBoxAnal.Click += new System.EventHandler(this.picBoxAnal_Click);
             // 
             // picBoxDiab
             // 
-            this.picBoxDiab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.picBoxDiab.BackColor = System.Drawing.Color.White;
             this.picBoxDiab.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxDiab.BackgroundImage")));
             this.picBoxDiab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxDiab.Location = new System.Drawing.Point(36, 194);
+            this.picBoxDiab.Location = new System.Drawing.Point(6, 194);
             this.picBoxDiab.Name = "picBoxDiab";
-            this.picBoxDiab.Size = new System.Drawing.Size(135, 131);
+            this.picBoxDiab.Size = new System.Drawing.Size(168, 152);
             this.picBoxDiab.TabIndex = 20;
             this.picBoxDiab.TabStop = false;
             this.picBoxDiab.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panelDep
-            // 
-            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelDep.Controls.Add(this.label1);
-            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panelDep.Location = new System.Drawing.Point(0, 0);
-            this.panelDep.Name = "panelDep";
-            this.panelDep.Size = new System.Drawing.Size(776, 72);
-            this.panelDep.TabIndex = 31;
             // 
             // FrmDepartamentos
             // 
@@ -530,6 +531,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panelPrintarDep.ResumeLayout(false);
+            this.panelDep.ResumeLayout(false);
+            this.panelDep.PerformLayout();
             this.paneiIconDep.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHiper)).EndInit();
@@ -539,8 +542,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxGine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAnal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDiab)).EndInit();
-            this.panelDep.ResumeLayout(false);
-            this.panelDep.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -103,7 +103,7 @@ namespace TESTE_GUNA.projeto.view
         {
             #region printarTela
             FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
-            telaDepEscolhido.NomeDepartamento("Antidepressivos");
+            telaDepEscolhido.NomeDepartamento("Anti-Inflamátorios");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
             telaDepEscolhido.Location = new Point(0, 0); // Define a localização dentro do panel

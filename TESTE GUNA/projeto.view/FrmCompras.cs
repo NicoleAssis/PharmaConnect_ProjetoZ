@@ -99,5 +99,15 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
             telaLogin.Show();
         }
+
+        private void scrollCompras_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel18_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
