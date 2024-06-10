@@ -119,6 +119,7 @@
     <Compile Include="projeto.model\Helpers.cs" />
     <Compile Include="projeto.model\ItemVenda.cs" />
     <Compile Include="projeto.model\Produto.cs" />
+    <Compile Include="projeto.model\Validador.cs" />
     <Compile Include="projeto.model\Venda.cs" />
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>
