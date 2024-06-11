@@ -118,42 +118,50 @@ namespace TESTE_GUNA.projeto.view
 
             //2° Validação: Email
             bool validacaoEmail = Validador.ValidarEmail(email);
-            
-            if(validacaoEmail && validacaoCPF)
+
+
+            #region Validando Email e CPF
+            if (validacaoEmail && validacaoCPF)
             {
-                
-                    // CPF Validado converte para inteiro 
-                    long cpf_inteiro = long.Parse((txtCPF.Text));
-                    Cliente obj = new Cliente
-                    {
-                        nome = txtNome.Text,
-                        email = txtEmail.Text,
-                        nivel = 2,
-                        senha = txtSenha.Text,
-                        cpf = cpf_inteiro
-                    };
+                long cpf_inteiro = long.Parse((txtCPF.Text));
+                Cliente obj = new Cliente
+                {
+                    nome = txtNome.Text,
+                    email = txtEmail.Text,
+                    nivel = 2,
+                    senha = txtSenha.Text,
+                    cpf = cpf_inteiro
+                };
 
-                    dao.CadastrarClienteC1(obj);
-                    FrmMessageBox mensagem = new FrmMessageBox();
-                    mensagem.Mensagem("Cadastro Efetuado");
+                dao.CadastrarClienteC1(obj);
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("Cadastro Efetuado");
 
 
-                    //abrir a tela de login
-                    FrmLogin telaLogin = new FrmLogin();
-                    ////esconde a tela anterior
+                //abrir a tela de login
+                FrmLogin telaLogin = new FrmLogin();
+                ////esconde a tela anterior
 
-                    new Helpers().LimparTela(this);
-                    telaLogin.Show();
-                    this.Hide();
-            }else if(validacaoEmail == true && validacaoCPF == false)
+                new Helpers().LimparTela(this);
+                telaLogin.Show();
+                this.Hide();
+            }
+            else if (validacaoEmail == true && validacaoCPF == false || validacaoEmail == false && validacaoCPF == true)
             {
                 MessageBox.Show("CPF Inválido");
+            }
+            else if (validacaoEmail == false && validacaoCPF == false)
+            {
+                MessageBox.Show("Email e senha inválidos!");
             }
             else
             {
                 MessageBox.Show("Email Inválido");
             }
-            
+
+            #endregion
+
+
 
         }
 
