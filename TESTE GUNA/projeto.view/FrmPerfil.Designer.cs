@@ -74,6 +74,7 @@
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.btnSalvar = new Guna.UI2.WinForms.Guna2Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -466,7 +467,7 @@
             this.btnSalvarAlteracoes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.btnSalvarAlteracoes.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.btnSalvarAlteracoes.ForeColor = System.Drawing.Color.White;
-            this.btnSalvarAlteracoes.Location = new System.Drawing.Point(588, 432);
+            this.btnSalvarAlteracoes.Location = new System.Drawing.Point(600, 465);
             this.btnSalvarAlteracoes.Name = "btnSalvarAlteracoes";
             this.btnSalvarAlteracoes.Size = new System.Drawing.Size(250, 50);
             this.btnSalvarAlteracoes.TabIndex = 40;
@@ -484,7 +485,7 @@
             this.btnAlterarSenha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.btnAlterarSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(480, 341);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(494, 342);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(141, 35);
             this.btnAlterarSenha.TabIndex = 41;
@@ -837,11 +838,29 @@
             this.txtCEP.Size = new System.Drawing.Size(110, 22);
             this.txtCEP.TabIndex = 77;
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.btnSalvar.BorderRadius = 20;
+            this.btnSalvar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalvar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalvar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSalvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(654, 402);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(141, 44);
+            this.btnSalvar.TabIndex = 78;
+            this.btnSalvar.Text = "SALVAR";
+            // 
             // FrmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtNum);
@@ -938,5 +957,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.MaskedTextBox txtCEP;
+        private Guna.UI2.WinForms.Guna2Button btnSalvar;
     }
 }
