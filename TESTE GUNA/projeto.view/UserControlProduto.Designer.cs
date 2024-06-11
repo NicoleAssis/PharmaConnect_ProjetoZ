@@ -65,6 +65,7 @@
             this.labelDescricao.Size = new System.Drawing.Size(129, 36);
             this.labelDescricao.TabIndex = 1;
             this.labelDescricao.Text = "10 Comprimidos de 5mg";
+            this.labelDescricao.Click += new System.EventHandler(this.labelDescricao_Click);
             // 
             // labelPreco
             // 
