@@ -141,11 +141,24 @@ namespace TESTE_GUNA.projeto.dao
                     int nivel = reader.GetInt32(14);
 
                     //Testando dados testados do banco
-                    //MessageBox.Show("Login realizado com sucesso! Bem vindo(a)" + nome +"nivel: "+nivel);
+
+
+
+                    /*
+                     * 
+                     * 
+                     * 
+                     * 
+                     * ADICIONAR FORM DE CLIENTE LOGADO COM SUCESSO 
+                     * 
+                     * 
+                     * 
+                     * 
+                     * */
 
                     FrmMenu menuCliente = new FrmMenu();
                     AdmFrmMenu menuAdm = new AdmFrmMenu();
-
+                    
 
                     if (nivel.Equals(2))
                     {
@@ -160,7 +173,27 @@ namespace TESTE_GUNA.projeto.dao
 
                     return true;
                 }
-                return true;
+                else
+                {
+                         /*
+                         * 
+                         * 
+                         * 
+                         * 
+                         * ADICIONAR FORM SE SENHA OU EMAIL INCORRETOS
+                         * 
+                         * 
+                         * 
+                         * 
+                         * */
+
+                    Helpers limparTela = new Helpers();
+                    
+
+                    FrmLogin tela = new FrmLogin();
+                    return false;
+                }
+                
             }
             catch (Exception erro)
             {

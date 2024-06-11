@@ -42,23 +42,10 @@ namespace TESTE_GUNA.projeto.view
 
             ClienteDAO dao = new ClienteDAO();
 
+
             if(dao.EfetuarLogin(email, senha)){
                 this.Hide();
             }
-
-            //PARA ACESSAR A TELA DO ADMINISTRADOR
-            //if (txtEmail.Text == "1234" && txtSenha.Text == "1234")
-            //{
-            //    AdmFrmMenu telaAdministrador = new AdmFrmMenu();
-            //    telaAdministrador.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    FrmMenu telaMenu = new FrmMenu();
-            //    telaMenu.Show();
-            //    this.Hide();
-            //}
              
         }
 
