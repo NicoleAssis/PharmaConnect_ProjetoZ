@@ -213,6 +213,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconTelefone {
+            get {
+                object obj = ResourceManager.GetObject("iconTelefone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PIXqrCode {
             get {
                 object obj = ResourceManager.GetObject("PIXqrCode", resourceCulture);
@@ -246,6 +256,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaCompraMenor {
             get {
                 object obj = ResourceManager.GetObject("telaCompraMenor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaFornecedor {
+            get {
+                object obj = ResourceManager.GetObject("telaFornecedor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

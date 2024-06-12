@@ -188,6 +188,7 @@
             this.txtBase.SelectedText = "";
             this.txtBase.Size = new System.Drawing.Size(330, 38);
             this.txtBase.TabIndex = 27;
+            this.txtBase.TextChanged += new System.EventHandler(this.txtBase_TextChanged);
             this.txtBase.Click += new System.EventHandler(this.guna2TextBox2_Click);
             // 
             // checkBoxMostrarSenha
@@ -216,6 +217,7 @@
             this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 29;
             this.label1.Text = "Mostrar Senha";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtCPF
             // 
@@ -299,6 +301,7 @@
             this.Name = "FrmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadastro";
+            this.Load += new System.EventHandler(this.FrmCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

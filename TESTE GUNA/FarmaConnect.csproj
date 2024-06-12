@@ -134,6 +134,12 @@
     <Compile Include="projeto.view\AdmFrmAlterarProdutos.Designer.cs">
       <DependentUpon>AdmFrmAlterarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\AdmFrmCadastroAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\AdmFrmCadastroAdministrador.Designer.cs">
+      <DependentUpon>AdmFrmCadastroAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\AdmFrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     <EmbeddedResource Include="projeto.view\AdmFrmAlterarProdutos.resx">
       <DependentUpon>AdmFrmAlterarProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\AdmFrmCadastroAdministrador.resx">
+      <DependentUpon>AdmFrmCadastroAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmMenu.resx">
       <DependentUpon>AdmFrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +406,8 @@
     <None Include="projeto.view\img\remedioImagemTeste2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="projeto.view\img\iconTelefone.png" />
+    <Content Include="projeto.view\img\telaFornecedor.png" />
     <None Include="projeto.view\img\iconDesligar.png" />
     <None Include="projeto.view\img\iconSair.png" />
     <None Include="projeto.view\img\iconProduto.png" />
