@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,7 +31,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtNomeCartao_Click(object sender, EventArgs e)
         {
-            txtNomeCartao.Text = "";
+            txtNomeProduto.Text = "";
         }
 
         private void txtPreco_Click(object sender, EventArgs e)
@@ -45,7 +46,16 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCriarProduto_Click(object sender, EventArgs e)
         {
+
+
+            string nome = txtNomeProduto.Text;
+            string desc = txtDescricao.Text;
+            int quantidadeEstoque = int.Parse(txtQuantidade.Text);
+            decimal precoUnitProduto = decimal.Parse(txtPreco.Text);
+
             FrmMessageBox mensagem = new FrmMessageBox();
+            
+
             mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
             mensagem.ShowDialog();
         }
@@ -53,6 +63,19 @@ namespace TESTE_GUNA.projeto.view
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
+            {
+                TextBox t = (TextBox)sender;
+                string w = t.Text;
+
+                w += e.KeyChar;
+                return;
+            }
+            e.Handled  = true;
         }
     }
 }
