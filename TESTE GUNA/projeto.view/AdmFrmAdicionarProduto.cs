@@ -49,5 +49,10 @@ namespace TESTE_GUNA.projeto.view
             mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
             mensagem.ShowDialog();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -403,6 +403,7 @@
     <None Include="projeto.view\img\iconAlterarProduto.png" />
     <None Include="projeto.view\img\iconProdutoadm2.png" />
     <None Include="projeto.view\img\iconProdutoadm.png" />
+    <Content Include="projeto.view\img\fotoProduto.png" />
     <Content Include="projeto.view\img\remedioImagem.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

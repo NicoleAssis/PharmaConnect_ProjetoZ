@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmFrmAdicionarProduto));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.btnX = new System.Windows.Forms.Button();
-            this.btnCriarProduto = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCadastrarProduto = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -43,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEscolherImagem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DescricaoProduto = new System.Windows.Forms.Label();
+            this.txtDesc = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +60,7 @@
             this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(5, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 39);
+            this.panel1.Size = new System.Drawing.Size(581, 39);
             this.panel1.TabIndex = 96;
             // 
             // label
@@ -86,26 +89,26 @@
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
-            // btnCriarProduto
+            // btnCadastrarProduto
             // 
-            this.btnCriarProduto.BackColor = System.Drawing.Color.Transparent;
-            this.btnCriarProduto.BorderRadius = 20;
-            this.btnCriarProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCriarProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCriarProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCriarProduto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCriarProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCriarProduto.FillColor = System.Drawing.Color.Navy;
-            this.btnCriarProduto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
-            this.btnCriarProduto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarProduto.ForeColor = System.Drawing.Color.White;
-            this.btnCriarProduto.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCriarProduto.Location = new System.Drawing.Point(186, 389);
-            this.btnCriarProduto.Name = "btnCriarProduto";
-            this.btnCriarProduto.Size = new System.Drawing.Size(201, 42);
-            this.btnCriarProduto.TabIndex = 99;
-            this.btnCriarProduto.Text = "CRIAR PRODUTOS";
-            this.btnCriarProduto.Click += new System.EventHandler(this.btnCriarProduto_Click);
+            this.btnCadastrarProduto.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarProduto.BorderRadius = 20;
+            this.btnCadastrarProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrarProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrarProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCadastrarProduto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCadastrarProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCadastrarProduto.FillColor = System.Drawing.Color.Navy;
+            this.btnCadastrarProduto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.btnCadastrarProduto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProduto.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarProduto.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(207, 480);
+            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
+            this.btnCadastrarProduto.Size = new System.Drawing.Size(209, 41);
+            this.btnCadastrarProduto.TabIndex = 99;
+            this.btnCadastrarProduto.Text = "CADASTRAR PRODUTOS";
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCriarProduto_Click);
             // 
             // panel3
             // 
@@ -113,9 +116,9 @@
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel3.Location = new System.Drawing.Point(5, 445);
+            this.panel3.Location = new System.Drawing.Point(5, 594);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 5);
+            this.panel3.Size = new System.Drawing.Size(581, 10);
             this.panel3.TabIndex = 98;
             // 
             // panel2
@@ -124,9 +127,9 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Location = new System.Drawing.Point(568, 0);
+            this.panel2.Location = new System.Drawing.Point(586, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 450);
+            this.panel2.Size = new System.Drawing.Size(10, 604);
             this.panel2.TabIndex = 97;
             // 
             // panel4
@@ -137,7 +140,7 @@
             this.panel4.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 450);
+            this.panel4.Size = new System.Drawing.Size(5, 604);
             this.panel4.TabIndex = 95;
             // 
             // txtQuantidade
@@ -155,7 +158,7 @@
             this.txtQuantidade.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtQuantidade.ForeColor = System.Drawing.Color.DimGray;
             this.txtQuantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantidade.Location = new System.Drawing.Point(258, 338);
+            this.txtQuantidade.Location = new System.Drawing.Point(255, 378);
             this.txtQuantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.PasswordChar = '\0';
@@ -172,7 +175,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label3.Location = new System.Drawing.Point(147, 343);
+            this.label3.Location = new System.Drawing.Point(124, 391);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 19);
             this.label3.TabIndex = 104;
@@ -193,7 +196,7 @@
             this.txtPreco.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPreco.ForeColor = System.Drawing.Color.DimGray;
             this.txtPreco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreco.Location = new System.Drawing.Point(258, 298);
+            this.txtPreco.Location = new System.Drawing.Point(255, 338);
             this.txtPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.PasswordChar = '\0';
@@ -210,7 +213,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label2.Location = new System.Drawing.Point(196, 303);
+            this.label2.Location = new System.Drawing.Point(162, 351);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 19);
             this.label2.TabIndex = 102;
@@ -231,7 +234,7 @@
             this.txtNomeCartao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNomeCartao.ForeColor = System.Drawing.Color.DimGray;
             this.txtNomeCartao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.Location = new System.Drawing.Point(258, 258);
+            this.txtNomeCartao.Location = new System.Drawing.Point(255, 258);
             this.txtNomeCartao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeCartao.Name = "txtNomeCartao";
             this.txtNomeCartao.PasswordChar = '\0';
@@ -249,7 +252,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label1.Location = new System.Drawing.Point(99, 263);
+            this.label1.Location = new System.Drawing.Point(76, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 19);
             this.label1.TabIndex = 100;
@@ -278,19 +281,61 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(195, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(182, 155);
             this.pictureBox1.TabIndex = 106;
             this.pictureBox1.TabStop = false;
             // 
+            // DescricaoProduto
+            // 
+            this.DescricaoProduto.AutoSize = true;
+            this.DescricaoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.DescricaoProduto.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescricaoProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
+            this.DescricaoProduto.Location = new System.Drawing.Point(132, 311);
+            this.DescricaoProduto.Name = "DescricaoProduto";
+            this.DescricaoProduto.Size = new System.Drawing.Size(103, 19);
+            this.DescricaoProduto.TabIndex = 108;
+            this.DescricaoProduto.Text = "Descrição: ";
+            this.DescricaoProduto.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.txtDesc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.txtDesc.BorderRadius = 13;
+            this.txtDesc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDesc.DefaultText = "descrição";
+            this.txtDesc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDesc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDesc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDesc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDesc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDesc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtDesc.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDesc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDesc.Location = new System.Drawing.Point(255, 298);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.PasswordChar = '\0';
+            this.txtDesc.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtDesc.PlaceholderText = "";
+            this.txtDesc.SelectedText = "";
+            this.txtDesc.Size = new System.Drawing.Size(216, 32);
+            this.txtDesc.TabIndex = 109;
+            // 
             // AdmFrmAdicionarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(573, 450);
+            this.ClientSize = new System.Drawing.Size(596, 604);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.DescricaoProduto);
             this.Controls.Add(this.btnEscolherImagem);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtQuantidade);
@@ -300,7 +345,7 @@
             this.Controls.Add(this.txtNomeCartao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnCriarProduto);
+            this.Controls.Add(this.btnCadastrarProduto);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
@@ -321,7 +366,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btnX;
-        private Guna.UI2.WinForms.Guna2GradientButton btnCriarProduto;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCadastrarProduto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
@@ -333,5 +378,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnEscolherImagem;
+        private System.Windows.Forms.Label DescricaoProduto;
+        private Guna.UI2.WinForms.Guna2TextBox txtDesc;
     }
 }
