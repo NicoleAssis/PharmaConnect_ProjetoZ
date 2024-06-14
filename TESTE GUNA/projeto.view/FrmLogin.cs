@@ -46,6 +46,8 @@ namespace TESTE_GUNA.projeto.view
             if(dao.EfetuarLogin(email, senha)){
                 this.Hide();
             }
+
+            dao.buscarDadosClientes(email, senha);
              
         }
 

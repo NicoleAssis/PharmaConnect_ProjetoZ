@@ -5,6 +5,7 @@ using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
+using System.Data;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -109,8 +110,50 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-        
+        #region Buscar dados do banco
+        public DataTable buscarDadosClientes(string email,string senha)
+        {
+            try
+            {
 
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelacliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes where email_cliente  = @email  and senha_cliente = @senha";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@email", email);
+                executacmd.Parameters.AddWithValue("@senha", senha);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelacliente;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+
+        #endregion
 
         #region Login
         public bool EfetuarLogin(string email, string senha)
