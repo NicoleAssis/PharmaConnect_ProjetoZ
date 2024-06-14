@@ -19,16 +19,12 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtBase_TextChanged(object sender, EventArgs e)
         {
-            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
-            txtCNPJ.Visible = true;
-            txtBase.Enabled = false;
+
         }
 
         private void txtBase2_TextChanged(object sender, EventArgs e)
         {
-            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
-            txtTelefone.Visible = true;
-            txtBase2.Enabled = false;
+
         }
 
         private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
@@ -43,6 +39,38 @@ namespace TESTE_GUNA.projeto.view
                 //caso deseja colocar o passwordChar novamente
                 txtSenha.PasswordChar = '*';
             }
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            //button fechar o programa (X)
+            this.Close();
+        }
+
+        private void txtBase3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBase_Click(object sender, EventArgs e)
+        {
+            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
+            txtCNPJ.Visible = true;
+            txtBase.Enabled = false;
+        }
+
+        private void txtBase2_Click(object sender, EventArgs e)
+        {
+            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
+            txtTelefone.Visible = true;
+            txtBase2.Enabled = false;
+        }
+
+        private void txtBase3_Click(object sender, EventArgs e)
+        {
+            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
+            txtCelular.Visible = true;
+            txtBase3.Enabled = false;
         }
     }
 }
