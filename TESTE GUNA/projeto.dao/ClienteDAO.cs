@@ -14,11 +14,50 @@ namespace TESTE_GUNA.projeto.dao
 
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
+              //retorna como TABELA
+        public DataTable listarClientes()
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaCliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaCliente);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
 
         //Construtor
         public ClienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
+         
         }
 
 
@@ -153,6 +192,47 @@ namespace TESTE_GUNA.projeto.dao
 
         }
 
+        #endregion
+
+        #region Buscar Clientes
+        //retorna como TABELA
+        public DataTable listarClientes()
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaCliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes ";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaCliente);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
         #endregion
 
         #region Login
