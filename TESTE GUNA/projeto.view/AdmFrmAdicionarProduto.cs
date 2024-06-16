@@ -69,7 +69,7 @@ namespace TESTE_GUNA.projeto.view
         {
             if (char.IsDigit(e.KeyChar) || e.KeyChar.Equals((char)Keys.Back))
             {
-                TextBox t = (TextBox)sender;
+                TextBox t = (TextBox) sender;
                 string w = t.Text;
 
                 w += e.KeyChar;
