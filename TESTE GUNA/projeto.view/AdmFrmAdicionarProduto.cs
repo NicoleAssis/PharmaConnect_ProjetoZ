@@ -48,6 +48,7 @@ namespace TESTE_GUNA.projeto.view
             FrmMessageBox mensagem = new FrmMessageBox();
             mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
             mensagem.ShowDialog();
+            this.Close();
         }
     }
 }

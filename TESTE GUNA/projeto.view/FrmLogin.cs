@@ -50,6 +50,7 @@ namespace TESTE_GUNA.projeto.view
 
             if(email == "1234" && senha == "1234")
             {
+                
                 AdmFrmMenu tela = new AdmFrmMenu();
                 tela.Show();
             }

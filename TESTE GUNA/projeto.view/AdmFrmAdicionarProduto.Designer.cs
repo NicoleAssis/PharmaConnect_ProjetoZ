@@ -104,7 +104,7 @@
             this.btnCriarProduto.Name = "btnCriarProduto";
             this.btnCriarProduto.Size = new System.Drawing.Size(201, 42);
             this.btnCriarProduto.TabIndex = 99;
-            this.btnCriarProduto.Text = "CRIAR PRODUTOS";
+            this.btnCriarProduto.Text = "CRIAR PRODUTO";
             this.btnCriarProduto.Click += new System.EventHandler(this.btnCriarProduto_Click);
             // 
             // panel3
