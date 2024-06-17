@@ -19,10 +19,19 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnX_Click(object sender, EventArgs e)
         {
-            //fechar o programa
-            this.Close();
-            FrmDepartamentos telaDep = new FrmDepartamentos();
-            telaDep.Show();
+            // Cria uma nova instância de FrmDepartamentos
+            FrmDepartamentos novaTelaDep = new FrmDepartamentos();
+
+            // Itera sobre todas as janelas abertas e fecha as do tipo FrmDepartamentos
+            foreach (Form telaAberta in Application.OpenForms.Cast<Form>().ToList())
+            {
+                if (telaAberta is FrmDepartamentos)
+                {
+                    telaAberta.Close();
+                }
+            }
+
+            novaTelaDep.Show();
         }
 
         public void NomeDepartamento(string departamento)
@@ -42,6 +51,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void lblDepartamento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

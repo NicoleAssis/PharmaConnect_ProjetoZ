@@ -38,6 +38,7 @@ namespace TESTE_GUNA.projeto.view
             FrmMessageBox mensagem = new FrmMessageBox();
             mensagem.Mensagem("ALTERAÇÕES SALVAS COM SUCESSO!");
             mensagem.ShowDialog();
+            this.Close();
         }
 
         private void txtNomeCartao_TextChanged(object sender, EventArgs e)
