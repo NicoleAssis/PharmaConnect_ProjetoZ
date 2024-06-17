@@ -88,7 +88,7 @@ namespace TESTE_GUNA.projeto.view
                 txtNome.ReadOnly = false;
                 txtNum.ReadOnly = false;
 
-                btnSalvarAlteracoes.Text = "SALVAR ALTERAÇÕES";
+                btnSalvarAlteracoes.Text = "SALVAR";
                 btnSalvarAlteracoes.FillColor = System.Drawing.Color.FromArgb(65, 25, 227);
                 click = true;
             }
@@ -167,5 +167,7 @@ namespace TESTE_GUNA.projeto.view
             
 
         }
+
+
     }
 }

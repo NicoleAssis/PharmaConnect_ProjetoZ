@@ -32,8 +32,7 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 //criando sql
-                string sql = @"select * from tb_clientes
-                                where email_cliente = @email and senha_cliente; = @senha";
+                string sql = @"inset to";
 
                 //organizar e executar o sql
 
