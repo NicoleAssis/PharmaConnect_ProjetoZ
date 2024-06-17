@@ -45,7 +45,8 @@ namespace TESTE_GUNA.projeto.view
 
             if((dao.EfetuarLogin(email, senha)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
-                this.Close();
+                
+                
             }
 
             if(email == "1234" && senha == "1234")

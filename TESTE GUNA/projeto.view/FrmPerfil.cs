@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -24,6 +26,12 @@ namespace TESTE_GUNA.projeto.view
             FrmMenu telaMenu = new FrmMenu();
             this.Close();
             telaMenu.Show();
+
+
+
+
+
+
         }
 
         private void btnDepartamentos_Click(object sender, EventArgs e)
@@ -131,6 +139,32 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtCPF_MouseClick(object sender, MouseEventArgs e)
         {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfil tela = new FrmPerfil();
+            this.Close();
+            tela.Show();
+
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+
+            
 
         }
     }

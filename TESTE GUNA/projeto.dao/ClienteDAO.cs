@@ -5,6 +5,7 @@ using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
+using System.Data;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -14,11 +15,16 @@ namespace TESTE_GUNA.projeto.dao
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        
+
+        
+
         //Construtor
         public ClienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
         }
+
 
 
         #region Classes Estáticas
@@ -61,6 +67,24 @@ namespace TESTE_GUNA.projeto.dao
             return cpf.EndsWith(digito);
 
 
+        }
+        #endregion
+        #region RetornarVazio
+        //
+        public static string MyStringConvert(object o)
+        {
+            if (o == DBNull.Value || o == null)
+                return "";
+
+            return o.ToString();
+        }
+
+        public static int MyIntonverter(object o)
+        {
+            if (o == DBNull.Value || o == null)
+                return 0;
+
+            return Convert.ToInt32(o);
         }
         #endregion
 
@@ -120,7 +144,7 @@ namespace TESTE_GUNA.projeto.dao
 
                 //criando sql
                 string sql = @"select * from tb_clientes
-                                where email_cliente = @email and senha_cliente; = @senha";
+                                where email_cliente = @email and senha_cliente = @senha";
 
                 //organizar e executar o sql
 
@@ -136,38 +160,53 @@ namespace TESTE_GUNA.projeto.dao
                 //Metódo de Leitura
                 if (reader.Read())
                 {
-                    //nivel = reader.GetString("nivel_acesso");
-                    string nome = reader.GetString("nome_cliente");
-                    int nivel = reader.GetInt32(14);
+                    //nivel = reader.GetString("nivel_acesso");              
+                    int nivel =  reader.GetInt32(14);
+                    long cpf = reader.GetInt64(1);
+                    string nome = MyStringConvert(reader[2]);
 
+                    string telefone = MyStringConvert(reader[4]);
+                    string celular = MyStringConvert(reader[5]);
+                    string cep = MyStringConvert(reader[6]);
+                    string endereco = MyStringConvert(reader[7]);
+                    int numEnd = MyIntonverter(reader[8]);
+                    string complemento = MyStringConvert(reader[9]);
+                    string bairro = MyStringConvert(reader[10]);
+                    string cidade = MyStringConvert(reader[11]);
+                    string estado = MyStringConvert(reader[12]);
                     //Testando dados testados do banco
 
 
-
-                    /*
-                     * 
-                     * 
-                     * 
-                     * 
-                     * ADICIONAR FORM DE CLIENTE LOGADO COM SUCESSO 
-                     * 
-                     * 
-                     * 
-                     * 
-                     * */
-
-                    FrmMenu menuCliente = new FrmMenu();
-                    AdmFrmMenu menuAdm = new AdmFrmMenu();
                     
 
                     if (nivel.Equals(2))
                     {
-                        menuCliente.Show();
+                        //Cliente
+                        
+                        
+                        
+                        FrmPerfil telaPerfil = new FrmPerfil();
+                        telaPerfil.txtNome.Text = nome;
+                        telaPerfil.txtEndereco.Text = endereco;
+                        telaPerfil.txtCidade.Text = cidade;
+                        telaPerfil.txtEstado.Text = estado;
+                        telaPerfil.txtComplemento.Text = complemento;
+                        telaPerfil.txtEmail.Text = email;
+                        telaPerfil.txtCPF.Text = cpf.ToString();
+                        telaPerfil.txtCEP.Text = cep;
+                        telaPerfil.txtBairro.Text = bairro;
+                        telaPerfil.txtNum.Text = numEnd.ToString();
+                        telaPerfil.txtSenha.Text = senha;
+                        telaPerfil.Show();
+
+                        
+                        
+
                     }
                     else if (nivel.Equals(1))
                     {
-                        menuAdm.Show();
 
+                        
                     }
 
 
@@ -203,6 +242,9 @@ namespace TESTE_GUNA.projeto.dao
 
         }
         #endregion
+
+
+      
 
         #endregion
 
