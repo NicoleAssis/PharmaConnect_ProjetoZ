@@ -138,13 +138,15 @@ namespace TESTE_GUNA.projeto.view
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             Cliente dao = new Cliente();
-            tabelacliente.DataSource = dao.listarClientes();
+            
+            DataTable tabelaCliente = new DataTable();
+           
             
             
-            txtNome.Text = tabelacliente.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = tabelaCliente.CurrentRow.Cells[0].Value.ToString();
             txtEmail.Text = tabelaCliente.CurrentRow.Cells[1].Value.ToString();
             txtCPF.Text = tabelaCliente.CurrentRow.Cells[2].Value.ToString();
-            txtcpf.Text = tabelaCliente.CurrentRow.Cells[3].Value.ToString();
+            txtCEP.Text = tabelaCliente.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

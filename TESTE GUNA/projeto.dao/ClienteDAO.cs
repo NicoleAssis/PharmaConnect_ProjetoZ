@@ -196,7 +196,7 @@ namespace TESTE_GUNA.projeto.dao
 
         #region Buscar Clientes
         //retorna como TABELA
-        public DataTable listarClientes()
+        public DataTable BuscarClientes()
         {
             try
             {
