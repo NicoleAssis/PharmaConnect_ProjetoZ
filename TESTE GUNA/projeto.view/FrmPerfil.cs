@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
@@ -25,6 +26,12 @@ namespace TESTE_GUNA.projeto.view
             FrmMenu telaMenu = new FrmMenu();
             this.Close();
             telaMenu.Show();
+
+
+
+
+
+
         }
 
         private void btnDepartamentos_Click(object sender, EventArgs e)
@@ -81,7 +88,7 @@ namespace TESTE_GUNA.projeto.view
                 txtNome.ReadOnly = false;
                 txtNum.ReadOnly = false;
 
-                btnSalvarAlteracoes.Text = "SALVAR ALTERAÇÕES";
+                btnSalvarAlteracoes.Text = "SALVAR";
                 btnSalvarAlteracoes.FillColor = System.Drawing.Color.FromArgb(65, 25, 227);
                 click = true;
             }
@@ -135,21 +142,32 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            Cliente dao = new Cliente();
-            tabelacliente.DataSource = dao.listarClientes();
-            
-            
-            txtNome.Text = tabelacliente.CurrentRow.Cells[0].Value.ToString();
-            txtEmail.Text = tabelaCliente.CurrentRow.Cells[1].Value.ToString();
-            txtCPF.Text = tabelaCliente.CurrentRow.Cells[2].Value.ToString();
-            txtcpf.Text = tabelaCliente.CurrentRow.Cells[3].Value.ToString();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfil tela = new FrmPerfil();
+            this.Close();
+            tela.Show();
+
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+
+            
+
+        }
+
+
     }
 }

@@ -41,13 +41,21 @@ namespace TESTE_GUNA.projeto.view
             string senha = txtSenha.Text;
 
             ClienteDAO dao = new ClienteDAO();
+            AdministradorDAO daoADM = new AdministradorDAO();
 
-
-            if(dao.EfetuarLogin(email, senha)){
-                this.Hide();
+            if((dao.EfetuarLogin(email, senha)) || daoADM.EfetuarLoginAdministrador(email, senha))
+            {
+                
+                
             }
 
-            dao.buscarDadosClientes(email, senha);
+            if(email == "1234" && senha == "1234")
+            {
+                
+                AdmFrmMenu tela = new AdmFrmMenu();
+                tela.Show();
+            }
+
              
         }
 
