@@ -70,19 +70,9 @@ namespace TESTE_GUNA.projeto.view
 
         private void TxtKeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Back)
+            if (char.IsDigit(e.KeyChar))
             {
-                return;
-            }
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar  != 08 && e.KeyChar != 44)
-            {
-                e.Handled = true;
-                return;
-            }else if(e.KeyChar == 44)
-            {
-                TextBox txt = (TextBox)sender;
-                if(txt.Text.Contains(","))
-                    e.Handled = true;
+
             }
 
 

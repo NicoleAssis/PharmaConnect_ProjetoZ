@@ -197,16 +197,17 @@ namespace TESTE_GUNA.projeto.dao
                         telaPerfil.txtBairro.Text = bairro;
                         telaPerfil.txtNum.Text = numEnd.ToString();
                         telaPerfil.txtSenha.Text = senha;
+                        
                         telaPerfil.Show();
 
-                        
-                        
+
+                        return true;
 
                     }
                     else if (nivel.Equals(1))
                     {
 
-                        
+                        return true;
                     }
 
 

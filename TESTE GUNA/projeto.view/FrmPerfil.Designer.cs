@@ -379,6 +379,7 @@
             this.txtNome.SelectedText = "";
             this.txtNome.Size = new System.Drawing.Size(268, 32);
             this.txtNome.TabIndex = 34;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtBase
             // 

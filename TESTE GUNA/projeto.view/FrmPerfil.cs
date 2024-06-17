@@ -95,6 +95,7 @@ namespace TESTE_GUNA.projeto.view
             //caso o button foi clicado pela segunda vez
             else if (click == true)
             {
+                //insert
                 FrmMessageBox messageBoxTela = new FrmMessageBox();
                 messageBoxTela.Mensagem("ALTERADO COM SUCESSO!");
                 messageBoxTela.ShowDialog();
@@ -168,6 +169,9 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
