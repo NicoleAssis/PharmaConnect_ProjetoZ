@@ -28,6 +28,7 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
         }
 
+
         private void txtNomeCartao_TextChanged(object sender, EventArgs e)
         {
 
@@ -110,14 +111,14 @@ namespace TESTE_GUNA.projeto.view
             }
         }
 
-        public static void Moeda(ref TextBox txt)
+        public static void Moeda(ref TextBox txtPreco)
         {
             string n = string.Empty;
             double v = 0;
 
             try
             {
-                n = txt.Text.Replace(",", "").Replace(".", "");
+                n = txtPreco.Text.Replace(",", "").Replace(".", "");
                 if (n.Equals(""))
                 {
                     n = "";
@@ -128,8 +129,8 @@ namespace TESTE_GUNA.projeto.view
                 {
                     n = n.Substring(1, n.Length - 1);
                     v = Convert.ToDouble(n) / 100;
-                    txt.Text = string.Format("{0:N}", v);
-                    txt.SelectionStart = txt.Text.Length;
+                    txtPreco.Text = string.Format("{0:N}", v);
+                    txtPreco.SelectionStart = txtPreco.Text.Length;
                 }
 
             }
