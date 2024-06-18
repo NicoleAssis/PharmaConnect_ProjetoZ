@@ -159,11 +159,7 @@ namespace TESTE_GUNA.projeto.view
             DataTable tabelaCliente = new DataTable();
            
             
-            
-            txtNome.Text = tabelaCliente.CurrentRow.Cells[0].Value.ToString();
-            txtEmail.Text = tabelaCliente.CurrentRow.Cells[1].Value.ToString();
-            txtCPF.Text = tabelaCliente.CurrentRow.Cells[2].Value.ToString();
-            txtCEP.Text = tabelaCliente.CurrentRow.Cells[3].Value.ToString();
+      
         }
 
         private void Form_Load(object sender, EventArgs e)

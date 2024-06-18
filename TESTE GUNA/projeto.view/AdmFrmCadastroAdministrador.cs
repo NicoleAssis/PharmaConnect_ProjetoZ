@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -75,9 +77,57 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            AdmFrmCadastroAdministradorC2 tela2 = new AdmFrmCadastroAdministradorC2();
-            tela2.Show();
+            //Instancei Cliente Dao para executar 
+            AdministradorDAO dao = new AdministradorDAO();
+
+            //recebo dados txt
+            string cnpj_string = txtCNPJ.Text;
+            string email = txtEmail.Text;
+
+            // 1° Validação: CPF
+            bool validacaoCNPJ = AdministradorDAO.ValidarCNPJ((cnpj_string));
+
+            //2° Validação: Email
+            bool validacaoEmail = Validador.ValidarEmail(email);
+
+
+            #region Validando Email e CPnjp
+            if (validacaoEmail && validacaoCNPJ)
+            {
+                long cnpj_inteiro = long.Parse((txtCNPJ.Text));
+                Administrador obj = new Administrador
+                {
+                    nome = txtNome.Text,
+                    email = txtEmail.Text,
+                    nivel = 1,
+                    senha = txtSenha.Text,
+                    cnpj = cnpj_inteiro.ToString()
+                };
+
+                dao.CadastrarAdministador1(obj);
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("Cadastro Efetuado");
+
+
+                //abrir a tela de login
+                AdmFrmCadastroAdministradorC2 telaLogin = new AdmFrmCadastroAdministradorC2();
+                ////esconde a tela anterior
+
+                new Helpers().LimparTela(this);
+                telaLogin.Show();
+                this.Hide();
+            }
+            else if (validacaoCNPJ == true && validacaoCNPJ == false || validacaoEmail == false && validacaoCNPJ == true)
+            {
+                MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+            }
+            else
+            {
+                MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+            }
+
+
+            #endregion
         }
     }
 }
