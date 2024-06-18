@@ -23,7 +23,12 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region Methodoso
+
+        #region Classes Estáticas
+
+      
+        #endregion
+        #region Methodos
 
         #region Cadastrar produto
         public bool EfetuarLogin(string email, string senha)
