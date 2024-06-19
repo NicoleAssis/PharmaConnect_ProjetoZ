@@ -425,7 +425,10 @@
     <Content Include="projeto.view\img\iconendereço3.png" />
     <None Include="projeto.view\img\iconHome.png" />
     <Content Include="projeto.view\img\iconnumero.png" />
+    <None Include="projeto.view\img\IconPessoa.png" />
     <Content Include="projeto.view\img\iconTelefone.png" />
+    <None Include="projeto.view\img\imagemProduto.png" />
+    <None Include="projeto.view\img\imagemProdutooficial.png" />
     <Content Include="projeto.view\img\smartphone.png" />
     <Content Include="projeto.view\img\telaAdm2.png" />
     <Content Include="projeto.view\img\telaFornecedor.png" />
@@ -435,6 +438,7 @@
     <None Include="projeto.view\img\iconAlterarProduto.png" />
     <None Include="projeto.view\img\iconProdutoadm2.png" />
     <None Include="projeto.view\img\iconProdutoadm.png" />
+    <Content Include="projeto.view\img\fotoProduto.png" />
     <Content Include="projeto.view\img\remedioImagem.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

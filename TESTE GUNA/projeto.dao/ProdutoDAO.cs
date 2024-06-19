@@ -16,17 +16,21 @@ namespace TESTE_GUNA.projeto.dao
 {
     public class ProdutoDAO
     {
+
+        //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        //Construtor
         public ProdutoDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
         }
 
 
+        #region Classes Estáticas
 
         #region CadastroProduto
-
+      
         public void CadastrarProduto(Produto obj)
         {
             try
@@ -46,6 +50,9 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
+                MySqlCommand executacmd = new MySqlCommand(@sql, conexao);
+                executacmd.Parameters.AddWithValue("@email", email);
+                executacmd.Parameters.AddWithValue("@senha", senha);
 
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
@@ -54,14 +61,28 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-            }
+                    FrmMenu menuCliente = new FrmMenu();
+                    AdmFrmMenu menuAdm = new AdmFrmMenu();
+
+
+                    if (nivel.Equals(2))
+                    {
+                        menuCliente.Show();
+                    }
             catch (Exception erro)
-            {
+                    {
+                        menuAdm.Show();
 
                     MessageBox.Show(erro.Message);
-            }
-        }
+                    }
+
+
+                    return true;
+                }
         #endregion
 
+        }
+        #endregion
+        #endregion
     }
 }

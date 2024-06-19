@@ -54,5 +54,12 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
             telaLogin.Show();
         }
+
+        private void btnCadastrarAdm_Click(object sender, EventArgs e)
+        {
+            AdmFrmCadastroAdministrador telaCadastro = new AdmFrmCadastroAdministrador();
+            this.Close();
+            telaCadastro.Show();
+        }
     }
 }

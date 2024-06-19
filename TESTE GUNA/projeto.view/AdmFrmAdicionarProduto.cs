@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
@@ -26,6 +28,7 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
         }
 
+
         private void txtNomeCartao_TextChanged(object sender, EventArgs e)
         {
 
@@ -38,17 +41,28 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtPreco_Click(object sender, EventArgs e)
         {
-            txtPreco.Text = "";
+            
         }
 
         private void txtQuantidade_Click(object sender, EventArgs e)
         {
-            txtQuantidade.Text = "";
+            
         }
 
         private void btnCriarProduto_Click(object sender, EventArgs e)
         {
+
+            var precoentrada = Convert.ToDecimal(txtPreco.Text);
+            txtPreco.Text = precoentrada.ToString("N2"); 
+            
+            string nome = txtNomeProduto.Text;
+            string desc = txtDescricao.Text;
+            int quantidadeEstoque = int.Parse(txtQuantidade.Text);
+            decimal precoUnitProduto = decimal.Parse(txtPreco.Text);
+            string dep = cbDepartamentos.Text;
             FrmMessageBox mensagem = new FrmMessageBox();
+            
+
             mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
             mensagem.ShowDialog();
 

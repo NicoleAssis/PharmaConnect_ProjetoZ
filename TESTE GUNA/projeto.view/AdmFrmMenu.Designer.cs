@@ -33,34 +33,39 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmFrmMenu));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCadastrarAdm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnX = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.btnCadastrarAdm);
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.panel1);
             this.panel6.Controls.Add(this.pictureBox2);
@@ -75,6 +80,24 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(186, 550);
             this.panel6.TabIndex = 26;
+            // 
+            // btnCadastrarAdm
+            // 
+            this.btnCadastrarAdm.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAdm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
+            this.btnCadastrarAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnCadastrarAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
+            this.btnCadastrarAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarAdm.Location = new System.Drawing.Point(-2, 289);
+            this.btnCadastrarAdm.Name = "btnCadastrarAdm";
+            this.btnCadastrarAdm.Size = new System.Drawing.Size(250, 52);
+            this.btnCadastrarAdm.TabIndex = 32;
+            this.btnCadastrarAdm.Text = "              Cadastar Adm";
+            this.btnCadastrarAdm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarAdm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrarAdm.UseVisualStyleBackColor = false;
+            this.btnCadastrarAdm.Click += new System.EventHandler(this.btnCadastrarAdm_Click);
             // 
             // panel1
             // 
@@ -97,18 +120,6 @@
             this.label.TabIndex = 30;
             this.label.Text = "ADMINISTRADOR";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.iconSair;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 297);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.Transparent;
@@ -117,7 +128,7 @@
             this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(-2, 289);
+            this.btnSair.Location = new System.Drawing.Point(-2, 347);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(250, 52);
             this.btnSair.TabIndex = 27;
@@ -126,18 +137,6 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(186, 158);
-            this.panel8.TabIndex = 20;
             // 
             // btnVendas
             // 
@@ -155,19 +154,6 @@
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVendas.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.ErrorImage")));
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(17, 239);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 2;
-            this.pictureBox9.TabStop = false;
             // 
             // btnProdutos
             // 
@@ -198,32 +184,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(3, 550);
             this.panel4.TabIndex = 27;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.BorderRadius = 15;
-            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPesquisa.DefaultText = "Pesquisar";
-            this.txtPesquisa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPesquisa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPesquisa.IconLeft")));
-            this.txtPesquisa.IconLeftSize = new System.Drawing.Size(22, 22);
-            this.txtPesquisa.Location = new System.Drawing.Point(116, 12);
-            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.PasswordChar = '\0';
-            this.txtPesquisa.PlaceholderText = "";
-            this.txtPesquisa.SelectedText = "";
-            this.txtPesquisa.Size = new System.Drawing.Size(541, 30);
-            this.txtPesquisa.TabIndex = 24;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
-            this.txtPesquisa.Click += new System.EventHandler(this.txtPesquisa_Click);
             // 
             // btnX
             // 
@@ -315,6 +275,45 @@
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtPesquisa.BorderRadius = 15;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPesquisa.DefaultText = "Pesquisar";
+            this.txtPesquisa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPesquisa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPesquisa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPesquisa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPesquisa.IconLeft")));
+            this.txtPesquisa.IconLeftSize = new System.Drawing.Size(22, 22);
+            this.txtPesquisa.Location = new System.Drawing.Point(116, 12);
+            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.PasswordChar = '\0';
+            this.txtPesquisa.PlaceholderText = "";
+            this.txtPesquisa.SelectedText = "";
+            this.txtPesquisa.Size = new System.Drawing.Size(541, 30);
+            this.txtPesquisa.TabIndex = 24;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            this.txtPesquisa.Click += new System.EventHandler(this.txtPesquisa_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.IconPessoa;
+            this.pictureBox3.Location = new System.Drawing.Point(19, 297);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
@@ -326,6 +325,43 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
+            this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.iconSair;
+            this.pictureBox2.Location = new System.Drawing.Point(19, 355);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(186, 158);
+            this.panel8.TabIndex = 20;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.ErrorImage")));
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(17, 239);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 2;
+            this.pictureBox9.TabStop = false;
             // 
             // AdmFrmMenu
             // 
@@ -343,11 +379,12 @@
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +407,7 @@
         private System.Windows.Forms.Label label;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridViewVendas;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnCadastrarAdm;
     }
 }

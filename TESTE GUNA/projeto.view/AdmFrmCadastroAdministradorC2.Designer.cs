@@ -105,6 +105,7 @@
             this.btnCadastrar.Size = new System.Drawing.Size(110, 45);
             this.btnCadastrar.TabIndex = 53;
             this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtNumero
             // 
@@ -326,6 +327,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdmFrmCadastroAdministradorC2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmFrmCadastroAdministradorC2";
             this.ResumeLayout(false);
             this.PerformLayout();

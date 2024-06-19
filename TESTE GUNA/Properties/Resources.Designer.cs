@@ -213,6 +213,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IconPessoa {
+            get {
+                object obj = ResourceManager.GetObject("IconPessoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconPix {
             get {
                 object obj = ResourceManager.GetObject("iconPix", resourceCulture);
@@ -276,6 +286,36 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap iconTelefone {
             get {
                 object obj = ResourceManager.GetObject("iconTelefone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagemProduto {
+            get {
+                object obj = ResourceManager.GetObject("imagemProduto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagemProdutooficial {
+            get {
+                object obj = ResourceManager.GetObject("imagemProdutooficial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagemProdutooficial1 {
+            get {
+                object obj = ResourceManager.GetObject("imagemProdutooficial1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

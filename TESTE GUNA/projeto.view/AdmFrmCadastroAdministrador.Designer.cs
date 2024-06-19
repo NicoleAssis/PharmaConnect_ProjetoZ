@@ -65,6 +65,7 @@
             this.btnCadastrar.Size = new System.Drawing.Size(110, 45);
             this.btnCadastrar.TabIndex = 41;
             this.btnCadastrar.Text = "Avançar";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
