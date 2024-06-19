@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -24,6 +26,12 @@ namespace TESTE_GUNA.projeto.view
             FrmMenu telaMenu = new FrmMenu();
             this.Close();
             telaMenu.Show();
+
+
+
+
+
+
         }
 
         private void btnDepartamentos_Click(object sender, EventArgs e)
@@ -80,7 +88,7 @@ namespace TESTE_GUNA.projeto.view
                 txtNome.ReadOnly = false;
                 txtNum.ReadOnly = false;
 
-                btnSalvarAlteracoes.Text = "SALVAR ALTERAÇÕES";
+                btnSalvarAlteracoes.Text = "SALVAR";
                 btnSalvarAlteracoes.FillColor = System.Drawing.Color.FromArgb(65, 25, 227);
                 click = true;
             }
@@ -133,5 +141,35 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Cliente dao = new Cliente();
+            
+            DataTable tabelaCliente = new DataTable();
+           
+            
+      
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            ClienteDAO dao = new ClienteDAO();
+
+            
+
+        }
+
+
     }
 }

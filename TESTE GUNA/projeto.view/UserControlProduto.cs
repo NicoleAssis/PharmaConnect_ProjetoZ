@@ -43,23 +43,53 @@ namespace TESTE_GUNA.projeto.view
 
         private void labelNome_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void UserControlProduto_Click(object sender, EventArgs e)
         {
 
-
             // Redirecionar para a tela de compras
-            FrmCompras telaCompras = new FrmCompras();
-            telaCompras.Show();
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.RetornaSimNao("DESEJA ADICIONAR AO CARRINHO?");
+            frmMessageBox.ShowDialog();
 
-            // Esconder o formulário atual (se necessário)
-            this.Hide();
+            if (frmMessageBox.btnSimClick == true)
+            {
+                // Se confirmou que deseja adicionar ao carrinho
+                frmMessageBox.Mensagem("PRODUTO ADICIONADO COM SUCESSO");
+                frmMessageBox.ShowDialog();
+
+                
+
+                // Abrir a tela de compras
+                FrmCompras telaCompras = new FrmCompras();
+                telaCompras.ShowDialog();
+
+
+            }
+            else if (frmMessageBox.btnNaoClick == true)
+            {
+                // Se não quer efetuar o pagamento, apenas ir para a tela de compras
+                frmMessageBox.Close(); // Fechar a caixa de mensagem
+                this.Hide(); // Esconder o formulário atual
+                
+            }
+            else
+            {
+                // Se não selecionou SIM ou NÃO
+                frmMessageBox.Mensagem("Selecione SIM ou NAO");
+            }
+
 
         }
 
         private void imagemProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescricao_Click(object sender, EventArgs e)
         {
 
         }
