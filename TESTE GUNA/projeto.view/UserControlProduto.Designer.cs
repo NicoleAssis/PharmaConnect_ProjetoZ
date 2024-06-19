@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlProduto));
             this.labelNome = new System.Windows.Forms.Label();
             this.labelDescricao = new System.Windows.Forms.Label();
             this.labelPreco = new System.Windows.Forms.Label();
@@ -119,7 +118,7 @@
             // imagemProduto
             // 
             this.imagemProduto.BackColor = System.Drawing.Color.White;
-            this.imagemProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagemProduto.BackgroundImage")));
+            this.imagemProduto.BackgroundImage = global::TESTE_GUNA.Properties.Resources.imagemProdutooficial1;
             this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imagemProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imagemProduto.Location = new System.Drawing.Point(0, 0);

@@ -72,5 +72,12 @@ namespace TESTE_GUNA.projeto.view
             txtCelular.Visible = true;
             txtBase3.Enabled = false;
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AdmFrmCadastroAdministradorC2 tela2 = new AdmFrmCadastroAdministradorC2();
+            tela2.Show();
+        }
     }
 }
