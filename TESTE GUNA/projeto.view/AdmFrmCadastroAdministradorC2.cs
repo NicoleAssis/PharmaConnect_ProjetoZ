@@ -45,12 +45,9 @@ namespace TESTE_GUNA.projeto.view
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             
-            //abre a tela adm
+          
 
-            AdmFrmMenu telaadmmenu = new AdmFrmMenu();
-            //esconde a tela anterior
-            telaadmmenu.Show();
-            this.Hide();
+            
 
         }
 
