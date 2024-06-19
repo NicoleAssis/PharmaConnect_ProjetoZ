@@ -25,6 +25,11 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnSalvarAlteracoes_Click(object sender, EventArgs e)
         {
+            if(txtAno.Text == "" || txtCartao.Text == "" || txtCVV.Text == "" ||)
+            {
+
+            }
+            
             //abrir tela finalizar pagamento
             FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
             this.Close();

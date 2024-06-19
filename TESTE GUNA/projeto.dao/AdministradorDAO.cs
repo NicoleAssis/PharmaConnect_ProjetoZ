@@ -81,7 +81,7 @@ namespace TESTE_GUNA.projeto.dao
                     Helpers limparTela = new Helpers();
 
 
-                    FrmLogin tela = new FrmLogin();
+                    FrmMenu tela = new FrmMenu();
                     return false;
                 }
 

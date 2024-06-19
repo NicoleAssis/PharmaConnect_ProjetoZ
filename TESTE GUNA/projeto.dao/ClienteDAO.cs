@@ -321,7 +321,9 @@ namespace TESTE_GUNA.projeto.dao
                         telaPerfil.txtBairro.Text = bairro;
                         telaPerfil.txtNum.Text = numEnd.ToString();
                         telaPerfil.txtSenha.Text = senha;
-                        telaPerfil.Show();
+
+                        FrmMenu telaMenu = new FrmMenu();
+                        telaMenu.Show();
 
                         
                         
@@ -353,7 +355,7 @@ namespace TESTE_GUNA.projeto.dao
                     Helpers limparTela = new Helpers();
                     
 
-                    FrmLogin tela = new FrmLogin();
+                    FrmMenu tela = new FrmMenu();
                     return false;
                 }
                 
