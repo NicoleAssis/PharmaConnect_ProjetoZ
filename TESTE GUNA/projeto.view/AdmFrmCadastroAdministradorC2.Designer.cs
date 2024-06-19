@@ -261,6 +261,7 @@
             this.txtbase1.SelectedText = "";
             this.txtbase1.Size = new System.Drawing.Size(330, 38);
             this.txtbase1.TabIndex = 58;
+            this.txtbase1.TextChanged += new System.EventHandler(this.txtbase1_TextChanged);
             this.txtbase1.Click += new System.EventHandler(this.txtbase1_Click);
             // 
             // txtEstado
@@ -280,7 +281,7 @@
             this.txtEstado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEstado.IconLeft = global::TESTE_GUNA.Properties.Resources.IconLupa1;
             this.txtEstado.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtEstado.Location = new System.Drawing.Point(552, 392);
+            this.txtEstado.Location = new System.Drawing.Point(551, 392);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Padding = new System.Windows.Forms.Padding(2);
@@ -305,6 +306,8 @@
             this.txtCEP.TabIndex = 60;
             this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCEP.Visible = false;
+            this.txtCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCEP_MaskInputRejected);
+            this.txtCEP.Click += new System.EventHandler(this.txtCEP_Click);
             // 
             // AdmFrmCadastroAdministradorC2
             // 

@@ -77,91 +77,133 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            // Validação dos campos
+            if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
+            {
+                MessageBox.Show("Por favor, preencha o campo CNPJ.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                MessageBox.Show("Por favor, preencha o campo Nome.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Por favor, preencha um email válido.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtCelular.Text))
+            {
+                MessageBox.Show("Por favor, preencha o campo Celular.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                MessageBox.Show("Por favor, preencha o campo Senha.");
+                return;
+            }
+
+            // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
             Administrador admin = new Administrador
             {
                 cnpj = txtCNPJ.Text,
                 nome = txtNome.Text,
                 email = txtEmail.Text,
-                
                 celular = txtCelular.Text,
                 senha = txtSenha.Text,
-               
             };
 
             // Passa o objeto admin para a próxima tela (Form2)
             AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
             form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
             this.Hide();
-
-
-
-            /*//Instancei Cliente Dao para executar 
-            AdministradorDAO dao = new AdministradorDAO();
-
-            //recebo dados txt
-            string cnpj_string = txtCNPJ.Text;
-            string email = txtEmail.Text;
-
-            // 1° Validação: Cnpj
-            bool validacaoCNPJ = AdministradorDAO.ValidarCNPJ((cnpj_string));
-
-            //2° Validação: Email
-            bool validacaoEmail = Validador.ValidarEmail(email);
-
-            
-            #region Validando Email e CPnjp
-            if (validacaoEmail && validacaoCNPJ)
-            {
-                long cnpj_inteiro = long.Parse((txtCNPJ.Text));
-                Administrador obj = new Administrador
-                {
-                    nome = txtNome.Text,
-                    email = txtEmail.Text,
-                    nivel = 1,
-                    senha = txtSenha.Text,
-                    cnpj = cnpj_inteiro.ToString()
-                };
-
-                dao.CadastrarAdministador1(obj);
-                FrmMessageBox mensagem = new FrmMessageBox();
-                mensagem.Mensagem("Cadastro Efetuado");
-                txtNome.Clear();
-                txtEmail.Clear();
-                txtSenha.Clear();
-                txtCNPJ.Clear();
-                txtBase.Clear();
-
-
-                //abrir a tela de login
-                AdmFrmCadastroAdministradorC2 telaLogin2 = new AdmFrmCadastroAdministradorC2();
-                ////esconde a tela anterior
-
-                new Helpers().LimparTela(this);
-                telaLogin2.Show();
-                this.Hide();
-            }
-            else if (validacaoCNPJ == true && validacaoCNPJ == false)
-            {
-                MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
-                txtNome.Clear();
-                txtEmail.Clear();
-                txtSenha.Clear();
-                txtCNPJ.Clear();
-                txtBase.Clear();
-                
-
-            }
-            else
-            {
-                MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
-                txtNome.Clear();
-                txtEmail.Clear();
-                txtSenha.Clear();
-
-            }
-
-
-            #endregion*/
         }
+
+        // Função para validar o formato do email
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+
+
+        /*//Instancei Cliente Dao para executar 
+        AdministradorDAO dao = new AdministradorDAO();
+
+        //recebo dados txt
+        string cnpj_string = txtCNPJ.Text;
+        string email = txtEmail.Text;
+
+        // 1° Validação: Cnpj
+        bool validacaoCNPJ = AdministradorDAO.ValidarCNPJ((cnpj_string));
+
+        //2° Validação: Email
+        bool validacaoEmail = Validador.ValidarEmail(email);
+
+
+        #region Validando Email e CPnjp
+        if (validacaoEmail && validacaoCNPJ)
+        {
+            long cnpj_inteiro = long.Parse((txtCNPJ.Text));
+            Administrador obj = new Administrador
+            {
+                nome = txtNome.Text,
+                email = txtEmail.Text,
+                nivel = 1,
+                senha = txtSenha.Text,
+                cnpj = cnpj_inteiro.ToString()
+            };
+
+            dao.CadastrarAdministador1(obj);
+            FrmMessageBox mensagem = new FrmMessageBox();
+            mensagem.Mensagem("Cadastro Efetuado");
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtSenha.Clear();
+            txtCNPJ.Clear();
+            txtBase.Clear();
+
+
+            //abrir a tela de login
+            AdmFrmCadastroAdministradorC2 telaLogin2 = new AdmFrmCadastroAdministradorC2();
+            ////esconde a tela anterior
+
+            new Helpers().LimparTela(this);
+            telaLogin2.Show();
+            this.Hide();
+        }
+        else if (validacaoCNPJ == true && validacaoCNPJ == false)
+        {
+            MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtSenha.Clear();
+            txtCNPJ.Clear();
+            txtBase.Clear();
+
+
+        }
+        else
+        {
+            MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+            txtNome.Clear();
+            txtEmail.Clear();
+            txtSenha.Clear();
+
+        }
+
+
+        #endregion*/
     }
 }
+
