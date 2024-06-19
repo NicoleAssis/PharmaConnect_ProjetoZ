@@ -843,20 +843,20 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.btnSalvar.BorderRadius = 20;
-            this.btnSalvar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSalvar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSalvar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSalvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
-            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(645, 415);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 44);
-            this.btnSalvar.TabIndex = 78;
-            this.btnSalvar.Text = "SALVAR";
+            //this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            //this.btnSalvar.BorderRadius = 20;
+            //this.btnSalvar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            //this.btnSalvar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            //this.btnSalvar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            //this.btnSalvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            //this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            //this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            //this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            //this.btnSalvar.Location = new System.Drawing.Point(645, 415);
+            //this.btnSalvar.Name = "btnSalvar";
+            //this.btnSalvar.Size = new System.Drawing.Size(141, 44);
+            //this.btnSalvar.TabIndex = 78;
+            //this.btnSalvar.Text = "SALVAR";
             // 
             // FrmPerfil
             // 

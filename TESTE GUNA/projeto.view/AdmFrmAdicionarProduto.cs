@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.dao;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using System.Windows.Media;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -20,6 +23,9 @@ namespace TESTE_GUNA.projeto.view
         public AdmFrmAdicionarProduto()
         {
             InitializeComponent();
+            
+            
+            
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -49,41 +55,65 @@ namespace TESTE_GUNA.projeto.view
             
         }
 
+
+
+
+
         private void btnCriarProduto_Click(object sender, EventArgs e)
         {
-
+            ProdutoDAO dao = new ProdutoDAO();
+            Validador validade = new Validador();
             var precoentrada = Convert.ToDecimal(txtPreco.Text);
             txtPreco.Text = precoentrada.ToString("N2"); 
             
             string nome = txtNomeProduto.Text;
-            string desc = txtDescricao.Text;
+            string desc = TxtDesc.Text;
             int quantidadeEstoque = int.Parse(txtQuantidade.Text);
             decimal precoUnitProduto = decimal.Parse(txtPreco.Text);
-            string dep = cbDepartamentos.Text;
-            FrmMessageBox mensagem = new FrmMessageBox();
-            
-
-            mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
-            mensagem.ShowDialog();
+            string dep = validade.RemoveAccents(cbDepartamentos.Text);
 
 
 
 
             Produto obj = new Produto()
             {
-                nomeProduto = txtNomeProduto.Text,
-                descProduto = TxtDesc.Text,
-                precoProduto = decimal.Parse(txtPreco.Text),
-                qtdEstoque = Convert.ToInt32(txtQuantidade),
-                departamento = cbDepartamentos.SelectedIndex.ToString()
+                nomeProduto = nome,
+                descProduto = desc,
+                precoProduto = precoUnitProduto,
+                qtdEstoque = quantidadeEstoque,
+                departamento = dep
             };
 
 
-            ProdutoDAO dao = new ProdutoDAO();
+            
             dao.CadastrarProduto(obj);
 
 
 
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar !=44)
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
+        }
+
+        private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 )
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
+            if(e.KeyChar == 44)
+            {
+                MessageBox.Show("Por gentileza insira apenas números inteiros");
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ using TESTE_GUNA.projeto.view;
 
 using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -26,11 +27,11 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
+        
 
-        #region Classes Estáticas
 
         #region CadastroProduto
-      
+
         public void CadastrarProduto(Produto obj)
         {
             try
@@ -50,9 +51,8 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
-                MySqlCommand executacmd = new MySqlCommand(@sql, conexao);
-                executacmd.Parameters.AddWithValue("@email", email);
-                executacmd.Parameters.AddWithValue("@senha", senha);
+                
+;
 
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
@@ -61,28 +61,29 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-                    FrmMenu menuCliente = new FrmMenu();
-                    AdmFrmMenu menuAdm = new AdmFrmMenu();
+                FrmMessageBox mensagem = new FrmMessageBox();
 
 
-                    if (nivel.Equals(2))
-                    {
-                        menuCliente.Show();
-                    }
+                mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
+                mensagem.ShowDialog();
+
+
+
+            }
             catch (Exception erro)
-                    {
-                        menuAdm.Show();
+            {
+                
 
-                    MessageBox.Show(erro.Message);
-                    }
+                MessageBox.Show(erro.Message);
+            }
 
 
-                    return true;
-                }
-        #endregion
+                    
+            
+        
 
         }
         #endregion
-        #endregion
+        
     }
 }

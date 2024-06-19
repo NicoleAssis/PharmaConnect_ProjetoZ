@@ -58,7 +58,7 @@
             this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(5, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(534, 39);
+            this.panel1.Size = new System.Drawing.Size(558, 39);
             this.panel1.TabIndex = 96;
             // 
             // label
@@ -89,24 +89,24 @@
             // 
             // btnCadastrarProduto
             // 
-            this.btnCriarProduto.BackColor = System.Drawing.Color.Transparent;
-            this.btnCriarProduto.BorderRadius = 20;
-            this.btnCriarProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCriarProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCriarProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCriarProduto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCriarProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCriarProduto.FillColor = System.Drawing.Color.Navy;
-            this.btnCriarProduto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
-            this.btnCriarProduto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarProduto.ForeColor = System.Drawing.Color.White;
-            this.btnCriarProduto.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCriarProduto.Location = new System.Drawing.Point(210, 370);
-            this.btnCriarProduto.Name = "btnCriarProduto";
-            this.btnCriarProduto.Size = new System.Drawing.Size(201, 42);
-            this.btnCriarProduto.TabIndex = 99;
-            this.btnCriarProduto.Text = "CADASTRAR PRODUTO";
-            this.btnCriarProduto.Click += new System.EventHandler(this.btnCriarProduto_Click);
+            this.btnCadastrarProduto.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarProduto.BorderRadius = 20;
+            this.btnCadastrarProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrarProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCadastrarProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCadastrarProduto.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCadastrarProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCadastrarProduto.FillColor = System.Drawing.Color.Navy;
+            this.btnCadastrarProduto.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.btnCadastrarProduto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProduto.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarProduto.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(210, 370);
+            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
+            this.btnCadastrarProduto.Size = new System.Drawing.Size(201, 42);
+            this.btnCadastrarProduto.TabIndex = 99;
+            this.btnCadastrarProduto.Text = "CADASTRAR PRODUTO";
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCriarProduto_Click);
             // 
             // panel3
             // 
@@ -114,9 +114,9 @@
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel3.Location = new System.Drawing.Point(5, 370);
+            this.panel3.Location = new System.Drawing.Point(5, 440);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(534, 10);
+            this.panel3.Size = new System.Drawing.Size(558, 10);
             this.panel3.TabIndex = 98;
             // 
             // panel2
@@ -125,9 +125,9 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Location = new System.Drawing.Point(539, 0);
+            this.panel2.Location = new System.Drawing.Point(563, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 380);
+            this.panel2.Size = new System.Drawing.Size(10, 450);
             this.panel2.TabIndex = 97;
             // 
             // panel4
@@ -138,7 +138,7 @@
             this.panel4.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 380);
+            this.panel4.Size = new System.Drawing.Size(5, 450);
             this.panel4.TabIndex = 95;
             // 
             // txtQuantidade
@@ -165,7 +165,6 @@
             this.txtQuantidade.SelectedText = "";
             this.txtQuantidade.Size = new System.Drawing.Size(216, 32);
             this.txtQuantidade.TabIndex = 105;
-            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             this.txtQuantidade.Click += new System.EventHandler(this.txtQuantidade_Click);
             this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
@@ -205,9 +204,8 @@
             this.txtPreco.SelectedText = "";
             this.txtPreco.Size = new System.Drawing.Size(216, 32);
             this.txtPreco.TabIndex = 103;
-            this.txtPreco.TextChanged += new System.EventHandler(this.txtPreco_TextChanged);
             this.txtPreco.Click += new System.EventHandler(this.txtPreco_Click);
-            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKeyPress);
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // label2
             // 
@@ -280,7 +278,7 @@
             this.TxtDesc.Name = "TxtDesc";
             this.TxtDesc.PasswordChar = '\0';
             this.TxtDesc.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.TxtDesc.PlaceholderText = "Desc";
+            this.TxtDesc.PlaceholderText = "Descrição";
             this.TxtDesc.SelectedText = "";
             this.TxtDesc.Size = new System.Drawing.Size(216, 32);
             this.TxtDesc.TabIndex = 106;
@@ -289,11 +287,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label4.Location = new System.Drawing.Point(170, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
+            this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 107;
             this.label4.Text = "Descriçâo:";
             // 
@@ -325,11 +323,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label5.Location = new System.Drawing.Point(130, 316);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 19);
+            this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 109;
             this.label5.Text = "Departamentos:";
             // 
@@ -358,7 +356,6 @@
             this.Name = "AdmFrmAdicionarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmFrmAdicionarProduto";
-            this.Load += new System.EventHandler(this.AdmFrmAdicionarProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
