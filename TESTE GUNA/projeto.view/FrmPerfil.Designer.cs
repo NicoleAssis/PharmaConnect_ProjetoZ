@@ -849,7 +849,7 @@
             this.btnSalvar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(654, 402);
+            this.btnSalvar.Location = new System.Drawing.Point(645, 415);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(141, 44);
             this.btnSalvar.TabIndex = 78;

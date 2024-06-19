@@ -113,6 +113,7 @@
     <Compile Include="projet.conexao\ConnectionFactory.cs" />
     <Compile Include="projeto.dao\AdministradorDAO.cs" />
     <Compile Include="projeto.dao\ClienteDAO.cs" />
+    <Compile Include="projeto.dao\ProdutoDAO.cs" />
     <Compile Include="projeto.model\Administrador.cs" />
     <Compile Include="projeto.model\Cliente.cs" />
     <Compile Include="projeto.model\FormaPagamento.cs" />

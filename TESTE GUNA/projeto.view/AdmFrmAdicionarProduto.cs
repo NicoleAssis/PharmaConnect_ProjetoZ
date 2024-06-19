@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projet.conexao;
+using TESTE_GUNA.projeto.model;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -30,7 +33,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtNomeCartao_Click(object sender, EventArgs e)
         {
-            txtNomeCartao.Text = "";
+            txtNomeProduto.Text = "";
         }
 
         private void txtPreco_Click(object sender, EventArgs e)
@@ -48,6 +51,25 @@ namespace TESTE_GUNA.projeto.view
             FrmMessageBox mensagem = new FrmMessageBox();
             mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
             mensagem.ShowDialog();
+
+
+
+
+            Produto obj = new Produto()
+            {
+                nomeProduto = txtNomeProduto.Text,
+                descProduto = TxtDesc.Text,
+                precoProduto = decimal.Parse(txtPreco.Text),
+                qtdEstoque = Convert.ToInt32(txtQuantidade),
+                departamento = cbDepartamentos.SelectedIndex.ToString()
+            };
+
+
+            ProdutoDAO dao = new ProdutoDAO();
+            dao.CadastrarProduto(obj);
+
+
+
         }
     }
 }
