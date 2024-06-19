@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
+
+
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -23,98 +27,63 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region Methodoso
+        
 
-        #region Cadastrar produto
-        public bool EfetuarLogin(string email, string senha)
+
+        #region CadastroProduto
+
+        public void CadastrarProduto(Produto obj)
         {
             try
             {
 
-                //criando sql
-                string sql = @"inset to";
+                //Definindo comando SQL
+                string sql = @"insert into tb_produtos (nome_produto, desc_produto, preco_produto, qtd_estoque, departamento)
+                            values(@nomeProduto,@descProduto,@precoProduto,@qtdEstoque,@departamento)";
 
-                //organizar e executar o sql
 
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-                MySqlCommand executacmd = new MySqlCommand(@sql, conexao);
-                executacmd.Parameters.AddWithValue("@email", email);
-                executacmd.Parameters.AddWithValue("@senha", senha);
+                executacmd.Parameters.AddWithValue("@nomeProduto", obj.nomeProduto);
+                executacmd.Parameters.AddWithValue("@descProduto", obj.descProduto);
+                executacmd.Parameters.AddWithValue("@precoProduto", obj.precoProduto);
+                executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
+                executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
+                
+;
+
+                //Abrindo conexao e aplicando sql
                 conexao.Open();
+                executacmd.ExecuteNonQuery();
 
-                MySqlDataReader reader = executacmd.ExecuteReader();
+                //fechando conexao
+                conexao.Close();
 
-                //Metódo de Leitura
-                if (reader.Read())
-                {
-                    //nivel = reader.GetString("nivel_acesso");
-                    string nome = reader.GetString("nome_cliente");
-                    int nivel = reader.GetInt32(14);
-
-                    //Testando dados testados do banco
+                FrmMessageBox mensagem = new FrmMessageBox();
 
 
-
-                    /*
-                     * 
-                     * 
-                     * 
-                     * 
-                     * ADICIONAR FORM DE CLIENTE LOGADO COM SUCESSO 
-                     * 
-                     * 
-                     * 
-                     * 
-                     * */
-
-                    FrmMenu menuCliente = new FrmMenu();
-                    AdmFrmMenu menuAdm = new AdmFrmMenu();
+                mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
+                mensagem.ShowDialog();
 
 
-                    if (nivel.Equals(2))
-                    {
-                        menuCliente.Show();
-                    }
-                    else if (nivel.Equals(1))
-                    {
-                        menuAdm.Show();
-
-                    }
-
-
-                    return true;
-                }
-                else
-                {
-                    /*
-                    * 
-                    * 
-                    * 
-                    * 
-                    * ADICIONAR FORM SE SENHA OU EMAIL INCORRETOS
-                    * 
-                    * 
-                    * 
-                    * 
-                    * */
-
-                    Helpers limparTela = new Helpers();
-
-
-                    FrmLogin tela = new FrmLogin();
-                    return false;
-                }
 
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Aconteceu o erro: " + erro);
-                return false;
+                
+
+                MessageBox.Show(erro.Message);
             }
+
+
+                    
+            
+        
 
         }
         #endregion
-        #endregion
+        
     }
 }
