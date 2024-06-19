@@ -10,10 +10,11 @@ using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
 using System.Windows;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace TESTE_GUNA.projeto.dao
 {
-    public  class AdministradorDAO
+    public class AdministradorDAO
     {
 
         //Conecta com o Banco de dados
@@ -26,7 +27,7 @@ namespace TESTE_GUNA.projeto.dao
         }
 
         #region Login
-        public bool EfetuarLoginAdministrador (string email, string senha)
+        public bool EfetuarLoginAdministrador(string email, string senha)
         {
             try
             {
@@ -87,7 +88,7 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Aconteceu o erro " + erro);
+                System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
                 return false;
             }
 
@@ -100,13 +101,11 @@ namespace TESTE_GUNA.projeto.dao
         {
             try
             {
-
-                //Definindo comando SQL
+                // Definindo comando SQL
                 string sql = @"insert into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador, endereco_administrador, numero_administrador,complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador,senha_administrador,nivel_acesso)
-                            values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
+                    values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
 
-
-                //Organizando comando SQL
+                // Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
                 executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
@@ -114,38 +113,6 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
                 executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
-                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
-
-                //Abrindo conexao e aplicando sql
-                conexao.Open();
-                executacmd.ExecuteNonQuery();
-
-                //fechando conexao
-                conexao.Close();
-
-            }
-            catch (Exception erro)
-            {
-
-                MessageBox.Show("Erro Identificado:" + erro);
-            }
-        }
-        #endregion
-
-        #region CadastroAdministrador2
-        public void CadastrarAdministador2(Administrador obj)
-        {
-            try
-            {
-
-                //Definindo comando SQL
-                string sql = @"insert into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador, endereco_administrador, numero_administrador,complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador,senha_administrador,nivel_acesso)
-                            values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
-
-
-                //Organizando comando SQL
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
                 executacmd.Parameters.AddWithValue("@cep_administrador", obj.cep);
                 executacmd.Parameters.AddWithValue("@endereco_administrador", obj.endereco);
                 executacmd.Parameters.AddWithValue("@numero_administrador", obj.numero);
@@ -153,21 +120,65 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@bairro_administrador", obj.bairro);
                 executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
                 executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
+                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
+               
 
-                //Abrindo conexao e aplicando sql
+                // Abrindo conexão e aplicando SQL
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                //fechando conexao
+                // Fechando conexão
                 conexao.Close();
-
             }
             catch (Exception erro)
             {
-
-                MessageBox.Show("Erro Identificado:" + erro);
+                System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
             }
         }
+
+        #endregion
+
+        #region CadastroAdministrador2
+        public void CadastrarAdministador2(Administrador obj)
+        {
+
+            try
+            {
+                // Definindo comando SQL
+                string sql = @"insert into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador, endereco_administrador, numero_administrador,complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador,senha_administrador,nivel_acesso)
+                    values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
+
+                // Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
+                executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
+                executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
+                executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
+                executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
+                executacmd.Parameters.AddWithValue("@cep_administrador", obj.cep);
+                executacmd.Parameters.AddWithValue("@endereco_administrador", obj.endereco);
+                executacmd.Parameters.AddWithValue("@numero_administrador", obj.numero);
+                executacmd.Parameters.AddWithValue("@complemento_administrador", obj.complemento);
+                executacmd.Parameters.AddWithValue("@bairro_administrador", obj.bairro);
+                executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
+                executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
+                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
+               
+
+                // Abrindo conexão e aplicando SQL
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // Fechando conexão
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+                System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+
         #endregion
 
         #region ValidarCPNJ
@@ -217,5 +228,7 @@ namespace TESTE_GUNA.projeto.dao
         }
 
         #endregion
+
+
     }
 }

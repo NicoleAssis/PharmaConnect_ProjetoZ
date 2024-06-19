@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
     public partial class AdmFrmCadastroAdministradorC2 : Form
     {
-        public AdmFrmCadastroAdministradorC2()
+        private Administrador admin;
+
+        // Construtor que aceita um argumento do tipo Administrador
+        public AdmFrmCadastroAdministradorC2(Administrador admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)

@@ -308,6 +308,8 @@ namespace TESTE_GUNA.projeto.dao
                         
                         
                         FrmPerfil telaPerfil = new FrmPerfil();
+
+                        
                         telaPerfil.txtNome.Text = nome;
                         telaPerfil.txtEndereco.Text = endereco;
                         telaPerfil.txtCidade.Text = cidade;

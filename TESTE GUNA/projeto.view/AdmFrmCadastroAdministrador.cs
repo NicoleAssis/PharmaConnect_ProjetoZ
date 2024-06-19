@@ -77,20 +77,38 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //Instancei Cliente Dao para executar 
+            Administrador admin = new Administrador
+            {
+                cnpj = txtCNPJ.Text,
+                nome = txtNome.Text,
+                email = txtEmail.Text,
+                
+                celular = txtCelular.Text,
+                senha = txtSenha.Text,
+               
+            };
+
+            // Passa o objeto admin para a próxima tela (Form2)
+            AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
+            form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
+            this.Hide();
+
+
+
+            /*//Instancei Cliente Dao para executar 
             AdministradorDAO dao = new AdministradorDAO();
 
             //recebo dados txt
             string cnpj_string = txtCNPJ.Text;
             string email = txtEmail.Text;
 
-            // 1° Validação: CPF
+            // 1° Validação: Cnpj
             bool validacaoCNPJ = AdministradorDAO.ValidarCNPJ((cnpj_string));
 
             //2° Validação: Email
             bool validacaoEmail = Validador.ValidarEmail(email);
 
-
+            
             #region Validando Email e CPnjp
             if (validacaoEmail && validacaoCNPJ)
             {
@@ -107,27 +125,43 @@ namespace TESTE_GUNA.projeto.view
                 dao.CadastrarAdministador1(obj);
                 FrmMessageBox mensagem = new FrmMessageBox();
                 mensagem.Mensagem("Cadastro Efetuado");
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtSenha.Clear();
+                txtCNPJ.Clear();
+                txtBase.Clear();
 
 
                 //abrir a tela de login
-                AdmFrmCadastroAdministradorC2 telaLogin = new AdmFrmCadastroAdministradorC2();
+                AdmFrmCadastroAdministradorC2 telaLogin2 = new AdmFrmCadastroAdministradorC2();
                 ////esconde a tela anterior
 
                 new Helpers().LimparTela(this);
-                telaLogin.Show();
+                telaLogin2.Show();
                 this.Hide();
             }
-            else if (validacaoCNPJ == true && validacaoCNPJ == false || validacaoEmail == false && validacaoCNPJ == true)
+            else if (validacaoCNPJ == true && validacaoCNPJ == false)
             {
                 MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtSenha.Clear();
+                txtCNPJ.Clear();
+                txtBase.Clear();
+                
+
             }
             else
             {
                 MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtSenha.Clear();
+
             }
 
 
-            #endregion
+            #endregion*/
         }
     }
 }
