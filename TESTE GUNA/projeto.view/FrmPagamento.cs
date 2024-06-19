@@ -86,6 +86,8 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagamento_Load(object sender, EventArgs e)
         {
+              
+
 
         }
 
