@@ -23,6 +23,32 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
         }
 
+        public String PagamentoEscolhido(string pagamento)
+        {
+            if (checkBoxCredito.Checked)
+            {
+                pagamento = "Credito";
+                return pagamento;
+            }
+            else if (checkBoxDebito.Checked)
+            {
+                pagamento = "Debito";
+                return pagamento;
+
+            }
+            else if (checkBoxPix.Checked)
+            {
+                pagamento = "Pix";
+                return pagamento;
+            }
+            else
+            {
+                pagamento = "Erro";
+                return pagamento;
+            }
+
+        }
+
         //IR PARA A TELA DO PAGAMENTO DESEJADO
         private void btnEscolherPagamento_Click(object sender, EventArgs e)
         {
@@ -60,6 +86,8 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagamento_Load(object sender, EventArgs e)
         {
+              
+
 
         }
 
