@@ -109,6 +109,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComprarAvancar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComprarAvancar.Designer.cs">
+      <DependentUpon>ComprarAvancar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="projet.conexao\ConnectionFactory.cs" />
     <Compile Include="projeto.dao\AdministradorDAO.cs" />
@@ -123,6 +129,12 @@
     <Compile Include="projeto.model\Produto.cs" />
     <Compile Include="projeto.model\Validador.cs" />
     <Compile Include="projeto.model\Venda.cs" />
+    <Compile Include="projeto.view\AdicionarAvançar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\AdicionarAvançar.Designer.cs">
+      <DependentUpon>AdicionarAvançar.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +286,12 @@
       <DependentUpon>UserControlProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComprarAvancar.resx">
+      <DependentUpon>ComprarAvancar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\AdicionarAvançar.resx">
+      <DependentUpon>AdicionarAvançar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmAdicionarProduto.resx">
       <DependentUpon>AdmFrmAdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +434,7 @@
     <None Include="projeto.view\img\remedioImagemTeste2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />
     <Content Include="projeto.view\img\iconcep.png" />
@@ -423,6 +442,7 @@
     <Content Include="projeto.view\img\iconendereço.png" />
     <Content Include="projeto.view\img\iconendereço2.png" />
     <Content Include="projeto.view\img\iconendereço3.png" />
+    <None Include="Resources\azulclean.jpg" />
     <None Include="projeto.view\img\iconHome.png" />
     <Content Include="projeto.view\img\iconnumero.png" />
     <None Include="projeto.view\img\IconPessoa.png" />
