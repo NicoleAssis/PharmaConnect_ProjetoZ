@@ -17,6 +17,14 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public string TipoDePagamento { get; set; }
+
+        public FrmPagCredito(string pagamento)
+        {
+            InitializeComponent();
+            TipoDePagamento = pagamento;
+        }
+
         private void btnX_Click(object sender, EventArgs e)
         {
             //button fechar a tela de pagamento
@@ -34,7 +42,7 @@ namespace TESTE_GUNA.projeto.view
             else
             {
                 //abrir tela finalizar pagamento
-                FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
+                FrmPagFinalizar telaFinalizar = new FrmPagFinalizar("Credito", txtCartao.Text, txtNomeCartao.Text, txtMes.Text, txtAno.Text, txtCVV.Text);
                 this.Close();
                 telaFinalizar.ShowDialog();
             }
@@ -44,7 +52,9 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagCredito_Load(object sender, EventArgs e)
         {
-
+            FrmMessageBox messageBox = new FrmMessageBox();
+            messageBox.Mensagem(TipoDePagamento);
+            messageBox.ShowDialog();
         }
 
         private void txtNomeCartao_Click(object sender, EventArgs e)

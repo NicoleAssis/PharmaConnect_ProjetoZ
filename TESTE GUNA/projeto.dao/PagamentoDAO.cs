@@ -22,7 +22,7 @@ namespace TESTE_GUNA.projeto.dao
 
         }
 
-        #region telaPagamento 
+        #region InserirNoBanco
 
 
 
@@ -30,20 +30,6 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
-        #region telaTipoPagamento
-
-
-
-
-        #endregion
-
-
-        #region telaPagamento 
-
-
-
-
-        #endregion
 
 
     }

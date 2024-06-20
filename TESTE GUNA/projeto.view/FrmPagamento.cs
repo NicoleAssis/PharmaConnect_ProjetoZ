@@ -31,7 +31,7 @@ namespace TESTE_GUNA.projeto.view
             if (checkBoxCredito.Checked)
             {
                 //abre a tela de credito
-                FrmPagCredito telaCredito = new FrmPagCredito();
+                FrmPagCredito telaCredito = new FrmPagCredito("Credito");
                 this.Close();
                 telaCredito.ShowDialog();
 

@@ -216,19 +216,20 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox txtSenha;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2Button btnCadastrar;
         public Guna.UI2.WinForms.Guna2Button btnEntrar;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxMostrarSenha;
+        public Guna.UI2.WinForms.Guna2TextBox txtSenha;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
     }
 }
