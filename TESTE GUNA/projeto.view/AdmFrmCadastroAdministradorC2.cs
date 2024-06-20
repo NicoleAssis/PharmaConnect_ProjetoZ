@@ -44,10 +44,13 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            
-          
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
+            frmMessageBox.ShowDialog();
+            AdmFrmMenu telaadmmenu = new AdmFrmMenu();
+            telaadmmenu.Show();
 
-            
+
 
         }
 
@@ -62,6 +65,12 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void txtCEP_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -106,7 +115,6 @@ namespace TESTE_GUNA.projeto.view
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
-
         }
     }
 }

@@ -40,6 +40,7 @@
             this.txtbase1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEstado = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtpesquisarcep = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnX
@@ -309,6 +310,28 @@
             this.txtCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCEP_MaskInputRejected);
             this.txtCEP.Click += new System.EventHandler(this.txtCEP_Click);
             // 
+            // txtpesquisarcep
+            // 
+            this.txtpesquisarcep.BackColor = System.Drawing.Color.Transparent;
+            this.txtpesquisarcep.BorderColor = System.Drawing.SystemColors.HighlightText;
+            this.txtpesquisarcep.BorderRadius = 20;
+            this.txtpesquisarcep.BorderThickness = 2;
+            this.txtpesquisarcep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtpesquisarcep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtpesquisarcep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txtpesquisarcep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txtpesquisarcep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txtpesquisarcep.FillColor = System.Drawing.SystemColors.HotTrack;
+            this.txtpesquisarcep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpesquisarcep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtpesquisarcep.Image = global::TESTE_GUNA.Properties.Resources.IconLupa1;
+            this.txtpesquisarcep.Location = new System.Drawing.Point(672, 116);
+            this.txtpesquisarcep.Name = "txtpesquisarcep";
+            this.txtpesquisarcep.PressedColor = System.Drawing.Color.Indigo;
+            this.txtpesquisarcep.Size = new System.Drawing.Size(49, 35);
+            this.txtpesquisarcep.TabIndex = 61;
+            this.txtpesquisarcep.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // AdmFrmCadastroAdministradorC2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +339,7 @@
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.telaAdm2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.txtpesquisarcep);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtbase1);
@@ -350,5 +374,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtbase1;
         private Guna.UI2.WinForms.Guna2TextBox txtEstado;
         private System.Windows.Forms.MaskedTextBox txtCEP;
+        public Guna.UI2.WinForms.Guna2Button txtpesquisarcep;
     }
 }

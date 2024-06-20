@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
@@ -80,27 +81,37 @@ namespace TESTE_GUNA.projeto.view
             // Validação dos campos
             if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo CNPJ.");
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Por favor, preencha um CNPJ valido");
+                frmMessageBox.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Nome.");
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Por favor, preencha um Nome valido");
+                frmMessageBox.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
             {
-                MessageBox.Show("Por favor, preencha um email válido.");
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Por favor, preencha um Email valido");
+                frmMessageBox.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtCelular.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Celular.");
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Por favor, preencha um Celular valido");
+                frmMessageBox.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtSenha.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Senha.");
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Por favor, preencha uma Senha valido");
+                frmMessageBox.ShowDialog();
                 return;
             }
 

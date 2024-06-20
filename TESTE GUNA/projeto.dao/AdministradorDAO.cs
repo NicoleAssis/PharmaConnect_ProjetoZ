@@ -121,7 +121,8 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
                 executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
                 executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
-               
+                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
+
 
                 // Abrindo conexão e aplicando SQL
                 conexao.Open();
@@ -164,7 +165,8 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
                 executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
                 executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
-               
+                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
+
 
                 // Abrindo conexão e aplicando SQL
                 conexao.Open();
