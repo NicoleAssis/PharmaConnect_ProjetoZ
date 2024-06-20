@@ -52,9 +52,11 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagCredito_Load(object sender, EventArgs e)
         {
+
             FrmMessageBox messageBox = new FrmMessageBox();
             messageBox.Mensagem(TipoDePagamento);
             messageBox.ShowDialog();
+
         }
 
         private void txtNomeCartao_Click(object sender, EventArgs e)
