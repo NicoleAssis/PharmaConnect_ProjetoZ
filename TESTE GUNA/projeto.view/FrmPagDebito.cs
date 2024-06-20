@@ -35,10 +35,20 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnSalvarInfo_Click(object sender, EventArgs e)
         {
-            //abrir tela finalizar pagamento
-            FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
-            this.Close();
-            telaFinalizar.ShowDialog();
+            if (txtAno.Text == "" || txtCartao.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "")
+            {
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("PREENCHA TODOS OS CAMPOS!");
+                message.ShowDialog();
+            }
+            else
+            {
+                //abrir tela finalizar pagamento
+                FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
+                this.Close();
+                telaFinalizar.ShowDialog();
+            }
+
         }
 
         private void txtNomeCartao_Click(object sender, EventArgs e)

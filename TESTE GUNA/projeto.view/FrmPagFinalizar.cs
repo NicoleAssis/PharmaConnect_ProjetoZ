@@ -39,6 +39,8 @@ namespace TESTE_GUNA.projeto.view
         {
             //Button finalizar o pagamento
 
+            /*
+            
             //pergunta se deseja efetuar o pagamento ou nao
             FrmMessageBox frmMessageBox = new FrmMessageBox();
             frmMessageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
@@ -63,7 +65,33 @@ namespace TESTE_GUNA.projeto.view
                 frmMessageBox.Mensagem("Selecione SIM ou NAO");
             }
 
+            */
 
+            FrmPagamento telaPagamento = new FrmPagamento();
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+
+            if (telaPagamento.checkBoxCredito.Checked)
+            {
+                frmMessageBox.Mensagem("c");
+                frmMessageBox.ShowDialog();
+
+            }
+            else if (telaPagamento.checkBoxDebito.Checked)
+            {
+                frmMessageBox.Mensagem("d");
+                frmMessageBox.ShowDialog();
+
+            }
+            else if (telaPagamento.checkBoxPix.Checked)
+            {
+                frmMessageBox.Mensagem("p");
+                frmMessageBox.ShowDialog();
+            }
+            else
+            {
+                frmMessageBox.Mensagem("erro");
+                frmMessageBox.ShowDialog();
+            }
 
 
 

@@ -17,42 +17,18 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public string pagEscolhido;
+
         private void btnX_Click(object sender, EventArgs e)
         {
             //button fechar a tela de pagamento
             this.Close();
         }
 
-        public String PagamentoEscolhido(string pagamento)
-        {
-            if (checkBoxCredito.Checked)
-            {
-                pagamento = "Credito";
-                return pagamento;
-            }
-            else if (checkBoxDebito.Checked)
-            {
-                pagamento = "Debito";
-                return pagamento;
-
-            }
-            else if (checkBoxPix.Checked)
-            {
-                pagamento = "Pix";
-                return pagamento;
-            }
-            else
-            {
-                pagamento = "Erro";
-                return pagamento;
-            }
-
-        }
-
         //IR PARA A TELA DO PAGAMENTO DESEJADO
         private void btnEscolherPagamento_Click(object sender, EventArgs e)
         {
-            if(checkBoxCredito.Checked )
+            if (checkBoxCredito.Checked)
             {
                 //abre a tela de credito
                 FrmPagCredito telaCredito = new FrmPagCredito();
@@ -60,7 +36,7 @@ namespace TESTE_GUNA.projeto.view
                 telaCredito.ShowDialog();
 
             }
-            else if(checkBoxDebito.Checked)
+            else if (checkBoxDebito.Checked)
             {
                 //abre a tela de debito
                 FrmPagDebito telaDebito = new FrmPagDebito();

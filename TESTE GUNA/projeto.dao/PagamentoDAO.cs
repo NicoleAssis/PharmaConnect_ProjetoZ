@@ -22,7 +22,28 @@ namespace TESTE_GUNA.projeto.dao
 
         }
 
+        #region telaPagamento 
 
+
+
+
+        #endregion
+
+
+        #region telaTipoPagamento
+
+
+
+
+        #endregion
+
+
+        #region telaPagamento 
+
+
+
+
+        #endregion
 
 
     }
