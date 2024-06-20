@@ -34,5 +34,10 @@ namespace TESTE_GUNA.projeto.view
             //button fechar o programa (X)
             this.Close();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

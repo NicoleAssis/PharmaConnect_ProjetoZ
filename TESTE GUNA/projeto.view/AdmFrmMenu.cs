@@ -47,5 +47,17 @@ namespace TESTE_GUNA.projeto.view
         {
             txtPesquisa.Text = "";
         }
+
+        private void btnCadastrarAdm_Click(object sender, EventArgs e)
+        {
+            AdmFrmCadastroAdministrador telaCadastro = new AdmFrmCadastroAdministrador();
+            this.Close();
+            telaCadastro.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

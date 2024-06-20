@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlComprasProdutos));
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.btnMenos = new System.Windows.Forms.PictureBox();
-            this.btnMais = new System.Windows.Forms.PictureBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imagemProduto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
@@ -43,6 +40,9 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.lblPreco = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnMenos = new System.Windows.Forms.PictureBox();
+            this.btnMais = new System.Windows.Forms.PictureBox();
+            this.imagemProduto = new System.Windows.Forms.PictureBox();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMais)).BeginInit();
@@ -85,28 +85,6 @@
             this.lblSubtotal.TabIndex = 48;
             this.lblSubtotal.Text = "RS: 135,50";
             // 
-            // btnMenos
-            // 
-            this.btnMenos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenos.BackgroundImage")));
-            this.btnMenos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMenos.Location = new System.Drawing.Point(518, 27);
-            this.btnMenos.Name = "btnMenos";
-            this.btnMenos.Size = new System.Drawing.Size(32, 31);
-            this.btnMenos.TabIndex = 47;
-            this.btnMenos.TabStop = false;
-            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
-            // 
-            // btnMais
-            // 
-            this.btnMais.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMais.BackgroundImage")));
-            this.btnMais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMais.Location = new System.Drawing.Point(598, 28);
-            this.btnMais.Name = "btnMais";
-            this.btnMais.Size = new System.Drawing.Size(28, 28);
-            this.btnMais.TabIndex = 46;
-            this.btnMais.TabStop = false;
-            this.btnMais.Click += new System.EventHandler(this.btnMais_Click);
-            // 
             // txtQuantidade
             // 
             this.txtQuantidade.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
@@ -126,19 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 100);
             this.panel1.TabIndex = 44;
-            // 
-            // imagemProduto
-            // 
-            this.imagemProduto.BackColor = System.Drawing.Color.White;
-            this.imagemProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagemProduto.BackgroundImage")));
-            this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imagemProduto.Location = new System.Drawing.Point(0, 0);
-            this.imagemProduto.Margin = new System.Windows.Forms.Padding(7);
-            this.imagemProduto.Name = "imagemProduto";
-            this.imagemProduto.Size = new System.Drawing.Size(99, 88);
-            this.imagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagemProduto.TabIndex = 42;
-            this.imagemProduto.TabStop = false;
             // 
             // panel2
             // 
@@ -212,6 +177,41 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(3, 100);
             this.panel12.TabIndex = 34;
+            // 
+            // btnMenos
+            // 
+            this.btnMenos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenos.BackgroundImage")));
+            this.btnMenos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenos.Location = new System.Drawing.Point(518, 27);
+            this.btnMenos.Name = "btnMenos";
+            this.btnMenos.Size = new System.Drawing.Size(32, 31);
+            this.btnMenos.TabIndex = 47;
+            this.btnMenos.TabStop = false;
+            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
+            // 
+            // btnMais
+            // 
+            this.btnMais.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMais.BackgroundImage")));
+            this.btnMais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMais.Location = new System.Drawing.Point(598, 28);
+            this.btnMais.Name = "btnMais";
+            this.btnMais.Size = new System.Drawing.Size(28, 28);
+            this.btnMais.TabIndex = 46;
+            this.btnMais.TabStop = false;
+            this.btnMais.Click += new System.EventHandler(this.btnMais_Click);
+            // 
+            // imagemProduto
+            // 
+            this.imagemProduto.BackColor = System.Drawing.Color.White;
+            this.imagemProduto.BackgroundImage = global::TESTE_GUNA.Properties.Resources.imagemProdutooficial;
+            this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imagemProduto.Location = new System.Drawing.Point(0, 0);
+            this.imagemProduto.Margin = new System.Windows.Forms.Padding(7);
+            this.imagemProduto.Name = "imagemProduto";
+            this.imagemProduto.Size = new System.Drawing.Size(99, 82);
+            this.imagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagemProduto.TabIndex = 42;
+            this.imagemProduto.TabStop = false;
             // 
             // UserControlComprasProdutos
             // 
