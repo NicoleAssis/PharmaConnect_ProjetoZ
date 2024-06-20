@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows;
 
 namespace TESTE_GUNA.projeto.model
@@ -14,6 +16,11 @@ namespace TESTE_GUNA.projeto.model
         public Validador(string email) 
         {
             this.email = email;
+        }
+
+        public Validador()
+        {
+            
         }
         public static bool ValidarEmail(string email)
         {
@@ -32,7 +39,19 @@ namespace TESTE_GUNA.projeto.model
             }
         }
 
+        public string RemoveAccents(string text)
+        {
+            StringBuilder sbReturn = new StringBuilder();
+            var arrayText = text.Normalize(NormalizationForm.FormD).ToCharArray();
+            foreach (char letter in arrayText)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(letter) != UnicodeCategory.NonSpacingMark)
+                    sbReturn.Append(letter);
+            }
+            return sbReturn.ToString();
+        }
 
-        
+
+
     }
 }

@@ -325,14 +325,14 @@ namespace TESTE_GUNA.projeto.dao
                         FrmMenu telaMenu = new FrmMenu();
                         telaMenu.Show();
 
-                        
-                        
+
+                        return true;
 
                     }
                     else if (nivel.Equals(1))
                     {
 
-                        
+                        return true;
                     }
 
 

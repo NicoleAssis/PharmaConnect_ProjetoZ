@@ -7,7 +7,14 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using TESTE_GUNA.projet.conexao;
+using TESTE_GUNA.projeto.model;
+using TESTE_GUNA.projeto.dao;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using System.Windows.Media;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -16,6 +23,9 @@ namespace TESTE_GUNA.projeto.view
         public AdmFrmAdicionarProduto()
         {
             InitializeComponent();
+            
+            
+            
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -24,6 +34,7 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
         }
 
+
         private void txtNomeCartao_TextChanged(object sender, EventArgs e)
         {
 
@@ -31,7 +42,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtNomeCartao_Click(object sender, EventArgs e)
         {
-            
+            txtNomeProduto.Text = "";
         }
 
         private void txtPreco_Click(object sender, EventArgs e)
@@ -44,81 +55,65 @@ namespace TESTE_GUNA.projeto.view
             
         }
 
+
+
+
+
         private void btnCriarProduto_Click(object sender, EventArgs e)
         {
-
+            ProdutoDAO dao = new ProdutoDAO();
+            Validador validade = new Validador();
             var precoentrada = Convert.ToDecimal(txtPreco.Text);
             txtPreco.Text = precoentrada.ToString("N2"); 
             
             string nome = txtNomeProduto.Text;
-            string desc = txtDescricao.Text;
+            string desc = TxtDesc.Text;
             int quantidadeEstoque = int.Parse(txtQuantidade.Text);
             decimal precoUnitProduto = decimal.Parse(txtPreco.Text);
-            string dep = cbDepartamentos.Text;
-            FrmMessageBox mensagem = new FrmMessageBox();
+            string dep = validade.RemoveAccents(cbDepartamentos.Text);
+
+
+
+
+            Produto obj = new Produto()
+            {
+                nomeProduto = nome,
+                descProduto = desc,
+                precoProduto = precoUnitProduto,
+                qtdEstoque = quantidadeEstoque,
+                departamento = dep
+            };
+
+
             
+            dao.CadastrarProduto(obj);
 
-            mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
-            mensagem.ShowDialog();
-            this.Close();
-        }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void TxtKeyPress(object sender, KeyPressEventArgs e)
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Back)
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar !=44)
             {
-                return;
-            }
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar  != 08 && e.KeyChar != 44)
-            {
+                //Atribui True no Handled para cancelar o evento
                 e.Handled = true;
-                return;
-            }else if(e.KeyChar == 44)
-            {
-                TextBox txt = (TextBox)sender;
-                if(txt.Text.Contains(","))
-                    e.Handled = true;
             }
-
-
-        }
-
-        private void AdmFrmAdicionarProduto_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtQuantidade_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Back)
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 )
             {
-                return;
-            }
-            if (char.IsDigit(e.KeyChar) == false)
-            {
+                //Atribui True no Handled para cancelar o evento
                 e.Handled = true;
-                return;
             }
-        }
-
-        private void txtPreco_TextChanged(object sender, EventArgs e)
-        {
-
+            if(e.KeyChar == 44)
+            {
+                MessageBox.Show("Por gentileza insira apenas números inteiros");
+            }
         }
     }
 }
