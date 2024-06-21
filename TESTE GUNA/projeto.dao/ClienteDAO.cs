@@ -6,6 +6,7 @@ using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
 using System.Data;
+using System.Linq;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -14,15 +15,54 @@ namespace TESTE_GUNA.projeto.dao
 
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
+              //retorna como TABELA
+        public DataTable listarClientes()
+        {
+            try
+            {
 
-        
+                //1 passo criar datatable e comando sql
 
-        
+                DataTable tabelaCliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaCliente);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+
+
+       
+
 
         //Construtor
         public ClienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
+         
         }
 
 
@@ -133,11 +173,94 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-        
+        #region Buscar dados do banco
+        public DataTable buscarDadosClientes(string email,string senha)
+        {
+            try
+            {
 
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelacliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes where email_cliente  = @email  and senha_cliente = @senha";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@email", email);
+                executacmd.Parameters.AddWithValue("@senha", senha);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelacliente;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+
+        #endregion
+
+        #region Buscar Clientes
+        //retorna como TABELA
+        public DataTable BuscarClientes()
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaCliente = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_clientes ";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaCliente);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+        #endregion
 
         #region Login
-        public bool EfetuarLogin(string email, string senha)
+        public bool EfetuarLogin(string email, string senha, FrmLogin telaLogin)
         {
             try
             {
@@ -186,6 +309,8 @@ namespace TESTE_GUNA.projeto.dao
                         
                         
                         FrmPerfil telaPerfil = new FrmPerfil();
+
+                        
                         telaPerfil.txtNome.Text = nome;
                         telaPerfil.txtEndereco.Text = endereco;
                         telaPerfil.txtCidade.Text = cidade;
@@ -197,9 +322,17 @@ namespace TESTE_GUNA.projeto.dao
                         telaPerfil.txtBairro.Text = bairro;
                         telaPerfil.txtNum.Text = numEnd.ToString();
                         telaPerfil.txtSenha.Text = senha;
-                        
-                        telaPerfil.Show();
 
+
+
+
+
+
+
+                        FrmMenu telaMenu = new FrmMenu();
+                        telaMenu.Show();
+
+                        telaLogin.Hide();
 
                         return true;
 
@@ -228,9 +361,10 @@ namespace TESTE_GUNA.projeto.dao
                          * */
 
                     Helpers limparTela = new Helpers();
-                    
 
-                    FrmLogin tela = new FrmLogin();
+
+
+                    FrmMenu tela = new FrmMenu();
                     return false;
                 }
                 

@@ -59,5 +59,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void panelDep_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

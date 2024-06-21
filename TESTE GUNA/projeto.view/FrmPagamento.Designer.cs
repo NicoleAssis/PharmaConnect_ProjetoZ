@@ -269,12 +269,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxDebito;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxCredito;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxPix;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnEscolherPagamento;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxDebito;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxCredito;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxPix;
     }
 }

@@ -44,7 +44,7 @@
             this.txtAno = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBase2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtCartao = new System.Windows.Forms.MaskedTextBox();
             this.txtCVV = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvarInfo = new Guna.UI2.WinForms.Guna2Button();
             this.panel14.SuspendLayout();
@@ -331,17 +331,17 @@
             this.label3.TabIndex = 91;
             this.label3.Text = "CVV:";
             // 
-            // txtCPF
+            // txtCartao
             // 
-            this.txtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCPF.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCPF.Location = new System.Drawing.Point(89, 82);
-            this.txtCPF.Mask = "0000-0000-0000-0000";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(158, 22);
-            this.txtCPF.TabIndex = 105;
+            this.txtCartao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCartao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCartao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCartao.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCartao.Location = new System.Drawing.Point(89, 82);
+            this.txtCartao.Mask = "0000-0000-0000-0000";
+            this.txtCartao.Name = "txtCartao";
+            this.txtCartao.Size = new System.Drawing.Size(158, 22);
+            this.txtCartao.TabIndex = 105;
             // 
             // txtCVV
             // 
@@ -383,7 +383,7 @@
             this.ClientSize = new System.Drawing.Size(332, 379);
             this.Controls.Add(this.btnSalvarInfo);
             this.Controls.Add(this.txtCVV);
-            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtCartao);
             this.Controls.Add(this.txtBase2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAno);
@@ -428,7 +428,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtAno;
         private Guna.UI2.WinForms.Guna2TextBox txtBase2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtCartao;
         private System.Windows.Forms.MaskedTextBox txtCVV;
         private Guna.UI2.WinForms.Guna2Button btnSalvarInfo;
     }

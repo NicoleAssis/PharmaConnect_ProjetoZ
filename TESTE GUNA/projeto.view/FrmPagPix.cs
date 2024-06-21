@@ -24,16 +24,32 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnSalvarInfo_Click(object sender, EventArgs e)
         {
+
             //abrir tela finalizar pagamento
-            FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
+            FrmPagFinalizar telaFinalizar = new FrmPagFinalizar("Pix", "Pix", "Pix", "Pix", "Pix", "Pix");
             this.Close();
             telaFinalizar.ShowDialog();
+
         }
 
         private void btnX_Click(object sender, EventArgs e)
         {
             //button fechar a tela de pagamento
             this.Close();
+        }
+
+        private void btnCopiar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPix.Text))
+            {
+                // Copiar o texto da TextBox para a área de transferência
+                Clipboard.SetText(txtPix.Text);
+                MessageBox.Show("Texto copiado para a área de transferência!");
+            }
+            else
+            {
+                MessageBox.Show("A TextBox está vazia, nada para copiar.");
+            }
         }
     }
 }

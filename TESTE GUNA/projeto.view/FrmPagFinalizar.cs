@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
+
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -17,8 +20,30 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public string TipoDePagamento { get; set; }
+        public string NumeroCartão { get; set; }
+        public string NomeCartao { get; set; }
+        public string Mes { get; set; }
+        public string Ano { get; set; }
+        public string CVV { get; set; }
+
+
+        public FrmPagFinalizar(string tipoPagamento, string numeroCartão, string nomeCartao, string mes, string ano, string cVV)
+        {
+            InitializeComponent();
+
+            TipoDePagamento = tipoPagamento;
+            NumeroCartão = numeroCartão;
+            NomeCartao = nomeCartao;
+            Mes = mes;
+            Ano = ano;
+            CVV = cVV;
+        }
+
+
         private void FrmPagFinalizar_Load(object sender, EventArgs e)
         {
+
             //printa os produtos na tela de scroll
             for (int i = 0; i <= 4; i++)
             {
@@ -26,6 +51,7 @@ namespace TESTE_GUNA.projeto.view
                 userControlProdutos.PrintarProduto(1);
                 scrollProdutosEscolhidos.Controls.Add(userControlProdutos);
             }
+
 
         }
 
@@ -38,7 +64,7 @@ namespace TESTE_GUNA.projeto.view
         private void btnSalvarAlteracoes_Click(object sender, EventArgs e)
         {
             //Button finalizar o pagamento
-
+            
             //pergunta se deseja efetuar o pagamento ou nao
             FrmMessageBox frmMessageBox = new FrmMessageBox();
             frmMessageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
@@ -46,6 +72,27 @@ namespace TESTE_GUNA.projeto.view
 
             if(frmMessageBox.btnSimClick == true)
             {
+
+                FormaPagamento obj = new FormaPagamento();
+
+                PagamentoDAO dao = new PagamentoDAO();
+                int idCliente = dao.RetornaIdCliente();
+
+                obj.tipoPagamento = TipoDePagamento;
+                obj.numCartao = NumeroCartão;
+                obj.mes = Mes;
+                obj.ano = Ano;
+                obj.cvv = CVV;
+                obj.idCliente = idCliente;
+
+
+
+                // 2 passo criar obj da classe clienteDAO e chamar o metodo cadastrarCliente
+                dao.CadastrarCompra(obj);
+
+
+
+
                 //se confirmou que deseja efetuar o pagamento
                 frmMessageBox.Mensagem("PAGAMENTO EFETUADO COM SUCESSO!");
                 frmMessageBox.ShowDialog();
@@ -63,7 +110,7 @@ namespace TESTE_GUNA.projeto.view
                 frmMessageBox.Mensagem("Selecione SIM ou NAO");
             }
 
-
+            
 
 
 
