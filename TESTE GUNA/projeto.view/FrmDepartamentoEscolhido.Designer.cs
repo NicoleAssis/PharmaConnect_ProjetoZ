@@ -276,6 +276,7 @@
             this.panelDep.Name = "panelDep";
             this.panelDep.Size = new System.Drawing.Size(772, 35);
             this.panelDep.TabIndex = 32;
+            this.panelDep.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDep_Paint);
             // 
             // FrmDepartamentoEscolhido
             // 

@@ -17,6 +17,14 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public string TipoDePagamento { get; set; }
+
+        public FrmPagDebito(string pagamento)
+        {
+            InitializeComponent();
+            TipoDePagamento = pagamento;
+        }
+
         private void btnX_Click(object sender, EventArgs e)
         {
             //button fechar a tela de pagamento
@@ -44,7 +52,7 @@ namespace TESTE_GUNA.projeto.view
             else
             {
                 //abrir tela finalizar pagamento
-                FrmPagFinalizar telaFinalizar = new FrmPagFinalizar();
+                FrmPagFinalizar telaFinalizar = new FrmPagFinalizar("Debito", txtCartao.Text, txtNomeCartao.Text, txtMes.Text, txtAno.Text, txtCVV.Text);
                 this.Close();
                 telaFinalizar.ShowDialog();
             }

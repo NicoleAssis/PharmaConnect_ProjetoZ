@@ -18,6 +18,7 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -25,7 +26,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+             
         }
 
 
@@ -87,8 +88,15 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+
+            // FECHA TODAS AS TELAS ANTERIORES
+            //_parentForm.Close();
+
+
+
+
             //printa os produtos na tela de scroll
-            for(int i=0; i<=40; i++)
+            for (int i=0; i<=40; i++)
             {
                 UserControlProduto userControlProdutos = new UserControlProduto();
                 userControlProdutos.PrintarProduto(1);

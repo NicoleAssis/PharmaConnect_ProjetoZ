@@ -111,10 +111,6 @@ namespace TESTE_GUNA.projeto.dao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                FrmMessageBox messageBox = new FrmMessageBox();
-                messageBox.Mensagem("Cliente cadastrado com sucesso!");
-                messageBox.ShowDialog();
-
                 //fechar a conexao com o banco de dados
                 conexao.Close();
 

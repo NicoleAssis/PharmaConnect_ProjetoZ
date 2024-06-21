@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalvarInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCopiar = new Guna.UI2.WinForms.Guna2Button();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -140,10 +141,10 @@
             this.txtPix.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPix.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPix.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPix.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPix.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtPix.ForeColor = System.Drawing.Color.DimGray;
             this.txtPix.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPix.Location = new System.Drawing.Point(34, 271);
+            this.txtPix.Location = new System.Drawing.Point(31, 279);
             this.txtPix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPix.Name = "txtPix";
             this.txtPix.PasswordChar = '\0';
@@ -151,7 +152,7 @@
             this.txtPix.PlaceholderText = "";
             this.txtPix.ReadOnly = true;
             this.txtPix.SelectedText = "";
-            this.txtPix.Size = new System.Drawing.Size(264, 32);
+            this.txtPix.Size = new System.Drawing.Size(176, 32);
             this.txtPix.TabIndex = 91;
             // 
             // label8
@@ -208,12 +209,34 @@
             this.btnSalvarInfo.Text = "SALVAR INFORMAÇÕES";
             this.btnSalvarInfo.Click += new System.EventHandler(this.btnSalvarInfo_Click);
             // 
+            // btnCopiar
+            // 
+            this.btnCopiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnCopiar.BorderColor = System.Drawing.Color.Teal;
+            this.btnCopiar.BorderRadius = 15;
+            this.btnCopiar.BorderThickness = 3;
+            this.btnCopiar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCopiar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCopiar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCopiar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCopiar.FillColor = System.Drawing.Color.Transparent;
+            this.btnCopiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCopiar.ForeColor = System.Drawing.Color.Teal;
+            this.btnCopiar.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnCopiar.Location = new System.Drawing.Point(214, 279);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(88, 33);
+            this.btnCopiar.TabIndex = 109;
+            this.btnCopiar.Text = "COPIAR";
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
+            // 
             // FrmPagPix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(332, 379);
+            this.Controls.Add(this.btnCopiar);
             this.Controls.Add(this.btnSalvarInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
@@ -251,5 +274,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnSalvarInfo;
+        private Guna.UI2.WinForms.Guna2Button btnCopiar;
     }
 }

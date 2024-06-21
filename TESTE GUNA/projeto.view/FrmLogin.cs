@@ -55,9 +55,7 @@ namespace TESTE_GUNA.projeto.view
 
             if((dao.EfetuarLogin(email, senha)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
-                
-                FrmMenu tela = new FrmMenu();
-                tela.Show();
+
             }
             else
             {

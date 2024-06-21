@@ -6,6 +6,7 @@ using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
 using System.Data;
+using System.Linq;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -322,6 +323,12 @@ namespace TESTE_GUNA.projeto.dao
                         telaPerfil.txtNum.Text = numEnd.ToString();
                         telaPerfil.txtSenha.Text = senha;
 
+
+
+
+
+
+
                         FrmMenu telaMenu = new FrmMenu();
                         telaMenu.Show();
 
@@ -353,7 +360,8 @@ namespace TESTE_GUNA.projeto.dao
                          * */
 
                     Helpers limparTela = new Helpers();
-                    
+
+
 
                     FrmMenu tela = new FrmMenu();
                     return false;
