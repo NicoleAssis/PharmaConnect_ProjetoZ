@@ -8,6 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
@@ -23,6 +24,12 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
             this.admin = admin;
         }
+        public AdmFrmCadastroAdministradorC2()
+        {
+            InitializeComponent();
+            
+        }
+
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
@@ -44,6 +51,22 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            //1 passo- receber os dados dentro do objeto modelo de cliente
+            Administrador obj = new Administrador();
+
+            obj.cep = txtCEP.Text;
+            obj.endereco=txtEndereco.Text;
+            obj.numero=txtNumero.Text;
+            obj.complemento=txtComplemento.Text;
+            obj.bairro=txtBairro.Text;
+            obj.cidade=txtCidade.Text;
+            obj.estado=txtEstado.Text;
+
+            //2 passo- Criar um objeto da classe AdmDao e chamar o metodo cadastrarADm
+            AdministradorDAO dao = new AdministradorDAO();
+            
+
+
             FrmMessageBox frmMessageBox = new FrmMessageBox();
             frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
             frmMessageBox.ShowDialog();
@@ -99,7 +122,7 @@ namespace TESTE_GUNA.projeto.view
                     txtEndereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
                     txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
                     txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
-                    txtComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                    
                     txtEstado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
                 }
                 catch (WebException webEx)
@@ -115,6 +138,11 @@ namespace TESTE_GUNA.projeto.view
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+        }
+
+        private void AdmFrmCadastroAdministradorC2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

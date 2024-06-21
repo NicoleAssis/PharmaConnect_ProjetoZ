@@ -13,7 +13,7 @@ namespace TESTE_GUNA.projeto.model
         public  long  cpf { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
-        public int telefone { get; set; }
+        public string telefone { get; set; }
         public string celular { get; set; }
         public string cep { get; set; }
         public string endereco { get; set; }

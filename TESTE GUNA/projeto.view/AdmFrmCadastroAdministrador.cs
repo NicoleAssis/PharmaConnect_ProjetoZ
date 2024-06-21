@@ -78,6 +78,22 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            int nivelacesso = 1;
+            //1- passo - Receber os dados dentro do objeto modelo de adm
+            Administrador obj= new Administrador();
+            long cnpj_inteiro = long.Parse((txtCNPJ.Text));
+            obj.nome = txtNome.Text;
+            obj.cnpj = cnpj_inteiro;
+            obj.email = txtEmail.Text;
+            obj.telefone = (txtTelefone.Text);
+            obj.celular = txtCelular.Text;
+            obj.senha = txtSenha.Text;
+            obj.nivel = nivelacesso;
+
+            //2 passo- Criar um objeto da classe AdministradorDAO e chamar o metodo cadastrarADM
+            AdministradorDAO dao = new AdministradorDAO();
+            dao.CadastrarAdministador1(obj);
+
             // Validação dos campos
             if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
             {
@@ -115,20 +131,20 @@ namespace TESTE_GUNA.projeto.view
                 return;
             }
 
-            // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
-            Administrador admin = new Administrador
-            {
-                cnpj = txtCNPJ.Text,
-                nome = txtNome.Text,
-                email = txtEmail.Text,
-                celular = txtCelular.Text,
-                senha = txtSenha.Text,
-            };
+            //// Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+            //Administrador admin = new Administrador
+            //{
+            //    cnpj = txtCNPJ.Text,
+            //    nome = txtNome.Text,
+            //    email = txtEmail.Text,
+            //    celular = txtCelular.Text,
+            //    senha = txtSenha.Text,
+            //};
 
             // Passa o objeto admin para a próxima tela (Form2)
-            AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
-            form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
-            this.Hide();
+            //AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
+            //form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
+            //this.Hide();
         }
 
         // Função para validar o formato do email
@@ -143,6 +159,11 @@ namespace TESTE_GUNA.projeto.view
             {
                 return false;
             }
+        }
+
+        private void txtCNPJ_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
 
 

@@ -59,5 +59,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

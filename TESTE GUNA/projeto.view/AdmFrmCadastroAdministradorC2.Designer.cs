@@ -296,7 +296,7 @@
             // 
             // txtCEP
             // 
-            this.txtCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCEP.BackColor = System.Drawing.Color.White;
             this.txtCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCEP.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -313,8 +313,8 @@
             // txtpesquisarcep
             // 
             this.txtpesquisarcep.BackColor = System.Drawing.Color.Transparent;
-            this.txtpesquisarcep.BorderColor = System.Drawing.SystemColors.HighlightText;
-            this.txtpesquisarcep.BorderRadius = 20;
+            this.txtpesquisarcep.BorderColor = System.Drawing.Color.Transparent;
+            this.txtpesquisarcep.BorderRadius = 10;
             this.txtpesquisarcep.BorderThickness = 2;
             this.txtpesquisarcep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtpesquisarcep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -325,10 +325,11 @@
             this.txtpesquisarcep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpesquisarcep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtpesquisarcep.Image = global::TESTE_GUNA.Properties.Resources.IconLupa1;
-            this.txtpesquisarcep.Location = new System.Drawing.Point(672, 116);
+            this.txtpesquisarcep.ImageSize = new System.Drawing.Size(15, 15);
+            this.txtpesquisarcep.Location = new System.Drawing.Point(674, 117);
             this.txtpesquisarcep.Name = "txtpesquisarcep";
             this.txtpesquisarcep.PressedColor = System.Drawing.Color.Indigo;
-            this.txtpesquisarcep.Size = new System.Drawing.Size(49, 35);
+            this.txtpesquisarcep.Size = new System.Drawing.Size(38, 35);
             this.txtpesquisarcep.TabIndex = 61;
             this.txtpesquisarcep.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -356,6 +357,7 @@
             this.Name = "AdmFrmCadastroAdministradorC2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmFrmCadastroAdministradorC2";
+            this.Load += new System.EventHandler(this.AdmFrmCadastroAdministradorC2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

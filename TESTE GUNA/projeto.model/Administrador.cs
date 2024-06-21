@@ -8,6 +8,6 @@ namespace TESTE_GUNA.projeto.model
 {
     public class Administrador : Cliente
     {
-        public string cnpj { get; set; }
+        public long cnpj { get; set; }
     }
 }
