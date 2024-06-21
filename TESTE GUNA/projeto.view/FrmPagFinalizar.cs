@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
+
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -40,10 +43,6 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagFinalizar_Load(object sender, EventArgs e)
         {
-            FrmMessageBox frmMessageBox = new FrmMessageBox();
-            //frmMessageBox.Mensagem(TipoDePagamento +" "+ NumeroCartão + " " + NomeCartao + " " + Mes + " " + Ano + " " + CVV);
-            FrmLogin frmLogin = new FrmLogin();
-            frmMessageBox.ShowDialog();
 
             //printa os produtos na tela de scroll
             for (int i = 0; i <= 4; i++)
@@ -74,8 +73,22 @@ namespace TESTE_GUNA.projeto.view
             if(frmMessageBox.btnSimClick == true)
             {
 
+                FormaPagamento obj = new FormaPagamento();
+
+                PagamentoDAO dao = new PagamentoDAO();
+                int idCliente = dao.RetornaIdCliente();
+
+                obj.tipoPagamento = TipoDePagamento;
+                obj.numCartao = NumeroCartão;
+                obj.mes = Mes;
+                obj.ano = Ano;
+                obj.cvv = CVV;
+                obj.idCliente = idCliente;
 
 
+
+                // 2 passo criar obj da classe clienteDAO e chamar o metodo cadastrarCliente
+                dao.CadastrarCompra(obj);
 
 
 

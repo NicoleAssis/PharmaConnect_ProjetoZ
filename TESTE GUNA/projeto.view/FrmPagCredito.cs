@@ -53,9 +53,6 @@ namespace TESTE_GUNA.projeto.view
         private void FrmPagCredito_Load(object sender, EventArgs e)
         {
 
-            FrmMessageBox messageBox = new FrmMessageBox();
-            messageBox.Mensagem(TipoDePagamento);
-            messageBox.ShowDialog();
 
         }
 
