@@ -191,6 +191,7 @@
             this.btnEscolherPagamento.FillColor = System.Drawing.Color.Teal;
             this.btnEscolherPagamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscolherPagamento.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEscolherPagamento.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnEscolherPagamento.ImageSize = new System.Drawing.Size(38, 38);
             this.btnEscolherPagamento.Location = new System.Drawing.Point(46, 315);
             this.btnEscolherPagamento.Name = "btnEscolherPagamento";

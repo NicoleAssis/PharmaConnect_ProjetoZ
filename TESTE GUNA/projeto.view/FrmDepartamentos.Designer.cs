@@ -38,7 +38,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
@@ -148,7 +147,6 @@
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.Controls.Add(this.pictureBox2);
             this.panel8.Controls.Add(this.btnSair);
-            this.panel8.Controls.Add(this.panel7);
             this.panel8.Controls.Add(this.panel6);
             this.panel8.Controls.Add(this.pictureBox6);
             this.panel8.Controls.Add(this.btnHome);
@@ -195,18 +193,6 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(0, 465);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(186, 85);
-            this.panel7.TabIndex = 24;
             // 
             // panel6
             // 
@@ -377,9 +363,9 @@
             this.panelPrintarDep.Controls.Add(this.panelDep);
             this.panelPrintarDep.Controls.Add(this.paneiIconDep);
             this.panelPrintarDep.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelPrintarDep.Location = new System.Drawing.Point(186, 0);
+            this.panelPrintarDep.Location = new System.Drawing.Point(189, 0);
             this.panelPrintarDep.Name = "panelPrintarDep";
-            this.panelPrintarDep.Size = new System.Drawing.Size(776, 550);
+            this.panelPrintarDep.Size = new System.Drawing.Size(773, 550);
             this.panelPrintarDep.TabIndex = 29;
             // 
             // panelDep
@@ -391,7 +377,7 @@
             this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
             this.panelDep.Location = new System.Drawing.Point(0, 0);
             this.panelDep.Name = "panelDep";
-            this.panelDep.Size = new System.Drawing.Size(776, 63);
+            this.panelDep.Size = new System.Drawing.Size(773, 63);
             this.panelDep.TabIndex = 31;
             // 
             // paneiIconDep
@@ -563,7 +549,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         public System.Windows.Forms.Button btnDepartamentos;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox picBoxDiab;

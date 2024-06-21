@@ -96,6 +96,7 @@
             this.btnAlterarSenha.FillColor = System.Drawing.SystemColors.HotTrack;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarSenha.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAlterarSenha.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
             this.btnAlterarSenha.Location = new System.Drawing.Point(69, 309);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(195, 38);

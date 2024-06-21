@@ -11,7 +11,7 @@ using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.dao
 {
-    internal class PagamentoDAO
+    public class PagamentoDAO
     {
 
         //Conecta com o Banco de dados

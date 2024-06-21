@@ -303,6 +303,8 @@
             this.btnSalvarAlteracoes.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.btnSalvarAlteracoes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarAlteracoes.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarAlteracoes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.btnSalvarAlteracoes.HoverState.FillColor2 = System.Drawing.Color.Navy;
             this.btnSalvarAlteracoes.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSalvarAlteracoes.Location = new System.Drawing.Point(179, 389);
             this.btnSalvarAlteracoes.Name = "btnSalvarAlteracoes";

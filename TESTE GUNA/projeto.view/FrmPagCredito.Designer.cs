@@ -365,6 +365,7 @@
             this.btnSalvarInfo.FillColor = System.Drawing.Color.Teal;
             this.btnSalvarInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarInfo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSalvarInfo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnSalvarInfo.Image = global::TESTE_GUNA.Properties.Resources.iconDinheiro1;
             this.btnSalvarInfo.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSalvarInfo.Location = new System.Drawing.Point(50, 329);

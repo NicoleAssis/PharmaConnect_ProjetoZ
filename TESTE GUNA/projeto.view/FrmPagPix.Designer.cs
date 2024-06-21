@@ -145,7 +145,7 @@
             this.txtPix.ForeColor = System.Drawing.Color.DimGray;
             this.txtPix.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPix.Location = new System.Drawing.Point(31, 279);
-            this.txtPix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPix.Margin = new System.Windows.Forms.Padding(4);
             this.txtPix.Name = "txtPix";
             this.txtPix.PasswordChar = '\0';
             this.txtPix.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -200,6 +200,7 @@
             this.btnSalvarInfo.FillColor = System.Drawing.Color.Teal;
             this.btnSalvarInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarInfo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSalvarInfo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnSalvarInfo.Image = global::TESTE_GUNA.Properties.Resources.iconDinheiro1;
             this.btnSalvarInfo.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSalvarInfo.Location = new System.Drawing.Point(50, 329);
