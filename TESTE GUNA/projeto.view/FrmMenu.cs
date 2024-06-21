@@ -18,6 +18,14 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        private FrmLogin TelaLogin;
+
+        public FrmMenu(FrmLogin telaLogin)
+        {
+            InitializeComponent();
+            TelaLogin = telaLogin;
+        }
+
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
@@ -88,10 +96,6 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
-            // FECHA TODAS AS TELAS ANTERIORES
-            //_parentForm.Close();
-
 
 
 

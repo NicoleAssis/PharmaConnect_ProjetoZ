@@ -53,7 +53,7 @@ namespace TESTE_GUNA.projeto.view
             ClienteDAO dao = new ClienteDAO();
             AdministradorDAO daoADM = new AdministradorDAO();
 
-            if((dao.EfetuarLogin(email, senha)) || daoADM.EfetuarLoginAdministrador(email, senha))
+            if((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
 
             }

@@ -260,7 +260,7 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
         #region Login
-        public bool EfetuarLogin(string email, string senha)
+        public bool EfetuarLogin(string email, string senha, FrmLogin telaLogin)
         {
             try
             {
@@ -332,6 +332,7 @@ namespace TESTE_GUNA.projeto.dao
                         FrmMenu telaMenu = new FrmMenu();
                         telaMenu.Show();
 
+                        telaLogin.Hide();
 
                         return true;
 
