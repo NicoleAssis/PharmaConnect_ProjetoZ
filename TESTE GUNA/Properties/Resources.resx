@@ -127,6 +127,9 @@
   <data name="imagemProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\imagemProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="carrinhoComprinha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrinhoComprinha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="smartphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\smartphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,6 +142,9 @@
   <data name="remedioImagemTeste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\remedioImagemTeste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconAlterarProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconAlterarProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,11 +154,20 @@
   <data name="iconendereço3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconendereço3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check-carrinho-de-compras1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-carrinho-de-compras1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="telaCompraMenor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\telaCompraMenor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check-carrinho-de-compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-carrinho-de-compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconProdutoadm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconProdutoadm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="telaAdm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\telaAdm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,20 +202,23 @@
   <data name="IconCarrinho2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\IconCarrinho2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="seta-para-a-direita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seta-para-a-direita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconDinheiro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDinheiro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PIXqrCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\PIXqrCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.view\img\IconLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconDesligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDesligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.view\img\IconLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azulclean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azulclean.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconDinheiro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDinheiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +235,10 @@
   <data name="iconCelular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconCelular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="azulclean" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\azulclean.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adicionar-ao-carrinho-de-compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adicionar-ao-carrinho-de-compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
