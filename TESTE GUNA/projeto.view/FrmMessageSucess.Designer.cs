@@ -30,8 +30,8 @@
         {
             this.btnX = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,20 @@
             this.panel1.Size = new System.Drawing.Size(336, 166);
             this.panel1.TabIndex = 27;
             // 
+            // lblTexto
+            // 
+            this.lblTexto.BackColor = System.Drawing.Color.Transparent;
+            this.lblTexto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexto.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblTexto.Location = new System.Drawing.Point(0, 1);
+            this.lblTexto.MaximumSize = new System.Drawing.Size(336, 60);
+            this.lblTexto.MinimumSize = new System.Drawing.Size(336, 47);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(336, 60);
+            this.lblTexto.TabIndex = 1;
+            this.lblTexto.Text = "Evento feito com sucesso!";
+            this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.Gravando_2024_06_22_1615533;
@@ -72,20 +86,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // lblTexto
-            // 
-            this.lblTexto.BackColor = System.Drawing.Color.Transparent;
-            this.lblTexto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(222)))));
-            this.lblTexto.Location = new System.Drawing.Point(0, 1);
-            this.lblTexto.MaximumSize = new System.Drawing.Size(336, 60);
-            this.lblTexto.MinimumSize = new System.Drawing.Size(336, 47);
-            this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(336, 60);
-            this.lblTexto.TabIndex = 1;
-            this.lblTexto.Text = "Evento feito com sucesso!";
-            this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmMessageSucess
             // 

@@ -72,6 +72,7 @@
             this.btnComprasFinalizadas = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPagamento = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnLimparCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -655,11 +656,34 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // btnLimparCarrinho
+            // 
+            this.btnLimparCarrinho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnLimparCarrinho.BorderRadius = 20;
+            this.btnLimparCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimparCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimparCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimparCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimparCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLimparCarrinho.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnLimparCarrinho.FillColor2 = System.Drawing.Color.Teal;
+            this.btnLimparCarrinho.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparCarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnLimparCarrinho.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnLimparCarrinho.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
+            this.btnLimparCarrinho.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(332, 347);
+            this.btnLimparCarrinho.Name = "btnLimparCarrinho";
+            this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
+            this.btnLimparCarrinho.TabIndex = 54;
+            this.btnLimparCarrinho.Text = "LIMPAR O CARRINHO";
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.btnComprasFinalizadas);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnPagamento);
@@ -753,5 +777,6 @@
         public System.Windows.Forms.FlowLayoutPanel scrollCompras;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLimparCarrinho;
     }
 }
