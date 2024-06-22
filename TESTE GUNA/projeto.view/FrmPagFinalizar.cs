@@ -94,9 +94,10 @@ namespace TESTE_GUNA.projeto.view
 
 
                 //se confirmou que deseja efetuar o pagamento
-                frmMessageBox.Mensagem("PAGAMENTO EFETUADO COM SUCESSO!");
-                frmMessageBox.ShowDialog();
-                this.Close();
+                FrmConfirmandoPagamento loadingPagamento = new FrmConfirmandoPagamento();
+                loadingPagamento.BringToFront();
+                loadingPagamento.ShowDialog();
+                this.Hide();
             }
             else if(frmMessageBox.btnNaoClick == true)
             {

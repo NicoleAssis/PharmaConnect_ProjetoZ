@@ -41,5 +41,10 @@ namespace TESTE_GUNA.projeto.view
             guna2ShadowForm1.SetShadowForm(this);
             timer1.Start();
         }
+
+        private void progressBar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

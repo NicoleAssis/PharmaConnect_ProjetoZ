@@ -178,6 +178,12 @@
     <Compile Include="projeto.view\FrmComprasConcluidas.Designer.cs">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmConfirmandoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmConfirmandoPagamento.Designer.cs">
+      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmDepartamentoEscolhido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,12 @@
     </Compile>
     <Compile Include="projeto.view\FrmMessageBox.Designer.cs">
       <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmMessageSucess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmMessageSucess.Designer.cs">
+      <DependentUpon>FrmMessageSucess.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmPagamento.cs">
       <SubType>Form</SubType>
@@ -308,6 +320,9 @@
     <EmbeddedResource Include="projeto.view\FrmComprasConcluidas.resx">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmConfirmandoPagamento.resx">
+      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmDepartamentoEscolhido.resx">
       <DependentUpon>FrmDepartamentoEscolhido.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmMessageBox.resx">
       <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmMessageSucess.resx">
+      <DependentUpon>FrmMessageSucess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPagamento.resx">
       <DependentUpon>FrmPagamento.cs</DependentUpon>
@@ -426,6 +444,7 @@
     <None Include="projeto.view\img\remedioImagemTeste2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="projeto.view\img\GIFLoading.gif" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />
     <Content Include="projeto.view\img\iconcep.png" />
@@ -433,6 +452,21 @@
     <Content Include="projeto.view\img\iconendereço.png" />
     <Content Include="projeto.view\img\iconendereço2.png" />
     <Content Include="projeto.view\img\iconendereço3.png" />
+    <None Include="Resources\Gravando 2024-06-22 1615533.gif" />
+    <None Include="Resources\GIFLoading.gif" />
+    <None Include="Resources\success.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1615532.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1631082.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1655261.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1615531.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1631081.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1635351.gif" />
+    <None Include="Resources\Gravando 2024-06-22 165526.gif" />
+    <None Include="Resources\Gravando 2024-06-22 163535.gif" />
+    <None Include="Resources\e1abb241f731493a9a2614f795fded16.gif" />
+    <None Include="Resources\Gravando-2024-06-22-163108-unscreen.gif" />
+    <None Include="Resources\Gravando 2024-06-22 163108.gif" />
+    <None Include="Resources\Gravando 2024-06-22 161553.gif" />
     <None Include="Resources\My Business1.gif" />
     <None Include="Resources\My Business.gif" />
     <None Include="projeto.view\img\iconHome.png" />
@@ -443,6 +477,7 @@
     <None Include="projeto.view\img\imagemProdutooficial.png" />
     <Content Include="projeto.view\img\smartphone.png" />
     <Content Include="projeto.view\img\telaAdm2.png" />
+    <Content Include="projeto.view\img\telaCompraPequena2.png" />
     <Content Include="projeto.view\img\telaFornecedor.png" />
     <None Include="projeto.view\img\iconDesligar.png" />
     <None Include="projeto.view\img\iconSair.png" />

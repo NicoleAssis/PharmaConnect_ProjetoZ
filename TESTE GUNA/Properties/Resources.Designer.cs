@@ -63,6 +63,156 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap e1abb241f731493a9a2614f795fded16 {
+            get {
+                object obj = ResourceManager.GetObject("e1abb241f731493a9a2614f795fded16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GIFLoading {
+            get {
+                object obj = ResourceManager.GetObject("GIFLoading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GIFLoading1 {
+            get {
+                object obj = ResourceManager.GetObject("GIFLoading1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_161553 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 161553", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1615531 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1615531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1615532 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1615532", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1615533 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1615533", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_163108 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 163108", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_163108_unscreen {
+            get {
+                object obj = ResourceManager.GetObject("Gravando-2024-06-22-163108-unscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1631081 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1631081", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1631082 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1631082", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_163535 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 163535", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1635351 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1635351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_165526 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 165526", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gravando_2024_06_22_1655261 {
+            get {
+                object obj = ResourceManager.GetObject("Gravando 2024-06-22 1655261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAlterarProduto {
             get {
                 object obj = ResourceManager.GetObject("iconAlterarProduto", resourceCulture);
@@ -383,6 +533,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap success {
+            get {
+                object obj = ResourceManager.GetObject("success", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaAdm2 {
             get {
                 object obj = ResourceManager.GetObject("telaAdm2", resourceCulture);
@@ -396,6 +556,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaCompraMenor {
             get {
                 object obj = ResourceManager.GetObject("telaCompraMenor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaCompraPequena2 {
+            get {
+                object obj = ResourceManager.GetObject("telaCompraPequena2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
