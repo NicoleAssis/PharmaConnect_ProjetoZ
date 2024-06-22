@@ -51,28 +51,28 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //1 passo- receber os dados dentro do objeto modelo de cliente
-            Administrador obj = new Administrador();
+         //1 passo - receber os dados dentro do objeto modelo de cliente
+            Administrador objeto = new Administrador();
 
-            obj.cep = txtCEP.Text;
-            obj.endereco=txtEndereco.Text;
-            obj.numero=txtNumero.Text;
-            obj.complemento=txtComplemento.Text;
-            obj.bairro=txtBairro.Text;
-            obj.cidade=txtCidade.Text;
-            obj.estado=txtEstado.Text;
+           
+            objeto.cep = txtCEP.Text;
+            objeto.endereco = txtEndereco.Text;
+            objeto.numero = txtNumero.Text;
+            objeto.complemento = txtComplemento.Text;
+            objeto.bairro = txtBairro.Text;
+            objeto.cidade = txtCidade.Text;
+            objeto.estado = txtEstado.Text;
+        
 
-            //2 passo- Criar um objeto da classe AdmDao e chamar o metodo cadastrarADm
-            AdministradorDAO dao = new AdministradorDAO();
-            
+            ////2 passo - Criar um objeto da classe AdmDao e chamar o metodo cadastrarADm
+            //AdministradorDAO dao = new AdministradorDAO();
+            //dao.CadastrarAdministrador2(objeto);
 
-
-            FrmMessageBox frmMessageBox = new FrmMessageBox();
-            frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
-            frmMessageBox.ShowDialog();
-            AdmFrmMenu telaadmmenu = new AdmFrmMenu();
-            telaadmmenu.Show();
-
+            //FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
+            //frmMessageBox.ShowDialog();
+            //AdmFrmMenu telaadmmenu = new AdmFrmMenu();
+            //telaadmmenu.Show();
 
 
         }

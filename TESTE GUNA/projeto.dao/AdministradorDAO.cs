@@ -97,34 +97,35 @@ namespace TESTE_GUNA.projeto.dao
 
         #region CadastroAdministrador1
 
-        public void CadastrarAdministador1(Administrador obj)
+
+
+        public void CadastrarAdministrador1(Administrador obj)
         {
             try
             {
                 // Definindo comando SQL
-                string sql = @"insert into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador,senha_administrador,nivel_acesso)
-                    values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@senha_administrador,@nivel_acesso)";
+                string sql = @"insert into tb_administrador (cnpj_administrador, nome_administrador, email_administrador, telefone_administrador, celular_administrador, senha_administrador, nivel_acesso)
+                    values (@cnpj_administrador, @nome_administrador, @email_administrador, @telefone_administrador, @celular_administrador, @senha_administrador, @nivel_acesso)";
 
                 // Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-
-                executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
                 executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
+                executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
                 executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
                 executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
                 executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
                 executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
 
-
-
                 // Abrindo conexão e aplicando SQL
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
                 // Fechando conexão
                 conexao.Close();
+                FrmMessageBox frmMessageBox = new FrmMessageBox();
+                frmMessageBox.Mensagem("Adm cadastrado com sucesso");
             }
             catch (Exception erro)
             {
@@ -132,49 +133,48 @@ namespace TESTE_GUNA.projeto.dao
             }
         }
 
-        #endregion
+        //  public void CadastrarAdministrador2(Administrador objeto)
+        //  {
+        //  {
+        //      try
+        //      {
+        //          // Definindo comando SQL
+        //          string sql = @"INSERT INTO tb_administrador (
+        //     cep_administrador, endereco_administrador, numero_administrador,
+        //    complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador, 
+        //   )
+        //VALUES (
+        //    @cep_administrador, @endereco_administrador, @numero_administrador,
+        //    @complemento_administrador, @bairro_administrador, @cidade_administrador, @estado_administrador, 
+        //    @senha_administrador, @nivel_acesso)";
 
-       /* #region CadastroAdministrador2
-        public void CadastrarAdministador2(Administrador obj)
-        {
+        //          // Organizando comando SQL
+        //          MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-            try
-            {
-                 Definindo comando SQL
-                string sql = @"uptade into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador, endereco_administrador, numero_administrador,complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador,senha_administrador,nivel_acesso)
-                    values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
-
-                // Organizando comando SQL
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-                
-                executacmd.Parameters.AddWithValue("@cep_administrador", obj.cep);
-                executacmd.Parameters.AddWithValue("@endereco_administrador", obj.endereco);
-                executacmd.Parameters.AddWithValue("@numero_administrador", obj.numero);
-                executacmd.Parameters.AddWithValue("@complemento_administrador", obj.complemento);
-                executacmd.Parameters.AddWithValue("@bairro_administrador", obj.bairro);
-                executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
-                executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
-               
+        //          executacmd.Parameters.AddWithValue("@cep_administrador", objeto.cep);
+        //          executacmd.Parameters.AddWithValue("@endereco_administrador", objeto.endereco);
+        //          executacmd.Parameters.AddWithValue("@numero_administrador", objeto.numero);
+        //          executacmd.Parameters.AddWithValue("@complemento_administrador", objeto.complemento);
+        //          executacmd.Parameters.AddWithValue("@bairro_administrador", objeto.bairro);
+        //          executacmd.Parameters.AddWithValue("@cidade_administrador", objeto.cidade);
+        //          executacmd.Parameters.AddWithValue("@estado_administrador", objeto.estado);
 
 
-                // Abrindo conexão e aplicando SQL
-                conexao.Open();
-                executacmd.ExecuteNonQuery();
+        //          // Abrindo conexão e aplicando SQL
+        //          conexao.Open();
+        //          executacmd.ExecuteNonQuery();
 
-                // Fechando conexão
-                conexao.Close();
-            }
-            catch (Exception erro)
-            {
-                System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
-            }
-        }
+        //          // Fechando conexão
+        //          conexao.Close();
+        //      }
+        //      catch (Exception erro)
+        //      {
+        //          System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+        //      }
+        //  }
 
-        #endregion
-
-        #region ValidarCPNJ
-        public static bool ValidarCNPJ(string cnpj)
+        // #region ValidarCPNJ
+        /*public static bool ValidarCNPJ(string cnpj)
         {
             // Remove caracteres não numéricos
             cnpj = Regex.Replace(cnpj, "[^0-9]", "");
@@ -218,9 +218,12 @@ namespace TESTE_GUNA.projeto.dao
             // Verifica se os dígitos calculados são iguais aos informados
             return cnpj.EndsWith(tempCnpj.Substring(12));
         }
-
+        */
         #endregion
-                */
 
+    
+        }
+        
     }
-}
+
+

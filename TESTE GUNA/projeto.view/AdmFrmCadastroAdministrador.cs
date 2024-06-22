@@ -80,8 +80,9 @@ namespace TESTE_GUNA.projeto.view
         {
             int nivelacesso = 1;
             //1- passo - Receber os dados dentro do objeto modelo de adm
+            string cnpj_string = txtCNPJ.Text.Replace(".", "").Replace("-", ""); ;
             Administrador obj= new Administrador();
-            long cnpj_inteiro = long.Parse((txtCNPJ.Text));
+            long cnpj_inteiro = long.Parse((cnpj_string));
             obj.nome = txtNome.Text;
             obj.cnpj = cnpj_inteiro;
             obj.email = txtEmail.Text;
@@ -92,56 +93,56 @@ namespace TESTE_GUNA.projeto.view
 
             //2 passo- Criar um objeto da classe AdministradorDAO e chamar o metodo cadastrarADM
             AdministradorDAO dao = new AdministradorDAO();
-            dao.CadastrarAdministador1(obj);
+            dao.CadastrarAdministrador1(obj);
 
             // Validação dos campos
-            if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
-            {
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Por favor, preencha um CNPJ valido");
-                frmMessageBox.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtNome.Text))
-            {
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Por favor, preencha um Nome valido");
-                frmMessageBox.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
-            {
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Por favor, preencha um Email valido");
-                frmMessageBox.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtCelular.Text))
-            {
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Por favor, preencha um Celular valido");
-                frmMessageBox.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtSenha.Text))
-            {
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Por favor, preencha uma Senha valido");
-                frmMessageBox.ShowDialog();
-                return;
-            }
+            //if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
+            //{
+            //    FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //    frmMessageBox.Mensagem("Por favor, preencha um CNPJ valido");
+            //    frmMessageBox.ShowDialog();
+            //    return;
+            //}
+            //if (string.IsNullOrWhiteSpace(txtNome.Text))
+            //{
+            //    FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //    frmMessageBox.Mensagem("Por favor, preencha um Nome valido");
+            //    frmMessageBox.ShowDialog();
+            //    return;
+            //}
+            //if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
+            //{
+            //    FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //    frmMessageBox.Mensagem("Por favor, preencha um Email valido");
+            //    frmMessageBox.ShowDialog();
+            //    return;
+            //}
+            //if (string.IsNullOrWhiteSpace(txtCelular.Text))
+            //{
+            //    FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //    frmMessageBox.Mensagem("Por favor, preencha um Celular valido");
+            //    frmMessageBox.ShowDialog();
+            //    return;
+            //}
+            //if (string.IsNullOrWhiteSpace(txtSenha.Text))
+            //{
+            //    FrmMessageBox frmMessageBox = new FrmMessageBox();
+            //    frmMessageBox.Mensagem("Por favor, preencha uma Senha valido");
+            //    frmMessageBox.ShowDialog();
+            //    return;
+            //}
 
-            //// Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+            // //Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
             //Administrador admin = new Administrador
             //{
-            //    cnpj = txtCNPJ.Text,
+            //    cnpj = Convert.ToInt64(txtCNPJ.Text),
             //    nome = txtNome.Text,
             //    email = txtEmail.Text,
             //    celular = txtCelular.Text,
             //    senha = txtSenha.Text,
             //};
 
-            // Passa o objeto admin para a próxima tela (Form2)
+            // //Passa o objeto admin para a próxima tela (Form2)
             //AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
             //form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
             //this.Hide();
