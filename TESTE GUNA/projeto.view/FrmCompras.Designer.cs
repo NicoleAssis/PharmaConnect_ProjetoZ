@@ -672,7 +672,7 @@
             this.btnLimparCarrinho.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnLimparCarrinho.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
             this.btnLimparCarrinho.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLimparCarrinho.Location = new System.Drawing.Point(332, 347);
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(331, 347);
             this.btnLimparCarrinho.Name = "btnLimparCarrinho";
             this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
             this.btnLimparCarrinho.TabIndex = 54;
