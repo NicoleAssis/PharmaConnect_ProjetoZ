@@ -101,7 +101,7 @@ namespace TESTE_GUNA.projeto.view
                 txtSenhaAtual.PasswordChar = '*';
                 txtNovaSenha.PasswordChar = '*';
                 txtConfirmeSenha.PasswordChar = '*';
-            }
+            } 
         }
     }
 }
