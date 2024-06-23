@@ -102,7 +102,7 @@ namespace TESTE_GUNA.projeto.dao
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@NovaSenha", senhaNova);
                 executacmd.Parameters.AddWithValue("@IdCliente", idCliente);
-
+                 
 
 
                 conexao.Open();
