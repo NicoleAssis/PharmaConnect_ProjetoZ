@@ -19,6 +19,13 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public static class TelaPagamento
+        {
+            public static string Email { get; set; }
+            public static string Senha { get; set; }
+        }
+
+
         private void btnX_Click(object sender, EventArgs e)
         {
             //buton fechar o programa (X)
@@ -37,17 +44,18 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            TelaPagamento.Email = txtEmail.Text;
+            TelaPagamento.Senha = txtSenha.Text;
+
             string email = txtEmail.Text;
             string senha = txtSenha.Text;
 
             ClienteDAO dao = new ClienteDAO();
             AdministradorDAO daoADM = new AdministradorDAO();
 
-            if((dao.EfetuarLogin(email, senha)) || daoADM.EfetuarLoginAdministrador(email, senha))
+            if((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
-                
-                FrmMenu tela = new FrmMenu();
-                tela.Show();
+
             }
             else
             {
@@ -90,6 +98,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
 
         }

@@ -473,6 +473,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap success {
+            get {
+                object obj = ResourceManager.GetObject("success", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaAdm2 {
             get {
                 object obj = ResourceManager.GetObject("telaAdm2", resourceCulture);
@@ -486,6 +496,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaCompraMenor {
             get {
                 object obj = ResourceManager.GetObject("telaCompraMenor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaCompraPequena2 {
+            get {
+                object obj = ResourceManager.GetObject("telaCompraPequena2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

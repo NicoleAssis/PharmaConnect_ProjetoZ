@@ -146,6 +146,7 @@
             this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
             this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
             this.btnEntrar.Location = new System.Drawing.Point(613, 415);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
@@ -216,19 +217,20 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox txtSenha;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2Button btnCadastrar;
         public Guna.UI2.WinForms.Guna2Button btnEntrar;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxMostrarSenha;
+        public Guna.UI2.WinForms.Guna2TextBox txtSenha;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
     }
 }

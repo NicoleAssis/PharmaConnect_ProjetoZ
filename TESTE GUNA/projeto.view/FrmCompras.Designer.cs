@@ -37,7 +37,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
@@ -73,6 +72,7 @@
             this.btnComprasFinalizadas = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPagamento = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnLimparCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -156,7 +156,6 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.btnSair);
-            this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.btnHome);
@@ -202,18 +201,6 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(0, 477);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(186, 73);
-            this.panel7.TabIndex = 24;
             // 
             // panel8
             // 
@@ -315,6 +302,7 @@
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCompras.UseVisualStyleBackColor = false;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // pictureBox9
             // 
@@ -379,7 +367,7 @@
             // 
             this.scrollCompras.AutoScroll = true;
             this.scrollCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.scrollCompras.Location = new System.Drawing.Point(211, 119);
+            this.scrollCompras.Location = new System.Drawing.Point(211, 116);
             this.scrollCompras.Name = "scrollCompras";
             this.scrollCompras.Size = new System.Drawing.Size(739, 227);
             this.scrollCompras.TabIndex = 31;
@@ -490,7 +478,7 @@
             this.lblCalcularFrete.AutoSize = true;
             this.lblCalcularFrete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lblCalcularFrete.ForeColor = System.Drawing.Color.Teal;
-            this.lblCalcularFrete.Location = new System.Drawing.Point(117, 6);
+            this.lblCalcularFrete.Location = new System.Drawing.Point(118, 6);
             this.lblCalcularFrete.Name = "lblCalcularFrete";
             this.lblCalcularFrete.Size = new System.Drawing.Size(109, 21);
             this.lblCalcularFrete.TabIndex = 39;
@@ -531,7 +519,7 @@
             this.panel10.Controls.Add(this.label4);
             this.panel10.Controls.Add(this.panel13);
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel10.Location = new System.Drawing.Point(210, 80);
+            this.panel10.Location = new System.Drawing.Point(210, 77);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(721, 38);
             this.panel10.TabIndex = 50;
@@ -619,9 +607,12 @@
             this.btnComprasFinalizadas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnComprasFinalizadas.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnComprasFinalizadas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnComprasFinalizadas.FillColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnComprasFinalizadas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.btnComprasFinalizadas.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(96)))), ((int)(((byte)(199)))));
             this.btnComprasFinalizadas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprasFinalizadas.ForeColor = System.Drawing.Color.White;
+            this.btnComprasFinalizadas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(96)))), ((int)(((byte)(199)))));
+            this.btnComprasFinalizadas.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.btnComprasFinalizadas.Image = global::TESTE_GUNA.Properties.Resources.IconCarrinho2;
             this.btnComprasFinalizadas.ImageSize = new System.Drawing.Size(30, 30);
             this.btnComprasFinalizadas.Location = new System.Drawing.Point(665, 14);
@@ -642,6 +633,7 @@
             this.btnPagamento.FillColor = System.Drawing.Color.Teal;
             this.btnPagamento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnPagamento.ForeColor = System.Drawing.Color.White;
+            this.btnPagamento.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnPagamento.Image = ((System.Drawing.Image)(resources.GetObject("btnPagamento.Image")));
             this.btnPagamento.ImageSize = new System.Drawing.Size(35, 35);
             this.btnPagamento.Location = new System.Drawing.Point(713, 477);
@@ -664,11 +656,34 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // btnLimparCarrinho
+            // 
+            this.btnLimparCarrinho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnLimparCarrinho.BorderRadius = 20;
+            this.btnLimparCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimparCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimparCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimparCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimparCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLimparCarrinho.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnLimparCarrinho.FillColor2 = System.Drawing.Color.Teal;
+            this.btnLimparCarrinho.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparCarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnLimparCarrinho.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnLimparCarrinho.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
+            this.btnLimparCarrinho.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(331, 347);
+            this.btnLimparCarrinho.Name = "btnLimparCarrinho";
+            this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
+            this.btnLimparCarrinho.TabIndex = 54;
+            this.btnLimparCarrinho.Text = "LIMPAR O CARRINHO";
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.btnComprasFinalizadas);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnPagamento);
@@ -736,7 +751,6 @@
         public System.Windows.Forms.Button btnDepartamentos;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label6;
@@ -763,5 +777,6 @@
         public System.Windows.Forms.FlowLayoutPanel scrollCompras;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLimparCarrinho;
     }
 }

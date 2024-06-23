@@ -191,6 +191,7 @@
             this.btnEscolherPagamento.FillColor = System.Drawing.Color.Teal;
             this.btnEscolherPagamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscolherPagamento.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEscolherPagamento.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnEscolherPagamento.ImageSize = new System.Drawing.Size(38, 38);
             this.btnEscolherPagamento.Location = new System.Drawing.Point(46, 315);
             this.btnEscolherPagamento.Name = "btnEscolherPagamento";
@@ -269,12 +270,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxDebito;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxCredito;
-        private Guna.UI2.WinForms.Guna2RadioButton checkBoxPix;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnEscolherPagamento;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxDebito;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxCredito;
+        public Guna.UI2.WinForms.Guna2RadioButton checkBoxPix;
     }
 }

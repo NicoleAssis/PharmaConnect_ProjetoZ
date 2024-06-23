@@ -155,10 +155,12 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            FrmPerfil tela = new FrmPerfil();
-            this.Close();
-            tela.Show();
-
+            Cliente dao = new Cliente();
+            
+            DataTable tabelaCliente = new DataTable();
+           
+            
+      
         }
 
         private void Form_Load(object sender, EventArgs e)

@@ -247,6 +247,7 @@
             this.btnEntrar.FillColor = System.Drawing.SystemColors.HotTrack;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
             this.btnEntrar.Location = new System.Drawing.Point(110, 404);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.PressedColor = System.Drawing.Color.Indigo;
@@ -269,6 +270,9 @@
             this.btnCadastrar.FillColor = System.Drawing.Color.Transparent;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCadastrar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
             this.btnCadastrar.Location = new System.Drawing.Point(237, 404);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.PressedColor = System.Drawing.Color.Indigo;

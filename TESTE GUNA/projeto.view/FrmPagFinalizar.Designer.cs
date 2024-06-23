@@ -293,6 +293,7 @@
             this.btnEfetuarPagamento.FillColor = System.Drawing.Color.Teal;
             this.btnEfetuarPagamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEfetuarPagamento.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEfetuarPagamento.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnEfetuarPagamento.Image = global::TESTE_GUNA.Properties.Resources.iconDinheiro2;
             this.btnEfetuarPagamento.ImageSize = new System.Drawing.Size(25, 25);
             this.btnEfetuarPagamento.Location = new System.Drawing.Point(49, 329);

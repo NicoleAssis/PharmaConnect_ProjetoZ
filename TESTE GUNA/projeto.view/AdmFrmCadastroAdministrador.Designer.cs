@@ -58,7 +58,8 @@
             this.btnCadastrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCadastrar.FillColor = System.Drawing.SystemColors.HotTrack;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(142)))), ((int)(((byte)(255)))));
             this.btnCadastrar.Location = new System.Drawing.Point(653, 439);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.PressedColor = System.Drawing.Color.Indigo;

@@ -59,5 +59,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void btnProdutos_MouseHover(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

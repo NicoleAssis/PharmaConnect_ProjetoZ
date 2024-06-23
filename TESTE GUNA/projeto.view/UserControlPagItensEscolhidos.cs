@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace TESTE_GUNA.projeto.view
 
         public void PrintarProduto(int IDProduto)
         {
+
             lblNome.Text = "Nome Produto";
             lblDescricao.Text = "Descrição do Produto";
             lblQtd.Text = "5";

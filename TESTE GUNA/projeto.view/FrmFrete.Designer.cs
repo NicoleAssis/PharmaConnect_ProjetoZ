@@ -370,6 +370,7 @@
             this.btnCalcularFrete.FillColor = System.Drawing.Color.Teal;
             this.btnCalcularFrete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcularFrete.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCalcularFrete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnCalcularFrete.Location = new System.Drawing.Point(94, 383);
             this.btnCalcularFrete.Name = "btnCalcularFrete";
             this.btnCalcularFrete.Size = new System.Drawing.Size(225, 38);

@@ -43,19 +43,16 @@ namespace TESTE_GUNA.projeto.view
 
         private void labelNome_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void UserControlProduto_Click(object sender, EventArgs e)
         {
 
-
             // Redirecionar para a tela de compras
             AdicionarAvancar telaconfirmar = new AdicionarAvancar();
             telaconfirmar.Show();
 
-            // Esconder o formulário atual (se necessário)
-            this.Hide();
 
         }
 

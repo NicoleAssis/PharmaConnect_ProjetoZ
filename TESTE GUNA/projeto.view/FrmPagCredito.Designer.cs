@@ -44,7 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBase = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtCartao = new System.Windows.Forms.MaskedTextBox();
             this.txtCVV = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvarInfo = new Guna.UI2.WinForms.Guna2Button();
             this.panel14.SuspendLayout();
@@ -330,17 +330,17 @@
             this.label8.TabIndex = 94;
             this.label8.Text = "Número Cartão:";
             // 
-            // txtCPF
+            // txtCartao
             // 
-            this.txtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCPF.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCPF.Location = new System.Drawing.Point(81, 83);
-            this.txtCPF.Mask = "0000-0000-0000-0000";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(165, 22);
-            this.txtCPF.TabIndex = 104;
+            this.txtCartao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCartao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCartao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCartao.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCartao.Location = new System.Drawing.Point(81, 83);
+            this.txtCartao.Mask = "0000-0000-0000-0000";
+            this.txtCartao.Name = "txtCartao";
+            this.txtCartao.Size = new System.Drawing.Size(165, 22);
+            this.txtCartao.TabIndex = 104;
             // 
             // txtCVV
             // 
@@ -365,6 +365,7 @@
             this.btnSalvarInfo.FillColor = System.Drawing.Color.Teal;
             this.btnSalvarInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarInfo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSalvarInfo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnSalvarInfo.Image = global::TESTE_GUNA.Properties.Resources.iconDinheiro1;
             this.btnSalvarInfo.ImageSize = new System.Drawing.Size(40, 40);
             this.btnSalvarInfo.Location = new System.Drawing.Point(50, 329);
@@ -381,7 +382,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(332, 379);
             this.Controls.Add(this.txtCVV);
-            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtCartao);
             this.Controls.Add(this.btnSalvarInfo);
             this.Controls.Add(this.txtbase2);
             this.Controls.Add(this.label3);
@@ -428,7 +429,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtBase;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtCartao;
         private System.Windows.Forms.MaskedTextBox txtCVV;
     }
 }

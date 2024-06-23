@@ -17,6 +17,8 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        public string pagEscolhido;
+
         private void btnX_Click(object sender, EventArgs e)
         {
             //button fechar a tela de pagamento
@@ -26,15 +28,15 @@ namespace TESTE_GUNA.projeto.view
         //IR PARA A TELA DO PAGAMENTO DESEJADO
         private void btnEscolherPagamento_Click(object sender, EventArgs e)
         {
-            if(checkBoxCredito.Checked )
+            if (checkBoxCredito.Checked)
             {
                 //abre a tela de credito
-                FrmPagCredito telaCredito = new FrmPagCredito();
+                FrmPagCredito telaCredito = new FrmPagCredito("Credito");
                 this.Close();
                 telaCredito.ShowDialog();
 
             }
-            else if(checkBoxDebito.Checked)
+            else if (checkBoxDebito.Checked)
             {
                 //abre a tela de debito
                 FrmPagDebito telaDebito = new FrmPagDebito();
@@ -60,6 +62,8 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmPagamento_Load(object sender, EventArgs e)
         {
+              
+
 
         }
 

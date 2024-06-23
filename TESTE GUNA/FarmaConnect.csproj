@@ -119,7 +119,9 @@
     <Compile Include="projet.conexao\ConnectionFactory.cs" />
     <Compile Include="projeto.dao\AdministradorDAO.cs" />
     <Compile Include="projeto.dao\ClienteDAO.cs" />
+    <Compile Include="projeto.dao\PagamentoDAO.cs" />
     <Compile Include="projeto.dao\ProdutoDAO.cs" />
+    <Compile Include="projeto.dao\SenhaDAO.cs" />
     <Compile Include="projeto.model\Administrador.cs" />
     <Compile Include="projeto.model\Cliente.cs" />
     <Compile Include="projeto.model\FormaPagamento.cs" />
@@ -189,6 +191,12 @@
     <Compile Include="projeto.view\FrmComprasConcluidas.Designer.cs">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmConfirmandoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmConfirmandoPagamento.Designer.cs">
+      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmDepartamentoEscolhido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +215,12 @@
     <Compile Include="projeto.view\FrmFrete.Designer.cs">
       <DependentUpon>FrmFrete.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmLoading.Designer.cs">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +238,12 @@
     </Compile>
     <Compile Include="projeto.view\FrmMessageBox.Designer.cs">
       <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmMessageSucess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmMessageSucess.Designer.cs">
+      <DependentUpon>FrmMessageSucess.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmPagamento.cs">
       <SubType>Form</SubType>
@@ -319,6 +339,9 @@
     <EmbeddedResource Include="projeto.view\FrmComprasConcluidas.resx">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmConfirmandoPagamento.resx">
+      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmDepartamentoEscolhido.resx">
       <DependentUpon>FrmDepartamentoEscolhido.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +351,9 @@
     <EmbeddedResource Include="projeto.view\FrmFrete.resx">
       <DependentUpon>FrmFrete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmLoading.resx">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmMessageBox.resx">
       <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmMessageSucess.resx">
+      <DependentUpon>FrmMessageSucess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPagamento.resx">
       <DependentUpon>FrmPagamento.cs</DependentUpon>
@@ -459,6 +488,7 @@
     <None Include="projeto.view\img\imagemProdutooficial.png" />
     <Content Include="projeto.view\img\smartphone.png" />
     <Content Include="projeto.view\img\telaAdm2.png" />
+    <Content Include="projeto.view\img\telaCompraPequena2.png" />
     <Content Include="projeto.view\img\telaFornecedor.png" />
     <None Include="projeto.view\img\iconDesligar.png" />
     <None Include="projeto.view\img\iconSair.png" />
