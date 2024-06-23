@@ -159,6 +159,18 @@
     <Compile Include="projeto.view\AdmFrmProdutos.Designer.cs">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmADMExcluirProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmADMExcluirProduto.Designer.cs">
+      <DependentUpon>FrmADMExcluirProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmADMPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmADMPerfil.Designer.cs">
+      <DependentUpon>FrmADMPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
