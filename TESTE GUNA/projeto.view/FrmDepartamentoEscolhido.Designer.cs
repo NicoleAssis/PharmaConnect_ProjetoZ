@@ -126,6 +126,7 @@
             this.userControlProduto2.NomeProduto = null;
             this.userControlProduto2.Size = new System.Drawing.Size(233, 117);
             this.userControlProduto2.TabIndex = 1;
+            this.userControlProduto2.Load += new System.EventHandler(this.userControlProduto2_Load);
             // 
             // userControlProduto3
             // 
@@ -269,15 +270,10 @@
             // 
             // panelDep
             // 
-            //this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            //this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            //this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
-            //this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
-            //this.panelDep.Location = new System.Drawing.Point(0, 0);
-            //this.panelDep.Name = "panelDep";
-            //this.panelDep.Size = new System.Drawing.Size(772, 35);
-            //this.panelDep.TabIndex = 32;
-            //this.panelDep.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDep_Paint);
+            this.panelDep.Location = new System.Drawing.Point(0, 0);
+            this.panelDep.Name = "panelDep";
+            this.panelDep.Size = new System.Drawing.Size(200, 100);
+            this.panelDep.TabIndex = 23;
             // 
             // FrmDepartamentoEscolhido
             // 

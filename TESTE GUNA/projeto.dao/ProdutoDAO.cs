@@ -30,7 +30,7 @@ namespace TESTE_GUNA.projeto.dao
         }
 
 
-
+        
 
         #region CadastroProduto
 
@@ -151,7 +151,40 @@ namespace TESTE_GUNA.projeto.dao
 
         }
         #endregion
-    
+
+
+
+        #region Get
+        public  void GetDetails(int detals_id)
+        {
+            string sql = @"select * from tb_produtos where id= '" +detals_id"'";
+
+            //organizar o comando e executar
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+            conexao.Open();
+
+            //responsavel por executar o comando e armazenar os dados do PRODUTO
+            MySqlDataReader reader = executacmd.ExecuteReader();
+
+            //se conseguiu ler o rs
+            if (rs.Read())
+            {
+                Produto p = new Produto();
+                p.id = reader.GetInt32("id_produto");
+                p.nomeProduto = reader["nome_produto"].ToString();
+                p.descricao = rs.GetString("desc_produto");
+                p.preco = rs.GetDecimal("preco");
+                p.id = reader.GetInt32("qtd_estoque");
+                p.descricao = rs.GetString("Departamento");
+
+                conexao.Close();
+
+                return p;
+
+            }
+        }
+        #endregion
+
 
     }
 }

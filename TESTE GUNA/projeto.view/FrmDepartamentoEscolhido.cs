@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -37,9 +40,15 @@ namespace TESTE_GUNA.projeto.view
         public void NomeDepartamento(string departamento)
         {
             lblDepartamento.Text = departamento;
+            
         }
-        
-
+        public static bool view = false;
+        public static int publid_id;
+        private void getDetail()
+        {
+            ProdutoDAO dao = new ProdutoDAO();
+            dao.GetDetails(UserControlProduto.
+        }
         private void FrmDepartamentoEscolhido_Load(object sender, EventArgs e)
         {
 
@@ -61,6 +70,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void userControlProduto1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlProduto2_Load(object sender, EventArgs e)
         {
 
         }

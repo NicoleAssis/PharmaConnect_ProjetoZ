@@ -48,6 +48,8 @@
             this.labelqtdscribe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelClasse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
@@ -99,12 +101,11 @@
             // 
             // labelDesc
             // 
-            this.labelDesc.AutoSize = true;
             this.labelDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDesc.Location = new System.Drawing.Point(28, 59);
+            this.labelDesc.Location = new System.Drawing.Point(66, 59);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(504, 20);
+            this.labelDesc.Size = new System.Drawing.Size(496, 84);
             this.labelDesc.TabIndex = 13;
             this.labelDesc.Text = "S1G1 - ANTIALÉRGICOS OFTAMOLÓGICOS, ANTI-HISTAMÍNICOS";
             this.labelDesc.Click += new System.EventHandler(this.labelDesc_Click);
@@ -330,6 +331,8 @@
             this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2ContainerControl4.BorderColor = System.Drawing.Color.Black;
             this.guna2ContainerControl4.BorderThickness = 1;
+            this.guna2ContainerControl4.Controls.Add(this.guna2VSeparator2);
+            this.guna2ContainerControl4.Controls.Add(this.guna2VSeparator1);
             this.guna2ContainerControl4.Controls.Add(this.btncancelar);
             this.guna2ContainerControl4.Controls.Add(this.btnadicionar);
             this.guna2ContainerControl4.Controls.Add(this.btncomprar);
@@ -341,6 +344,20 @@
             this.guna2ContainerControl4.TabIndex = 22;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             this.guna2ContainerControl4.Click += new System.EventHandler(this.guna2ContainerControl4_Click);
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(282, 20);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(12, 24);
+            this.guna2VSeparator1.TabIndex = 14;
+            // 
+            // guna2VSeparator2
+            // 
+            this.guna2VSeparator2.Location = new System.Drawing.Point(400, 22);
+            this.guna2VSeparator2.Name = "guna2VSeparator2";
+            this.guna2VSeparator2.Size = new System.Drawing.Size(12, 24);
+            this.guna2VSeparator2.TabIndex = 15;
             // 
             // AdicionarAvancar
             // 
@@ -370,7 +387,6 @@
             this.guna2ContainerControl3.ResumeLayout(false);
             this.guna2ContainerControl3.PerformLayout();
             this.guna2ContainerControl4.ResumeLayout(false);
-            this.guna2ContainerControl4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +413,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelqtdscribe;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
     }
 }
