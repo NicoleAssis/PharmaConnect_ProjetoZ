@@ -60,7 +60,7 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
-        private void panelDep_Paint(object sender, PaintEventArgs e)
+        private void userControlProduto1_Load(object sender, EventArgs e)
         {
 
         }

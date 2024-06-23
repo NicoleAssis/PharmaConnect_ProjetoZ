@@ -68,7 +68,7 @@
             // 
             // labelPreco
             // 
-            this.labelPreco.Font = new System.Drawing.Font("Dubai", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPreco.ForeColor = System.Drawing.Color.White;
             this.labelPreco.Location = new System.Drawing.Point(160, 92);
             this.labelPreco.Name = "labelPreco";

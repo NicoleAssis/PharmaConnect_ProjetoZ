@@ -125,6 +125,12 @@
     <Compile Include="projeto.model\Produto.cs" />
     <Compile Include="projeto.model\Validador.cs" />
     <Compile Include="projeto.model\Venda.cs" />
+    <Compile Include="projeto.view\AdicionarAvancar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\AdicionarAvancar.Designer.cs">
+      <DependentUpon>AdicionarAvancar.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +179,23 @@
     <Compile Include="projeto.view\AdmFrmProdutos.Designer.cs">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmAllProdutosADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmAllProdutosADM.Designer.cs">
+      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="projeto.view\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmCompras.cs">
       <SubType>Form</SubType>
@@ -287,6 +305,12 @@
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="SampleADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleADD.Designer.cs">
+      <DependentUpon>SampleADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\UserControlComprasProdutos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,6 +330,9 @@
       <DependentUpon>UserControlProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="projeto.view\AdicionarAvancar.resx">
+      <DependentUpon>AdicionarAvancar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmAdicionarProduto.resx">
       <DependentUpon>AdmFrmAdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,8 +357,14 @@
     <EmbeddedResource Include="projeto.view\AdmFrmProdutos.resx">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmAllProdutosADM.resx">
+      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
@@ -386,6 +419,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleADD.resx">
+      <DependentUpon>SampleADD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\UserControlComprasProdutos.resx">
       <DependentUpon>UserControlComprasProdutos.cs</DependentUpon>
@@ -463,7 +499,10 @@
     <None Include="projeto.view\img\remedioImagemTeste2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="projeto.view\img\GIFLoading.gif" />
+    <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
+    <Content Include="projeto.view\img\azulclean.jpg" />
+    <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <None Include="projeto.view\img\depDermatologicos.png" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />
     <Content Include="projeto.view\img\iconcep.png" />
@@ -471,23 +510,13 @@
     <Content Include="projeto.view\img\iconendereço.png" />
     <Content Include="projeto.view\img\iconendereço2.png" />
     <Content Include="projeto.view\img\iconendereço3.png" />
-    <None Include="Resources\Gravando 2024-06-22 1615533.gif" />
-    <None Include="Resources\GIFLoading.gif" />
-    <None Include="Resources\success.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1615532.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1631082.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1655261.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1615531.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1631081.gif" />
-    <None Include="Resources\Gravando 2024-06-22 1635351.gif" />
-    <None Include="Resources\Gravando 2024-06-22 165526.gif" />
-    <None Include="Resources\Gravando 2024-06-22 163535.gif" />
-    <None Include="Resources\e1abb241f731493a9a2614f795fded16.gif" />
-    <None Include="Resources\Gravando-2024-06-22-163108-unscreen.gif" />
-    <None Include="Resources\Gravando 2024-06-22 163108.gif" />
-    <None Include="Resources\Gravando 2024-06-22 161553.gif" />
-    <None Include="Resources\My Business1.gif" />
-    <None Include="Resources\My Business.gif" />
+    <Content Include="projeto.view\img\x.png" />
+    <None Include="Resources\menos-circulo.png" />
+    <None Include="Resources\adicionar %283%29.png" />
+    <None Include="Resources\angulo-pequeno-esquerdo.png" />
+    <None Include="Resources\angulos-para-cima-e-para-baixo.png" />
+    <None Include="Resources\angulo-esquerdo.png" />
+    <None Include="Resources\azulclean.jpg" />
     <None Include="projeto.view\img\iconHome.png" />
     <Content Include="projeto.view\img\iconnumero.png" />
     <None Include="projeto.view\img\IconPessoa.png" />
