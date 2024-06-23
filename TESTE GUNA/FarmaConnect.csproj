@@ -129,11 +129,11 @@
     <Compile Include="projeto.model\Produto.cs" />
     <Compile Include="projeto.model\Validador.cs" />
     <Compile Include="projeto.model\Venda.cs" />
-    <Compile Include="projeto.view\AdicionarAvançar.cs">
+    <Compile Include="projeto.view\AdicionarAvancar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="projeto.view\AdicionarAvançar.Designer.cs">
-      <DependentUpon>AdicionarAvançar.cs</DependentUpon>
+    <Compile Include="projeto.view\AdicionarAvancar.Designer.cs">
+      <DependentUpon>AdicionarAvancar.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\AdmFrmAdicionarProduto.cs">
       <SubType>Form</SubType>
@@ -289,8 +289,8 @@
     <EmbeddedResource Include="ComprarAvancar.resx">
       <DependentUpon>ComprarAvancar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\AdicionarAvançar.resx">
-      <DependentUpon>AdicionarAvançar.cs</DependentUpon>
+    <EmbeddedResource Include="projeto.view\AdicionarAvancar.resx">
+      <DependentUpon>AdicionarAvancar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmAdicionarProduto.resx">
       <DependentUpon>AdmFrmAdicionarProduto.cs</DependentUpon>
@@ -434,7 +434,9 @@
     <None Include="projeto.view\img\remedioImagemTeste2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
+    <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />
     <Content Include="projeto.view\img\iconcep.png" />
@@ -442,6 +444,12 @@
     <Content Include="projeto.view\img\iconendereço.png" />
     <Content Include="projeto.view\img\iconendereço2.png" />
     <Content Include="projeto.view\img\iconendereço3.png" />
+    <Content Include="projeto.view\img\x.png" />
+    <None Include="Resources\menos-circulo.png" />
+    <None Include="Resources\adicionar %283%29.png" />
+    <None Include="Resources\angulo-pequeno-esquerdo.png" />
+    <None Include="Resources\angulos-para-cima-e-para-baixo.png" />
+    <None Include="Resources\angulo-esquerdo.png" />
     <None Include="Resources\azulclean.jpg" />
     <None Include="projeto.view\img\iconHome.png" />
     <Content Include="projeto.view\img\iconnumero.png" />

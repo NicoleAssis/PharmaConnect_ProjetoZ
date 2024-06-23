@@ -51,8 +51,8 @@ namespace TESTE_GUNA.projeto.view
 
 
             // Redirecionar para a tela de compras
-            FrmCompras telaCompras = new FrmCompras();
-            telaCompras.Show();
+            AdicionarAvancar telaconfirmar = new AdicionarAvancar();
+            telaconfirmar.Show();
 
             // Esconder o formulário atual (se necessário)
             this.Hide();
@@ -60,6 +60,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void imagemProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescricao_Click(object sender, EventArgs e)
         {
 
         }

@@ -63,9 +63,49 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar__3_ {
+            get {
+                object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar_ao_carrinho_de_compras {
             get {
                 object obj = ResourceManager.GetObject("adicionar-ao-carrinho-de-compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angulo_esquerdo {
+            get {
+                object obj = ResourceManager.GetObject("angulo-esquerdo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angulo_pequeno_esquerdo {
+            get {
+                object obj = ResourceManager.GetObject("angulo-pequeno-esquerdo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angulos_para_cima_e_para_baixo {
+            get {
+                object obj = ResourceManager.GetObject("angulos-para-cima-e-para-baixo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +406,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap imagemProdutooficial1 {
             get {
                 object obj = ResourceManager.GetObject("imagemProdutooficial1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menos_circulo {
+            get {
+                object obj = ResourceManager.GetObject("menos-circulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

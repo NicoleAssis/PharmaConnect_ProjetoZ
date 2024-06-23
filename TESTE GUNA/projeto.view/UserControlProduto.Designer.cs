@@ -64,10 +64,11 @@
             this.labelDescricao.Size = new System.Drawing.Size(129, 36);
             this.labelDescricao.TabIndex = 1;
             this.labelDescricao.Text = "10 Comprimidos de 5mg";
+            this.labelDescricao.Click += new System.EventHandler(this.labelDescricao_Click);
             // 
             // labelPreco
             // 
-            this.labelPreco.Font = new System.Drawing.Font("Dubai", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPreco.ForeColor = System.Drawing.Color.White;
             this.labelPreco.Location = new System.Drawing.Point(160, 92);
             this.labelPreco.Name = "labelPreco";

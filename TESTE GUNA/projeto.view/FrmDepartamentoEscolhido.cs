@@ -59,5 +59,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void userControlProduto1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

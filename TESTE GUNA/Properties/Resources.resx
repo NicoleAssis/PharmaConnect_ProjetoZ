@@ -121,6 +121,9 @@
   <data name="iconCredito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconCredito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="angulo-esquerdo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angulo-esquerdo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconProduto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="remedioImagemTeste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\remedioImagemTeste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="angulos-para-cima-e-para-baixo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angulos-para-cima-e-para-baixo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconAlterarProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconAlterarProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -156,6 +159,12 @@
   </data>
   <data name="check-carrinho-de-compras1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check-carrinho-de-compras1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angulo-pequeno-esquerdo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angulo-pequeno-esquerdo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="telaCompraMenor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\telaCompraMenor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,6 +186,9 @@
   </data>
   <data name="iconDebito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDebito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adicionar (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adicionar (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconSair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconSair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,11 +223,14 @@
   <data name="PIXqrCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\PIXqrCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.view\img\IconLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconDesligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDesligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.view\img\IconLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="azulclean" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\azulclean.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +253,7 @@
   <data name="adicionar-ao-carrinho-de-compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar-ao-carrinho-de-compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menos-circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menos-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
