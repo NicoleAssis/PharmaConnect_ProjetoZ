@@ -102,7 +102,7 @@
             this.labelDesc.AutoSize = true;
             this.labelDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDesc.Location = new System.Drawing.Point(27, 70);
+            this.labelDesc.Location = new System.Drawing.Point(18, 59);
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(504, 20);
             this.labelDesc.TabIndex = 13;
