@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -14,6 +15,7 @@ namespace TESTE_GUNA.projeto.view
     {
         public AdmFrmProdutos()
         {
+
             InitializeComponent();
         }
 
@@ -60,6 +62,39 @@ namespace TESTE_GUNA.projeto.view
             AdmFrmCadastroAdministrador telaCadastro = new AdmFrmCadastroAdministrador();
             this.Close();
             telaCadastro.Show();
+        }
+
+        private void AdmFrmProdutos_Load(object sender, EventArgs e)
+        {
+            //puxando o metodo listar produto
+            ProdutoDAO dao = new ProdutoDAO();
+            tabelaProdutos.DataSource = dao.LIstarProdutos();
+
+        }
+
+        private void tabelaProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Pegando os dados de um produto selecionado
+            
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            //indo para a tela alterar produtos
+            AdmFrmAlterarProdutos telalterarprodutos = new AdmFrmAlterarProdutos();
+            //esconde a tela anterior
+            telalterarprodutos.Show();
+           
+        }
+
+        private void tabelaProdutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

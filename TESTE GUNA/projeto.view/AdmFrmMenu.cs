@@ -64,5 +64,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
