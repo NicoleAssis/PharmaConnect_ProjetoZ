@@ -109,12 +109,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComprarAvancar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ComprarAvancar.Designer.cs">
-      <DependentUpon>ComprarAvancar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="projet.conexao\ConnectionFactory.cs" />
     <Compile Include="projeto.dao\AdministradorDAO.cs" />
@@ -173,11 +167,23 @@
     <Compile Include="projeto.view\AdmFrmProdutos.Designer.cs">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\FrmAllProdutosADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmAllProdutosADM.Designer.cs">
+      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="projeto.view\FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmCompras.cs">
       <SubType>Form</SubType>
@@ -287,6 +293,12 @@
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="SampleADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleADD.Designer.cs">
+      <DependentUpon>SampleADD.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\UserControlComprasProdutos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,9 +318,6 @@
       <DependentUpon>UserControlProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ComprarAvancar.resx">
-      <DependentUpon>ComprarAvancar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdicionarAvancar.resx">
       <DependentUpon>AdicionarAvancar.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,8 +339,14 @@
     <EmbeddedResource Include="projeto.view\AdmFrmProdutos.resx">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmAllProdutosADM.resx">
+      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
@@ -386,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleADD.resx">
+      <DependentUpon>SampleADD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\UserControlComprasProdutos.resx">
       <DependentUpon>UserControlComprasProdutos.cs</DependentUpon>
@@ -466,6 +484,7 @@
     <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <None Include="projeto.view\img\depDermatologicos.png" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />
     <Content Include="projeto.view\img\iconcep.png" />

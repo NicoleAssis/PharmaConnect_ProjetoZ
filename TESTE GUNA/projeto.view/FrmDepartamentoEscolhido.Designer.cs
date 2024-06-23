@@ -269,15 +269,15 @@
             // 
             // panelDep
             // 
-            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panelDep.Location = new System.Drawing.Point(0, 0);
-            this.panelDep.Name = "panelDep";
-            this.panelDep.Size = new System.Drawing.Size(772, 35);
-            this.panelDep.TabIndex = 32;
-            this.panelDep.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDep_Paint);
+            //this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            //this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            //this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
+            //this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
+            //this.panelDep.Location = new System.Drawing.Point(0, 0);
+            //this.panelDep.Name = "panelDep";
+            //this.panelDep.Size = new System.Drawing.Size(772, 35);
+            //this.panelDep.TabIndex = 32;
+            //this.panelDep.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDep_Paint);
             // 
             // FrmDepartamentoEscolhido
             // 

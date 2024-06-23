@@ -119,15 +119,15 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.Gravando_2024_06_22_1631082;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(641, 648);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(221, 201);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
+            //this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
+            //this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.Gravando_2024_06_22_1631082;
+            //this.guna2PictureBox1.ImageRotate = 0F;
+            //this.guna2PictureBox1.Location = new System.Drawing.Point(641, 648);
+            //this.guna2PictureBox1.Name = "guna2PictureBox1";
+            //this.guna2PictureBox1.Size = new System.Drawing.Size(221, 201);
+            //this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            //this.guna2PictureBox1.TabIndex = 2;
+            //this.guna2PictureBox1.TabStop = false;
             // 
             // guna2CirclePictureBox1
             // 
