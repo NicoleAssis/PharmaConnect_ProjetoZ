@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -25,30 +26,64 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnAlterarSenha_Click(object sender, EventArgs e)
         {
-            //pergunta se deseja efetuar o pagamento ou nao
-            FrmMessageBox frmMessageBox = new FrmMessageBox();
-            frmMessageBox.RetornaSimNao("DESEJA ALTERAR A SENHA?");
-            frmMessageBox.ShowDialog();
-
-            if (frmMessageBox.btnSimClick == true)
+            if (txtSenhaAtual.Text == "" || txtConfirmeSenha.Text == "" || txtNovaSenha.Text == "")
             {
-                
-                //se confirmou que deseja efetuar o pagamento
-                frmMessageBox.Mensagem("SENHA ALTERADA COM SUCESSO!");
-                frmMessageBox.ShowDialog();
-                this.Close();
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("Preencha todos os campos!");
+                mensagem.ShowDialog();
             }
-            else if (frmMessageBox.btnNaoClick == true)
+            else if (txtNovaSenha.Text != txtConfirmeSenha.Text)
             {
-                //se nao quer efetuar o pagamento
-                this.Close();
-                FrmPerfil telaPerfil = new FrmPerfil();
-                telaPerfil.ShowDialog();
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("Senhas diferentes!");
+                mensagem.ShowDialog();
             }
             else
             {
-                frmMessageBox.Mensagem("Selecione SIM ou NAO");
+                SenhaDAO senhaDAO = new SenhaDAO();
+
+                if((senhaDAO.ConfirmarSenha(txtSenhaAtual.Text)) == true)
+                { 
+                    //pergunta se deseja efetuar o pagamento ou nao
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.RetornaSimNao("DESEJA ALTERAR A SENHA?");
+                    frmMessageBox.ShowDialog();
+
+                    if (frmMessageBox.btnSimClick == true)
+                    {
+
+                        senhaDAO.AlterarSenha(txtNovaSenha.Text);
+
+
+                        //se confirmou que deseja efetuar o pagamento
+                        FrmMessageSucess frmMessageSucess = new FrmMessageSucess();
+                        frmMessageSucess.MensagemDeSucesso("SENHA ALTERADA COM SUCESSO!");
+                        frmMessageSucess.ShowDialog();
+                        this.Close();
+                    }
+                    else if (frmMessageBox.btnNaoClick == true)
+                    {
+                        //se nao quer efetuar o pagamento
+                        this.Close();
+                        FrmPerfil telaPerfil = new FrmPerfil();
+                        telaPerfil.ShowDialog();
+                    }
+                    else
+                    {
+                        frmMessageBox.Mensagem("Selecione SIM ou NAO");
+                    }
+                }
+                else
+                {
+                    FrmMessageBox mensagem = new FrmMessageBox();
+                    mensagem.Mensagem("Senha atual incorreta!");
+                    mensagem.ShowDialog();
+                }
+
+
             }
+            
+           
         }
 
         private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
