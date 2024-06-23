@@ -80,27 +80,37 @@ namespace TESTE_GUNA.projeto.view
             // Validação dos campos
             if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo CNPJ.");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por favor, preencha o campo CNPJ.");
+                message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Nome.");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por favor, preencha o campo Nome.");
+                message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
             {
-                MessageBox.Show("Por favor, preencha um email válido.");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por favor, preencha um email válido.");
+                message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtCelular.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Celular.");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por favor, preencha o campo Celular.");
+                message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtSenha.Text))
             {
-                MessageBox.Show("Por favor, preencha o campo Senha.");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por favor, preencha o campo Senha.");
+                message.ShowDialog();
                 return;
             }
 

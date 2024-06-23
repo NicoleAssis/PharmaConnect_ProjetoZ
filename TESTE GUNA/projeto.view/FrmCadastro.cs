@@ -39,12 +39,7 @@ namespace TESTE_GUNA.projeto.view
             Environment.Exit(0);
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            FrmMenu telaMenu = new FrmMenu();
-            telaMenu.Show();
-            this.Hide();
-        }
+
 
         private void guna2TextBox2_Click(object sender, EventArgs e)
         {
@@ -134,8 +129,9 @@ namespace TESTE_GUNA.projeto.view
                 };
 
                 dao.CadastrarClienteC1(obj);
-                FrmMessageBox mensagem = new FrmMessageBox();
-                mensagem.Mensagem("Cadastro Efetuado");
+                FrmMessageSucess mensagem = new FrmMessageSucess();
+                mensagem.MensagemDeSucesso("Cadastro Efetuado com Sucesso!");
+                mensagem.ShowDialog();
 
 
                 //abrir a tela de login
@@ -148,15 +144,21 @@ namespace TESTE_GUNA.projeto.view
             }
             else if (validacaoEmail == true && validacaoCPF == false || validacaoEmail == false && validacaoCPF == true)
             {
-                MessageBox.Show("CPF Inválido");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("CPF Inválido");
+                message.ShowDialog();
             }
             else if (validacaoEmail == false && validacaoCPF == false)
             {
-                MessageBox.Show("Email e senha inválidos!");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Email e senha inválidos!");
+                message.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Email Inválido");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Email Inválido");
+                message.ShowDialog();
             }
 
             #endregion
@@ -167,7 +169,9 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click_1(object sender, EventArgs e)
         {
-
+            FrmLogin telaLogin = new FrmLogin();
+            telaLogin.Show();
+            this.Hide();
         }
 
         private void FrmCadastro_Load(object sender, EventArgs e)

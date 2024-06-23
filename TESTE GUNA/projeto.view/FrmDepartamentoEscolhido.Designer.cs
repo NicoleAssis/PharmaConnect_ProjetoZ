@@ -274,7 +274,7 @@
             this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
             this.panelDep.Location = new System.Drawing.Point(0, 0);
             this.panelDep.Name = "panelDep";
-            this.panelDep.Size = new System.Drawing.Size(772, 35);
+            this.panelDep.Size = new System.Drawing.Size(777, 35);
             this.panelDep.TabIndex = 32;
             this.panelDep.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDep_Paint);
             // 
@@ -283,7 +283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(772, 550);
+            this.ClientSize = new System.Drawing.Size(777, 550);
             this.Controls.Add(this.lblDepartamento);
             this.Controls.Add(this.scrollDepartamento);
             this.Controls.Add(this.btnX);
