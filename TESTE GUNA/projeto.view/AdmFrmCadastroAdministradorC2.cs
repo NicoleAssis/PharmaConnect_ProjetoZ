@@ -50,30 +50,71 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-         //1 passo - receber os dados dentro do objeto modelo de cliente
-            Administrador objeto = new Administrador();
+        { 
+            // Validação dos campos
+            if (string.IsNullOrWhiteSpace(txtCEP.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um CEP válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtEndereco.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Endereço válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNumero.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Número válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBairro.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Bairro válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtCidade.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha uma Cidade válida");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtEstado.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Estado válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
 
-           
-            objeto.cep = txtCEP.Text;
-            objeto.endereco = txtEndereco.Text;
-            objeto.numero = txtNumero.Text;
-            objeto.complemento = txtComplemento.Text;
-            objeto.bairro = txtBairro.Text;
-            objeto.cidade = txtCidade.Text;
-            objeto.estado = txtEstado.Text;
-        
+            // Adiciona os campos da segunda tela ao objeto admin
+            admin.cep = txtCEP.Text;
+            admin.endereco = txtEndereco.Text;
+            admin.numero = txtNumero.Text;
+            admin.complemento = txtComplemento.Text;
+            admin.bairro = txtBairro.Text;
+            admin.cidade = txtCidade.Text;
+            admin.estado = txtEstado.Text;
 
-            ////2 passo - Criar um objeto da classe AdmDao e chamar o metodo cadastrarADm
-            //AdministradorDAO dao = new AdministradorDAO();
-            //dao.CadastrarAdministrador2(objeto);
+            // Chama o método de cadastro com o objeto completo
+            AdministradorDAO dao = new AdministradorDAO();
+            dao.CadastrarAdministrador(admin);
 
-            //FrmMessageBox frmMessageBox = new FrmMessageBox();
-            //frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
-            //frmMessageBox.ShowDialog();
-            //AdmFrmMenu telaadmmenu = new AdmFrmMenu();
-            //telaadmmenu.Show();
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
+            frmMessageBox.ShowDialog();
 
+            AdmFrmMenu telaadmmenu = new AdmFrmMenu();
+            telaadmmenu.Show();
+            this.Hide();
 
         }
 

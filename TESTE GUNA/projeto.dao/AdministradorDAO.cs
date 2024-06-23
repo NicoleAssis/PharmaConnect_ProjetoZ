@@ -95,17 +95,22 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-        #region CadastroAdministrador1
-
-
-
-        public void CadastrarAdministrador1(Administrador obj)
+        #region CadastroAdmnistrrador
+        public void CadastrarAdministrador(Administrador obj)
         {
             try
             {
                 // Definindo comando SQL
-                string sql = @"insert into tb_administrador (cnpj_administrador, nome_administrador, email_administrador, telefone_administrador, celular_administrador, senha_administrador, nivel_acesso)
-                    values (@cnpj_administrador, @nome_administrador, @email_administrador, @telefone_administrador, @celular_administrador, @senha_administrador, @nivel_acesso)";
+                string sql = @"INSERT INTO tb_administrador (
+                           cnpj_administrador, nome_administrador, email_administrador, telefone_administrador, 
+                           celular_administrador, senha_administrador, nivel_acesso, cep_administrador, 
+                           endereco_administrador, numero_administrador, complemento_administrador, 
+                           bairro_administrador, cidade_administrador, estado_administrador)
+                       VALUES (
+                           @cnpj_administrador, @nome_administrador, @email_administrador, @telefone_administrador, 
+                           @celular_administrador, @senha_administrador, @nivel_acesso, @cep_administrador, 
+                           @endereco_administrador, @numero_administrador, @complemento_administrador, 
+                           @bairro_administrador, @cidade_administrador, @estado_administrador)";
 
                 // Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
@@ -117,6 +122,13 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
                 executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
                 executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
+                executacmd.Parameters.AddWithValue("@cep_administrador", obj.cep);
+                executacmd.Parameters.AddWithValue("@endereco_administrador", obj.endereco);
+                executacmd.Parameters.AddWithValue("@numero_administrador", obj.numero);
+                executacmd.Parameters.AddWithValue("@complemento_administrador", obj.complemento);
+                executacmd.Parameters.AddWithValue("@bairro_administrador", obj.bairro);
+                executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
+                executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
 
                 // Abrindo conexão e aplicando SQL
                 conexao.Open();
@@ -124,8 +136,6 @@ namespace TESTE_GUNA.projeto.dao
 
                 // Fechando conexão
                 conexao.Close();
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("Adm cadastrado com sucesso");
             }
             catch (Exception erro)
             {
@@ -133,13 +143,59 @@ namespace TESTE_GUNA.projeto.dao
             }
         }
 
-        //  public void CadastrarAdministrador2(Administrador objeto)
-        //  {
-        //  {
-        //      try
-        //      {
-        //          // Definindo comando SQL
-        //          string sql = @"INSERT INTO tb_administrador (
+
+
+
+
+        #endregion
+
+        //#region CadastroAdministrador1
+
+
+
+        //public void CadastrarAdministrador1(Administrador obj)
+        //{
+        //    try
+        //    {
+        //        // Definindo comando SQL
+        //        string sql = @"insert into tb_administrador (cnpj_administrador, nome_administrador, email_administrador, telefone_administrador, celular_administrador, senha_administrador, nivel_acesso)
+        //            values (@cnpj_administrador, @nome_administrador, @email_administrador, @telefone_administrador, @celular_administrador, @senha_administrador, @nivel_acesso)";
+
+        //        // Organizando comando SQL
+        //        MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+        //        executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
+        //        executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
+        //        executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
+        //        executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
+        //        executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
+        //        executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
+        //        executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
+
+        //        // Abrindo conexão e aplicando SQL
+        //        conexao.Open();
+        //        executacmd.ExecuteNonQuery();
+
+        //        // Fechando conexão
+        //        conexao.Close();
+
+        //    }
+        //    catch (Exception erro)
+        //    {
+        //        System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+        //    }
+        //}
+        //#endregion
+
+
+
+        //public void CadastrarAdministrador2(Administrador objeto)
+        //{
+        //    {
+        //        try
+        //        {
+        //            // Definindo comando SQL
+        //            string sql = @"insert into tb_administrador (
         //     cep_administrador, endereco_administrador, numero_administrador,
         //    complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador, 
         //   )
@@ -148,82 +204,84 @@ namespace TESTE_GUNA.projeto.dao
         //    @complemento_administrador, @bairro_administrador, @cidade_administrador, @estado_administrador, 
         //    @senha_administrador, @nivel_acesso)";
 
-        //          // Organizando comando SQL
-        //          MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+        //            // Organizando comando SQL
+        //            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-        //          executacmd.Parameters.AddWithValue("@cep_administrador", objeto.cep);
-        //          executacmd.Parameters.AddWithValue("@endereco_administrador", objeto.endereco);
-        //          executacmd.Parameters.AddWithValue("@numero_administrador", objeto.numero);
-        //          executacmd.Parameters.AddWithValue("@complemento_administrador", objeto.complemento);
-        //          executacmd.Parameters.AddWithValue("@bairro_administrador", objeto.bairro);
-        //          executacmd.Parameters.AddWithValue("@cidade_administrador", objeto.cidade);
-        //          executacmd.Parameters.AddWithValue("@estado_administrador", objeto.estado);
+        //            executacmd.Parameters.AddWithValue("@cep_administrador", objeto.cep);
+        //            executacmd.Parameters.AddWithValue("@endereco_administrador", objeto.endereco);
+        //            executacmd.Parameters.AddWithValue("@numero_administrador", objeto.numero);
+        //            executacmd.Parameters.AddWithValue("@complemento_administrador", objeto.complemento);
+        //            executacmd.Parameters.AddWithValue("@bairro_administrador", objeto.bairro);
+        //            executacmd.Parameters.AddWithValue("@cidade_administrador", objeto.cidade);
+        //            executacmd.Parameters.AddWithValue("@estado_administrador", objeto.estado);
 
 
-        //          // Abrindo conexão e aplicando SQL
-        //          conexao.Open();
-        //          executacmd.ExecuteNonQuery();
+        //            // Abrindo conexão e aplicando SQL
+        //            conexao.Open();
+        //            executacmd.ExecuteNonQuery();
 
-        //          // Fechando conexão
-        //          conexao.Close();
-        //      }
-        //      catch (Exception erro)
-        //      {
-        //          System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
-        //      }
-        //  }
+        //            // Fechando conexão
+        //            conexao.Close();
+        //        }
+        //        catch (Exception erro)
+        //        {
+        //            System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+        //        }
+        //    }
 
-        // #region ValidarCPNJ
-        /*public static bool ValidarCNPJ(string cnpj)
-        {
-            // Remove caracteres não numéricos
-            cnpj = Regex.Replace(cnpj, "[^0-9]", "");
+        //    //#region Validar CNPJ
+        //    //public static bool ValidarCNPJ(string cnpj)
+        //    //{
+        //    //    // Remove caracteres não numéricos
+        //    //    cnpj = Regex.Replace(cnpj, "[^0-9]", "");
 
-            // Verifica se o CNPJ tem 14 dígitos
-            if (cnpj.Length != 14)
-                return false;
+        //    //    // Verifica se o CNPJ tem 14 dígitos
+        //    //    if (cnpj.Length != 14)
+        //    //        return false;
 
-            // Verifica se todos os dígitos são iguais (caso raro de erro)
-            if (cnpj.All(x => x == cnpj[0]))
-                return false;
+        //    //    // Verifica se todos os dígitos são iguais (caso raro de erro)
+        //    //    if (cnpj.All(x => x == cnpj[0]))
+        //    //        return false;
 
-            // Calcula os dígitos verificadores
-            int[] multiplicadores1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicadores2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        //    //    // Calcula os dígitos verificadores
+        //    //    int[] multiplicadores1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+        //    //    int[] multiplicadores2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-            string tempCnpj = cnpj.Substring(0, 12);
-            int soma = 0;
+        //    //    string tempCnpj = cnpj.Substring(0, 12);
+        //    //    int soma = 0;
 
-            for (int i = 0; i < 12; i++)
-            {
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores1[i];
-            }
+        //    //    for (int i = 0; i < 12; i++)
+        //    //    {
+        //    //        soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores1[i];
+        //    //    }
 
-            int resto = soma % 11;
-            int digito1 = resto < 2 ? 0 : 11 - resto;
+        //    //    int resto = soma % 11;
+        //    //    int digito1 = resto < 2 ? 0 : 11 - resto;
 
-            tempCnpj += digito1;
-            soma = 0;
+        //    //    tempCnpj += digito1;
+        //    //    soma = 0;
 
-            for (int i = 0; i < 13; i++)
-            {
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores2[i];
-            }
+        //    //    for (int i = 0; i < 13; i++)
+        //    //    {
+        //    //        soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores2[i];
+        //    //    }
 
-            resto = soma % 11;
-            int digito2 = resto < 2 ? 0 : 11 - resto;
+        //    //    resto = soma % 11;
+        //    //    int digito2 = resto < 2 ? 0 : 11 - resto;
 
-            tempCnpj += digito2;
+        //    //    tempCnpj += digito2;
 
-            // Verifica se os dígitos calculados são iguais aos informados
-            return cnpj.EndsWith(tempCnpj.Substring(12));
-        }
-        */
-        #endregion
+        //    //    // Verifica se os dígitos calculados são iguais aos informados
+        //    //    return cnpj.EndsWith(tempCnpj.Substring(12));
+        //    //}
+        //    //#endregion
+        //}
+
+
+
+    }
+}
 
     
-        }
-        
-    }
 
 

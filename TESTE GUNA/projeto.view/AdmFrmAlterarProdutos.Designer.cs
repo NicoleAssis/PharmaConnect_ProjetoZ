@@ -39,7 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtNomeCartao = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNomeProduto = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -173,43 +173,45 @@
             this.DataGridViewVendas.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridViewVendas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVendas_CellClick);
+            this.DataGridViewVendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVendas_CellContentClick);
             // 
-            // txtNomeCartao
+            // txtNomeProduto
             // 
-            this.txtNomeCartao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.txtNomeCartao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.BorderRadius = 13;
-            this.txtNomeCartao.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomeCartao.DefaultText = "Nome do Produto";
-            this.txtNomeCartao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNomeCartao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNomeCartao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeCartao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeCartao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtNomeCartao.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNomeCartao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.Location = new System.Drawing.Point(258, 255);
-            this.txtNomeCartao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNomeCartao.Name = "txtNomeCartao";
-            this.txtNomeCartao.PasswordChar = '\0';
-            this.txtNomeCartao.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtNomeCartao.PlaceholderText = "";
-            this.txtNomeCartao.SelectedText = "";
-            this.txtNomeCartao.Size = new System.Drawing.Size(216, 32);
-            this.txtNomeCartao.TabIndex = 89;
-            this.txtNomeCartao.TextChanged += new System.EventHandler(this.txtNomeCartao_TextChanged);
-            this.txtNomeCartao.Click += new System.EventHandler(this.txtNomeCartao_Click);
+            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.txtNomeProduto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.txtNomeProduto.BorderRadius = 13;
+            this.txtNomeProduto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNomeProduto.DefaultText = "Nome do Produto";
+            this.txtNomeProduto.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNomeProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNomeProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeProduto.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeProduto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeProduto.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtNomeProduto.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNomeProduto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeProduto.Location = new System.Drawing.Point(258, 255);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.PasswordChar = '\0';
+            this.txtNomeProduto.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtNomeProduto.PlaceholderText = "";
+            this.txtNomeProduto.SelectedText = "";
+            this.txtNomeProduto.Size = new System.Drawing.Size(216, 32);
+            this.txtNomeProduto.TabIndex = 89;
+            this.txtNomeProduto.TextChanged += new System.EventHandler(this.txtNomeCartao_TextChanged);
+            this.txtNomeProduto.Click += new System.EventHandler(this.txtNomeCartao_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label1.Location = new System.Drawing.Point(99, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 19);
+            this.label1.Size = new System.Drawing.Size(160, 20);
             this.label1.TabIndex = 88;
             this.label1.Text = "Nome do Produto:";
             // 
@@ -244,11 +246,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label2.Location = new System.Drawing.Point(196, 300);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 19);
+            this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 90;
             this.label2.Text = "Preço:";
             // 
@@ -282,11 +284,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label3.Location = new System.Drawing.Point(147, 340);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 19);
+            this.label3.Size = new System.Drawing.Size(110, 20);
             this.label3.TabIndex = 92;
             this.label3.Text = "Quantidade:";
             // 
@@ -334,6 +336,7 @@
             this.txtPesquisa.SelectedText = "";
             this.txtPesquisa.Size = new System.Drawing.Size(316, 29);
             this.txtPesquisa.TabIndex = 29;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             this.txtPesquisa.Click += new System.EventHandler(this.txtPesquisa_Click);
             // 
             // AdmFrmAlterarProdutos
@@ -347,7 +350,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNomeCartao);
+            this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridViewVendas);
             this.Controls.Add(this.panel3);
@@ -378,7 +381,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
         private System.Windows.Forms.Label label;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridViewVendas;
-        private Guna.UI2.WinForms.Guna2TextBox txtNomeCartao;
+        private Guna.UI2.WinForms.Guna2TextBox txtNomeProduto;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtPreco;
         private System.Windows.Forms.Label label2;
