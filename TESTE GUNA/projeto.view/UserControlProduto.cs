@@ -82,7 +82,14 @@ namespace TESTE_GUNA.projeto.view
 
             // Redirecionar para a tela de compras
             AdicionarAvancar telaconfirmar = new AdicionarAvancar();
+            telaconfirmar.labelProduto.Text = labelNome.Text;
+            telaconfirmar.labelDesc.Text = labelDescricao.Text;
+            telaconfirmar.labelValor.Text = labelPreco.Text;
+
+
             telaconfirmar.Show();
+
+            
 
 
         }
@@ -93,6 +100,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void labelDescricao_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void labelcodigo_Click(object sender, EventArgs e)
         {
 
         }

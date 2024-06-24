@@ -15,6 +15,7 @@ namespace TESTE_GUNA.projeto.view
 {
     public partial class FrmDepartamentoEscolhido : Form
     {
+        int j = 1;
         public FrmDepartamentoEscolhido()
         {
             InitializeComponent();
@@ -37,12 +38,13 @@ namespace TESTE_GUNA.projeto.view
                 Produto obj = new Produto();
                 
 
-                    dao.GetDetails(i);
+                    dao.GetDetails(j);
                     usercontrolproduto[i].NomeProduto = dao.nome_reader;
                     usercontrolproduto[i].Dep = dao.dep_reader;
                     usercontrolproduto[i].Preco = dao.preco_reader;
                     usercontrolproduto[i].Desc = dao.desc_reader;
-                    Console.WriteLine(obj.descProduto);
+                    
+                   
 
                 
 
@@ -55,6 +57,7 @@ namespace TESTE_GUNA.projeto.view
                 else
                 {
                     flowLayoutPanel1.Controls.Add(usercontrolproduto[i]);
+                    j++;
                 }
 
 

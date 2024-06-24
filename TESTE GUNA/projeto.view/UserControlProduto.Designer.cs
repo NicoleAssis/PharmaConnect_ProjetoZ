@@ -32,6 +32,7 @@
             this.labelDescricao = new System.Windows.Forms.Label();
             this.labelPreco = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labeldep = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -41,9 +42,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelid = new System.Windows.Forms.Label();
-            this.labelcodigo = new System.Windows.Forms.Label();
-            this.labeldep = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagemProduto)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +90,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(98, 149);
             this.panel1.TabIndex = 4;
+            // 
+            // labeldep
+            // 
+            this.labeldep.BackColor = System.Drawing.Color.Transparent;
+            this.labeldep.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldep.ForeColor = System.Drawing.Color.Gray;
+            this.labeldep.Location = new System.Drawing.Point(3, 2);
+            this.labeldep.Name = "labeldep";
+            this.labeldep.Size = new System.Drawing.Size(95, 36);
+            this.labeldep.TabIndex = 12;
             // 
             // panel8
             // 
@@ -181,41 +189,11 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "RS: ";
             // 
-            // labelid
-            // 
-            this.labelid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelid.ForeColor = System.Drawing.Color.White;
-            this.labelid.Location = new System.Drawing.Point(241, 92);
-            this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(55, 20);
-            this.labelid.TabIndex = 10;
-            // 
-            // labelcodigo
-            // 
-            this.labelcodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelcodigo.Location = new System.Drawing.Point(206, 98);
-            this.labelcodigo.Name = "labelcodigo";
-            this.labelcodigo.Size = new System.Drawing.Size(90, 36);
-            this.labelcodigo.TabIndex = 11;
-            // 
-            // labeldep
-            // 
-            this.labeldep.BackColor = System.Drawing.Color.Transparent;
-            this.labeldep.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldep.ForeColor = System.Drawing.Color.Gray;
-            this.labeldep.Location = new System.Drawing.Point(3, 2);
-            this.labeldep.Name = "labeldep";
-            this.labeldep.Size = new System.Drawing.Size(95, 36);
-            this.labeldep.TabIndex = 12;
-            // 
             // UserControlProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
-            this.Controls.Add(this.labelcodigo);
-            this.Controls.Add(this.labelid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -251,8 +229,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelid;
-        private System.Windows.Forms.Label labelcodigo;
         private System.Windows.Forms.Label labeldep;
     }
 }

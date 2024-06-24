@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -65,9 +67,25 @@ namespace TESTE_GUNA.projeto.view
           
         }
 
+
         private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void userControlProduto1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdmFrmMenu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

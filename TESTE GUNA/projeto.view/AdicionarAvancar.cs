@@ -12,6 +12,7 @@ namespace TESTE_GUNA.projeto.view
 {
     public partial class AdicionarAvancar : Form
     {
+        private int qtd;
         public AdicionarAvancar()
         {
             InitializeComponent();
@@ -40,6 +41,43 @@ namespace TESTE_GUNA.projeto.view
         private void guna2ContainerControl4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btncomprar_Click(object sender, EventArgs e)
+        {
+            
+            
+
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            qtd++; 
+            txtqtd.Text = qtd.ToString();
+        }
+
+        private void txtqtd_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btndiminuir_Click(object sender, EventArgs e)
+        {
+            qtd--;
+            txtqtd.Text = qtd.ToString();
         }
     }
 }

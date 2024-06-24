@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.btnX = new System.Windows.Forms.Button();
-            this.scrollProdutos = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
@@ -52,6 +51,8 @@
             this.btnComprasBarraPesquisa = new System.Windows.Forms.Button();
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControlProduto1 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnX
@@ -68,7 +70,7 @@
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnX.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnX.Location = new System.Drawing.Point(930, 3);
+            this.btnX.Location = new System.Drawing.Point(1072, 20);
             this.btnX.Name = "btnX";
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(28, 29);
@@ -77,16 +79,6 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
-            // 
-            // scrollProdutos
-            // 
-            this.scrollProdutos.AutoScroll = true;
-            this.scrollProdutos.Location = new System.Drawing.Point(197, 78);
-            this.scrollProdutos.Margin = new System.Windows.Forms.Padding(30, 20, 20, 20);
-            this.scrollProdutos.Name = "scrollProdutos";
-            this.scrollProdutos.Size = new System.Drawing.Size(761, 454);
-            this.scrollProdutos.TabIndex = 23;
-            this.scrollProdutos.Paint += new System.Windows.Forms.PaintEventHandler(this.scrollProdutos_Paint);
             // 
             // panel6
             // 
@@ -303,12 +295,13 @@
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Controls.Add(this.btnPerfilBarraPerquisa);
             this.panel3.Controls.Add(this.btnComprasBarraPesquisa);
+            this.panel3.Controls.Add(this.btnX);
             this.panel3.Controls.Add(this.txtPesquisa);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(186, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 65);
+            this.panel3.Size = new System.Drawing.Size(1118, 65);
             this.panel3.TabIndex = 22;
             // 
             // btnPerfilBarraPerquisa
@@ -318,7 +311,7 @@
             this.btnPerfilBarraPerquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPerfilBarraPerquisa.FlatAppearance.BorderSize = 0;
             this.btnPerfilBarraPerquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfilBarraPerquisa.Location = new System.Drawing.Point(649, 14);
+            this.btnPerfilBarraPerquisa.Location = new System.Drawing.Point(1014, 17);
             this.btnPerfilBarraPerquisa.Name = "btnPerfilBarraPerquisa";
             this.btnPerfilBarraPerquisa.Size = new System.Drawing.Size(52, 36);
             this.btnPerfilBarraPerquisa.TabIndex = 26;
@@ -332,7 +325,7 @@
             this.btnComprasBarraPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnComprasBarraPesquisa.FlatAppearance.BorderSize = 0;
             this.btnComprasBarraPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprasBarraPesquisa.Location = new System.Drawing.Point(573, 14);
+            this.btnComprasBarraPesquisa.Location = new System.Drawing.Point(956, 17);
             this.btnComprasBarraPesquisa.Name = "btnComprasBarraPesquisa";
             this.btnComprasBarraPesquisa.Size = new System.Drawing.Size(52, 36);
             this.btnComprasBarraPesquisa.TabIndex = 25;
@@ -374,14 +367,39 @@
             this.panel2.Size = new System.Drawing.Size(10, 550);
             this.panel2.TabIndex = 21;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(205, 78);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1087, 460);
+            this.flowLayoutPanel1.TabIndex = 25;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // userControlProduto1
+            // 
+            this.userControlProduto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
+            this.userControlProduto1.Dep = null;
+            this.userControlProduto1.Desc = null;
+            this.userControlProduto1.Location = new System.Drawing.Point(5, 5);
+            this.userControlProduto1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlProduto1.Name = "userControlProduto1";
+            this.userControlProduto1.NomeProduto = null;
+            this.userControlProduto1.Preco = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.userControlProduto1.Size = new System.Drawing.Size(329, 149);
+            this.userControlProduto1.TabIndex = 0;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 550);
+            this.ClientSize = new System.Drawing.Size(1304, 550);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.scrollProdutos);
-            this.Controls.Add(this.btnX);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -398,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -422,8 +441,9 @@
         private System.Windows.Forms.Button btnPerfilBarraPerquisa;
         private System.Windows.Forms.Button btnComprasBarraPesquisa;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        public System.Windows.Forms.FlowLayoutPanel scrollProdutos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private UserControlProduto userControlProduto1;
     }
 }
