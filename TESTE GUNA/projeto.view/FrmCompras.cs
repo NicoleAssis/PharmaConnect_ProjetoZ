@@ -71,7 +71,7 @@ namespace TESTE_GUNA.projeto.view
         private void btnComprasFinalizadas_Click(object sender, EventArgs e)
         {
             FrmComprasConcluidas telaComprasConcluidas = new FrmComprasConcluidas();
-            telaComprasConcluidas.ShowDialog();
+            telaComprasConcluidas.ShowDialog(); 
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
