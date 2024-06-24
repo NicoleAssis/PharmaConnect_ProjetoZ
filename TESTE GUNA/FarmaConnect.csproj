@@ -161,6 +161,12 @@
     <Compile Include="projeto.view\AdmFrmExcluirProduto.Designer.cs">
       <DependentUpon>AdmFrmExcluirProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.view\AdmFrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\AdmFrmMenu.Designer.cs">
+      <DependentUpon>AdmFrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.view\AdmFrmPerfilAdm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmExcluirProduto.resx">
       <DependentUpon>AdmFrmExcluirProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\AdmFrmMenu.resx">
+      <DependentUpon>AdmFrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\AdmFrmPerfilAdm.resx">
       <DependentUpon>AdmFrmPerfilAdm.cs</DependentUpon>
