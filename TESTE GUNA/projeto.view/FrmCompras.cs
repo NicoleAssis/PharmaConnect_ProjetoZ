@@ -51,8 +51,8 @@ namespace TESTE_GUNA.projeto.view
 
         public void DeletarProduto(UserControlComprasProdutos produto)
         {
-            scrollCompras.Controls.Remove(produto);
-            scrollCompras.Refresh();
+            //scrollcompras.controls.remove(produto);
+            //scrollcompras.refresh();
         }
 
 
@@ -81,13 +81,13 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            //printa os produtos na tela de scroll
-            for (int i = 0; i <= 4; i++)
-            {
-                UserControlComprasProdutos userControlProdutos = new UserControlComprasProdutos();
-                userControlProdutos.printarProduto(1);
-                scrollCompras.Controls.Add(userControlProdutos);
-            }
+            ////printa os produtos na tela de scroll
+            //for (int i = 0; i <= 4; i++)
+            //{
+            //    UserControlComprasProdutos userControlProdutos = new UserControlComprasProdutos();
+            //    userControlProdutos.printarProduto(1);
+            //    scrollCompras.Controls.Add(userControlProdutos);
+            //}
 
             
         }
@@ -113,6 +113,13 @@ namespace TESTE_GUNA.projeto.view
         private void btnCompras_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimparCarrinho_Click(object sender, EventArgs e)
+        {
+            FrmFrete telafrete = new FrmFrete();
+            this.Close();
+            telafrete.Show();
         }
     }
 }

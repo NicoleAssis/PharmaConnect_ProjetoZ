@@ -99,7 +99,7 @@ namespace TESTE_GUNA.projeto.view
         private void FrmMenu_Load(object sender, EventArgs e)
         {
 
-            populateItems();
+            //populateItems();
 
            // printa os produtos na tela de scroll
             //for (int i = 0; i <= 40; i++)
@@ -139,48 +139,48 @@ namespace TESTE_GUNA.projeto.view
 
         }
         public int j = 1;
-        private void populateItems()
-        {
-            //populate it here
+        //private void populateItems()
+        //{
+        //    //populate it here
 
-            UserControlProduto[] usercontrolproduto = new UserControlProduto[20];
+        //    UserControlProduto[] usercontrolproduto = new UserControlProduto[20];
 
 
-            for (int i = 0; i < usercontrolproduto.Length; i++)
-            {
+        //    for (int i = 0; i < usercontrolproduto.Length; i++)
+        //    {
 
-                usercontrolproduto[i] = new UserControlProduto();
-                FrmDepartamentoEscolhido tela = new FrmDepartamentoEscolhido();
-                ProdutoDAO dao = new ProdutoDAO();
+        //        usercontrolproduto[i] = new UserControlProduto();
+        //        FrmDepartamentoEscolhido tela = new FrmDepartamentoEscolhido();
+        //        ProdutoDAO dao = new ProdutoDAO();
                 
 
 
-                dao.GetDetails(j);
-                usercontrolproduto[i].NomeProduto = dao.nome_reader;
-                usercontrolproduto[i].Dep = dao.dep_reader;
-                usercontrolproduto[i].Preco = dao.preco_reader;
-                usercontrolproduto[i].Desc = dao.desc_reader;
+        //        dao.GetDetails(j);
+        //        usercontrolproduto[i].NomeProduto = dao.nome_reader;
+        //        usercontrolproduto[i].Dep = dao.dep_reader;
+        //        usercontrolproduto[i].Preco = dao.preco_reader;
+        //        usercontrolproduto[i].Desc = dao.desc_reader;
 
 
 
 
 
 
-                if (flowLayoutPanel1.Controls.Count < 0)
-                {
+        //        if (flowLayoutPanel1.Controls.Count < 0)
+        //        {
 
-                    flowLayoutPanel1.Controls.Clear();
-                }
-                else
-                {
-                    flowLayoutPanel1.Controls.Add(usercontrolproduto[i]);
-                    j++;
-                }
+        //            flowLayoutPanel1.Controls.Clear();
+        //        }
+        //        else
+        //        {
+        //            flowLayoutPanel1.Controls.Add(usercontrolproduto[i]);
+        //            j++;
+        //        }
 
 
 
-            }
+        //    }
 
-        }
+        //}
     }
 }

@@ -158,49 +158,49 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
-        #region Get
-        public  void  GetDetails(int detals_id)
-        {
-            //MessageBox.Show(detals_id.ToString());
-            int dt = detals_id;
-            string sql = @"select * from tb_produto where id_produto= @id;";
+        //#region Get
+        //public  void  GetDetails(int detals_id)
+        //{
+        //    //MessageBox.Show(detals_id.ToString());
+        //    int dt = detals_id;
+        //    string sql = @"select * from tb_produto where id_produto= @id;";
 
-            //organizar o comando e executar
-            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-            executacmd.Parameters.AddWithValue("@id", dt);
-            conexao.Open();
+        //    //organizar o comando e executar
+        //    MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+        //    executacmd.Parameters.AddWithValue("@id", dt);
+        //    conexao.Open();
 
-            //responsavel por executar o comando e armazenar os dados do PRODUTO
-            MySqlDataReader reader = executacmd.ExecuteReader();
+        //    //responsavel por executar o comando e armazenar os dados do PRODUTO
+        //    MySqlDataReader reader = executacmd.ExecuteReader();
 
-            //se conseguiu ler o rs
-            if (reader.Read())
-            {
-                Produto p = new Produto();
+        //    //se conseguiu ler o rs
+        //    if (reader.Read())
+        //    {
+        //        Produto p = new Produto();
                 
                
-                this.nome_reader = reader.GetString(1);
-                this.desc_reader  = reader.GetString(2);
-                this.preco_reader = reader.GetDecimal(3);
-                this.qtd_reader = reader.GetInt32(4);
-                this.dep_reader  = reader.GetString(5);
+        //        this.nome_reader = reader.GetString(1);
+        //        this.desc_reader  = reader.GetString(2);
+        //        this.preco_reader = reader.GetDecimal(3);
+        //        this.qtd_reader = reader.GetInt32(4);
+        //        this.dep_reader  = reader.GetString(5);
 
                 
 
-                conexao.Close();
+        //        conexao.Close();
 
                 
 
-            }
-            else
-            {
-                MessageBox.Show("Nenhum produto encontrado com esse código!");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Nenhum produto encontrado com esse código!");
 
-                conexao.Close();
+        //        conexao.Close();
                 
-            }
-        }
-        #endregion
+        //    }
+        //}
+        //#endregion
 
 
     }

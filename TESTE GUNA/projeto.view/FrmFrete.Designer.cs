@@ -49,7 +49,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.btnpesquisacep = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,11 +85,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(105, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 27);
+            this.label6.Size = new System.Drawing.Size(200, 29);
             this.label6.TabIndex = 39;
             this.label6.Text = "Calcular o Frete";
             // 
@@ -107,7 +108,7 @@
             this.txtComplemento.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtComplemento.ForeColor = System.Drawing.Color.DimGray;
             this.txtComplemento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtComplemento.Location = new System.Drawing.Point(154, 203);
+            this.txtComplemento.Location = new System.Drawing.Point(154, 244);
             this.txtComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.PasswordChar = '\0';
@@ -122,11 +123,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label10.Location = new System.Drawing.Point(15, 208);
+            this.label10.Location = new System.Drawing.Point(15, 249);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 19);
+            this.label10.Size = new System.Drawing.Size(129, 20);
             this.label10.TabIndex = 62;
             this.label10.Text = "Complemento:";
             // 
@@ -145,7 +146,7 @@
             this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEstado.ForeColor = System.Drawing.Color.DimGray;
             this.txtEstado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEstado.Location = new System.Drawing.Point(154, 82);
+            this.txtEstado.Location = new System.Drawing.Point(154, 123);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.PasswordChar = '\0';
@@ -160,11 +161,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label8.Location = new System.Drawing.Point(79, 89);
+            this.label8.Location = new System.Drawing.Point(79, 130);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 19);
+            this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 60;
             this.label8.Text = "Estado:";
             // 
@@ -183,7 +184,7 @@
             this.txtCidade.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCidade.ForeColor = System.Drawing.Color.DimGray;
             this.txtCidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCidade.Location = new System.Drawing.Point(154, 123);
+            this.txtCidade.Location = new System.Drawing.Point(154, 164);
             this.txtCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.PasswordChar = '\0';
@@ -198,11 +199,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label7.Location = new System.Drawing.Point(74, 129);
+            this.label7.Location = new System.Drawing.Point(74, 170);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 19);
+            this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 58;
             this.label7.Text = "Cidade:";
             // 
@@ -221,7 +222,7 @@
             this.txtEndereco.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEndereco.ForeColor = System.Drawing.Color.DimGray;
             this.txtEndereco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEndereco.Location = new System.Drawing.Point(154, 163);
+            this.txtEndereco.Location = new System.Drawing.Point(154, 204);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.PasswordChar = '\0';
@@ -236,11 +237,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label1.Location = new System.Drawing.Point(54, 169);
+            this.label1.Location = new System.Drawing.Point(54, 210);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 19);
+            this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 56;
             this.label1.Text = "Endereço:";
             // 
@@ -274,11 +275,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label11.Location = new System.Drawing.Point(67, 327);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 19);
+            this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 68;
             this.label11.Text = "Número:";
             // 
@@ -299,7 +300,7 @@
             this.txtBase.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBase.ForeColor = System.Drawing.Color.DimGray;
             this.txtBase.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBase.Location = new System.Drawing.Point(154, 242);
+            this.txtBase.Location = new System.Drawing.Point(145, 80);
             this.txtBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBase.Name = "txtBase";
             this.txtBase.PasswordChar = '\0';
@@ -313,11 +314,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
-            this.label9.Location = new System.Drawing.Point(101, 246);
+            this.label9.Location = new System.Drawing.Point(92, 84);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 19);
+            this.label9.Size = new System.Drawing.Size(52, 20);
             this.label9.TabIndex = 66;
             this.label9.Text = "CEP:";
             // 
@@ -351,11 +352,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label4.Location = new System.Drawing.Point(87, 288);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 19);
+            this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 64;
             this.label4.Text = "Bairro:";
             // 
@@ -368,7 +369,7 @@
             this.btnCalcularFrete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCalcularFrete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCalcularFrete.FillColor = System.Drawing.Color.Teal;
-            this.btnCalcularFrete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcularFrete.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCalcularFrete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnCalcularFrete.Location = new System.Drawing.Point(94, 383);
@@ -410,17 +411,42 @@
             this.panel3.Size = new System.Drawing.Size(408, 5);
             this.panel3.TabIndex = 75;
             // 
-            // txtCEP
+            // btnpesquisacep
             // 
-            this.txtCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCEP.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCEP.Location = new System.Drawing.Point(163, 246);
-            this.txtCEP.Mask = "000.000.000-00";
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(110, 22);
-            this.txtCEP.TabIndex = 76;
+            this.btnpesquisacep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnpesquisacep.BorderRadius = 20;
+            this.btnpesquisacep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnpesquisacep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnpesquisacep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnpesquisacep.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnpesquisacep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnpesquisacep.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnpesquisacep.FillColor2 = System.Drawing.Color.Teal;
+            this.btnpesquisacep.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisacep.ForeColor = System.Drawing.Color.Black;
+            this.btnpesquisacep.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.btnpesquisacep.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
+            this.btnpesquisacep.Image = global::TESTE_GUNA.Properties.Resources.IconLupa;
+            this.btnpesquisacep.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnpesquisacep.Location = new System.Drawing.Point(284, 74);
+            this.btnpesquisacep.Name = "btnpesquisacep";
+            this.btnpesquisacep.Size = new System.Drawing.Size(50, 42);
+            this.btnpesquisacep.TabIndex = 77;
+            this.btnpesquisacep.Click += new System.EventHandler(this.btnpesquisacep_Click);
+            // 
+            // txtCep
+            // 
+            this.txtCep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCep.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtCep.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtCep.Location = new System.Drawing.Point(154, 84);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(88, 22);
+            this.txtCep.TabIndex = 78;
+            this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCep.Visible = false;
             // 
             // FrmFrete
             // 
@@ -428,7 +454,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(418, 449);
-            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.btnpesquisacep);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -482,6 +509,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private Guna.UI2.WinForms.Guna2GradientButton btnpesquisacep;
+        private System.Windows.Forms.MaskedTextBox txtCep;
     }
 }

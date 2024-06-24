@@ -52,5 +52,31 @@ namespace TESTE_GUNA.projeto.view
         {
             txtNum.Text = " ";
         }
+
+        private void btnpesquisacep_Click(object sender, EventArgs e)
+        {
+            //Botao consultar cep
+            try
+            {
+                string cep = txtCep.Text;
+                string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
+                
+                DataSet dados = new DataSet();
+
+                dados.ReadXml(xml);
+
+                txtEndereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+
+                txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                txtComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                txtEstado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("erro");
+            }
+        }
     }
 }
