@@ -615,11 +615,11 @@
             this.btnComprasFinalizadas.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
             this.btnComprasFinalizadas.Image = global::TESTE_GUNA.Properties.Resources.IconCarrinho2;
             this.btnComprasFinalizadas.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnComprasFinalizadas.Location = new System.Drawing.Point(665, 14);
+            this.btnComprasFinalizadas.Location = new System.Drawing.Point(718, 21);
             this.btnComprasFinalizadas.Name = "btnComprasFinalizadas";
-            this.btnComprasFinalizadas.Size = new System.Drawing.Size(250, 47);
+            this.btnComprasFinalizadas.Size = new System.Drawing.Size(200, 39);
             this.btnComprasFinalizadas.TabIndex = 53;
-            this.btnComprasFinalizadas.Text = "COMPRAS FINALIZADAS";
+            this.btnComprasFinalizadas.Text = "COMPRAS ";
             this.btnComprasFinalizadas.Click += new System.EventHandler(this.btnComprasFinalizadas_Click);
             // 
             // btnPagamento
@@ -672,9 +672,9 @@
             this.btnLimparCarrinho.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnLimparCarrinho.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
             this.btnLimparCarrinho.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLimparCarrinho.Location = new System.Drawing.Point(331, 347);
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(512, 21);
             this.btnLimparCarrinho.Name = "btnLimparCarrinho";
-            this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
+            this.btnLimparCarrinho.Size = new System.Drawing.Size(200, 39);
             this.btnLimparCarrinho.TabIndex = 54;
             this.btnLimparCarrinho.Text = "LIMPAR O CARRINHO";
             // 
