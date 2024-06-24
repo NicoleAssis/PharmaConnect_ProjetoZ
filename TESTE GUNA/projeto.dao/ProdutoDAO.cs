@@ -69,10 +69,8 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-                FrmMessageBox mensagem = new FrmMessageBox();
-
-
-                mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
+                FrmMessageSucess mensagem = new FrmMessageSucess();
+                mensagem.MensagemDeSucesso("PRODUTO CRIADO COM SUCESSO!");
                 mensagem.ShowDialog();
 
 

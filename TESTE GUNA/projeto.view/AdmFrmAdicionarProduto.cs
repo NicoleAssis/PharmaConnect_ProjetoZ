@@ -15,6 +15,7 @@ using TESTE_GUNA.projeto.dao;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 using System.Windows.Media;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -112,7 +113,9 @@ namespace TESTE_GUNA.projeto.view
             }
             if(e.KeyChar == 44)
             {
-                MessageBox.Show("Por gentileza insira apenas números inteiros");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem("Por gentileza insira apenas números inteiros");
+                message.ShowDialog();
             }
         }
     }

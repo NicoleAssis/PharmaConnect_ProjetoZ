@@ -67,6 +67,7 @@ namespace TESTE_GUNA.projeto.view
                 
                 AdmFrmMenu tela = new AdmFrmMenu();
                 tela.Show();
+                this.Hide();
             }
 
              

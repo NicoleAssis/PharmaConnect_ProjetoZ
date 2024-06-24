@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.model;
@@ -73,7 +74,9 @@ namespace TESTE_GUNA.projeto.view
                 // Validação simples do CEP (formato básico de 8 dígitos)
                 if (cep.Length != 8 || !cep.All(char.IsDigit))
                 {
-                    MessageBox.Show("CEP inválido. Por favor, digite um CEP válido.");
+                    FrmMessageBox messageBox = new FrmMessageBox();
+                    messageBox.Mensagem("CEP inválido. Por favor, digite um CEP válido.");
+                    messageBox.ShowDialog();
                     return;
                 }
 
@@ -98,16 +101,22 @@ namespace TESTE_GUNA.projeto.view
                 }
                 catch (WebException webEx)
                 {
-                    MessageBox.Show("Erro ao acessar a internet: " + webEx.Message);
+                    FrmMessageBox messageBox = new FrmMessageBox();
+                    messageBox.Mensagem("Erro ao acessar a internet: " + webEx.Message);
+                    messageBox.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Endereço não encontrado, por favor digite manualmente. Detalhes: " + ex.Message);
+                    FrmMessageBox messageBox = new FrmMessageBox();
+                    messageBox.Mensagem("Endereço não encontrado, por favor digite manualmente. Detalhes: " + ex.Message);
+                    messageBox.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                FrmMessageBox messageBox = new FrmMessageBox();
+                messageBox.Mensagem("Erro: " + ex.Message);
+                messageBox.ShowDialog();
             }
 
         }

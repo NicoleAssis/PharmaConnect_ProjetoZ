@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows;
+using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.model
 {
@@ -33,8 +34,9 @@ namespace TESTE_GUNA.projeto.model
             }
             catch (Exception)
             {
-
-                MessageBox.Show($"Email Inválido {email} ");
+                FrmMessageBox message = new FrmMessageBox();
+                message.Mensagem($"Email Inválido {email} ");
+                message.ShowDialog();
                 return false;
             }
         }

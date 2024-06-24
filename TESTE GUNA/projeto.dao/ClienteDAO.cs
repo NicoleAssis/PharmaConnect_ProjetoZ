@@ -360,6 +360,10 @@ namespace TESTE_GUNA.projeto.dao
                          * 
                          * */
 
+                    FrmMessageBox message  = new FrmMessageBox();
+                    message.Mensagem("Email ou senha Incorretos!");
+                    message.ShowDialog();
+
                     Helpers limparTela = new Helpers();
 
 
