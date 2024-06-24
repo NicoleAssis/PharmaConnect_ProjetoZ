@@ -115,7 +115,6 @@
             this.userControlProduto1.NomeProduto = null;
             this.userControlProduto1.Size = new System.Drawing.Size(233, 117);
             this.userControlProduto1.TabIndex = 0;
-            this.userControlProduto1.Load += new System.EventHandler(this.userControlProduto1_Load);
             // 
             // userControlProduto2
             // 
