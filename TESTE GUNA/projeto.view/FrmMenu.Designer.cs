@@ -37,6 +37,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -88,6 +89,7 @@
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.btnSair);
+            this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.btnHome);
             this.panel6.Controls.Add(this.panel8);
@@ -133,6 +135,17 @@
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel7.Location = new System.Drawing.Point(0, 465);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(186, 85);
+            this.panel7.TabIndex = 23;
             // 
             // pictureBox6
             // 
@@ -420,6 +433,7 @@
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridViewVendas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVendas_CellClick);
+            this.DataGridViewVendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVendas_CellContentClick);
             // 
             // FrmMenu
             // 
@@ -467,6 +481,7 @@
         public System.Windows.Forms.Button btnDepartamentos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnPerfilBarraPerquisa;
         private System.Windows.Forms.Button btnComprasBarraPesquisa;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;

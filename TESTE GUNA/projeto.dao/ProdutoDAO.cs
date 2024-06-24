@@ -54,6 +54,8 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
 
+
+
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
                 executacmd.ExecuteNonQuery();

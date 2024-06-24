@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -19,15 +20,6 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
-        private FrmLogin TelaLogin;
-
-        public FrmMenu(FrmLogin telaLogin)
-        {
-            InitializeComponent();
-            TelaLogin = telaLogin;
-        }
-
-
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -35,7 +27,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-             
+
         }
 
 
@@ -97,18 +89,36 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            ////printa os produtos na tela de scroll
-            //for(int i=0; i<=40; i++)
-            //{
-            //    UserControlProduto userControlProdutos = new UserControlProduto();
-            //    userControlProdutos.PrintarProduto(1);
-            //    scrollProdutos.Controls.Add(userControlProdutos);
-            //}
+            CarregarProdutos();
+            
         }
+
+        private void CarregarProdutos()
+        {
+            try
+            {
+                // Criar uma instância de ComprasDAO
+                ComprasDAO comprasDAO = new ComprasDAO();
+
+                // Obter os dados dos produtos
+                DataTable tabelaProdutos = comprasDAO.ListarProdutosMENU();
+
+                // Preencher o DataGridView com os dados
+                DataGridViewVendas.DataSource = tabelaProdutos;
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar produtos: " + erro.Message);
+            }
+        }
+
+
 
         private void scrollBar_Scroll(object sender, ScrollEventArgs e)
         {
-           // scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
+            // scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
         }
 
         private void txtPesquisa_Click(object sender, EventArgs e)
@@ -137,11 +147,66 @@ namespace TESTE_GUNA.projeto.view
 
             DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
         }
+        private void ConfigureDataGridView()
+        {
+            // Definir a fonte padrão para todas as células
+            FrmCompras c = new FrmCompras();
+            c.dataGridCarrinho.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Regular);
+
+            // Definir a fonte para o cabeçalho das colunas
+            c.dataGridCarrinho.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
+
+            // Outras configurações de estilo, se necessário
+            c.dataGridCarrinho.AllowUserToAddRows = false; // Desabilitar a última linha em branco
+        }
+
+
 
         private void DataGridViewVendas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //pergunta se deseja efetuar o pagamento ou nao
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.RetornaSimNao("DESEJA ADICIONAR AO CARRINHO?");
+            frmMessageBox.ShowDialog();
+
+            if (frmMessageBox.btnSimClick == true)
+            {
+
+                if (e.RowIndex >= 0)
+                {
+                    // Obter o ID do produto da linha clicada
+                    int idProduto = Convert.ToInt32(DataGridViewVendas.Rows[e.RowIndex].Cells["ID Produto"].Value);
+                    string nomeProduto = DataGridViewVendas.Rows[e.RowIndex].Cells["Nome Produto"].Value.ToString();
+                    string descProduto = DataGridViewVendas.Rows[e.RowIndex].Cells["Descrição"].Value.ToString();
+                    decimal precoProduto = Convert.ToDecimal(DataGridViewVendas.Rows[e.RowIndex].Cells["Preço"].Value);
+                    int qtdEstoque = Convert.ToInt32(DataGridViewVendas.Rows[e.RowIndex].Cells["Qtd Estoque"].Value);
+                    string departamento = DataGridViewVendas.Rows[e.RowIndex].Cells["Departamento"].Value.ToString();
+
+                    // Inserir o produto na tabela tb_carrinho
+                    ComprasDAO DAO = new ComprasDAO();
+
+                    DAO.InserirProdutoNoCarrinho(idProduto, nomeProduto, descProduto, precoProduto, qtdEstoque, departamento);
+                }
+            }
+            else if (frmMessageBox.btnNaoClick == true)
+            {
+                //se nao quer efetuar o pagamento
+                this.Close();
+                FrmCompras telaCompras = new FrmCompras();
+                telaCompras.ShowDialog();
+            }
+            else
+            {
+                frmMessageBox.Mensagem("Selecione SIM ou NAO");
+            }
+            // Verificar se o clique foi em uma célula válida (não no cabeçalho)
+           
+        }
+
+        private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
     }
-    
+
 }

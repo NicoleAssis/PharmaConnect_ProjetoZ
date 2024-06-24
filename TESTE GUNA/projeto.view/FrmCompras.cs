@@ -82,7 +82,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            ConfigureDataGridView();
+            //ConfigureDataGridView();
             CarregarProdutos();
             
         }
@@ -101,6 +101,7 @@ namespace TESTE_GUNA.projeto.view
                 dataGridCarrinho.DataSource = tabelaProdutos;
 
                 CalcularTotal();
+                ConfigureDataGridView();
             }
             catch (Exception erro)
             {
@@ -133,6 +134,17 @@ namespace TESTE_GUNA.projeto.view
 
             // Exibir o total geral em um Label ou TextBox
             lblTotal.Text ="Rs: "+ totalGeral.ToString();
+        }
+
+        private void btnLimparCarrinho_Click(object sender, EventArgs e)
+        {
+            // Chamar o método para limpar o carrinho
+            ComprasDAO comprasDAO = new ComprasDAO();
+            comprasDAO.LimparCarrinho();
+
+            // Atualizar o DataGridView ou realizar outras ações necessárias após limpar o carrinho
+            // Exemplo: Recarregar os dados no DataGridView
+            CarregarProdutos();
         }
     }
     /*

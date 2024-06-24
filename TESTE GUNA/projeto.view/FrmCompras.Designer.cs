@@ -565,23 +565,21 @@
             this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
             this.btnLimparCarrinho.TabIndex = 54;
             this.btnLimparCarrinho.Text = "LIMPAR O CARRINHO";
+            this.btnLimparCarrinho.Click += new System.EventHandler(this.btnLimparCarrinho_Click);
             // 
             // dataGridCarrinho
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridCarrinho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCarrinho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridCarrinho.ColumnHeadersHeight = 4;
-            this.dataGridCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -591,11 +589,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCarrinho.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridCarrinho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridCarrinho.Location = new System.Drawing.Point(249, 122);
+            this.dataGridCarrinho.Location = new System.Drawing.Point(249, 124);
             this.dataGridCarrinho.Name = "dataGridCarrinho";
             this.dataGridCarrinho.RowHeadersVisible = false;
-            this.dataGridCarrinho.RowTemplate.Height = 50;
-            this.dataGridCarrinho.Size = new System.Drawing.Size(666, 219);
+            this.dataGridCarrinho.Size = new System.Drawing.Size(666, 220);
             this.dataGridCarrinho.TabIndex = 55;
             this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -608,14 +605,14 @@
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridCarrinho.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.Height = 4;
             this.dataGridCarrinho.ThemeStyle.ReadOnly = false;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridCarrinho.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridCarrinho.ThemeStyle.RowsStyle.Height = 50;
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridCarrinho.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -624,8 +621,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
-            this.Controls.Add(this.panel13);
             this.Controls.Add(this.dataGridCarrinho);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.btnComprasFinalizadas);
@@ -701,6 +698,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
         private Guna.UI2.WinForms.Guna2GradientButton btnLimparCarrinho;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridCarrinho;
+        public Guna.UI2.WinForms.Guna2DataGridView dataGridCarrinho;
     }
 }

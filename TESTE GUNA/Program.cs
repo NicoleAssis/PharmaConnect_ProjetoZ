@@ -17,7 +17,7 @@ namespace TESTE_GUNA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCompras());
+            Application.Run(new FrmLogin());
         }
     }
 }
