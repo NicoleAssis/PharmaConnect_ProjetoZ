@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -33,6 +34,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
+            
             AdmFrmProdutos telaProdutos = new AdmFrmProdutos();
             this.Close();
             telaProdutos.Show();
@@ -40,7 +42,10 @@ namespace TESTE_GUNA.projeto.view
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
+            string nome = "%" + txtPesquisa.Text + "%";
+            ProdutoDAO dao = new ProdutoDAO();
 
+            DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
         }
 
         private void txtPesquisa_Click(object sender, EventArgs e)
@@ -60,9 +65,26 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
-        private void btnProdutos_MouseHover(object sender, EventArgs e)
+        private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmADMPerfil telaPerfil = new FrmADMPerfil();
+            this.Close();
+            telaPerfil.Show();
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdmFrmMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

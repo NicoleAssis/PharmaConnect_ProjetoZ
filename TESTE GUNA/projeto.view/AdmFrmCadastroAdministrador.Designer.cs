@@ -236,6 +236,7 @@
             this.txtCNPJ.TabIndex = 42;
             this.txtCNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCNPJ.Visible = false;
+            this.txtCNPJ.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCNPJ_MaskInputRejected);
             // 
             // txtBase2
             // 
@@ -377,7 +378,6 @@
         public Guna.UI2.WinForms.Guna2Button btnCadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxMostrarSenha;
-        private Guna.UI2.WinForms.Guna2TextBox txtBase;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
@@ -388,5 +388,6 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.MaskedTextBox txtCelular;
         private Guna.UI2.WinForms.Guna2TextBox txtBase3;
+        public Guna.UI2.WinForms.Guna2TextBox txtBase;
     }
 }

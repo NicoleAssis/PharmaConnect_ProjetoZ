@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -14,6 +15,7 @@ namespace TESTE_GUNA.projeto.view
     {
         public AdmFrmProdutos()
         {
+
             InitializeComponent();
         }
 
@@ -24,8 +26,8 @@ namespace TESTE_GUNA.projeto.view
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            AdmFrmAlterarProdutos telaAlterarProdutos = new AdmFrmAlterarProdutos();
-            telaAlterarProdutos.ShowDialog();
+            FrmADMExcluirProduto telaExcluirProdutos = new FrmADMExcluirProduto();
+            telaExcluirProdutos.ShowDialog();
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -33,6 +35,7 @@ namespace TESTE_GUNA.projeto.view
             AdmFrmMenu telaMenu = new AdmFrmMenu();
             this.Close();
             telaMenu.ShowDialog();
+            
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -60,6 +63,54 @@ namespace TESTE_GUNA.projeto.view
             AdmFrmCadastroAdministrador telaCadastro = new AdmFrmCadastroAdministrador();
             this.Close();
             telaCadastro.Show();
+        }
+
+        private void AdmFrmProdutos_Load(object sender, EventArgs e)
+        {
+            //puxando o metodo listar produto
+            ProdutoDAO dao = new ProdutoDAO();
+            DataGridViewVendas.DataSource = dao.LIstarProdutos();
+
+        }
+
+        private void tabelaProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Pegando os dados de um produto selecionado
+            
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            //indo para a tela alterar produtos
+            AdmFrmAlterarProdutos telalterarprodutos = new AdmFrmAlterarProdutos();
+            //esconde a tela anterior
+            telalterarprodutos.Show();
+           
+        }
+
+        private void tabelaProdutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnPerfilAdm_Click(object sender, EventArgs e)
+        {
+            FrmADMPerfil telaPerfil = new FrmADMPerfil();
+            this.Close();
+            telaPerfil.Show();
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtPesquisa.Text + "%";
+            ProdutoDAO dao = new ProdutoDAO();
+
+            DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
         }
     }
 }

@@ -179,11 +179,17 @@
     <Compile Include="projeto.view\AdmFrmProdutos.Designer.cs">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="projeto.view\FrmAllProdutosADM.cs">
+    <Compile Include="projeto.view\FrmADMExcluirProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="projeto.view\FrmAllProdutosADM.Designer.cs">
-      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    <Compile Include="projeto.view\FrmADMExcluirProduto.Designer.cs">
+      <DependentUpon>FrmADMExcluirProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.view\FrmADMPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.view\FrmADMPerfil.Designer.cs">
+      <DependentUpon>FrmADMPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmCadastro.cs">
       <SubType>Form</SubType>
@@ -357,8 +363,11 @@
     <EmbeddedResource Include="projeto.view\AdmFrmProdutos.resx">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\FrmAllProdutosADM.resx">
-      <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
+    <EmbeddedResource Include="projeto.view\FrmADMExcluirProduto.resx">
+      <DependentUpon>FrmADMExcluirProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmADMPerfil.resx">
+      <DependentUpon>FrmADMPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>

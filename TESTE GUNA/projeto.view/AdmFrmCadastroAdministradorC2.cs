@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
@@ -24,6 +25,12 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
             this.admin = admin;
         }
+        public AdmFrmCadastroAdministradorC2()
+        {
+            InitializeComponent();
+            
+        }
+
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
@@ -44,12 +51,69 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            
-            //abre a tela adm
+        { 
+            // Validação dos campos
+            if (string.IsNullOrWhiteSpace(txtCEP.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um CEP válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtEndereco.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Endereço válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtNumero.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Número válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBairro.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Bairro válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtCidade.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha uma Cidade válida");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtEstado.Text))
+            {
+                FrmMessageBox frmMessageBox2 = new FrmMessageBox();
+                frmMessageBox2.Mensagem("Por favor, preencha um Estado válido");
+                frmMessageBox2.ShowDialog();
+                return;
+            }
+
+            // Adiciona os campos da segunda tela ao objeto admin
+            admin.cep = txtCEP.Text;
+            admin.endereco = txtEndereco.Text;
+            admin.numero = txtNumero.Text;
+            admin.complemento = txtComplemento.Text;
+            admin.bairro = txtBairro.Text;
+            admin.cidade = txtCidade.Text;
+            admin.estado = txtEstado.Text;
+
+            // Chama o método de cadastro com o objeto completo
+            AdministradorDAO dao = new AdministradorDAO();
+            dao.CadastrarAdministrador(admin);
+
+            FrmMessageBox frmMessageBox = new FrmMessageBox();
+            frmMessageBox.Mensagem("Cadastro efetuado com sucesso");
+            frmMessageBox.ShowDialog();
 
             AdmFrmMenu telaadmmenu = new AdmFrmMenu();
-            //esconde a tela anterior
             telaadmmenu.Show();
             this.Hide();
 
@@ -66,6 +130,12 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void txtCEP_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -96,7 +166,7 @@ namespace TESTE_GUNA.projeto.view
                     txtEndereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
                     txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
                     txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
-                    txtComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                    
                     txtEstado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
                 }
                 catch (WebException webEx)
@@ -118,6 +188,10 @@ namespace TESTE_GUNA.projeto.view
                 messageBox.Mensagem("Erro: " + ex.Message);
                 messageBox.ShowDialog();
             }
+        }
+
+        private void AdmFrmCadastroAdministradorC2_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
@@ -75,145 +76,166 @@ namespace TESTE_GUNA.projeto.view
             txtBase3.Enabled = false;
         }
 
+       
+        //{
+        //    int nivelacesso = 1;
+        //    //1- passo - Receber os dados dentro do objeto modelo de adm
+        //    string cnpj_string = txtCNPJ.Text.Replace(".", "").Replace("-", ""); ;
+        //    Administrador obj= new Administrador();
+        //    long cnpj_inteiro = long.Parse((cnpj_string));
+        //    obj.nome = txtNome.Text;
+        //    obj.cnpj = cnpj_inteiro;
+        //    obj.email = txtEmail.Text;
+        //    obj.telefone = (txtTelefone.Text);
+        //    obj.celular = txtCelular.Text;
+        //    obj.senha = txtSenha.Text;
+        //    obj.nivel = nivelacesso;
+
+        //    //2 passo- Criar um objeto da classe AdministradorDAO e chamar o metodo cadastrarADM
+        //    AdministradorDAO dao = new AdministradorDAO();
+        //    dao.CadastrarAdministrador1(obj);
+
+        //     //Validação dos campos
+        //    if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
+        //    {
+        //       FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha um CNPJ valido");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+        //    }
+        //    if (string.IsNullOrWhiteSpace(txtNome.Text))
+        //    {
+        //        FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha um Nome valido");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+        //    }
+        //    if (string.IsNullOrWhiteSpace(txtEmail.Text))
+        //    {
+        //        FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha um Email valido");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+
+        //    }
+
+        //    if (string.IsNullOrWhiteSpace(txtTelefone.Text))
+        //    {
+        //        FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha um Telefone valido");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+        //    }
+        //    if (string.IsNullOrWhiteSpace(txtCelular.Text))
+        //    {
+        //        FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha um Celular valido");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+        //    }
+        //    if (string.IsNullOrWhiteSpace(txtSenha.Text))
+        //    {
+        //        FrmMessageBox frmMessageBox = new FrmMessageBox();
+        //        frmMessageBox.Mensagem("Por favor, preencha uma Senha valida");
+        //        frmMessageBox.ShowDialog();
+        //        return;
+        //    }
+            
+           
+        //    //// Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+        //    Administrador admin = new Administrador
+        //    {
+        //        cnpj = Convert.ToInt64(txtCNPJ.Text),
+        //        nome = txtNome.Text,
+        //        email = txtEmail.Text,
+        //        celular = txtCelular.Text,
+        //        senha = txtSenha.Text,
+        //    };
+
+        //     //Passa o objeto admin para a próxima tela (Form2)
+        //    AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
+        //    form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
+        //    this.Hide();
+        //}
+
+        
+
+
+        private void txtCNPJ_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            // Validação dos campos
-            if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("Por favor, preencha o campo CNPJ.");
-                message.ShowDialog();
-                return;
+                int nivelacesso = 1;
+                // Validação dos campos
+                if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha um CNPJ válido");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha um Nome válido");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtEmail.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha um Email válido");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtTelefone.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha um Telefone válido");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtCelular.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha um Celular válido");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtSenha.Text))
+                {
+                    FrmMessageBox frmMessageBox = new FrmMessageBox();
+                    frmMessageBox.Mensagem("Por favor, preencha uma Senha válida");
+                    frmMessageBox.ShowDialog();
+                    return;
+                }
+
+                // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+                string cnpj_string = txtCNPJ.Text.Replace(".", "").Replace("-", "");
+                long cnpj_inteiro = long.Parse(cnpj_string);
+                Administrador admin = new Administrador
+                {
+                    cnpj = cnpj_inteiro,
+                    nome = txtNome.Text,
+                    email = txtEmail.Text,
+                    telefone = txtTelefone.Text,
+                    celular = txtCelular.Text,
+                    senha = txtSenha.Text,
+                    nivel = nivelacesso
+                };
+
+                // Passa o objeto admin para a próxima tela (Form2)
+                AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
+                form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
+                this.Hide();
+
             }
-            if (string.IsNullOrWhiteSpace(txtNome.Text))
-            {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("Por favor, preencha o campo Nome.");
-                message.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
-            {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("Por favor, preencha um email válido.");
-                message.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtCelular.Text))
-            {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("Por favor, preencha o campo Celular.");
-                message.ShowDialog();
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(txtSenha.Text))
-            {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("Por favor, preencha o campo Senha.");
-                message.ShowDialog();
-                return;
-            }
-
-            // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
-            Administrador admin = new Administrador
-            {
-                cnpj = txtCNPJ.Text,
-                nome = txtNome.Text,
-                email = txtEmail.Text,
-                celular = txtCelular.Text,
-                senha = txtSenha.Text,
-            };
-
-            // Passa o objeto admin para a próxima tela (Form2)
-            AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
-            form2.Show(); // Certifique-se de estar chamando o método Show() na instância do formulário
-            this.Hide();
-        }
-
-        // Função para validar o formato do email
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-
-
-
-        /*//Instancei Cliente Dao para executar 
-        AdministradorDAO dao = new AdministradorDAO();
-
-        //recebo dados txt
-        string cnpj_string = txtCNPJ.Text;
-        string email = txtEmail.Text;
-
-        // 1° Validação: Cnpj
-        bool validacaoCNPJ = AdministradorDAO.ValidarCNPJ((cnpj_string));
-
-        //2° Validação: Email
-        bool validacaoEmail = Validador.ValidarEmail(email);
-
-
-        #region Validando Email e CPnjp
-        if (validacaoEmail && validacaoCNPJ)
-        {
-            long cnpj_inteiro = long.Parse((txtCNPJ.Text));
-            Administrador obj = new Administrador
-            {
-                nome = txtNome.Text,
-                email = txtEmail.Text,
-                nivel = 1,
-                senha = txtSenha.Text,
-                cnpj = cnpj_inteiro.ToString()
-            };
-
-            dao.CadastrarAdministador1(obj);
-            FrmMessageBox mensagem = new FrmMessageBox();
-            mensagem.Mensagem("Cadastro Efetuado");
-            txtNome.Clear();
-            txtEmail.Clear();
-            txtSenha.Clear();
-            txtCNPJ.Clear();
-            txtBase.Clear();
-
-
-            //abrir a tela de login
-            AdmFrmCadastroAdministradorC2 telaLogin2 = new AdmFrmCadastroAdministradorC2();
-            ////esconde a tela anterior
-
-            new Helpers().LimparTela(this);
-            telaLogin2.Show();
-            this.Hide();
-        }
-        else if (validacaoCNPJ == true && validacaoCNPJ == false)
-        {
-            MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
-            txtNome.Clear();
-            txtEmail.Clear();
-            txtSenha.Clear();
-            txtCNPJ.Clear();
-            txtBase.Clear();
-
 
         }
-        else
-        {
-            MessageBox.Show("CNPJ Inválido, Por Favor digitar novamente");
-            txtNome.Clear();
-            txtEmail.Clear();
-            txtSenha.Clear();
-
-        }
-
-
-        #endregion*/
     }
 }
 
