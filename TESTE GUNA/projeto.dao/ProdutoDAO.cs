@@ -13,7 +13,6 @@ using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data;
-using Guna.UI2.WinForms;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -54,9 +53,6 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
 
-                ;
-
-
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
@@ -64,8 +60,10 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-                FrmMessageSucess mensagem = new FrmMessageSucess();
-                mensagem.MensagemDeSucesso("PRODUTO CRIADO COM SUCESSO!");
+                FrmMessageBox mensagem = new FrmMessageBox();
+
+
+                mensagem.Mensagem("PRODUTO CRIADO COM SUCESSO!");
                 mensagem.ShowDialog();
 
 
@@ -79,9 +77,9 @@ namespace TESTE_GUNA.projeto.dao
             }
 
 
-                    
-            
-        
+
+
+
 
         }
         #endregion
@@ -140,13 +138,13 @@ namespace TESTE_GUNA.projeto.dao
                 //Definindo comando SQL
                 string sql = @"update tb_produto set  desc_produto=@desc_produto, 
                             preco_produto=@preco_produto, qtd_estoque=@qtd_estoque, departamento=@departamento where nome_produto=@nome_produto";
-                          
+
 
 
                 //Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-                
+
                 executacmd.Parameters.AddWithValue("@nome_produto", obj.nomeProduto);
                 executacmd.Parameters.AddWithValue("@desc_produto", obj.descProduto);
                 executacmd.Parameters.AddWithValue("@preco_produto", obj.precoProduto);
@@ -164,10 +162,10 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-               
 
 
-                
+
+
 
 
 
@@ -262,67 +260,16 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.ExecuteNonQuery();
 
 
-
-
-
-
-        }
-        #endregion
-
-        
-
-
-        #region Listar Produtos
-
-        public DataTable ListarProdutos()
-        {
-            try
-            {
-                //criar datatable e comando sql
-                DataTable tabelProdutos = new DataTable();
-
-
-                //CODIGO PARA PERSONALIZAR VISUALIZACAO DO DATA GRID VIEW
-
-                /*              VISUALIZACAO DO NOME DA TABELA
-                 * select tb_produtos.id_produto,
-                 *      tb_produtos.nome_produto ,
-                 *      tb_produtos.desc_produto as 'Preço',
-                 *      tb_produtos.preco_produto as 'Qtd no Estoque',
-                 *      
-                 *            CONECTAR DIFERENTES TABELAS
-                 *      tb_fornecedores.nome as 'Fornecedores' from tb_produtos
-                 *    JUNTA AS TABELA          CHAVE ESTRANGEIRA           CHAVE PRIMARIA
-                 *      join tb_fornecedores on (tb_produtos.for_id = tb_fornecedores.id);
-                 */
-
-
-
-
-                string sql = @"   SELECT id_produto as 'ID',
-                                                    nome_produto as 'Nome',
-                                                    desc_produto as 'Descrição',
-                                                    preco_produto as  'Preço',
-                                                    qtd_estoque as 'Quantidade',
-                                                    departamento  as 'Departamento'
-                                            FROM tb_produto;";
-
-
-                //organizar o comando e executar
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-                conexao.Open();
-                executacmd.ExecuteNonQuery();
-
-                //criar mysqldataapter para preencher os dados no data table
+                //3 passo criar mysqldataapter para preencher dados no datatable
                 MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-                da.Fill(tabelProdutos);
+                da.Fill(DataGridViewVendas);//preencher
 
+
+                //fechar a conexao com o banco de dados
                 conexao.Close();
 
 
-                return tabelProdutos;
-
+                return DataGridViewVendas;
 
             }
             catch (Exception erro)
@@ -331,9 +278,54 @@ namespace TESTE_GUNA.projeto.dao
                 return null;
             }
 
-        }
-        #endregion
-    
 
+        }
+
+        #endregion
+
+        #region MétodoBuscarProdutoPorNome
+        public DataTable BuscarProdutosPorNome(string nome)
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaProdutos = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"select  id_produto as 'ID Produto' ,nome_produto 'Nome Produto', 
+                                        desc_produto 'Descrição', 
+                                        preco_produto 'Preço', qtd_estoque 'Qtd Estoque', 
+                                        departamento 'Departamentos'  from tb_produto where nome_produto = @nome_produto";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome_produto", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaProdutos;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+
+        #endregion
     }
 }
