@@ -20,6 +20,62 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
+        
+        private void populateItems()
+        {
+            //populate it here
+
+            UserControlProduto[] usercontrolproduto = new UserControlProduto[20];
+
+
+            for (int i = 0; i < usercontrolproduto.Length; i++)
+            {
+                
+                usercontrolproduto[i] = new UserControlProduto();
+                FrmDepartamentoEscolhido tela = new FrmDepartamentoEscolhido();
+                ProdutoDAO dao = new ProdutoDAO();
+                Produto obj = new Produto();
+                
+
+                    dao.GetDetails(i);
+                    usercontrolproduto[i].NomeProduto = dao.nome_reader;
+                    usercontrolproduto[i].Dep = dao.dep_reader;
+                    usercontrolproduto[i].Preco = dao.preco_reader;
+                    usercontrolproduto[i].Desc = dao.desc_reader;
+                    Console.WriteLine(obj.descProduto);
+
+                
+
+
+                if (flowLayoutPanel1.Controls.Count < 0)
+                {
+
+                    flowLayoutPanel1.Controls.Clear();
+                }
+                else
+                {
+                    flowLayoutPanel1.Controls.Add(usercontrolproduto[i]);
+                }
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void btnX_Click(object sender, EventArgs e)
         {
             // Cria uma nova instância de FrmDepartamentos
@@ -42,16 +98,13 @@ namespace TESTE_GUNA.projeto.view
             lblDepartamento.Text = departamento;
             
         }
-        public static bool view = false;
-        public static int publid_id;
+
         private void getDetail()
         {
-            ProdutoDAO dao = new ProdutoDAO();
-            dao.GetDetails(UserControlProduto.
         }
         private void FrmDepartamentoEscolhido_Load(object sender, EventArgs e)
         {
-
+            populateItems();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -75,6 +128,26 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void userControlProduto2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userControlProduto6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlProduto1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlProduto1_Load_2(object sender, EventArgs e)
         {
 
         }

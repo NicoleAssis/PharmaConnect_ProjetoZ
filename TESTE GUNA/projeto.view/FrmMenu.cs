@@ -100,12 +100,12 @@ namespace TESTE_GUNA.projeto.view
 
 
             //printa os produtos na tela de scroll
-            for (int i=0; i<=40; i++)
-            {
-                UserControlProduto userControlProdutos = new UserControlProduto();
-                userControlProdutos.PrintarProduto(1);
-                scrollProdutos.Controls.Add(userControlProdutos);
-            }
+            //for (int i=0; i<=40; i++)
+            //{
+            //    UserControlProduto userControlProdutos = new UserControlProduto();
+            //    userControlProdutos.PrintarProduto(1);
+            //    scrollProdutos.Controls.Add(userControlProdutos);
+            //}
         }
 
         private void scrollBar_Scroll(object sender, ScrollEventArgs e)

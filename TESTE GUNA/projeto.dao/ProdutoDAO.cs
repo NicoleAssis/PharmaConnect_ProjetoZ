@@ -23,6 +23,12 @@ namespace TESTE_GUNA.projeto.dao
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        public int  id_reader ;
+        public string nome_reader;
+        public string desc_reader;
+        public decimal preco_reader;
+        public int qtd_reader;
+        public string dep_reader;
         //Construtor
         public ProdutoDAO()
         {
@@ -155,32 +161,45 @@ namespace TESTE_GUNA.projeto.dao
 
 
         #region Get
-        public  void GetDetails(int detals_id)
+        public  void  GetDetails(int detals_id)
         {
-            string sql = @"select * from tb_produtos where id= '" +detals_id"'";
+            //MessageBox.Show(detals_id.ToString());
+            int dt = detals_id;
+            string sql = @"select * from tb_produto where id_produto= @id;";
 
             //organizar o comando e executar
             MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+            executacmd.Parameters.AddWithValue("@id", dt);
             conexao.Open();
 
             //responsavel por executar o comando e armazenar os dados do PRODUTO
             MySqlDataReader reader = executacmd.ExecuteReader();
 
             //se conseguiu ler o rs
-            if (rs.Read())
+            if (reader.Read())
             {
                 Produto p = new Produto();
-                p.id = reader.GetInt32("id_produto");
-                p.nomeProduto = reader["nome_produto"].ToString();
-                p.descricao = rs.GetString("desc_produto");
-                p.preco = rs.GetDecimal("preco");
-                p.id = reader.GetInt32("qtd_estoque");
-                p.descricao = rs.GetString("Departamento");
+                
+               
+                this.nome_reader = reader.GetString(1);
+                this.desc_reader  = reader.GetString(2);
+                this.preco_reader = reader.GetDecimal(3);
+                this.qtd_reader = reader.GetInt32(4);
+                this.dep_reader  = reader.GetString(5);
+
+                
 
                 conexao.Close();
 
-                return p;
+                
 
+            }
+            else
+            {
+                MessageBox.Show("Nenhum produto encontrado com esse código!");
+
+                conexao.Close();
+                
             }
         }
         #endregion
