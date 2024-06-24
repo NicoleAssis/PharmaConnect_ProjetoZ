@@ -146,6 +146,11 @@ namespace TESTE_GUNA.projeto.view
             // Exemplo: Recarregar os dados no DataGridView
             CarregarProdutos();
         }
+
+        private void dataGridCarrinho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     /*
         private void btnSair_Click(object sender, EventArgs e)

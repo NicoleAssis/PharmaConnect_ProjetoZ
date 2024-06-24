@@ -65,6 +65,26 @@ namespace TESTE_GUNA.projeto.view
 
         #region PictureBoxDepartamentos
 
+
+        private void CarregarProdutosPorDepartamento(string departamento)
+        {
+            DepartamentoDAO comprasDAO = new DepartamentoDAO();
+            DataTable produtosPorDepartamento = comprasDAO.ListarProdutosPorDepartamento(departamento);
+
+            if (produtosPorDepartamento != null)
+            {
+                FrmDepartamentoEscolhido dep = new FrmDepartamentoEscolhido();
+                dep.dataGridDep.DataSource = produtosPorDepartamento;
+            }
+            else
+            {
+                // Tratar caso de erro ou nenhum resultado encontrado
+                MessageBox.Show("Não foram encontrados produtos para o departamento especificado.");
+            }
+        }
+
+
+
         //picBoxDiabeticos
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -72,7 +92,8 @@ namespace TESTE_GUNA.projeto.view
             ProdutoDAO produtoDAO = new ProdutoDAO();
             DataTable produtos = produtoDAO.BuscarProdutosPorDepartamento("Diabéticos");
 
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Diabeticos");
             telaDepEscolhido.NomeDepartamento("Diabéticos");
 
             foreach (DataRow row in produtos.Rows)
@@ -108,7 +129,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxAnal_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Analgesico");
             telaDepEscolhido.NomeDepartamento("Analgésicos");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -125,7 +146,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxAntidepressivos_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Antinflamatorio");
             telaDepEscolhido.NomeDepartamento("Anti-Inflamátorios");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -142,7 +163,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxAnativirais_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Antivirais e Antibioticos");
             telaDepEscolhido.NomeDepartamento("Antivirais e Antibióticos");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -159,7 +180,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxDerm_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Dermatologicos");
             telaDepEscolhido.NomeDepartamento("Dermatológicos");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -176,7 +197,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxGine_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Ginecologicos");
             telaDepEscolhido.NomeDepartamento("Ginecológicos");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -193,7 +214,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxHiper_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Hipertensao");
             telaDepEscolhido.NomeDepartamento("Hipertensão");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
@@ -210,7 +231,7 @@ namespace TESTE_GUNA.projeto.view
         private void picBoxSup_Click(object sender, EventArgs e)
         {
             #region printarTela
-            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
+            FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido("Suplementos e Vitaminas");
             telaDepEscolhido.NomeDepartamento("Suplementos e Vitaminas");
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel

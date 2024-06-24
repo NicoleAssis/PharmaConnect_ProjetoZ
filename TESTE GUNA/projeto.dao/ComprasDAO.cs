@@ -87,7 +87,7 @@ namespace TESTE_GUNA.projeto.dao
                 cmd.Parameters.AddWithValue("@nome_produto", nomeProduto);
                 cmd.Parameters.AddWithValue("@desc_produto", descProduto);
                 cmd.Parameters.AddWithValue("@preco_produto", precoProduto);
-                cmd.Parameters.AddWithValue("@qtd_estoque", qtdEstoque);
+                cmd.Parameters.AddWithValue("@qtd_estoque", 1);
                 cmd.Parameters.AddWithValue("@departamento", departamento);
 
                 // Abrir conexão e executar o comando
@@ -198,7 +198,6 @@ namespace TESTE_GUNA.projeto.dao
                 string sql = @"
                                 SELECT 
                                     tb_carrinho.nome_produto AS 'Produto',
-                                    tb_carrinho.qtd_estoque AS 'Quantidade',
                                     tb_carrinho.preco_produto AS 'Preço Unitário',
                                     (tb_carrinho.preco_produto * tb_carrinho.qtd_estoque) AS 'Total'
                                 FROM 
