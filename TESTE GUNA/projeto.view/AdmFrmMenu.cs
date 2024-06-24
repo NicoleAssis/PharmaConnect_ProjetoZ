@@ -86,5 +86,14 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void DataGridViewVendas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ////Pegando os dados do produto selecionado
+            //txtNomeProduto.Text = DataGridViewVendas.CurrentRow.Cells[1].Value.ToString();
+            //txtDescricao.Text = DataGridViewVendas.CurrentRow.Cells[2].Value.ToString();
+            //txtPreco.Text = DataGridViewVendas.CurrentRow.Cells[3].Value.ToString();
+            //txtQuantidade.Text = DataGridViewVendas.CurrentRow.Cells[4].Value.ToString();
+        }
     }
 }

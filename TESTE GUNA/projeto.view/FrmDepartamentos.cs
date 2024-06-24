@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -67,16 +69,37 @@ namespace TESTE_GUNA.projeto.view
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             #region printarTela
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+            DataTable produtos = produtoDAO.BuscarProdutosPorDepartamento("Diabéticos");
+
             FrmDepartamentoEscolhido telaDepEscolhido = new FrmDepartamentoEscolhido();
             telaDepEscolhido.NomeDepartamento("Diabéticos");
+
+            foreach (DataRow row in produtos.Rows)
+            {
+                Produto produto = new Produto
+                {
+                    idproduto = Convert.ToInt32(row["ID Produto"]),
+                    nomeProduto = row["Nome Produto"].ToString(),
+                    descProduto = row["Descrição"].ToString(),
+                    precoProduto = Convert.ToDecimal(row["Preço"]),
+                    qtdEstoque = Convert.ToInt32(row["Qtd Estoque"]),
+                    departamento = row["Departamentos"].ToString()
+                };
+
+                
+            }
+
             telaDepEscolhido.TopLevel = false; // Indica que o frmDep não é mais um formulário top-level
             panelPrintarDep.Controls.Add(telaDepEscolhido); // Adiciona o frmDep ao panel
             telaDepEscolhido.Location = new Point(0, 0); // Define a localização dentro do panel
-            //tornar os itens invisiveis
+
+            // Tornar os itens invisíveis
             paneiIconDep.Visible = false;
             btnX.Visible = false;
             label1.Visible = false;
             panelDep.Visible = false;
+
             telaDepEscolhido.Show();
             #endregion
 

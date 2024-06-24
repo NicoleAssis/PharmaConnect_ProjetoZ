@@ -31,6 +31,7 @@
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.btnX = new System.Windows.Forms.Button();
             this.scrollDepartamento = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDep = new System.Windows.Forms.Panel();
             this.userControlProduto1 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto2 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto3 = new TESTE_GUNA.projeto.view.UserControlProduto();
@@ -47,7 +48,6 @@
             this.userControlProduto14 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto15 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.userControlProduto16 = new TESTE_GUNA.projeto.view.UserControlProduto();
-            this.panelDep = new System.Windows.Forms.Panel();
             this.scrollDepartamento.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,11 +55,11 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.lblDepartamento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartamento.ForeColor = System.Drawing.Color.White;
             this.lblDepartamento.Location = new System.Drawing.Point(8, 4);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(238, 23);
+            this.lblDepartamento.Size = new System.Drawing.Size(239, 24);
             this.lblDepartamento.TabIndex = 1;
             this.lblDepartamento.Text = "Departamento Escolhido";
             this.lblDepartamento.Click += new System.EventHandler(this.lblDepartamento_Click);
@@ -106,6 +106,17 @@
             this.scrollDepartamento.TabIndex = 22;
             this.scrollDepartamento.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // panelDep
+            // 
+            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
+            this.panelDep.Location = new System.Drawing.Point(0, 0);
+            this.panelDep.Name = "panelDep";
+            this.panelDep.Size = new System.Drawing.Size(772, 35);
+            this.panelDep.TabIndex = 32;
+            // 
             // userControlProduto1
             // 
             this.userControlProduto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
@@ -125,6 +136,7 @@
             this.userControlProduto2.NomeProduto = null;
             this.userControlProduto2.Size = new System.Drawing.Size(233, 117);
             this.userControlProduto2.TabIndex = 1;
+            this.userControlProduto2.Load += new System.EventHandler(this.userControlProduto2_Load);
             // 
             // userControlProduto3
             // 
@@ -265,17 +277,6 @@
             this.userControlProduto16.NomeProduto = null;
             this.userControlProduto16.Size = new System.Drawing.Size(233, 117);
             this.userControlProduto16.TabIndex = 15;
-            // 
-            // panelDep
-            // 
-            this.panelDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.panelDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelDep.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDep.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panelDep.Location = new System.Drawing.Point(0, 0);
-            this.panelDep.Name = "panelDep";
-            this.panelDep.Size = new System.Drawing.Size(772, 35);
-            this.panelDep.TabIndex = 32;
             // 
             // FrmDepartamentoEscolhido
             // 

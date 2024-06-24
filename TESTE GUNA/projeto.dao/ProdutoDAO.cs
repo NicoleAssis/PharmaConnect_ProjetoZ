@@ -13,6 +13,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -327,6 +328,48 @@ namespace TESTE_GUNA.projeto.dao
 
 
         }
+
+        #endregion
+
+        #region MetodoBuscarPorDepartamento
+
+        public DataTable BuscarProdutosPorDepartamento(string departamento)
+        {
+            try
+            {
+                // Passo 1: Criar DataTable e comando SQL
+                DataTable tabelaProdutos = new DataTable();
+                string sql = @"select id_produto as 'ID Produto', 
+                                  nome_produto as 'Nome Produto', 
+                                  desc_produto as 'Descrição', 
+                                  preco_produto as 'Preço', 
+                                  qtd_estoque as 'Qtd Estoque', 
+                                  departamento as 'Departamentos'  
+                           from tb_produto 
+                           where departamento = @departamento";
+
+                // Passo 2: Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@departamento", departamento);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // Passo 3: Criar MySqlDataAdapter para preencher dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos); // preencher
+
+                // Fechar a conexão com o banco de dados
+                conexao.Close();
+
+                return tabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando SQL: " + erro);
+                return null;
+            }
+        }
+
 
         #endregion
     }

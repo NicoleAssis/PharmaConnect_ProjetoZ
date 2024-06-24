@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -87,18 +88,18 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            //printa os produtos na tela de scroll
-            for(int i=0; i<=40; i++)
-            {
-                UserControlProduto userControlProdutos = new UserControlProduto();
-                userControlProdutos.PrintarProduto(1);
-                scrollProdutos.Controls.Add(userControlProdutos);
-            }
+            ////printa os produtos na tela de scroll
+            //for(int i=0; i<=40; i++)
+            //{
+            //    UserControlProduto userControlProdutos = new UserControlProduto();
+            //    userControlProdutos.PrintarProduto(1);
+            //    scrollProdutos.Controls.Add(userControlProdutos);
+            //}
         }
 
         private void scrollBar_Scroll(object sender, ScrollEventArgs e)
         {
-            scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
+           // scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
         }
 
         private void txtPesquisa_Click(object sender, EventArgs e)
@@ -119,5 +120,19 @@ namespace TESTE_GUNA.projeto.view
             this.Close();
             telaLogin.Show();
         }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtPesquisa.Text + "%";
+            ProdutoDAO dao = new ProdutoDAO();
+
+            DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
+        }
+
+        private void DataGridViewVendas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
+    
 }

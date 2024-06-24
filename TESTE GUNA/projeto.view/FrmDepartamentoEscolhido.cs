@@ -21,6 +21,7 @@ namespace TESTE_GUNA.projeto.view
         {
             // Cria uma nova instância de FrmDepartamentos
             FrmDepartamentos novaTelaDep = new FrmDepartamentos();
+        
 
             // Itera sobre todas as janelas abertas e fecha as do tipo FrmDepartamentos
             foreach (Form telaAberta in Application.OpenForms.Cast<Form>().ToList())
@@ -56,6 +57,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControlProduto2_Load(object sender, EventArgs e)
         {
 
         }
