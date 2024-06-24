@@ -17,23 +17,42 @@ namespace TESTE_GUNA.projeto.view
             InitializeComponent();
         }
 
-        private string labelProduto;
+        
+        
+        private string _nome;
+        private string _desc;
+        private decimal _preco;
+        private string _dep;
 
+
+        [Category("Custom Props")]
         public string NomeProduto
         {
-            get { return labelProduto; }
-            set { labelProduto = value; labelNome.Text = value; }
+            get { return _nome; }
+            set { _nome = value; labelNome.Text = value; }
         }
 
-        //atraves do ID do produto printar as info sobre o produto
-        public void PrintarProduto(int IDProduto)
+
+
+        [Category("Custom Props")]
+        public string Desc
         {
-            //recebe as informações
-            labelNome.Text = "Nome do produto";
-            labelDescricao.Text = "Descrição do produto";
-            labelPreco.Text = "RS 00,00";
+            get { return _desc; }
+            set { _desc = value; labelDescricao.Text = value; }
+        }
 
+        [Category("Custom Props")]
+        public string Dep
+        {
+            get { return _dep; }
+            set { _dep = value; labeldep.Text = value; }
+        }
 
+        [Category("Custom Props")]
+        public Decimal Preco
+        {
+            get { return _preco; }
+            set { _preco = value; labelPreco.Text = value.ToString(); }
         }
 
         private void UserControlProduto_Load(object sender, EventArgs e)
@@ -41,45 +60,36 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
+
         private void labelNome_Click(object sender, EventArgs e)
         {
             
         }
+        //atraves do ID do produto printar as info sobre o produto
+        //public void PrintarProduto(int IDProduto)
+        //{
+
+        //    //recebe as informações
+        //    labelNome.Text = "Nome do produto";
+        //    labelDescricao.Text = "Descrição do produto";
+        //    labelPreco.Text = "RS 00,00";
+
+
+        //}
 
         private void UserControlProduto_Click(object sender, EventArgs e)
         {
 
             // Redirecionar para a tela de compras
-            FrmMessageBox frmMessageBox = new FrmMessageBox();
-            frmMessageBox.RetornaSimNao("DESEJA ADICIONAR AO CARRINHO?");
-            frmMessageBox.ShowDialog();
-
-            if (frmMessageBox.btnSimClick == true)
-            {
-                // Se confirmou que deseja adicionar ao carrinho
-                frmMessageBox.Mensagem("PRODUTO ADICIONADO COM SUCESSO");
-                frmMessageBox.ShowDialog();
-
-                
-
-                // Abrir a tela de compras
-                FrmCompras telaCompras = new FrmCompras();
-                telaCompras.ShowDialog();
+            AdicionarAvancar telaconfirmar = new AdicionarAvancar();
+            telaconfirmar.labelProduto.Text = labelNome.Text;
+            telaconfirmar.labelDesc.Text = labelDescricao.Text;
+            telaconfirmar.labelValor.Text = labelPreco.Text;
 
 
-            }
-            else if (frmMessageBox.btnNaoClick == true)
-            {
-                // Se não quer efetuar o pagamento, apenas ir para a tela de compras
-                frmMessageBox.Close(); // Fechar a caixa de mensagem
-                this.Hide(); // Esconder o formulário atual
-                
-            }
-            else
-            {
-                // Se não selecionou SIM ou NÃO
-                frmMessageBox.Mensagem("Selecione SIM ou NAO");
-            }
+            telaconfirmar.Show();
+
+            
 
 
         }
@@ -90,6 +100,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void labelDescricao_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void labelcodigo_Click(object sender, EventArgs e)
         {
 
         }

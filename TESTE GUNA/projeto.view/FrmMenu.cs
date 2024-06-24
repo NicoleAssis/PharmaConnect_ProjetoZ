@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -97,21 +99,21 @@ namespace TESTE_GUNA.projeto.view
         private void FrmMenu_Load(object sender, EventArgs e)
         {
 
+            populateItems();
 
-
-            //printa os produtos na tela de scroll
-            for (int i=0; i<=40; i++)
-            {
-                UserControlProduto userControlProdutos = new UserControlProduto();
-                userControlProdutos.PrintarProduto(1);
-                scrollProdutos.Controls.Add(userControlProdutos);
-            }
+           // printa os produtos na tela de scroll
+            //for (int i = 0; i <= 40; i++)
+            //{
+            //    UserControlProduto userControlProdutos = new UserControlProduto();
+            //    userControlProdutos.PrintarProduto(1);
+            //    scrollProdutos.Controls.Add(userControlProdutos);
+            //}
         }
 
-        private void scrollBar_Scroll(object sender, ScrollEventArgs e)
-        {
-            scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
-        }
+        //private void scrollBar_Scroll(object sender, ScrollEventArgs e)
+        //{
+        //    scrollProdutos.AutoScrollPosition = new System.Drawing.Point(0, e.NewValue);
+        //}
 
         private void txtPesquisa_Click(object sender, EventArgs e)
         {
@@ -130,6 +132,55 @@ namespace TESTE_GUNA.projeto.view
             FrmLogin telaLogin = new FrmLogin();
             this.Close();
             telaLogin.Show();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public int j = 1;
+        private void populateItems()
+        {
+            //populate it here
+
+            UserControlProduto[] usercontrolproduto = new UserControlProduto[20];
+
+
+            for (int i = 0; i < usercontrolproduto.Length; i++)
+            {
+
+                usercontrolproduto[i] = new UserControlProduto();
+                FrmDepartamentoEscolhido tela = new FrmDepartamentoEscolhido();
+                ProdutoDAO dao = new ProdutoDAO();
+                
+
+
+                dao.GetDetails(j);
+                usercontrolproduto[i].NomeProduto = dao.nome_reader;
+                usercontrolproduto[i].Dep = dao.dep_reader;
+                usercontrolproduto[i].Preco = dao.preco_reader;
+                usercontrolproduto[i].Desc = dao.desc_reader;
+
+
+
+
+
+
+                if (flowLayoutPanel1.Controls.Count < 0)
+                {
+
+                    flowLayoutPanel1.Controls.Clear();
+                }
+                else
+                {
+                    flowLayoutPanel1.Controls.Add(usercontrolproduto[i]);
+                    j++;
+                }
+
+
+
+            }
+
         }
     }
 }

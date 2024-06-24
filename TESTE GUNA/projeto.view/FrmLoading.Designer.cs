@@ -115,16 +115,16 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.My_Business1;
-            this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(574, 606);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(351, 292);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            //this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            //this.guna2PictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.My_Business1;
+            //this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
+            //this.guna2PictureBox1.ImageRotate = 0F;
+            //this.guna2PictureBox1.Location = new System.Drawing.Point(574, 606);
+            //this.guna2PictureBox1.Name = "guna2PictureBox1";
+            //this.guna2PictureBox1.Size = new System.Drawing.Size(351, 292);
+            //this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.guna2PictureBox1.TabIndex = 0;
+            //this.guna2PictureBox1.TabStop = false;
             // 
             // timer1
             // 

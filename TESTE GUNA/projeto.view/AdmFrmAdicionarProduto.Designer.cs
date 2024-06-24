@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label = new System.Windows.Forms.Label();
             this.btnX = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
             this.btnCadastrarProduto = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,17 +61,6 @@
             this.panel1.Size = new System.Drawing.Size(560, 39);
             this.panel1.TabIndex = 96;
             // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(178, 7);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(206, 25);
-            this.label.TabIndex = 33;
-            this.label.Text = "ADICIONAR PRODUTO";
-            // 
             // btnX
             // 
             this.btnX.BackColor = System.Drawing.Color.Transparent;
@@ -86,6 +75,17 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(178, 7);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(206, 25);
+            this.label.TabIndex = 33;
+            this.label.Text = "ADICIONAR PRODUTO";
             // 
             // btnCadastrarProduto
             // 
@@ -103,7 +103,7 @@
             this.btnCadastrarProduto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.btnCadastrarProduto.HoverState.FillColor2 = System.Drawing.Color.Navy;
             this.btnCadastrarProduto.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCadastrarProduto.Location = new System.Drawing.Point(186, 351);
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(195, 367);
             this.btnCadastrarProduto.Name = "btnCadastrarProduto";
             this.btnCadastrarProduto.Size = new System.Drawing.Size(201, 42);
             this.btnCadastrarProduto.TabIndex = 99;

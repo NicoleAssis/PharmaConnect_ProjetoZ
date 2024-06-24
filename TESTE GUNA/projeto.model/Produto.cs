@@ -8,6 +8,7 @@ namespace TESTE_GUNA.projeto.model
 {
     public class Produto
     {
+        public int Id { get; set; }
         public string nomeProduto { get; set; }
         public string descProduto { get; set; }
         public decimal precoProduto { get; set; }

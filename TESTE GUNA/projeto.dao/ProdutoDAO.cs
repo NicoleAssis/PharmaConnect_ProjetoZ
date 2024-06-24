@@ -12,6 +12,8 @@ using TESTE_GUNA.projeto.view;
 using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Data;
+using Guna.UI2.WinForms;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -21,14 +23,20 @@ namespace TESTE_GUNA.projeto.dao
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        public int  id_reader ;
+        public string nome_reader;
+        public string desc_reader;
+        public decimal preco_reader;
+        public int qtd_reader;
+        public string dep_reader;
         //Construtor
         public ProdutoDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        
 
+        
 
         #region CadastroProduto
 
@@ -51,8 +59,8 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
 
-                
-;
+
+                ;
 
                 //Abrindo conexao e aplicando sql
                 conexao.Open();
@@ -70,18 +78,130 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception erro)
             {
-                
+
 
                 MessageBox.Show(erro.Message);
             }
 
 
-                    
-            
-        
+
+
+
 
         }
         #endregion
+
         
+
+
+        #region Listar Produtos
+
+        public DataTable ListarProdutos()
+        {
+            try
+            {
+                //criar datatable e comando sql
+                DataTable tabelProdutos = new DataTable();
+
+
+                //CODIGO PARA PERSONALIZAR VISUALIZACAO DO DATA GRID VIEW
+
+                /*              VISUALIZACAO DO NOME DA TABELA
+                 * select tb_produtos.id_produto,
+                 *      tb_produtos.nome_produto ,
+                 *      tb_produtos.desc_produto as 'Preço',
+                 *      tb_produtos.preco_produto as 'Qtd no Estoque',
+                 *      
+                 *            CONECTAR DIFERENTES TABELAS
+                 *      tb_fornecedores.nome as 'Fornecedores' from tb_produtos
+                 *    JUNTA AS TABELA          CHAVE ESTRANGEIRA           CHAVE PRIMARIA
+                 *      join tb_fornecedores on (tb_produtos.for_id = tb_fornecedores.id);
+                 */
+
+
+
+
+                string sql = @"   SELECT id_produto as 'ID',
+                                                    nome_produto as 'Nome',
+                                                    desc_produto as 'Descrição',
+                                                    preco_produto as  'Preço',
+                                                    qtd_estoque as 'Quantidade',
+                                                    departamento  as 'Departamento'
+                                            FROM tb_produto;";
+
+
+                //organizar o comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //criar mysqldataapter para preencher os dados no data table
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelProdutos);
+
+                conexao.Close();
+
+
+                return tabelProdutos;
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+        }
+        #endregion
+
+
+
+        #region Get
+        public  void  GetDetails(int detals_id)
+        {
+            //MessageBox.Show(detals_id.ToString());
+            int dt = detals_id;
+            string sql = @"select * from tb_produto where id_produto= @id;";
+
+            //organizar o comando e executar
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+            executacmd.Parameters.AddWithValue("@id", dt);
+            conexao.Open();
+
+            //responsavel por executar o comando e armazenar os dados do PRODUTO
+            MySqlDataReader reader = executacmd.ExecuteReader();
+
+            //se conseguiu ler o rs
+            if (reader.Read())
+            {
+                Produto p = new Produto();
+                
+               
+                this.nome_reader = reader.GetString(1);
+                this.desc_reader  = reader.GetString(2);
+                this.preco_reader = reader.GetDecimal(3);
+                this.qtd_reader = reader.GetInt32(4);
+                this.dep_reader  = reader.GetString(5);
+
+                
+
+                conexao.Close();
+
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Nenhum produto encontrado com esse código!");
+
+                conexao.Close();
+                
+            }
+        }
+        #endregion
+
+
     }
 }
