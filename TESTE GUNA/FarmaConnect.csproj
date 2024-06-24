@@ -304,6 +304,12 @@
     <EmbeddedResource Include="projeto.view\AdmFrmProdutos.resx">
       <DependentUpon>AdmFrmProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmADMExcluirProduto.resx">
+      <DependentUpon>FrmADMExcluirProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.view\FrmADMPerfil.resx">
+      <DependentUpon>FrmADMPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>

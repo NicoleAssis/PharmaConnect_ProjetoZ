@@ -26,8 +26,8 @@ namespace TESTE_GUNA.projeto.view
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            AdmFrmAlterarProdutos telaAlterarProdutos = new AdmFrmAlterarProdutos();
-            telaAlterarProdutos.ShowDialog();
+            FrmADMExcluirProduto telaExcluirProdutos = new FrmADMExcluirProduto();
+            telaExcluirProdutos.ShowDialog();
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -35,6 +35,7 @@ namespace TESTE_GUNA.projeto.view
             AdmFrmMenu telaMenu = new AdmFrmMenu();
             this.Close();
             telaMenu.ShowDialog();
+            
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace TESTE_GUNA.projeto.view
         {
             //puxando o metodo listar produto
             ProdutoDAO dao = new ProdutoDAO();
-            tabelaProdutos.DataSource = dao.LIstarProdutos();
+            DataGridViewVendas.DataSource = dao.LIstarProdutos();
 
         }
 
@@ -95,6 +96,21 @@ namespace TESTE_GUNA.projeto.view
         private void tabelaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnPerfilAdm_Click(object sender, EventArgs e)
+        {
+            FrmADMPerfil telaPerfil = new FrmADMPerfil();
+            this.Close();
+            telaPerfil.Show();
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            string nome = "%" + txtPesquisa.Text + "%";
+            ProdutoDAO dao = new ProdutoDAO();
+
+            DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
         }
     }
 }

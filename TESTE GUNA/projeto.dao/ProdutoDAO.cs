@@ -95,7 +95,7 @@ namespace TESTE_GUNA.projeto.dao
 
                 //1 passo criar datatable e comando sql
 
-                DataTable tabelaProdutos = new DataTable();
+                DataTable DataGridViewVendas = new DataTable();
                 //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
                 string sql = @"select  id_produto as 'ID Produto' ,nome_produto 'Nome Produto', 
                                         desc_produto 'Descrição', 
@@ -110,14 +110,14 @@ namespace TESTE_GUNA.projeto.dao
 
                 //3 passo criar mysqldataapter para preencher dados no datatable
                 MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-                da.Fill(tabelaProdutos);//preencher
+                da.Fill(DataGridViewVendas);//preencher
 
 
                 //fechar a conexao com o banco de dados
                 conexao.Close();
 
 
-                return tabelaProdutos;
+                return DataGridViewVendas;
 
             }
             catch (Exception erro)
@@ -138,8 +138,8 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 //Definindo comando SQL
-                string sql = @"update into tb_produto set nome_produto=@nomeProduto, desc_produto=@descProduto, 
-                            preco_produto=@precoProduto, qtd_estoque=@qtd_estoque, departamento=@departamento where id_produto=@id_produto";
+                string sql = @"update tb_produto set  desc_produto=@desc_produto, 
+                            preco_produto=@preco_produto, qtd_estoque=@qtd_estoque, departamento=@departamento where nome_produto=@nome_produto";
                           
 
 
@@ -147,10 +147,10 @@ namespace TESTE_GUNA.projeto.dao
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
                 
-                executacmd.Parameters.AddWithValue("@nomeProduto", obj.nomeProduto);
-                executacmd.Parameters.AddWithValue("@descProduto", obj.descProduto);
-                executacmd.Parameters.AddWithValue("@precoProduto", obj.precoProduto);
-                executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
+                executacmd.Parameters.AddWithValue("@nome_produto", obj.nomeProduto);
+                executacmd.Parameters.AddWithValue("@desc_produto", obj.descProduto);
+                executacmd.Parameters.AddWithValue("@preco_produto", obj.precoProduto);
+                executacmd.Parameters.AddWithValue("@qtd_estoque", obj.qtdEstoque);
                 executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
                 executacmd.Parameters.AddWithValue("@id_produto", obj.idproduto);
 
@@ -164,11 +164,10 @@ namespace TESTE_GUNA.projeto.dao
                 //fechando conexao
                 conexao.Close();
 
-                FrmMessageBox mensagem = new FrmMessageBox();
+               
 
 
-                mensagem.Mensagem("PRODUTO ALTERADO COM SUCESSO!");
-                mensagem.ShowDialog();
+                
 
 
 
@@ -197,14 +196,14 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 //Definindo comando SQL
-                string sql = @"delete from tb_produto where id=@id";
+                string sql = @"delete from tb_produto where nome_produto=@nome_produto";
 
 
                 //Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
 
-                executacmd.Parameters.AddWithValue("@id_produto", obj.idproduto);
+                executacmd.Parameters.AddWithValue("@nome_produto", obj.nomeProduto);
 
 
 
@@ -249,30 +248,30 @@ namespace TESTE_GUNA.projeto.dao
 
                 //1 passo criar datatable e comando sql
 
-                DataTable tabelaProdutos = new DataTable();
+                DataTable DataGridViewVendas = new DataTable();
                 //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
                 string sql = @"select  id_produto as 'ID Produto' ,nome_produto 'Nome Produto', 
                                         desc_produto 'Descrição', 
                                         preco_produto 'Preço', qtd_estoque 'Qtd Estoque', 
-                                        departamento 'Departamentos'  from tb_produto; where desc_produto like @nome";
+                                        departamento 'Departamentos'  from tb_produto where nome_produto like @nome_produto";
 
                 //2 passo organizar comando e executar
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                executacmd.Parameters.AddWithValue("@nome", nome);
+                executacmd.Parameters.AddWithValue("@nome_produto", nome);
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
 
                 //3 passo criar mysqldataapter para preencher dados no datatable
                 MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-                da.Fill(tabelaProdutos);//preencher
+                da.Fill(DataGridViewVendas);//preencher
 
 
                 //fechar a conexao com o banco de dados
                 conexao.Close();
 
 
-                return tabelaProdutos;
+                return DataGridViewVendas;
 
             }
             catch (Exception erro)
@@ -299,11 +298,11 @@ namespace TESTE_GUNA.projeto.dao
                 string sql = @"select  id_produto as 'ID Produto' ,nome_produto 'Nome Produto', 
                                         desc_produto 'Descrição', 
                                         preco_produto 'Preço', qtd_estoque 'Qtd Estoque', 
-                                        departamento 'Departamentos'  from tb_produto; where desc_produto = @nome";
+                                        departamento 'Departamentos'  from tb_produto where nome_produto = @nome_produto";
 
                 //2 passo organizar comando e executar
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                executacmd.Parameters.AddWithValue("@nome", nome);
+                executacmd.Parameters.AddWithValue("@nome_produto", nome);
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 

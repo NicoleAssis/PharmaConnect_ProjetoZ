@@ -39,14 +39,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnSalvarAlteracoes_Click(object sender, EventArgs e)
         {
-            //Botao Alterar Produto
-
-            //ProdutoDAO dao = new ProdutoDAO();
-            //Validador validade = new Validador();
-            //var precoentrada = Convert.ToDecimal(txtPreco.Text);
-            //txtPreco.Text = precoentrada.ToString("N2");
-
-            //string nome = txtNomeProduto.Text;
+          
             Produto obj = new Produto();
             obj.nomeProduto =txtNomeProduto.Text;
             obj.precoProduto = decimal.Parse(txtPreco.Text);
@@ -55,7 +48,7 @@ namespace TESTE_GUNA.projeto.view
             ProdutoDAO dao = new ProdutoDAO();
             dao.AlterarProduto(obj);
 
-            new Helpers().LimparTela(this);
+          
 
             //Recarregar o datagridview 
 
@@ -66,12 +59,7 @@ namespace TESTE_GUNA.projeto.view
             FrmMessageBox mensagem = new FrmMessageBox();
             mensagem.Mensagem("ALTERAÇÕES SALVAS COM SUCESSO!");
             mensagem.ShowDialog();
-            this.Close();
-        }
-
-        private void txtNomeCartao_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void txtPreco_TextChanged(object sender, EventArgs e)
@@ -103,6 +91,7 @@ namespace TESTE_GUNA.projeto.view
         {
             //Pegando os dados do produto selecionado
             txtNomeProduto.Text= DataGridViewVendas.CurrentRow.Cells[1].Value.ToString();
+            txtDescricao.Text = DataGridViewVendas.CurrentRow.Cells[2].Value.ToString();
             txtPreco.Text = DataGridViewVendas.CurrentRow.Cells[3].Value.ToString();
             txtQuantidade.Text = DataGridViewVendas.CurrentRow.Cells[4].Value.ToString();
         }
@@ -113,6 +102,11 @@ namespace TESTE_GUNA.projeto.view
             ProdutoDAO dao =new ProdutoDAO();
 
             DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
+        }
+
+        private void txtNomeCartao_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

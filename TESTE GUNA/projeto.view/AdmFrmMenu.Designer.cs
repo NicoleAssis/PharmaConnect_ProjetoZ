@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmFrmMenu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmFrmMenu));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnPerfilAdm = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarAdm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,9 +52,8 @@
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnPerfilAdm = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -85,6 +85,36 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(186, 550);
             this.panel6.TabIndex = 26;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.ErrorImage")));
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(16, 347);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(39, 37);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 35;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btnPerfilAdm
+            // 
+            this.btnPerfilAdm.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfilAdm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
+            this.btnPerfilAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfilAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnPerfilAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
+            this.btnPerfilAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfilAdm.Location = new System.Drawing.Point(-2, 340);
+            this.btnPerfilAdm.Name = "btnPerfilAdm";
+            this.btnPerfilAdm.Size = new System.Drawing.Size(188, 53);
+            this.btnPerfilAdm.TabIndex = 34;
+            this.btnPerfilAdm.Text = "              Perfil";
+            this.btnPerfilAdm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfilAdm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfilAdm.UseVisualStyleBackColor = false;
+            this.btnPerfilAdm.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // pictureBox3
             // 
@@ -208,6 +238,7 @@
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVendas.UseVisualStyleBackColor = false;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // pictureBox9
             // 
@@ -369,36 +400,6 @@
             this.DataGridViewVendas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridViewVendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewVendas_CellContentClick);
             // 
-            // btnPerfilAdm
-            // 
-            this.btnPerfilAdm.BackColor = System.Drawing.Color.Transparent;
-            this.btnPerfilAdm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
-            this.btnPerfilAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfilAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnPerfilAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
-            this.btnPerfilAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfilAdm.Location = new System.Drawing.Point(-2, 340);
-            this.btnPerfilAdm.Name = "btnPerfilAdm";
-            this.btnPerfilAdm.Size = new System.Drawing.Size(188, 53);
-            this.btnPerfilAdm.TabIndex = 34;
-            this.btnPerfilAdm.Text = "              Perfil";
-            this.btnPerfilAdm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfilAdm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfilAdm.UseVisualStyleBackColor = false;
-            this.btnPerfilAdm.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.ErrorImage")));
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(16, 347);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 35;
-            this.pictureBox8.TabStop = false;
-            // 
             // AdmFrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +413,9 @@
             this.Name = "AdmFrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmFrmMenu";
+            this.Load += new System.EventHandler(this.AdmFrmMenu_Load);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -421,7 +424,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -11,6 +11,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Windows;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Data;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -95,7 +96,7 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-        #region CadastroAdmnistrrador
+        #region CadastroAdmnistrador
         public void CadastrarAdministrador(Administrador obj)
         {
             try
@@ -149,138 +150,61 @@ namespace TESTE_GUNA.projeto.dao
 
         #endregion
 
-        //#region CadastroAdministrador1
 
-
-
-        //public void CadastrarAdministrador1(Administrador obj)
+        //#region ConsultarAdministradorPorCNPJ
+        //private void CarregarDadosAdministrador(string obj)
         //{
         //    try
         //    {
-        //        // Definindo comando SQL
-        //        string sql = @"insert into tb_administrador (cnpj_administrador, nome_administrador, email_administrador, telefone_administrador, celular_administrador, senha_administrador, nivel_acesso)
-        //            values (@cnpj_administrador, @nome_administrador, @email_administrador, @telefone_administrador, @celular_administrador, @senha_administrador, @nivel_acesso)";
+        //        // Implemente a lógica para recuperar os dados do administrador cadastrado
+        //        // Pode ser uma consulta SQL SELECT ou qualquer outra forma de acesso aos dados
 
-        //        // Organizando comando SQL
+        //        string sql = "SELECT * FROM tb_administrador WHERE cnpj_administrador = @cnpj";
         //        MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
         //        executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
-        //        executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
-        //        executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
-        //        executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
-        //        executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
-        //        executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
-        //        executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel);
-
-        //        // Abrindo conexão e aplicando SQL
         //        conexao.Open();
-        //        executacmd.ExecuteNonQuery();
+        //        MySqlDataReader reader = executacmd.ExecuteReader();
 
-        //        // Fechando conexão
-        //        conexao.Close();
+        //        if (reader.Read())
+        //        {
+        //            // Atribuir os valores recuperados às TextBoxes correspondentes
+        //            txtNome.Text = reader["nome_administrador"].ToString();
+        //            txtEstado.Text = reader["estado_administrador"].ToString();
+        //            txtCidade.Text = reader["cidade_administrador"].ToString();
+        //            txtEndereco.Text = reader["endereco_administrador"].ToString();
+        //            txtComplemento.Text = reader["complemento_administrador"].ToString();
+        //            txtEmail.Text = reader["email_administrador"].ToString();
+        //            txtSenha.Text = reader["senha_administrador"].ToString();
+        //            txtCPNJ.Text = reader["cnpj_administrador"].ToString();
+        //            txtCEP.Text = reader["cep_administrador"].ToString();
+        //            txtBairro.Text = reader["bairro_administrador"].ToString();
+        //            txtNum.Text = reader["numero_administrador"].ToString();
+        //            // Preencher outras TextBoxes conforme necessário
+        //        }
 
+        //        reader.Close();
         //    }
         //    catch (Exception erro)
         //    {
-        //        System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+                
         //    }
-        //}
-        //#endregion
-
-
-
-        //public void CadastrarAdministrador2(Administrador objeto)
-        //{
+        //    finally
         //    {
-        //        try
-        //        {
-        //            // Definindo comando SQL
-        //            string sql = @"insert into tb_administrador (
-        //     cep_administrador, endereco_administrador, numero_administrador,
-        //    complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador, 
-        //   )
-        //VALUES (
-        //    @cep_administrador, @endereco_administrador, @numero_administrador,
-        //    @complemento_administrador, @bairro_administrador, @cidade_administrador, @estado_administrador, 
-        //    @senha_administrador, @nivel_acesso)";
-
-        //            // Organizando comando SQL
-        //            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-        //            executacmd.Parameters.AddWithValue("@cep_administrador", objeto.cep);
-        //            executacmd.Parameters.AddWithValue("@endereco_administrador", objeto.endereco);
-        //            executacmd.Parameters.AddWithValue("@numero_administrador", objeto.numero);
-        //            executacmd.Parameters.AddWithValue("@complemento_administrador", objeto.complemento);
-        //            executacmd.Parameters.AddWithValue("@bairro_administrador", objeto.bairro);
-        //            executacmd.Parameters.AddWithValue("@cidade_administrador", objeto.cidade);
-        //            executacmd.Parameters.AddWithValue("@estado_administrador", objeto.estado);
-
-
-        //            // Abrindo conexão e aplicando SQL
-        //            conexao.Open();
-        //            executacmd.ExecuteNonQuery();
-
-        //            // Fechando conexão
-        //            conexao.Close();
-        //        }
-        //        catch (Exception erro)
-        //        {
-        //            System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
-        //        }
+        //        conexao.Close();
         //    }
-
-        //    //#region Validar CNPJ
-        //    //public static bool ValidarCNPJ(string cnpj)
-        //    //{
-        //    //    // Remove caracteres não numéricos
-        //    //    cnpj = Regex.Replace(cnpj, "[^0-9]", "");
-
-        //    //    // Verifica se o CNPJ tem 14 dígitos
-        //    //    if (cnpj.Length != 14)
-        //    //        return false;
-
-        //    //    // Verifica se todos os dígitos são iguais (caso raro de erro)
-        //    //    if (cnpj.All(x => x == cnpj[0]))
-        //    //        return false;
-
-        //    //    // Calcula os dígitos verificadores
-        //    //    int[] multiplicadores1 = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-        //    //    int[] multiplicadores2 = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-
-        //    //    string tempCnpj = cnpj.Substring(0, 12);
-        //    //    int soma = 0;
-
-        //    //    for (int i = 0; i < 12; i++)
-        //    //    {
-        //    //        soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores1[i];
-        //    //    }
-
-        //    //    int resto = soma % 11;
-        //    //    int digito1 = resto < 2 ? 0 : 11 - resto;
-
-        //    //    tempCnpj += digito1;
-        //    //    soma = 0;
-
-        //    //    for (int i = 0; i < 13; i++)
-        //    //    {
-        //    //        soma += int.Parse(tempCnpj[i].ToString()) * multiplicadores2[i];
-        //    //    }
-
-        //    //    resto = soma % 11;
-        //    //    int digito2 = resto < 2 ? 0 : 11 - resto;
-
-        //    //    tempCnpj += digito2;
-
-        //    //    // Verifica se os dígitos calculados são iguais aos informados
-        //    //    return cnpj.EndsWith(tempCnpj.Substring(12));
-        //    //}
-        //    //#endregion
+        //    #endregion
         //}
-
-
 
     }
+    
+
+
+
+
+
 }
+
 
     
 
