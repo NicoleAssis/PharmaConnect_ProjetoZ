@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,31 +51,23 @@
             this.btnDepartamentos = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.scrollCompras = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.lblSubtotal = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.lblCalcularFrete = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnComprasFinalizadas = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPagamento = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnLimparCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dataGridCarrinho = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -82,14 +77,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -200,7 +192,6 @@
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // panel8
             // 
@@ -302,7 +293,6 @@
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCompras.UseVisualStyleBackColor = false;
-            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // pictureBox9
             // 
@@ -363,67 +353,13 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "MINHAS COMPRAS";
             // 
-            // scrollCompras
-            // 
-            this.scrollCompras.AutoScroll = true;
-            this.scrollCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.scrollCompras.Location = new System.Drawing.Point(211, 116);
-            this.scrollCompras.Name = "scrollCompras";
-            this.scrollCompras.Size = new System.Drawing.Size(739, 227);
-            this.scrollCompras.TabIndex = 31;
-            this.scrollCompras.Paint += new System.Windows.Forms.PaintEventHandler(this.scrollCompras_Paint);
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel14.Controls.Add(this.label6);
-            this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel14.Location = new System.Drawing.Point(601, 347);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(110, 33);
-            this.panel14.TabIndex = 33;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 21);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "SUBTOTAL";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel15.Controls.Add(this.label7);
-            this.panel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel15.Location = new System.Drawing.Point(601, 384);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(110, 33);
-            this.panel15.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 21);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "ENTREGA";
-            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.DarkCyan;
             this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel16.Controls.Add(this.label8);
             this.panel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel16.Location = new System.Drawing.Point(601, 421);
+            this.panel16.Location = new System.Drawing.Point(601, 355);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(110, 33);
             this.panel16.TabIndex = 35;
@@ -439,61 +375,15 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "TOTAL";
             // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel17.Controls.Add(this.lblSubtotal);
-            this.panel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel17.Location = new System.Drawing.Point(713, 347);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(237, 33);
-            this.panel17.TabIndex = 36;
-            // 
-            // lblSubtotal
-            // 
-            this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSubtotal.ForeColor = System.Drawing.Color.Teal;
-            this.lblSubtotal.Location = new System.Drawing.Point(149, 6);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(77, 21);
-            this.lblSubtotal.TabIndex = 39;
-            this.lblSubtotal.Text = "RS: 35,00";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel18.Controls.Add(this.lblCalcularFrete);
-            this.panel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel18.Location = new System.Drawing.Point(713, 384);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(237, 33);
-            this.panel18.TabIndex = 37;
-            this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
-            // 
-            // lblCalcularFrete
-            // 
-            this.lblCalcularFrete.AutoSize = true;
-            this.lblCalcularFrete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCalcularFrete.ForeColor = System.Drawing.Color.Teal;
-            this.lblCalcularFrete.Location = new System.Drawing.Point(118, 6);
-            this.lblCalcularFrete.Name = "lblCalcularFrete";
-            this.lblCalcularFrete.Size = new System.Drawing.Size(109, 21);
-            this.lblCalcularFrete.TabIndex = 39;
-            this.lblCalcularFrete.Text = "Calcular Frete";
-            this.lblCalcularFrete.Click += new System.EventHandler(this.lblCalcularFrete_Click);
-            // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel19.Controls.Add(this.lblTotal);
             this.panel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel19.Location = new System.Drawing.Point(713, 421);
+            this.panel19.Location = new System.Drawing.Point(713, 355);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(237, 33);
+            this.panel19.Size = new System.Drawing.Size(202, 33);
             this.panel19.TabIndex = 38;
             // 
             // lblTotal
@@ -501,7 +391,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.Teal;
-            this.lblTotal.Location = new System.Drawing.Point(149, 6);
+            this.lblTotal.Location = new System.Drawing.Point(114, 6);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(77, 21);
             this.lblTotal.TabIndex = 40;
@@ -512,16 +402,14 @@
             this.panel10.BackColor = System.Drawing.Color.DarkCyan;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.panel13);
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel10.Location = new System.Drawing.Point(210, 77);
+            this.panel10.Location = new System.Drawing.Point(249, 80);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(721, 38);
+            this.panel10.Size = new System.Drawing.Size(666, 38);
             this.panel10.TabIndex = 50;
             // 
             // label5
@@ -529,21 +417,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(20, 9);
+            this.label5.Location = new System.Drawing.Point(35, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 21);
             this.label5.TabIndex = 39;
             this.label5.Text = "PRODUTO";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel11.Location = new System.Drawing.Point(371, -1);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 49);
-            this.panel11.TabIndex = 38;
             // 
             // panel12
             // 
@@ -560,7 +438,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(375, 9);
+            this.label2.Location = new System.Drawing.Point(175, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 21);
             this.label2.TabIndex = 36;
@@ -571,7 +449,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(517, 9);
+            this.label3.Location = new System.Drawing.Point(363, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 35;
@@ -582,18 +460,28 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(652, 9);
+            this.label4.Location = new System.Drawing.Point(562, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "TOTAL";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel11.ForeColor = System.Drawing.Color.DarkCyan;
+            this.panel11.Location = new System.Drawing.Point(405, 69);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(5, 49);
+            this.panel11.TabIndex = 38;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel13.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel13.Location = new System.Drawing.Point(630, 0);
+            this.panel13.Location = new System.Drawing.Point(575, 69);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(5, 49);
             this.panel13.TabIndex = 34;
@@ -636,7 +524,7 @@
             this.btnPagamento.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnPagamento.Image = ((System.Drawing.Image)(resources.GetObject("btnPagamento.Image")));
             this.btnPagamento.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnPagamento.Location = new System.Drawing.Point(713, 477);
+            this.btnPagamento.Location = new System.Drawing.Point(678, 425);
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.PressedDepth = 0;
             this.btnPagamento.Size = new System.Drawing.Size(237, 45);
@@ -672,28 +560,79 @@
             this.btnLimparCarrinho.HoverState.FillColor = System.Drawing.Color.Teal;
             this.btnLimparCarrinho.HoverState.FillColor2 = System.Drawing.Color.RoyalBlue;
             this.btnLimparCarrinho.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLimparCarrinho.Location = new System.Drawing.Point(331, 347);
+            this.btnLimparCarrinho.Location = new System.Drawing.Point(331, 350);
             this.btnLimparCarrinho.Name = "btnLimparCarrinho";
             this.btnLimparCarrinho.Size = new System.Drawing.Size(209, 39);
             this.btnLimparCarrinho.TabIndex = 54;
             this.btnLimparCarrinho.Text = "LIMPAR O CARRINHO";
+            // 
+            // dataGridCarrinho
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridCarrinho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCarrinho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridCarrinho.ColumnHeadersHeight = 4;
+            this.dataGridCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCarrinho.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridCarrinho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCarrinho.Location = new System.Drawing.Point(249, 122);
+            this.dataGridCarrinho.Name = "dataGridCarrinho";
+            this.dataGridCarrinho.RowHeadersVisible = false;
+            this.dataGridCarrinho.RowTemplate.Height = 50;
+            this.dataGridCarrinho.Size = new System.Drawing.Size(666, 219);
+            this.dataGridCarrinho.TabIndex = 55;
+            this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridCarrinho.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCarrinho.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridCarrinho.ThemeStyle.ReadOnly = false;
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.Height = 50;
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCarrinho.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.dataGridCarrinho);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.btnComprasFinalizadas);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.panel19);
-            this.Controls.Add(this.panel18);
-            this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel16);
-            this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel14);
-            this.Controls.Add(this.scrollCompras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.pictureBox4);
@@ -713,21 +652,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrinho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,16 +684,8 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label lblSubtotal;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label lblCalcularFrete;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2Button btnPagamento;
@@ -774,9 +698,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2GradientButton btnComprasFinalizadas;
-        public System.Windows.Forms.FlowLayoutPanel scrollCompras;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
         private Guna.UI2.WinForms.Guna2GradientButton btnLimparCarrinho;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridCarrinho;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -51,8 +52,8 @@ namespace TESTE_GUNA.projeto.view
 
         public void DeletarProduto(UserControlComprasProdutos produto)
         {
-            scrollCompras.Controls.Remove(produto);
-            scrollCompras.Refresh();
+            //scrollCompras.Controls.Remove(produto);
+           // scrollCompras.Refresh();
         }
 
 
@@ -81,17 +82,60 @@ namespace TESTE_GUNA.projeto.view
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            //printa os produtos na tela de scroll
-            for (int i = 0; i <= 4; i++)
-            {
-                UserControlComprasProdutos userControlProdutos = new UserControlComprasProdutos();
-                userControlProdutos.printarProduto(1);
-                scrollCompras.Controls.Add(userControlProdutos);
-            }
-
+            ConfigureDataGridView();
+            CarregarProdutos();
             
         }
 
+        private void CarregarProdutos()
+        {
+            try
+            {
+                // Criar uma instância de ComprasDAO
+                ComprasDAO comprasDAO = new ComprasDAO();
+
+                // Obter os dados dos produtos
+                DataTable tabelaProdutos = comprasDAO.ListarProdutos();
+
+                // Preencher o DataGridView com os dados
+                dataGridCarrinho.DataSource = tabelaProdutos;
+
+                CalcularTotal();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar produtos: " + erro.Message);
+            }
+        }
+
+        private void ConfigureDataGridView()
+        {
+            // Ajustar a fonte do cabeçalho
+            dataGridCarrinho.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+
+            // Ajustar a fonte das células
+            dataGridCarrinho.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+        }
+
+        private void CalcularTotal()
+        {
+            decimal totalGeral = 0;
+
+            // Percorrer as linhas do DataGridView e somar os valores da coluna 'Total'
+            foreach (DataGridViewRow row in dataGridCarrinho.Rows)
+            {
+                if (row.Cells["Total"].Value != null)
+                {
+                    totalGeral += Convert.ToDecimal(row.Cells["Total"].Value);
+                }
+            }
+
+            // Exibir o total geral em um Label ou TextBox
+            lblTotal.Text ="Rs: "+ totalGeral.ToString();
+        }
+    }
+    /*
         private void btnSair_Click(object sender, EventArgs e)
         {
             //volta para a tela e login
@@ -114,5 +158,10 @@ namespace TESTE_GUNA.projeto.view
         {
 
         }
+
+        private void dataGridCarrinho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }*/
     }
-}
+
