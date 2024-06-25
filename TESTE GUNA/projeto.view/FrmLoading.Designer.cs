@@ -37,9 +37,11 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             numeroLabel = new System.Windows.Forms.Label();
             this.progressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // numeroLabel
@@ -56,6 +58,7 @@
             // 
             // progressBar
             // 
+            this.progressBar.Controls.Add(this.pictureBox1);
             this.progressBar.Controls.Add(numeroLabel);
             this.progressBar.Controls.Add(this.label4);
             this.progressBar.Controls.Add(this.label3);
@@ -115,21 +118,29 @@
             // 
             // guna2PictureBox1
             // 
-            //this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            //this.guna2PictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.My_Business1;
-            //this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
-            //this.guna2PictureBox1.ImageRotate = 0F;
-            //this.guna2PictureBox1.Location = new System.Drawing.Point(574, 606);
-            //this.guna2PictureBox1.Name = "guna2PictureBox1";
-            //this.guna2PictureBox1.Size = new System.Drawing.Size(351, 292);
-            //this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            //this.guna2PictureBox1.TabIndex = 0;
-            //this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 200);
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.GIFLoading;
+            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
+            this.pictureBox1.Location = new System.Drawing.Point(607, 641);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(284, 216);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmLoading
             // 
@@ -145,6 +156,7 @@
             this.progressBar.ResumeLayout(false);
             this.progressBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
