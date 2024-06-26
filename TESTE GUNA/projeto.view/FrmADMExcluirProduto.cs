@@ -53,6 +53,8 @@ namespace TESTE_GUNA.projeto.view
             //puxando o metodo listar produto
             ProdutoDAO dao = new ProdutoDAO();
             DataGridViewVendas.DataSource = dao.LIstarProdutos();
+
+            Cursor.Current = Cursors.Arrow;
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
@@ -67,6 +69,11 @@ namespace TESTE_GUNA.projeto.view
         private void txtNomeProduto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

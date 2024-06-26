@@ -28,6 +28,25 @@ namespace TESTE_GUNA.projeto.dao
         #region
 
 
+
+
+
+
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
+        #region
+
+
         public void LimparCarrinho()
         {
             try
@@ -65,7 +84,52 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
+        public DataTable ListarProdutosVendasADM()
+        {
+            try
+            {
+                //criar datatable e comando sql
+                DataTable tabelaProdutos = new DataTable();
 
+
+
+                string sql = @"
+                SELECT 
+                    id_venda AS 'IdVenda',
+                    data_venda AS 'DataVenda',
+                    total_venda AS 'TotalVenda',
+                    id_pagamento AS 'IdPagamento',
+                    id_cliente AS 'IdCliente'
+                FROM 
+                    tb_venda;";
+
+                //organizar o comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //criar mysqldataapter para preencher os dados no data table
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos);
+
+                conexao.Close();
+
+
+                return tabelaProdutos;
+
+
+            }
+            catch (Exception erro)
+            {
+                //MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                FrmMessageBox mensagem = new FrmMessageBox();
+                mensagem.Mensagem("erro dao compra" + erro);
+                mensagem.ShowDialog();
+                return null;
+            }
+
+        }
 
 
         #region

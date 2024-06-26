@@ -51,6 +51,7 @@
             // 
             this.btnExcluirProduto.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluirProduto.BorderRadius = 20;
+            this.btnExcluirProduto.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnExcluirProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExcluirProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExcluirProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -84,7 +85,7 @@
             this.txtNomeProduto.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNomeProduto.ForeColor = System.Drawing.Color.DimGray;
             this.txtNomeProduto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeProduto.Location = new System.Drawing.Point(258, 273);
+            this.txtNomeProduto.Location = new System.Drawing.Point(258, 274);
             this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.PasswordChar = '\0';
@@ -100,6 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
+            this.label1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(110)))));
             this.label1.Location = new System.Drawing.Point(99, 278);
@@ -124,7 +126,7 @@
             this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPesquisa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPesquisa.IconLeft")));
             this.txtPesquisa.IconLeftSize = new System.Drawing.Size(18, 18);
-            this.txtPesquisa.Location = new System.Drawing.Point(126, 45);
+            this.txtPesquisa.Location = new System.Drawing.Point(138, 45);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.PasswordChar = '\0';
             this.txtPesquisa.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -141,6 +143,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.btnX);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -152,9 +155,10 @@
             // label
             // 
             this.label.AutoSize = true;
+            this.label.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.label.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(193, 7);
+            this.label.Location = new System.Drawing.Point(208, 7);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(177, 25);
             this.label.TabIndex = 33;
@@ -164,9 +168,10 @@
             // btnX
             // 
             this.btnX.BackColor = System.Drawing.Color.Transparent;
+            this.btnX.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnX.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnX.Location = new System.Drawing.Point(538, 3);
+            this.btnX.Location = new System.Drawing.Point(553, 3);
             this.btnX.Name = "btnX";
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(28, 29);
@@ -175,38 +180,45 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.UseWaitCursor = true;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel2.Location = new System.Drawing.Point(588, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 426);
             this.panel2.TabIndex = 105;
+            this.panel2.UseWaitCursor = true;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel3.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel3.Location = new System.Drawing.Point(0, 39);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 426);
             this.panel3.TabIndex = 106;
+            this.panel3.UseWaitCursor = true;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel4.Location = new System.Drawing.Point(0, 460);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(588, 5);
             this.panel4.TabIndex = 107;
+            this.panel4.UseWaitCursor = true;
             // 
             // DataGridViewVendas
             // 
@@ -222,6 +234,7 @@
             this.DataGridViewVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewVendas.ColumnHeadersHeight = 4;
             this.DataGridViewVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DataGridViewVendas.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,6 +289,7 @@
             this.Controls.Add(this.DataGridViewVendas);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmADMExcluirProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

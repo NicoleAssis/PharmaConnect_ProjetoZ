@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdmFrmProdutos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarAdm = new System.Windows.Forms.Button();
@@ -52,13 +52,7 @@
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdicionarProdutos = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnCadastrarAdm = new System.Windows.Forms.Button();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,15 +61,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Controls.Add(this.pictureBox8);
-            this.panel6.Controls.Add(this.btnPerfilAdm);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.btnCadastrarAdm);
             this.panel6.Controls.Add(this.panel1);
@@ -98,7 +89,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
             this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.IconPessoa;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 348);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 296);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +104,7 @@
             this.btnCadastrarAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnCadastrarAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.btnCadastrarAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAdm.Location = new System.Drawing.Point(-2, 341);
+            this.btnCadastrarAdm.Location = new System.Drawing.Point(-2, 289);
             this.btnCadastrarAdm.Name = "btnCadastrarAdm";
             this.btnCadastrarAdm.Size = new System.Drawing.Size(250, 52);
             this.btnCadastrarAdm.TabIndex = 34;
@@ -149,7 +140,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
             this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.iconSair;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 407);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 355);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +155,7 @@
             this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(-2, 399);
+            this.btnSair.Location = new System.Drawing.Point(-2, 347);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(250, 52);
             this.btnSair.TabIndex = 27;
@@ -325,27 +316,27 @@
             // 
             // DataGridViewVendas
             // 
-            //dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-           // this.DataGridViewVendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridViewVendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-           /* dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;*/
-           // this.DataGridViewVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewVendas.ColumnHeadersHeight = 4;
             this.DataGridViewVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            //dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            //dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-           // dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-           // dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-          //  dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-          //  dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-          //  dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-          //  this.DataGridViewVendas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewVendas.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridViewVendas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridViewVendas.Location = new System.Drawing.Point(199, 61);
             this.DataGridViewVendas.Name = "DataGridViewVendas";
@@ -387,11 +378,9 @@
             this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(235)))));
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(115)))), ((int)(((byte)(252)))));
             this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(235)))));
-            this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.guna2GradientButton2.Image = global::TESTE_GUNA.Properties.Resources.iconProdutoadm2;
             this.guna2GradientButton2.ImageSize = new System.Drawing.Size(40, 40);
             this.guna2GradientButton2.Location = new System.Drawing.Point(713, 491);
@@ -411,11 +400,9 @@
             this.btnAdicionarProdutos.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAdicionarProdutos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdicionarProdutos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
-            this.btnAdicionarProdutos.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(235)))));
+            this.btnAdicionarProdutos.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.btnAdicionarProdutos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionarProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionarProdutos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(235)))));
-            this.btnAdicionarProdutos.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
             this.btnAdicionarProdutos.Image = global::TESTE_GUNA.Properties.Resources.iconProdutoadm;
             this.btnAdicionarProdutos.ImageSize = new System.Drawing.Size(40, 40);
             this.btnAdicionarProdutos.Location = new System.Drawing.Point(199, 491);
@@ -425,109 +412,27 @@
             this.btnAdicionarProdutos.Text = "ADICIONAR PRODUTOS";
             this.btnAdicionarProdutos.Click += new System.EventHandler(this.btnAdicionarProdutos_Click);
             // 
-            // txtPesquisa
+            // guna2GradientButton1
             // 
-            this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.BorderRadius = 15;
-            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPesquisa.DefaultText = "Pesquisar";
-            this.txtPesquisa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPesquisa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPesquisa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPesquisa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPesquisa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPesquisa.IconLeft")));
-            this.txtPesquisa.IconLeftSize = new System.Drawing.Size(22, 22);
-            this.txtPesquisa.Location = new System.Drawing.Point(116, 13);
-            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.PasswordChar = '\0';
-            this.txtPesquisa.PlaceholderText = "";
-            this.txtPesquisa.SelectedText = "";
-            this.txtPesquisa.Size = new System.Drawing.Size(541, 30);
-            this.txtPesquisa.TabIndex = 24;
-            this.txtPesquisa.Click += new System.EventHandler(this.txtPesquisa_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.iconSair;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 355);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(186, 158);
-            this.panel8.TabIndex = 20;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.ErrorImage")));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(16, 173);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 42);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(250)))));
-            this.pictureBox9.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.ErrorImage")));
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(17, 239);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 2;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
-            this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.IconPessoa;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 297);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnCadastrarAdm
-            // 
-            this.btnCadastrarAdm.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarAdm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
-            this.btnCadastrarAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarAdm.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnCadastrarAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
-            this.btnCadastrarAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAdm.Location = new System.Drawing.Point(-2, 289);
-            this.btnCadastrarAdm.Name = "btnCadastrarAdm";
-            this.btnCadastrarAdm.Size = new System.Drawing.Size(250, 52);
-            this.btnCadastrarAdm.TabIndex = 34;
-            this.btnCadastrarAdm.Text = "              Cadastar Adm";
-            this.btnCadastrarAdm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAdm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastrarAdm.UseVisualStyleBackColor = false;
-            this.btnCadastrarAdm.Click += new System.EventHandler(this.btnCadastrarAdm_Click);
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.BorderRadius = 20;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(205)))), ((int)(((byte)(255)))));
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(115)))), ((int)(((byte)(252)))));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.Image = global::TESTE_GUNA.Properties.Resources.iconProdutoadm2;
+            this.guna2GradientButton1.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(455, 491);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(241, 47);
+            this.guna2GradientButton1.TabIndex = 57;
+            this.guna2GradientButton1.Text = "ALTERAR PRODUTOS";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // AdmFrmProdutos
             // 
@@ -555,7 +460,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewVendas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,7 +487,5 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnCadastrarAdm;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btnPerfilAdm;
     }
 }

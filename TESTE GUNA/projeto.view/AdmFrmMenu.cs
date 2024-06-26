@@ -87,6 +87,27 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
+        private void CarregarProdutos()
+        {
+            try
+            {
+                // Criar uma instância de ComprasDAO
+                ComprasDAO comprasDAO = new ComprasDAO();
+
+                // Obter os dados dos produtos
+                DataTable tabelaProdutos = comprasDAO.ListarProdutosVendasADM();
+
+                // Preencher o DataGridView com os dados
+                DataGridViewVendas.DataSource = tabelaProdutos;
+
+                // ConfigureDataGridView();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao carregar produtos: " + erro.Message);
+            }
+        }
+
         private void DataGridViewVendas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ////Pegando os dados do produto selecionado
