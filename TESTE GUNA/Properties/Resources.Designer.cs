@@ -163,6 +163,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GIFLoading {
+            get {
+                object obj = ResourceManager.GetObject("GIFLoading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gravando_2024_06_22_161553 {
             get {
                 object obj = ResourceManager.GetObject("Gravando 2024-06-22 161553", resourceCulture);

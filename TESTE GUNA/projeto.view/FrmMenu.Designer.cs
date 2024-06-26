@@ -389,13 +389,13 @@
             this.DataGridViewVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridViewVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewVendas.ColumnHeadersHeight = 4;
+            this.DataGridViewVendas.ColumnHeadersHeight = 40;
             this.DataGridViewVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -423,7 +423,7 @@
             this.DataGridViewVendas.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataGridViewVendas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridViewVendas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridViewVendas.ThemeStyle.HeaderStyle.Height = 4;
+            this.DataGridViewVendas.ThemeStyle.HeaderStyle.Height = 40;
             this.DataGridViewVendas.ThemeStyle.ReadOnly = false;
             this.DataGridViewVendas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridViewVendas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

@@ -55,14 +55,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.btnComprasFinalizadas = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPagamento = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -79,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrinho)).BeginInit();
             this.SuspendLayout();
@@ -397,95 +388,6 @@
             this.lblTotal.TabIndex = 40;
             this.lblTotal.Text = "RS: 35,00";
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(75)))));
-            this.panel10.Location = new System.Drawing.Point(249, 80);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(666, 38);
-            this.panel10.TabIndex = 50;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(35, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 21);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "PRODUTO";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel12.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel12.Location = new System.Drawing.Point(509, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(5, 49);
-            this.panel12.TabIndex = 37;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(175, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 21);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "PREÇO UNITÁRIO";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(363, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "QUANTIDADE";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(562, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "TOTAL";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel11.Location = new System.Drawing.Point(405, 69);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 49);
-            this.panel11.TabIndex = 38;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel13.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel13.Location = new System.Drawing.Point(575, 69);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(5, 49);
-            this.panel13.TabIndex = 34;
-            // 
             // btnComprasFinalizadas
             // 
             this.btnComprasFinalizadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
@@ -569,30 +471,33 @@
             // 
             // dataGridCarrinho
             // 
+            this.dataGridCarrinho.AllowDrop = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dataGridCarrinho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCarrinho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCarrinho.ColumnHeadersHeight = 50;
+            this.dataGridCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCarrinho.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridCarrinho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridCarrinho.Location = new System.Drawing.Point(249, 124);
+            this.dataGridCarrinho.Location = new System.Drawing.Point(249, 67);
             this.dataGridCarrinho.Name = "dataGridCarrinho";
             this.dataGridCarrinho.RowHeadersVisible = false;
-            this.dataGridCarrinho.Size = new System.Drawing.Size(666, 220);
+            this.dataGridCarrinho.Size = new System.Drawing.Size(666, 277);
             this.dataGridCarrinho.TabIndex = 55;
             this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridCarrinho.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -605,8 +510,8 @@
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridCarrinho.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridCarrinho.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCarrinho.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridCarrinho.ThemeStyle.HeaderStyle.Height = 50;
             this.dataGridCarrinho.ThemeStyle.ReadOnly = false;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridCarrinho.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -623,11 +528,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
             this.Controls.Add(this.dataGridCarrinho);
-            this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.btnLimparCarrinho);
             this.Controls.Add(this.btnComprasFinalizadas);
-            this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.panel16);
@@ -654,8 +556,6 @@
             this.panel16.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrinho)).EndInit();
             this.ResumeLayout(false);
@@ -687,14 +587,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2Button btnPagamento;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2GradientButton btnComprasFinalizadas;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;

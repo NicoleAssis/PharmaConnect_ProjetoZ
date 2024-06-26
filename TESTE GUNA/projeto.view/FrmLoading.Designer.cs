@@ -58,12 +58,12 @@
             // 
             // progressBar
             // 
-            this.progressBar.Controls.Add(this.pictureBox1);
             this.progressBar.Controls.Add(numeroLabel);
             this.progressBar.Controls.Add(this.label4);
             this.progressBar.Controls.Add(this.label3);
             this.progressBar.Controls.Add(this.label1);
             this.progressBar.Controls.Add(this.guna2PictureBox1);
+            this.progressBar.Controls.Add(this.pictureBox1);
             this.progressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.progressBar.FillThickness = 850;
             this.progressBar.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -133,11 +133,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.GIFLoading;
             this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
-            this.pictureBox1.Location = new System.Drawing.Point(607, 641);
+            this.pictureBox1.Location = new System.Drawing.Point(561, 614);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(367, 267);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;

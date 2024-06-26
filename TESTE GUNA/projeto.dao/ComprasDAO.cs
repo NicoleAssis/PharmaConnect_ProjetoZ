@@ -199,6 +199,7 @@ namespace TESTE_GUNA.projeto.dao
                                 SELECT 
                                     tb_carrinho.nome_produto AS 'Produto',
                                     tb_carrinho.preco_produto AS 'Preço Unitário',
+                                    tb_carrinho.qtd_estoque AS 'Quantidade',
                                     (tb_carrinho.preco_produto * tb_carrinho.qtd_estoque) AS 'Total'
                                 FROM 
                                     tb_carrinho;";

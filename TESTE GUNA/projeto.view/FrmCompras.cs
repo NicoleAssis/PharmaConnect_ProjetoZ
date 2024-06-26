@@ -101,7 +101,7 @@ namespace TESTE_GUNA.projeto.view
                 dataGridCarrinho.DataSource = tabelaProdutos;
 
                 CalcularTotal();
-                ConfigureDataGridView();
+               // ConfigureDataGridView();
             }
             catch (Exception erro)
             {
@@ -109,7 +109,7 @@ namespace TESTE_GUNA.projeto.view
             }
         }
 
-        private void ConfigureDataGridView()
+      /*  private void ConfigureDataGridView()
         {
             // Ajustar a fonte do cabeçalho
             dataGridCarrinho.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16, FontStyle.Bold);
@@ -117,7 +117,7 @@ namespace TESTE_GUNA.projeto.view
             // Ajustar a fonte das células
             dataGridCarrinho.DefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
-        }
+        }*/
 
         private void CalcularTotal()
         {
