@@ -53,7 +53,15 @@ namespace TESTE_GUNA.projeto.view
             ClienteDAO dao = new ClienteDAO();
             AdministradorDAO daoADM = new AdministradorDAO();
 
-            if((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
+
+            if (email == "1234" && senha == "1234")
+            {
+
+                AdmFrmMenu tela = new AdmFrmMenu();
+                tela.Show();
+                this.Hide();
+            }
+            else if((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
 
             }
@@ -62,13 +70,7 @@ namespace TESTE_GUNA.projeto.view
 
             }
 
-            if(email == "1234" && senha == "1234")
-            {
-                
-                AdmFrmMenu tela = new AdmFrmMenu();
-                tela.Show();
-                this.Hide();
-            }
+
 
              
         }
