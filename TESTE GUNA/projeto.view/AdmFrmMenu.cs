@@ -119,7 +119,7 @@ namespace TESTE_GUNA.projeto.view
         }
 
 
-        private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+     /*   private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -137,6 +137,6 @@ namespace TESTE_GUNA.projeto.view
         private void AdmFrmMenu_Load(object sender, EventArgs e)
         {
             
-        }
+        }*/
     }
 }

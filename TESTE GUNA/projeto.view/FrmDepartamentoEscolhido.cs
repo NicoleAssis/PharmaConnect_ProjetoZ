@@ -184,11 +184,11 @@ namespace TESTE_GUNA.projeto.view
             }
         }
 
-        private void userControlProduto2_Load(object sender, EventArgs e)
+      /*  private void userControlProduto2_Load(object sender, EventArgs e)
         {
 
         }
-
+      */
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
