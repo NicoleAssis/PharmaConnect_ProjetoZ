@@ -176,6 +176,13 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
+        private void btnLimparCarrinho_Click(object sender, EventArgs e)
+        {
+            FrmFrete telafrete = new FrmFrete();
+            this.Close();
+            telafrete.Show();
+        }
+
         private void dataGridCarrinho_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

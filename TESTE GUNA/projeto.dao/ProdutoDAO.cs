@@ -23,6 +23,12 @@ namespace TESTE_GUNA.projeto.dao
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
 
+        public int  id_reader ;
+        public string nome_reader;
+        public string desc_reader;
+        public decimal preco_reader;
+        public int qtd_reader;
+        public string dep_reader;
         //Construtor
         public ProdutoDAO()
         {
@@ -30,7 +36,7 @@ namespace TESTE_GUNA.projeto.dao
         }
 
 
-
+        
 
         #region CadastroProduto
 

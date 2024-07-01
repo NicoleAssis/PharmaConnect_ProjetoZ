@@ -58,7 +58,7 @@
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnX.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnX.Location = new System.Drawing.Point(741, 3);
+            this.btnX.Location = new System.Drawing.Point(1271, -2);
             this.btnX.Name = "btnX";
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(28, 29);
@@ -141,7 +141,6 @@
             this.Controls.Add(this.dataGridDep);
             this.Controls.Add(this.lblDepartamento);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.panelDep);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(500, 0);
             this.Name = "FrmDepartamentoEscolhido";

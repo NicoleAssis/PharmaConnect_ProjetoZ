@@ -30,7 +30,6 @@
         {
             this.labelProduto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtqtd = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelDesc = new System.Windows.Forms.Label();
             this.btndiminuir = new Guna.UI2.WinForms.Guna2Button();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
@@ -48,6 +47,7 @@
             this.labelqtdscribe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelClasse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ContainerControl4 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.txtqtd = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2ContainerControl1.SuspendLayout();
             this.guna2ContainerControl2.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             this.labelProduto.BackColor = System.Drawing.Color.Transparent;
             this.labelProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProduto.Location = new System.Drawing.Point(149, 62);
+            this.labelProduto.Location = new System.Drawing.Point(199, 22);
             this.labelProduto.Name = "labelProduto";
             this.labelProduto.Size = new System.Drawing.Size(114, 22);
             this.labelProduto.TabIndex = 8;
@@ -69,42 +69,19 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(70, 62);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(120, 22);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(63, 22);
             this.guna2HtmlLabel2.TabIndex = 11;
             this.guna2HtmlLabel2.Text = "Produto:";
             // 
-            // txtqtd
-            // 
-            this.txtqtd.AutoRoundedCorners = true;
-            this.txtqtd.BorderRadius = 11;
-            this.txtqtd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtqtd.DefaultText = "1";
-            this.txtqtd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtqtd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtqtd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtqtd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtqtd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtqtd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtqtd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtqtd.Location = new System.Drawing.Point(300, 60);
-            this.txtqtd.Name = "txtqtd";
-            this.txtqtd.PasswordChar = '\0';
-            this.txtqtd.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtqtd.PlaceholderText = "";
-            this.txtqtd.SelectedText = "";
-            this.txtqtd.Size = new System.Drawing.Size(24, 24);
-            this.txtqtd.TabIndex = 12;
-            // 
             // labelDesc
             // 
-            this.labelDesc.AutoSize = true;
             this.labelDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDesc.Location = new System.Drawing.Point(28, 59);
+            this.labelDesc.Location = new System.Drawing.Point(66, 59);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(504, 20);
+            this.labelDesc.Size = new System.Drawing.Size(496, 84);
             this.labelDesc.TabIndex = 13;
             this.labelDesc.Text = "S1G1 - ANTIALÉRGICOS OFTAMOLÓGICOS, ANTI-HISTAMÍNICOS";
             this.labelDesc.Click += new System.EventHandler(this.labelDesc_Click);
@@ -123,11 +100,12 @@
             this.btndiminuir.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndiminuir.ForeColor = System.Drawing.Color.White;
             this.btndiminuir.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btndiminuir.Location = new System.Drawing.Point(331, 60);
+            this.btndiminuir.Location = new System.Drawing.Point(489, 22);
             this.btndiminuir.Name = "btndiminuir";
             this.btndiminuir.Size = new System.Drawing.Size(24, 24);
             this.btndiminuir.TabIndex = 16;
             this.btndiminuir.Text = "guna2Button5";
+            this.btndiminuir.Click += new System.EventHandler(this.btndiminuir_Click);
             // 
             // btnadd
             // 
@@ -143,11 +121,12 @@
             this.btnadd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnadd.ForeColor = System.Drawing.Color.White;
             this.btnadd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnadd.Location = new System.Drawing.Point(361, 60);
+            this.btnadd.Location = new System.Drawing.Point(529, 22);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(24, 24);
             this.btnadd.TabIndex = 15;
             this.btnadd.Text = "guna2Button5";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // guna2PictureBox1
             // 
@@ -156,7 +135,7 @@
             this.guna2PictureBox1.Image = global::TESTE_GUNA.Properties.Resources.imagemProduto;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.InitialImage = global::TESTE_GUNA.Properties.Resources.imagemProduto;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 58);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(62, 18);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(61, 26);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,11 +153,12 @@
             this.btncomprar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncomprar.ForeColor = System.Drawing.Color.Black;
             this.btncomprar.Image = global::TESTE_GUNA.Properties.Resources.check_carrinho_de_compras;
-            this.btncomprar.Location = new System.Drawing.Point(363, 146);
+            this.btncomprar.Location = new System.Drawing.Point(437, 146);
             this.btncomprar.Name = "btncomprar";
-            this.btncomprar.Size = new System.Drawing.Size(180, 45);
+            this.btncomprar.Size = new System.Drawing.Size(239, 45);
             this.btncomprar.TabIndex = 7;
             this.btncomprar.Text = "Comprar";
+            this.btncomprar.Click += new System.EventHandler(this.btncomprar_Click);
             // 
             // btnadicionar
             // 
@@ -190,9 +170,9 @@
             this.btnadicionar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadicionar.ForeColor = System.Drawing.Color.Black;
             this.btnadicionar.Image = global::TESTE_GUNA.Properties.Resources.adicionar_ao_carrinho_de_compras;
-            this.btnadicionar.Location = new System.Drawing.Point(198, 146);
+            this.btnadicionar.Location = new System.Drawing.Point(211, 146);
             this.btnadicionar.Name = "btnadicionar";
-            this.btnadicionar.Size = new System.Drawing.Size(180, 45);
+            this.btnadicionar.Size = new System.Drawing.Size(235, 45);
             this.btnadicionar.TabIndex = 6;
             this.btnadicionar.Text = "Adicionar";
             this.btnadicionar.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -209,15 +189,16 @@
             this.btncancelar.Image = global::TESTE_GUNA.Properties.Resources.angulo_pequeno_esquerdo;
             this.btncancelar.Location = new System.Drawing.Point(3, 146);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(180, 45);
+            this.btncancelar.Size = new System.Drawing.Size(202, 45);
             this.btncancelar.TabIndex = 5;
             this.btncancelar.Text = "Cancelar";
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(418, 62);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(571, 22);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(24, 22);
             this.guna2HtmlLabel3.TabIndex = 17;
@@ -227,7 +208,7 @@
             // 
             this.labelValor.BackColor = System.Drawing.Color.Transparent;
             this.labelValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValor.Location = new System.Drawing.Point(448, 62);
+            this.labelValor.Location = new System.Drawing.Point(601, 22);
             this.labelValor.Name = "labelValor";
             this.labelValor.Size = new System.Drawing.Size(43, 22);
             this.labelValor.TabIndex = 18;
@@ -242,7 +223,7 @@
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(555, 43);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(676, 43);
             this.guna2ContainerControl1.TabIndex = 19;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
@@ -255,7 +236,7 @@
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(0, 0);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
-            this.guna2ContainerControl2.Size = new System.Drawing.Size(555, 43);
+            this.guna2ContainerControl2.Size = new System.Drawing.Size(676, 43);
             this.guna2ContainerControl2.TabIndex = 20;
             this.guna2ContainerControl2.Text = "guna2ContainerControl2";
             // 
@@ -271,7 +252,7 @@
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(0, 0);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
-            this.guna2ContainerControl3.Size = new System.Drawing.Size(555, 43);
+            this.guna2ContainerControl3.Size = new System.Drawing.Size(676, 43);
             this.guna2ContainerControl3.TabIndex = 21;
             this.guna2ContainerControl3.Text = "guna2ContainerControl3";
             // 
@@ -290,16 +271,17 @@
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Image = global::TESTE_GUNA.Properties.Resources.x1;
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(511, 3);
+            this.guna2Button4.Location = new System.Drawing.Point(635, 3);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(44, 37);
+            this.guna2Button4.Size = new System.Drawing.Size(65, 37);
             this.guna2Button4.TabIndex = 26;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(418, 12);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(573, 12);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(44, 22);
             this.guna2HtmlLabel7.TabIndex = 25;
@@ -309,7 +291,7 @@
             // 
             this.labelqtdscribe.BackColor = System.Drawing.Color.Transparent;
             this.labelqtdscribe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelqtdscribe.Location = new System.Drawing.Point(292, 12);
+            this.labelqtdscribe.Location = new System.Drawing.Point(450, 12);
             this.labelqtdscribe.Name = "labelqtdscribe";
             this.labelqtdscribe.Size = new System.Drawing.Size(86, 22);
             this.labelqtdscribe.TabIndex = 24;
@@ -327,36 +309,58 @@
             // 
             // guna2ContainerControl4
             // 
-            this.guna2ContainerControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2ContainerControl4.BorderColor = System.Drawing.Color.Black;
             this.guna2ContainerControl4.BorderThickness = 1;
+            this.guna2ContainerControl4.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2ContainerControl4.Controls.Add(this.labelValor);
+            this.guna2ContainerControl4.Controls.Add(this.btnadd);
             this.guna2ContainerControl4.Controls.Add(this.btncancelar);
+            this.guna2ContainerControl4.Controls.Add(this.btndiminuir);
             this.guna2ContainerControl4.Controls.Add(this.btnadicionar);
+            this.guna2ContainerControl4.Controls.Add(this.txtqtd);
             this.guna2ContainerControl4.Controls.Add(this.btncomprar);
             this.guna2ContainerControl4.Controls.Add(this.labelDesc);
+            this.guna2ContainerControl4.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2ContainerControl4.Controls.Add(this.guna2PictureBox1);
+            this.guna2ContainerControl4.Controls.Add(this.labelProduto);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
             this.guna2ContainerControl4.Location = new System.Drawing.Point(0, 40);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
-            this.guna2ContainerControl4.Size = new System.Drawing.Size(555, 194);
+            this.guna2ContainerControl4.Size = new System.Drawing.Size(676, 203);
             this.guna2ContainerControl4.TabIndex = 22;
             this.guna2ContainerControl4.Text = "guna2ContainerControl4";
             this.guna2ContainerControl4.Click += new System.EventHandler(this.guna2ContainerControl4_Click);
+            // 
+            // txtqtd
+            // 
+            this.txtqtd.AutoRoundedCorners = true;
+            this.txtqtd.BorderRadius = 11;
+            this.txtqtd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtqtd.DefaultText = "";
+            this.txtqtd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtqtd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtqtd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtqtd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtqtd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtqtd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtqtd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtqtd.Location = new System.Drawing.Point(450, 22);
+            this.txtqtd.Name = "txtqtd";
+            this.txtqtd.PasswordChar = '\0';
+            this.txtqtd.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtqtd.PlaceholderText = "";
+            this.txtqtd.SelectedText = "";
+            this.txtqtd.Size = new System.Drawing.Size(24, 24);
+            this.txtqtd.TabIndex = 12;
+            this.txtqtd.TextChanged += new System.EventHandler(this.txtqtd_TextChanged);
             // 
             // AdicionarAvancar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(555, 234);
+            this.ClientSize = new System.Drawing.Size(676, 234);
             this.Controls.Add(this.guna2ContainerControl1);
-            this.Controls.Add(this.labelValor);
-            this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.btndiminuir);
-            this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.txtqtd);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.labelProduto);
             this.Controls.Add(this.guna2ContainerControl4);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -372,7 +376,6 @@
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -380,22 +383,22 @@
         private Guna.UI2.WinForms.Guna2Button btncancelar;
         private Guna.UI2.WinForms.Guna2Button btnadicionar;
         private Guna.UI2.WinForms.Guna2Button btncomprar;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelProduto;
         protected Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtqtd;
-        private System.Windows.Forms.Label labelDesc;
         private Guna.UI2.WinForms.Guna2Button btnadd;
         private Guna.UI2.WinForms.Guna2Button btndiminuir;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelValor;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl2;
         private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl3;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelClasse;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelqtdscribe;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        public Guna.UI2.WinForms.Guna2HtmlLabel labelProduto;
+        public System.Windows.Forms.Label labelDesc;
+        public Guna.UI2.WinForms.Guna2HtmlLabel labelValor;
+        public Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl4;
+        private Guna.UI2.WinForms.Guna2TextBox txtqtd;
     }
 }

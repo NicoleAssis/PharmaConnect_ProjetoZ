@@ -73,7 +73,7 @@
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnX.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnX.Location = new System.Drawing.Point(930, 3);
+            this.btnX.Location = new System.Drawing.Point(1072, 20);
             this.btnX.Name = "btnX";
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(28, 29);
@@ -310,12 +310,13 @@
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Controls.Add(this.btnPerfilBarraPerquisa);
             this.panel3.Controls.Add(this.btnComprasBarraPesquisa);
+            this.panel3.Controls.Add(this.btnX);
             this.panel3.Controls.Add(this.txtPesquisa);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(186, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 65);
+            this.panel3.Size = new System.Drawing.Size(1118, 65);
             this.panel3.TabIndex = 22;
             // 
             // btnPerfilBarraPerquisa
@@ -325,7 +326,7 @@
             this.btnPerfilBarraPerquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPerfilBarraPerquisa.FlatAppearance.BorderSize = 0;
             this.btnPerfilBarraPerquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfilBarraPerquisa.Location = new System.Drawing.Point(649, 14);
+            this.btnPerfilBarraPerquisa.Location = new System.Drawing.Point(1014, 17);
             this.btnPerfilBarraPerquisa.Name = "btnPerfilBarraPerquisa";
             this.btnPerfilBarraPerquisa.Size = new System.Drawing.Size(52, 36);
             this.btnPerfilBarraPerquisa.TabIndex = 26;
@@ -339,7 +340,7 @@
             this.btnComprasBarraPesquisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnComprasBarraPesquisa.FlatAppearance.BorderSize = 0;
             this.btnComprasBarraPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprasBarraPesquisa.Location = new System.Drawing.Point(573, 14);
+            this.btnComprasBarraPesquisa.Location = new System.Drawing.Point(956, 17);
             this.btnComprasBarraPesquisa.Name = "btnComprasBarraPesquisa";
             this.btnComprasBarraPesquisa.Size = new System.Drawing.Size(52, 36);
             this.btnComprasBarraPesquisa.TabIndex = 25;

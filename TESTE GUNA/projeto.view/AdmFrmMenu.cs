@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.view
 {
@@ -115,6 +116,27 @@ namespace TESTE_GUNA.projeto.view
             //txtDescricao.Text = DataGridViewVendas.CurrentRow.Cells[2].Value.ToString();
             //txtPreco.Text = DataGridViewVendas.CurrentRow.Cells[3].Value.ToString();
             //txtQuantidade.Text = DataGridViewVendas.CurrentRow.Cells[4].Value.ToString();
+        }
+
+
+        private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void userControlProduto1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdmFrmMenu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

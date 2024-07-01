@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarAdm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,6 +53,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,6 +83,35 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(186, 550);
             this.panel6.TabIndex = 26;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.ErrorImage")));
+            this.pictureBox4.Image = global::TESTE_GUNA.Properties.Resources.iconSair;
+            this.pictureBox4.Location = new System.Drawing.Point(18, 354);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(60)))), ((int)(((byte)(122)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(19, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 52);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "        Categorias";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -253,7 +285,7 @@
             this.btnX.BackColor = System.Drawing.Color.Transparent;
             this.btnX.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnX.Location = new System.Drawing.Point(742, 3);
+            this.btnX.Location = new System.Drawing.Point(1101, 13);
             this.btnX.Name = "btnX";
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(28, 29);
@@ -274,7 +306,7 @@
             this.panel3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(189, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(773, 55);
+            this.panel3.Size = new System.Drawing.Size(1150, 55);
             this.panel3.TabIndex = 29;
             // 
             // txtPesquisa
@@ -370,8 +402,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 550);
-            this.Controls.Add(this.DataGridViewVendas);
+            this.ClientSize = new System.Drawing.Size(1339, 550);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
@@ -381,6 +412,7 @@
             this.Text = "AdmFrmMenu";
             this.Load += new System.EventHandler(this.AdmFrmMenu_Load);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -409,7 +441,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridViewVendas;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnCadastrarAdm;
