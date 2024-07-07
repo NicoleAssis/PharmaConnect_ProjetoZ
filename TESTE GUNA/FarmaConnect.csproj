@@ -299,6 +299,12 @@
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="SampleADD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SampleADD.resx">
       <DependentUpon>SampleADD.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,6 +502,8 @@
     <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <None Include="Resources\Captura de tela 2024-07-05 193433.png" />
+    <None Include="Resources\Captura de tela 2024-07-02 164547.png" />
     <None Include="projeto.view\img\depDermatologicos.png" />
     <Content Include="projeto.view\img\iconbairro.png" />
     <Content Include="projeto.view\img\iconCelular.png" />

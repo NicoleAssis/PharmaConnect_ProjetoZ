@@ -123,6 +123,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_07_02_164547 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-07-02 164547", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_07_05_193433 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-07-05 193433", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carrinhoComprinha {
             get {
                 object obj = ResourceManager.GetObject("carrinhoComprinha", resourceCulture);

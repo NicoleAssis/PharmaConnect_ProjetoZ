@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.view;
+using TESTE_GUNA.projeto.window;
 
 namespace TESTE_GUNA
 {
@@ -17,7 +18,7 @@ namespace TESTE_GUNA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmFrete());
+            Application.Run(new Teste());
         }
     }
 }

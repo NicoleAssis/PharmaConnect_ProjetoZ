@@ -52,7 +52,6 @@
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControlProduto1 = new TESTE_GUNA.projeto.view.UserControlProduto();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -61,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnX
@@ -369,35 +367,17 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.userControlProduto1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(205, 78);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(217, 81);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1087, 460);
             this.flowLayoutPanel1.TabIndex = 25;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // userControlProduto1
-            // 
-            this.userControlProduto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(181)))), ((int)(((byte)(204)))));
-            this.userControlProduto1.Dep = null;
-            this.userControlProduto1.Desc = null;
-            this.userControlProduto1.Location = new System.Drawing.Point(5, 5);
-            this.userControlProduto1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlProduto1.Name = "userControlProduto1";
-            this.userControlProduto1.NomeProduto = null;
-            this.userControlProduto1.Preco = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.userControlProduto1.Size = new System.Drawing.Size(329, 149);
-            this.userControlProduto1.TabIndex = 0;
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1304, 550);
+            this.ClientSize = new System.Drawing.Size(903, 550);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -416,7 +396,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -444,6 +423,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private UserControlProduto userControlProduto1;
     }
 }
