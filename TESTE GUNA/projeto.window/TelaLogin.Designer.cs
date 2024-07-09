@@ -30,73 +30,16 @@ namespace TESTE_GUNA.projeto.window
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.label4 = new System.Windows.Forms.Label();
             this.btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntrar = new Guna.UI2.WinForms.Guna2Button();
             this.btnX = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxMostrarSenha = new System.Windows.Forms.CheckBox();
+            this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.Color.Transparent;
-            this.txtSenha.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.txtSenha.BorderRadius = 10;
-            this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha.DefaultText = "";
-            this.txtSenha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSenha.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSenha.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSenha.Location = new System.Drawing.Point(566, 264);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Padding = new System.Windows.Forms.Padding(2);
-            this.txtSenha.PasswordChar = '\0';
-            this.txtSenha.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtSenha.PlaceholderText = "Senha";
-            this.txtSenha.SelectedText = "";
-            this.txtSenha.Size = new System.Drawing.Size(330, 38);
-            this.txtSenha.TabIndex = 16;
-            this.txtSenha.WordWrap = false;
-            this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.txtEmail.BorderRadius = 10;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtEmail.Location = new System.Drawing.Point(566, 209);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(2);
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(330, 38);
-            this.txtEmail.TabIndex = 15;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // label4
             // 
@@ -196,6 +139,63 @@ namespace TESTE_GUNA.projeto.window
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = false;
             this.checkBoxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBoxMostrarSenha_CheckedChanged);
             // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.txtSenha.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.txtSenha.BorderRadius = 10;
+            this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSenha.DefaultText = "";
+            this.txtSenha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSenha.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSenha.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSenha.IconLeft")));
+            this.txtSenha.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtSenha.Location = new System.Drawing.Point(566, 259);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Padding = new System.Windows.Forms.Padding(2);
+            this.txtSenha.PasswordChar = '\0';
+            this.txtSenha.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtSenha.PlaceholderText = "Senha";
+            this.txtSenha.SelectedText = "";
+            this.txtSenha.Size = new System.Drawing.Size(330, 38);
+            this.txtSenha.TabIndex = 33;
+            this.txtSenha.WordWrap = false;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmail.BorderRadius = 10;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
+            this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtEmail.Location = new System.Drawing.Point(566, 204);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(2);
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(330, 38);
+            this.txtEmail.TabIndex = 32;
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,11 +203,11 @@ namespace TESTE_GUNA.projeto.window
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.telaLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 550);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxMostrarSenha);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnEntrar);

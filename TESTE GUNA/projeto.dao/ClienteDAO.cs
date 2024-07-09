@@ -330,7 +330,7 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
-                        FrmMenu telaMenu = new FrmMenu();
+                        TelaHome telaMenu = new TelaHome();
                         telaMenu.Show();
 
                         telaLogin.Hide();
