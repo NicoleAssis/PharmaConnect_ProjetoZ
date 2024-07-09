@@ -42,12 +42,7 @@ namespace TESTE_GUNA.projeto.window
 
 
 
-        private void guna2TextBox2_Click(object sender, EventArgs e)
-        {
-            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
-            txtCPF.Visible = true;
-            txtBase.Enabled = false;
-        }
+
 
         private void txtNome_Click(object sender, EventArgs e)
         {
@@ -180,14 +175,16 @@ namespace TESTE_GUNA.projeto.window
 
         }
 
-        private void txtBase_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void txtBase_TextChanged_1(object sender, EventArgs e)
         {
-
+            //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
+            txtCPF.Visible = true;
+            txtBase.Enabled = false;
         }
     }
 }

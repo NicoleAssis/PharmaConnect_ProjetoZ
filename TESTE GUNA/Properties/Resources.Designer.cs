@@ -423,6 +423,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconMenos {
+            get {
+                object obj = ResourceManager.GetObject("iconMenos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconnumero {
             get {
                 object obj = ResourceManager.GetObject("iconnumero", resourceCulture);
@@ -546,6 +556,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap menos_circulo {
             get {
                 object obj = ResourceManager.GetObject("menos-circulo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PHARMACONNECT {
+            get {
+                object obj = ResourceManager.GetObject("PHARMACONNECT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -188,6 +188,7 @@ namespace TESTE_GUNA.projeto.window
             this.txtBase.SelectedText = "";
             this.txtBase.Size = new System.Drawing.Size(330, 38);
             this.txtBase.TabIndex = 37;
+            this.txtBase.TextChanged += new System.EventHandler(this.txtBase_TextChanged_1);
             // 
             // txtNome
             // 

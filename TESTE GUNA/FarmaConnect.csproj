@@ -418,6 +418,9 @@
       <DependentUpon>TelaCadastro.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaHome.resx">
+      <DependentUpon>TelaHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaLoading.resx">
       <DependentUpon>TelaLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,6 +513,8 @@
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
     <Content Include="projeto.window\img\GIFLoading.gif" />
+    <None Include="projeto.window\img\iconMenos.png" />
+    <Content Include="projeto.window\img\PHARMACONNECT.png" />
     <Content Include="projeto.window\img\telaAdm2.png" />
     <Content Include="projeto.window\img\telaCadastro.png" />
     <Content Include="projeto.window\img\telaCompraMenor.png" />
