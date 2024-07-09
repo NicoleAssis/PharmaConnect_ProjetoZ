@@ -502,6 +502,7 @@
     <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <None Include="Resources\GIFLoading.gif" />
     <None Include="Resources\Captura de tela 2024-07-05 193433.png" />
     <None Include="Resources\Captura de tela 2024-07-02 164547.png" />
     <None Include="projeto.view\img\depDermatologicos.png" />
