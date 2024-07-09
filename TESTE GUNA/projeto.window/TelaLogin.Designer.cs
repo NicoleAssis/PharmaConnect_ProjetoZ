@@ -1,6 +1,8 @@
-﻿namespace TESTE_GUNA.projeto.view
+﻿using TESTE_GUNA.projeto.view;
+
+namespace TESTE_GUNA.projeto.window
 {
-    partial class FrmLogin
+    partial class TelaLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSenha.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSenha.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSenha.IconLeft")));
             this.txtSenha.IconLeftSize = new System.Drawing.Size(25, 25);
             this.txtSenha.Location = new System.Drawing.Point(566, 264);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -84,7 +84,6 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEmail.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
             this.txtEmail.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txtEmail.Location = new System.Drawing.Point(566, 209);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -197,11 +196,11 @@
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = false;
             this.checkBoxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBoxMostrarSenha_CheckedChanged);
             // 
-            // FrmLogin
+            // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.telaLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 550);
             this.Controls.Add(this.label1);
@@ -214,7 +213,7 @@
             this.Controls.Add(this.btnEntrar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLogin";
+            this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
@@ -233,4 +232,14 @@
         public Guna.UI2.WinForms.Guna2TextBox txtSenha;
         public Guna.UI2.WinForms.Guna2TextBox txtEmail;
     }
+
+
+
+
+
+
+
+
+
+
 }

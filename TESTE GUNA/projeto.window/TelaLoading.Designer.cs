@@ -1,6 +1,6 @@
-﻿namespace TESTE_GUNA.projeto.view
+﻿namespace TESTE_GUNA.projeto.window
 {
-    partial class FrmLoading
+    partial class TelaLoading
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label numeroLabel;
+            this.numeroLabel = new System.Windows.Forms.Label();
             this.progressBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            numeroLabel = new System.Windows.Forms.Label();
             this.progressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -46,20 +45,20 @@
             // 
             // numeroLabel
             // 
-            numeroLabel.AutoSize = true;
-            numeroLabel.BackColor = System.Drawing.Color.Transparent;
-            numeroLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numeroLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            numeroLabel.Location = new System.Drawing.Point(675, 870);
-            numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new System.Drawing.Size(155, 25);
-            numeroLabel.TabIndex = 7;
-            numeroLabel.Text = "Carregando...";
+            this.numeroLabel.AutoSize = true;
+            this.numeroLabel.BackColor = System.Drawing.Color.Transparent;
+            this.numeroLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.numeroLabel.Location = new System.Drawing.Point(675, 870);
+            this.numeroLabel.Name = "numeroLabel";
+            this.numeroLabel.Size = new System.Drawing.Size(155, 25);
+            this.numeroLabel.TabIndex = 7;
+            this.numeroLabel.Text = "Carregando...";
             // 
             // progressBar
             // 
             this.progressBar.Controls.Add(this.pictureBox1);
-            this.progressBar.Controls.Add(numeroLabel);
+            this.progressBar.Controls.Add(this.numeroLabel);
             this.progressBar.Controls.Add(this.label4);
             this.progressBar.Controls.Add(this.label3);
             this.progressBar.Controls.Add(this.label1);
@@ -79,6 +78,17 @@
             this.progressBar.TabIndex = 0;
             this.progressBar.Text = "guna2CircleProgressBar1";
             this.progressBar.ValueChanged += new System.EventHandler(this.progressBar_ValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading1;
+            this.pictureBox1.Location = new System.Drawing.Point(636, 646);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -116,22 +126,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "0";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.GIFLoading;
-            this.pictureBox1.Location = new System.Drawing.Point(636, 646);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 208);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -141,14 +135,19 @@
             this.guna2PictureBox1.TabIndex = 8;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // FrmLoading
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // TelaLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 550);
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLoading";
+            this.Name = "TelaLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLoading";
             this.Load += new System.EventHandler(this.FrmLoading_Load);
@@ -170,5 +169,6 @@
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label numeroLabel;
     }
 }

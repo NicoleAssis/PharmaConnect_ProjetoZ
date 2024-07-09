@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TESTE_GUNA.projeto.window;
 using System.Windows.Forms;
 
 namespace TESTE_GUNA.projeto.view
@@ -50,7 +51,7 @@ namespace TESTE_GUNA.projeto.view
         private void btnSair_Click(object sender, EventArgs e)
         {
             //volta para a tela e login
-            FrmLogin telaLogin = new FrmLogin();
+            TelaLogin telaLogin = new TelaLogin();
             this.Close();
             telaLogin.Show();
         }

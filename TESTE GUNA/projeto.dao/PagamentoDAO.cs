@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
+using TESTE_GUNA.projeto.window;
 using TESTE_GUNA.projeto.dao;
 
 namespace TESTE_GUNA.projeto.dao
@@ -34,8 +35,8 @@ namespace TESTE_GUNA.projeto.dao
 
             try
             {
-                string email = FrmLogin.TelaPagamento.Email;
-                string senha = FrmLogin.TelaPagamento.Senha;
+                string email = TelaLogin.TelaPagamento.Email;
+                string senha = TelaLogin.TelaPagamento.Senha;
 
 
                 //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#

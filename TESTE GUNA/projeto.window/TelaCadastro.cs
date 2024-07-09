@@ -13,12 +13,13 @@ using TESTE_GUNA.projeto.model;
 using System.Text.RegularExpressions;
 using static System.Convert;
 using System.Numerics;
+using TESTE_GUNA.projeto.view;
 
-namespace TESTE_GUNA.projeto.view
+namespace TESTE_GUNA.projeto.window
 {
-    public partial class FrmCadastro : Form
+    public partial class TelaCadastro : Form
     {
-        public FrmCadastro()
+        public TelaCadastro()
         {
             InitializeComponent();
         }
@@ -44,8 +45,8 @@ namespace TESTE_GUNA.projeto.view
         private void guna2TextBox2_Click(object sender, EventArgs e)
         {
             //aparece o masked box em cima desse text box p coletar os dados do CPF corretamente
-            txtCPF.Visible= true;
-            txtBase.Enabled= false;
+            txtCPF.Visible = true;
+            txtBase.Enabled = false;
         }
 
         private void txtNome_Click(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
         {
-            if(txtSenha.PasswordChar == '*')
+            if (txtSenha.PasswordChar == '*')
             {
                 //remove o passwordChar
                 txtSenha.PasswordChar = '\0';
@@ -107,7 +108,7 @@ namespace TESTE_GUNA.projeto.view
             //recebo dados txt
             string cpf_string = txtCPF.Text;
             string email = txtEmail.Text;
-            
+
             // 1° Validação: CPF
             bool validacaoCPF = ClienteDAO.isCpf((cpf_string));
 
@@ -135,7 +136,7 @@ namespace TESTE_GUNA.projeto.view
 
 
                 //abrir a tela de login
-                FrmLogin telaLogin = new FrmLogin();
+                TelaLogin telaLogin = new TelaLogin();
                 ////esconde a tela anterior
 
                 new Helpers().LimparTela(this);
@@ -169,7 +170,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnEntrar_Click_1(object sender, EventArgs e)
         {
-            FrmLogin telaLogin = new FrmLogin();
+            TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
             this.Hide();
         }

@@ -185,12 +185,6 @@
     <Compile Include="projeto.view\FrmAllProdutosADM.Designer.cs">
       <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
     </Compile>
-    <Compile Include="projeto.view\FrmCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="projeto.view\FrmCadastro.Designer.cs">
-      <DependentUpon>FrmCadastro.cs</DependentUpon>
-    </Compile>
     <Compile Include="projeto.view\FrmCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,18 +220,6 @@
     </Compile>
     <Compile Include="projeto.view\FrmFrete.Designer.cs">
       <DependentUpon>FrmFrete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="projeto.view\FrmLoading.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="projeto.view\FrmLoading.Designer.cs">
-      <DependentUpon>FrmLoading.cs</DependentUpon>
-    </Compile>
-    <Compile Include="projeto.view\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="projeto.view\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.view\FrmMenu.cs">
       <SubType>Form</SubType>
@@ -298,6 +280,24 @@
     </Compile>
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.window\TelaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaCadastro.Designer.cs">
+      <DependentUpon>TelaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.window\TelaLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaLoading.Designer.cs">
+      <DependentUpon>TelaLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.window\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.window\Teste.cs">
       <SubType>Form</SubType>
@@ -360,9 +360,6 @@
     <EmbeddedResource Include="projeto.view\FrmAllProdutosADM.resx">
       <DependentUpon>FrmAllProdutosADM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\FrmCadastro.resx">
-      <DependentUpon>FrmCadastro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,12 +377,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmFrete.resx">
       <DependentUpon>FrmFrete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\FrmLoading.resx">
-      <DependentUpon>FrmLoading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -416,6 +407,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaCadastro.resx">
+      <DependentUpon>TelaCadastro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaLoading.resx">
+      <DependentUpon>TelaLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\Teste.resx">
       <DependentUpon>Teste.cs</DependentUpon>
@@ -502,6 +503,14 @@
     <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <Content Include="projeto.window\img\GIFLoading.gif" />
+    <Content Include="projeto.window\img\telaAdm2.png" />
+    <Content Include="projeto.window\img\telaCadastro.png" />
+    <Content Include="projeto.window\img\telaCompraMenor.png" />
+    <Content Include="projeto.window\img\telaCompraPequena2.png" />
+    <Content Include="projeto.window\img\telaDepartamentosMenor.png" />
+    <Content Include="projeto.window\img\telaFornecedor.png" />
+    <Content Include="projeto.window\img\telaLogin.png" />
     <None Include="Resources\GIFLoading.gif" />
     <None Include="Resources\Captura de tela 2024-07-05 193433.png" />
     <None Include="Resources\Captura de tela 2024-07-02 164547.png" />

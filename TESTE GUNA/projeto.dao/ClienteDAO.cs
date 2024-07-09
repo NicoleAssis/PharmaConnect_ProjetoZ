@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
 using TESTE_GUNA.projeto.view;
+using TESTE_GUNA.projeto.window;
 using System.Diagnostics.Eventing.Reader;
 using System.Data;
 using System.Linq;
@@ -260,7 +261,7 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
         #region Login
-        public bool EfetuarLogin(string email, string senha, FrmLogin telaLogin)
+        public bool EfetuarLogin(string email, string senha, TelaLogin telaLogin)
         {
             try
             {

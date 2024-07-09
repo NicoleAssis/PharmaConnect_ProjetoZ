@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
+using  TESTE_GUNA.projeto.window;
+using TESTE_GUNA.projeto.view;
 
-namespace TESTE_GUNA.projeto.view
+namespace TESTE_GUNA.projeto.window
 {
-    public partial class FrmLogin : Form
+    public partial class TelaLogin : Form
     {
-        public FrmLogin()
+        public TelaLogin()
         {
             InitializeComponent();
         }
 
-        public static class TelaPagamento
-        {
-            public static string Email { get; set; }
-            public static string Senha { get; set; }
-        }
+          public static class TelaPagamento
+          {
+              public static string Email { get; set; }
+              public static string Senha { get; set; }
+          }
 
 
         private void btnX_Click(object sender, EventArgs e)
@@ -34,9 +36,9 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            
+
             //abrir a tela de cadastro
-            FrmCadastro telaCadastro = new FrmCadastro();
+            TelaCadastro telaCadastro = new TelaCadastro();
             //esconde a tela anterior
             telaCadastro.Show();
             this.Hide();
@@ -53,7 +55,7 @@ namespace TESTE_GUNA.projeto.view
             ClienteDAO dao = new ClienteDAO();
             AdministradorDAO daoADM = new AdministradorDAO();
 
-            if((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
+            if ((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
             {
 
             }
@@ -62,15 +64,15 @@ namespace TESTE_GUNA.projeto.view
 
             }
 
-            if(email == "1234" && senha == "1234")
+            if (email == "1234" && senha == "1234")
             {
-                
+
                 AdmFrmMenu tela = new AdmFrmMenu();
                 tela.Show();
                 this.Hide();
             }
 
-             
+
         }
 
         private void txtEmail_Click(object sender, EventArgs e)

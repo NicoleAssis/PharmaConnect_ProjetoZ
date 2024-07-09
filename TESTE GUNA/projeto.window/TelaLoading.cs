@@ -6,23 +6,24 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TESTE_GUNA.projeto.window;
 using System.Windows.Forms;
 
-namespace TESTE_GUNA.projeto.view
+namespace TESTE_GUNA.projeto.window
 {
-    public partial class FrmLoading : Form
+    public partial class TelaLoading : Form
     {
-        public FrmLoading()
+        public TelaLoading()
         {
             InitializeComponent();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(progressBar.Value == 100)
+            if (progressBar.Value == 100)
             {
                 timer1.Stop();
-                FrmLogin telaLogin = new FrmLogin();
+                TelaLogin telaLogin = new TelaLogin();
                 telaLogin.Show();
 
                 this.Hide();

@@ -193,6 +193,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GIFLoading1 {
+            get {
+                object obj = ResourceManager.GetObject("GIFLoading1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gravando_2024_06_22_161553 {
             get {
                 object obj = ResourceManager.GetObject("Gravando 2024-06-22 161553", resourceCulture);
@@ -603,6 +613,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap telaCadastro {
+            get {
+                object obj = ResourceManager.GetObject("telaCadastro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaCompraMenor {
             get {
                 object obj = ResourceManager.GetObject("telaCompraMenor", resourceCulture);
@@ -616,6 +636,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaFornecedor {
             get {
                 object obj = ResourceManager.GetObject("telaFornecedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaLogin {
+            get {
+                object obj = ResourceManager.GetObject("telaLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
