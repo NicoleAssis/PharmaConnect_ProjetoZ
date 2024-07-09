@@ -512,7 +512,17 @@
     <Content Include="projeto.view\img\adicionar-ao-carrinho-de-compras.png" />
     <Content Include="projeto.view\img\azulclean.jpg" />
     <Content Include="projeto.view\img\check-carrinho-de-compras.png" />
+    <Content Include="projeto.window\img\aumentar.png" />
+    <Content Include="projeto.window\img\Carrinho.png" />
     <Content Include="projeto.window\img\GIFLoading.gif" />
+    <Content Include="projeto.window\img\Group 6.png" />
+    <Content Include="projeto.window\img\Info %281%29.png" />
+    <Content Include="projeto.window\img\Info.png" />
+    <Content Include="projeto.window\img\Menu.png" />
+    <Content Include="projeto.window\img\Perfil %281%29.png" />
+    <Content Include="projeto.window\img\Produtos %281%29.png" />
+    <Content Include="projeto.window\img\Sair %281%29.png" />
+    <Content Include="projeto.window\img\x.png" />
     <None Include="projeto.window\img\iconMenos.png" />
     <Content Include="projeto.window\img\PHARMACONNECT.png" />
     <Content Include="projeto.window\img\telaAdm2.png" />
