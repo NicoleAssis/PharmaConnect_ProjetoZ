@@ -72,7 +72,7 @@
             this.txtBairro.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBairro.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtBairro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBairro.IconLeft = global::TESTE_GUNA.Properties.Resources.iconendereço3;
+           // this.txtBairro.IconLeft = global::TESTE_GUNA.Properties.Resources.iconendereço3;
             this.txtBairro.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txtBairro.Location = new System.Drawing.Point(551, 300);
             this.txtBairro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -123,7 +123,7 @@
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtNumero.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.IconLeft = global::TESTE_GUNA.Properties.Resources.iconnumero;
+          //  this.txtNumero.IconLeft = global::TESTE_GUNA.Properties.Resources.iconnumero;
             this.txtNumero.IconLeftSize = new System.Drawing.Size(28, 28);
             this.txtNumero.Location = new System.Drawing.Point(551, 208);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -209,7 +209,7 @@
             this.txtComplemento.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtComplemento.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtComplemento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtComplemento.IconLeft = global::TESTE_GUNA.Properties.Resources.iconHome;
+           // this.txtComplemento.IconLeft = global::TESTE_GUNA.Properties.Resources.iconHome;
             this.txtComplemento.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txtComplemento.Location = new System.Drawing.Point(551, 254);
             this.txtComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -250,7 +250,7 @@
             this.txtbase1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtbase1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtbase1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtbase1.IconLeft = global::TESTE_GUNA.Properties.Resources.iconcep;
+           // this.txtbase1.IconLeft = global::TESTE_GUNA.Properties.Resources.iconcep;
             this.txtbase1.IconLeftSize = new System.Drawing.Size(18, 18);
             this.txtbase1.Location = new System.Drawing.Point(551, 116);
             this.txtbase1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -280,7 +280,7 @@
             this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEstado.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtEstado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEstado.IconLeft = global::TESTE_GUNA.Properties.Resources.IconLupa1;
+           // this.txtEstado.IconLeft = global::TESTE_GUNA.Properties.Resources.IconLupa1;
             this.txtEstado.IconLeftSize = new System.Drawing.Size(25, 25);
             this.txtEstado.Location = new System.Drawing.Point(551, 392);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.telaAdm2;
+           // this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.telaAdm2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 550);
             this.Controls.Add(this.txtCEP);

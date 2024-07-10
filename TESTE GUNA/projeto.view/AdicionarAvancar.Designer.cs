@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelProduto = new Guna.UI2.WinForms.Guna2HtmlLabel();
+           /* this.labelProduto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelDesc = new System.Windows.Forms.Label();
             this.btndiminuir = new Guna.UI2.WinForms.Guna2Button();
@@ -376,7 +376,7 @@
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
             this.ResumeLayout(false);
-
+           */
         }
 
         #endregion

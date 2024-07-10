@@ -131,7 +131,7 @@
             // imagemProduto
             // 
             this.imagemProduto.BackColor = System.Drawing.Color.White;
-            this.imagemProduto.BackgroundImage = global::TESTE_GUNA.Properties.Resources.imagemProdutooficial1;
+            //this.imagemProduto.BackgroundImage = global::TESTE_GUNA.Properties.Resources.imagemProdutooficial1;
             this.imagemProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.imagemProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imagemProduto.Location = new System.Drawing.Point(0, 0);

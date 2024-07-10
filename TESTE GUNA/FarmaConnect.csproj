@@ -311,6 +311,11 @@
     <Compile Include="projeto.window\Teste.Designer.cs">
       <DependentUpon>Teste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SampleADD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +425,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaHome.resx">
       <DependentUpon>TelaHome.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaLoading.resx">
       <DependentUpon>TelaLoading.cs</DependentUpon>
@@ -452,11 +458,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -520,9 +521,21 @@
     <Content Include="projeto.window\img\Info.png" />
     <Content Include="projeto.window\img\Menu.png" />
     <Content Include="projeto.window\img\Perfil %281%29.png" />
-    <Content Include="projeto.window\img\Produtos %281%29.png" />
+    <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\Design sem nome %281%29.jpg" />
+    <None Include="Resources\Design sem nome.png" />
+    <None Include="Resources\Design sem nome1.png" />
+    <None Include="Resources\Design sem nome2.png" />
+    <None Include="Resources\Design sem nome3.png" />
+    <None Include="Resources\5 Sem Título_20240708143010.png" />
+    <None Include="Resources\5 Sem Título_20240710172003.png" />
+    <None Include="Resources\6 Sem Título_20240710172213.png" />
+    <Content Include="Resources\Group 6.png" />
+    <Content Include="projeto.window\img\Produtos11.png" />
+    <None Include="Resources\TelaHome2.png" />
     <None Include="projeto.window\img\iconMenos.png" />
     <Content Include="projeto.window\img\PHARMACONNECT.png" />
     <Content Include="projeto.window\img\telaAdm2.png" />

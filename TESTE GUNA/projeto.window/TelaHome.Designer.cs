@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaHome));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnBarraX = new Guna.UI2.WinForms.Guna2Button();
             this.btnBarraTelaCheia = new Guna.UI2.WinForms.Guna2Button();
             this.btnBarraMeno = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSideBarPerfil = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSideBarCarrinho = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSideBarProdutos = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideBar.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,151 +65,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1150, 41);
             this.panel1.TabIndex = 0;
-            // 
-            // SideBar
-            // 
-            this.SideBar.BackColor = System.Drawing.Color.Transparent;
-            this.SideBar.BorderRadius = 45;
-            this.SideBar.Controls.Add(this.guna2Panel3);
-            this.SideBar.Controls.Add(this.guna2Button6);
-            this.SideBar.Controls.Add(this.guna2Button5);
-            this.SideBar.Controls.Add(this.guna2Button4);
-            this.SideBar.Controls.Add(this.guna2Button3);
-            this.SideBar.Controls.Add(this.guna2Button1);
-            this.SideBar.Cursor = System.Windows.Forms.Cursors.SizeNS;
-            this.SideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
-            this.SideBar.Location = new System.Drawing.Point(6, 45);
-            this.SideBar.Name = "SideBar";
-            this.SideBar.ShadowDecoration.BorderRadius = 60;
-            this.SideBar.ShadowDecoration.Depth = 25;
-            this.SideBar.ShadowDecoration.Enabled = true;
-            this.SideBar.Size = new System.Drawing.Size(95, 700);
-            this.SideBar.TabIndex = 1;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BorderRadius = 25;
-            this.guna2Panel3.BorderThickness = 25;
-            this.guna2Panel3.Controls.Add(this.label2);
-            this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Controls.Add(this.pictureBox2);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
-            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(13, 616);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(244, 56);
-            this.guna2Panel3.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.Group_6;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Image = global::TESTE_GUNA.Properties.Resources.Sair__1_;
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(18, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button6.Location = new System.Drawing.Point(1, 478);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(268, 45);
-            this.guna2Button6.TabIndex = 7;
-            this.guna2Button6.Text = "       Sair";
-            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = global::TESTE_GUNA.Properties.Resources.Perfil__1_;
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button5.Location = new System.Drawing.Point(1, 378);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(268, 45);
-            this.guna2Button5.TabIndex = 6;
-            this.guna2Button5.Text = "       Perfil";
-            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = global::TESTE_GUNA.Properties.Resources.Carrinho;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(14, 0);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button4.Location = new System.Drawing.Point(1, 278);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(268, 45);
-            this.guna2Button4.TabIndex = 5;
-            this.guna2Button4.Text = "       Carrinho";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = global::TESTE_GUNA.Properties.Resources.Produtos__1_;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(19, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button3.Location = new System.Drawing.Point(1, 178);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(268, 45);
-            this.guna2Button3.TabIndex = 4;
-            this.guna2Button3.Text = "       Produtos";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::TESTE_GUNA.Properties.Resources.Menu;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(1, 36);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(268, 45);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "       MENU";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnBarraX
             // 
@@ -270,23 +128,175 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // SideBar
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
-            this.label1.Location = new System.Drawing.Point(99, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 31);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "9999-9999";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.SideBar.BackColor = System.Drawing.Color.Transparent;
+            this.SideBar.BorderRadius = 45;
+            this.SideBar.Controls.Add(this.btnSideBarMenu);
+            this.SideBar.Controls.Add(this.btnSideBarSair);
+            this.SideBar.Controls.Add(this.btnSideBarPerfil);
+            this.SideBar.Controls.Add(this.btnSideBarCarrinho);
+            this.SideBar.Controls.Add(this.btnSideBarProdutos);
+            this.SideBar.Controls.Add(this.guna2Panel3);
+            this.SideBar.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.SideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
+            this.SideBar.Location = new System.Drawing.Point(6, 45);
+            this.SideBar.Name = "SideBar";
+            this.SideBar.ShadowDecoration.BorderRadius = 45;
+            this.SideBar.ShadowDecoration.Depth = 15;
+            this.SideBar.ShadowDecoration.Enabled = true;
+            this.SideBar.Size = new System.Drawing.Size(95, 700);
+            this.SideBar.TabIndex = 1;
+            // 
+            // btnSideBarMenu
+            // 
+            this.btnSideBarMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarMenu.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarMenu.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSideBarMenu.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarMenu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarMenu.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarMenu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarMenu.Image = global::TESTE_GUNA.Properties.Resources.Menu;
+            this.btnSideBarMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarMenu.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSideBarMenu.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSideBarMenu.Location = new System.Drawing.Point(1, 41);
+            this.btnSideBarMenu.Name = "btnSideBarMenu";
+            this.btnSideBarMenu.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarMenu.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarMenu.TabIndex = 9;
+            this.btnSideBarMenu.Text = "       MENU";
+            this.btnSideBarMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarMenu.Click += new System.EventHandler(this.btnSideBarMenu_Click);
+            // 
+            // btnSideBarSair
+            // 
+            this.btnSideBarSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarSair.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarSair.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarSair.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarSair.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarSair.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarSair.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarSair.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarSair.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarSair.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarSair.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarSair.Image = global::TESTE_GUNA.Properties.Resources.Sair__1_;
+            this.btnSideBarSair.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarSair.ImageOffset = new System.Drawing.Point(18, 0);
+            this.btnSideBarSair.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSideBarSair.Location = new System.Drawing.Point(1, 478);
+            this.btnSideBarSair.Name = "btnSideBarSair";
+            this.btnSideBarSair.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarSair.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarSair.TabIndex = 7;
+            this.btnSideBarSair.Text = "       Sair";
+            this.btnSideBarSair.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnSideBarPerfil
+            // 
+            this.btnSideBarPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarPerfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarPerfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarPerfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarPerfil.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarPerfil.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarPerfil.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarPerfil.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarPerfil.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarPerfil.Image = global::TESTE_GUNA.Properties.Resources.Perfil__1_;
+            this.btnSideBarPerfil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarPerfil.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSideBarPerfil.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSideBarPerfil.Location = new System.Drawing.Point(1, 378);
+            this.btnSideBarPerfil.Name = "btnSideBarPerfil";
+            this.btnSideBarPerfil.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarPerfil.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarPerfil.TabIndex = 6;
+            this.btnSideBarPerfil.Text = "       Perfil";
+            this.btnSideBarPerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnSideBarCarrinho
+            // 
+            this.btnSideBarCarrinho.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarCarrinho.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarCarrinho.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarCarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarCarrinho.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarCarrinho.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Carrinho;
+            this.btnSideBarCarrinho.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarCarrinho.ImageOffset = new System.Drawing.Point(14, 0);
+            this.btnSideBarCarrinho.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSideBarCarrinho.Location = new System.Drawing.Point(1, 278);
+            this.btnSideBarCarrinho.Name = "btnSideBarCarrinho";
+            this.btnSideBarCarrinho.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarCarrinho.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarCarrinho.TabIndex = 5;
+            this.btnSideBarCarrinho.Text = "       Carrinho";
+            this.btnSideBarCarrinho.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnSideBarProdutos
+            // 
+            this.btnSideBarProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarProdutos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarProdutos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarProdutos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarProdutos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarProdutos.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarProdutos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarProdutos.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarProdutos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarProdutos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarProdutos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarProdutos.Image = global::TESTE_GUNA.Properties.Resources.Produtos11;
+            this.btnSideBarProdutos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarProdutos.ImageOffset = new System.Drawing.Point(19, 0);
+            this.btnSideBarProdutos.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnSideBarProdutos.Location = new System.Drawing.Point(1, 178);
+            this.btnSideBarProdutos.Name = "btnSideBarProdutos";
+            this.btnSideBarProdutos.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarProdutos.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarProdutos.TabIndex = 4;
+            this.btnSideBarProdutos.Text = "       Produtos";
+            this.btnSideBarProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarProdutos.Click += new System.EventHandler(this.btnSideBarProdutos_Click);
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderRadius = 25;
+            this.guna2Panel3.BorderThickness = 25;
+            this.guna2Panel3.Controls.Add(this.label2);
+            this.guna2Panel3.Controls.Add(this.label1);
+            this.guna2Panel3.Controls.Add(this.pictureBox2);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
+            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(13, 606);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(230, 56);
+            this.guna2Panel3.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(99, 3);
+            this.label2.Location = new System.Drawing.Point(85, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 30);
             this.label2.TabIndex = 11;
@@ -294,23 +304,58 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
+            this.label1.Location = new System.Drawing.Point(98, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "9999-9999";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::TESTE_GUNA.Properties.Resources.Group_6;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelAbrirTela
+            // 
+            this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
+            this.panelAbrirTela.Location = new System.Drawing.Point(104, 42);
+            this.panelAbrirTela.Name = "panelAbrirTela";
+            this.panelAbrirTela.Size = new System.Drawing.Size(1046, 707);
+            this.panelAbrirTela.TabIndex = 2;
+            this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAbrirTela_Paint);
+            // 
             // TelaHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1150, 750);
+            this.Controls.Add(this.panelAbrirTela);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaHome";
+            this.Load += new System.EventHandler(this.TelaHome_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SideBar.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,14 +369,15 @@
         private Guna.UI2.WinForms.Guna2Button btnBarraMeno;
         private Guna.UI2.WinForms.Guna2Button btnBarraX;
         private Guna.UI2.WinForms.Guna2Panel SideBar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarProdutos;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarCarrinho;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarPerfil;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarSair;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarMenu;
+        private Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
     }
 }

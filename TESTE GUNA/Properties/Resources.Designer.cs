@@ -63,6 +63,36 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_Sem_Título_20240708143010 {
+            get {
+                object obj = ResourceManager.GetObject("5 Sem Título_20240708143010", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5_Sem_Título_20240710172003 {
+            get {
+                object obj = ResourceManager.GetObject("5 Sem Título_20240710172003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6_Sem_Título_20240710172213 {
+            get {
+                object obj = ResourceManager.GetObject("6 Sem Título_20240710172213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar__3_ {
             get {
                 object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
@@ -206,6 +236,56 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap depDermatologicos {
             get {
                 object obj = ResourceManager.GetObject("depDermatologicos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome1 {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome2 {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome3 {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +723,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu1 {
+            get {
+                object obj = ResourceManager.GetObject("Menu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Perfil__1_ {
             get {
                 object obj = ResourceManager.GetObject("Perfil (1)", resourceCulture);
@@ -673,9 +763,9 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Produtos__1_ {
+        internal static System.Drawing.Bitmap Produtos11 {
             get {
-                object obj = ResourceManager.GetObject("Produtos (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("Produtos11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -766,6 +856,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaFornecedor {
             get {
                 object obj = ResourceManager.GetObject("telaFornecedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaHome {
+            get {
+                object obj = ResourceManager.GetObject("TelaHome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
