@@ -153,6 +153,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar__3_ {
             get {
                 object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
@@ -446,6 +466,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Group_6 {
             get {
                 object obj = ResourceManager.GetObject("Group 6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_7 {
+            get {
+                object obj = ResourceManager.GetObject("Group 7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -305,6 +305,12 @@
     <Compile Include="projeto.window\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaProdutos.Designer.cs">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\Teste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +439,9 @@
     <EmbeddedResource Include="projeto.window\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaProdutos.resx">
+      <DependentUpon>TelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\Teste.resx">
       <DependentUpon>Teste.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +533,7 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Group 7.png" />
     <None Include="Resources\Menu.png" />
     <None Include="Resources\Design sem nome %281%29.jpg" />
     <None Include="Resources\Design sem nome.png" />
@@ -539,6 +549,8 @@
     <None Include="Resources\5 Sem Título.png" />
     <None Include="Resources\7 Sem Título_20240714171631 %281%29.png" />
     <None Include="Resources\7 Sem Título_20240714171925 %281%29.jpg" />
+    <None Include="Resources\7 Sem Título_20240714171925 %281%291.jpg" />
+    <None Include="Resources\7 Sem Título_20240714171925 %281%292.jpg" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

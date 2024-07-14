@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCompreAgora = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +49,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelAbrirTela.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SideBar.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -136,6 +140,8 @@
             // panelAbrirTela
             // 
             this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
+            this.panelAbrirTela.Controls.Add(this.btnCompreAgora);
+            this.panelAbrirTela.Controls.Add(this.pictureBox3);
             this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelAbrirTela.Location = new System.Drawing.Point(100, 41);
             this.panelAbrirTela.Name = "panelAbrirTela";
@@ -143,6 +149,42 @@
             this.panelAbrirTela.Size = new System.Drawing.Size(1050, 709);
             this.panelAbrirTela.TabIndex = 2;
             this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAbrirTela_Paint);
+            // 
+            // btnCompreAgora
+            // 
+            this.btnCompreAgora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCompreAgora.BackColor = System.Drawing.Color.Transparent;
+            this.btnCompreAgora.BorderRadius = 20;
+            this.btnCompreAgora.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCompreAgora.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCompreAgora.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCompreAgora.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCompreAgora.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
+            this.btnCompreAgora.Font = new System.Drawing.Font("Segoe UI Black", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnCompreAgora.ForeColor = System.Drawing.Color.White;
+            this.btnCompreAgora.Location = new System.Drawing.Point(77, 387);
+            this.btnCompreAgora.MaximumSize = new System.Drawing.Size(223, 45);
+            this.btnCompreAgora.Name = "btnCompreAgora";
+            this.btnCompreAgora.ShadowDecoration.BorderRadius = 20;
+            this.btnCompreAgora.ShadowDecoration.Depth = 15;
+            this.btnCompreAgora.ShadowDecoration.Enabled = true;
+            this.btnCompreAgora.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4);
+            this.btnCompreAgora.Size = new System.Drawing.Size(223, 45);
+            this.btnCompreAgora.TabIndex = 1;
+            this.btnCompreAgora.Text = "COMPRE AGORA!";
+            this.btnCompreAgora.Click += new System.EventHandler(this.btnCompreAgora_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.Group_7;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 157);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(489, 229);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(489, 229);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // SideBar
             // 
@@ -155,9 +197,9 @@
             this.SideBar.Controls.Add(this.btnSideBarCarrinho);
             this.SideBar.Controls.Add(this.btnSideBarProdutos);
             this.SideBar.Controls.Add(this.guna2Panel3);
-            this.SideBar.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.SideBar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
-            this.SideBar.Location = new System.Drawing.Point(3, 55);
+            this.SideBar.Location = new System.Drawing.Point(3, 52);
             this.SideBar.MaximumSize = new System.Drawing.Size(256, 700);
             this.SideBar.Name = "SideBar";
             this.SideBar.ShadowDecoration.BorderRadius = 45;
@@ -303,7 +345,7 @@
             this.guna2Panel3.Controls.Add(this.pictureBox2);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
             this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(255)))), ((int)(((byte)(222)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(13, 606);
+            this.guna2Panel3.Location = new System.Drawing.Point(13, 586);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(230, 56);
             this.guna2Panel3.TabIndex = 8;
@@ -363,6 +405,8 @@
             this.Load += new System.EventHandler(this.TelaHome_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelAbrirTela.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.SideBar.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -390,5 +434,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2Button btnCompreAgora;
     }
 }

@@ -25,22 +25,6 @@ namespace TESTE_GUNA.projeto.window
             animationTimer.Tick += AnimationTimer_Tick;
             #endregion
 
-            #region maximizarTela
-
-            // Inicializar dicionário de tamanhos originais
-            originalSizes = new Dictionary<Control, Size>();
-
-            // Armazenar os tamanhos originais dos componentes
-
-
-            // Subscrição no evento Resize
-           
-            //this.Resize += new EventHandler(Form1_Resize);
-
-            #endregion
-
-
-
         }
         #region ANIMACAO side bar
         private void AnimationTimer_Tick(object sender, EventArgs e)
@@ -72,25 +56,6 @@ namespace TESTE_GUNA.projeto.window
         }
         #endregion
 
-
-        #region MAXIMIZAR A TELA
-
-        // Variáveis para armazenar os tamanhos originais dos componentes
-        private Dictionary<Control, Size> originalSizes;
-/*
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            // Fatores de escala
-            float widthScale = (float)this.ClientSize.Width / this.MinimumSize.Width;
-            float heightScale = (float)this.ClientSize.Height / this.MinimumSize.Height;
-
-        }
-
-        */
-
-        #endregion
-
-
         #region PrintarTela
 
         private void PrintarTela(Form form)
@@ -110,7 +75,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void label2_Click(object sender, EventArgs e)
         {
-            // Evento do label, se necessário
+          
         }
 
 
@@ -129,12 +94,16 @@ namespace TESTE_GUNA.projeto.window
 
         }
 
+
+
         private void btnSideBarProdutos_Click(object sender, EventArgs e)
         {
             Teste teste = new Teste();
             PrintarTela(teste);
+            teste.BringToFront();
         }
 
+        #region Barra de menos, tela cheia e fechar
         private void btnBarraMeno_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -195,6 +164,13 @@ namespace TESTE_GUNA.projeto.window
         private void btnBarraX_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        #endregion
+
+        private void btnCompreAgora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
