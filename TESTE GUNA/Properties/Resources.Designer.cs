@@ -63,6 +63,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_Sem_Título {
+            get {
+                object obj = ResourceManager.GetObject("5 Sem Título", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5_Sem_Título_20240708143010 {
             get {
                 object obj = ResourceManager.GetObject("5 Sem Título_20240708143010", resourceCulture);
@@ -83,9 +93,59 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_Sem_Título_20240714135217 {
+            get {
+                object obj = ResourceManager.GetObject("5 Sem Título_20240714135217", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6_Sem_Título_20240710172213 {
             get {
                 object obj = ResourceManager.GetObject("6 Sem Título_20240710172213", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714134825 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714134825", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714135017 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714135017", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171631__1_ {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171631 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_ {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

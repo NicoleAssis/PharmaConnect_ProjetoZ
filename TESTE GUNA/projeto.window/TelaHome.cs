@@ -18,11 +18,29 @@ namespace TESTE_GUNA.projeto.window
         {
             InitializeComponent();
 
-
+            #region animacaoSideBar
             // Inicializa o Timer
             animationTimer = new System.Windows.Forms.Timer();
             animationTimer.Interval = 200; // Intervalo de atualização da animação (em milissegundos)
             animationTimer.Tick += AnimationTimer_Tick;
+            #endregion
+
+            #region maximizarTela
+
+            // Inicializar dicionário de tamanhos originais
+            originalSizes = new Dictionary<Control, Size>();
+
+            // Armazenar os tamanhos originais dos componentes
+
+
+            // Subscrição no evento Resize
+           
+            //this.Resize += new EventHandler(Form1_Resize);
+
+            #endregion
+
+
+
         }
         #region ANIMACAO side bar
         private void AnimationTimer_Tick(object sender, EventArgs e)
@@ -44,6 +62,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarMenu_Click(object sender, EventArgs e)
         {
+            SideBar.BringToFront();
             // Define a largura alvo baseada na condição atual
             targetWidth = (SideBar.Width == 95) ? 256 : 95;
 
@@ -54,17 +73,25 @@ namespace TESTE_GUNA.projeto.window
         #endregion
 
 
+        #region MAXIMIZAR A TELA
 
-        private void label2_Click(object sender, EventArgs e)
+        // Variáveis para armazenar os tamanhos originais dos componentes
+        private Dictionary<Control, Size> originalSizes;
+/*
+        private void Form1_Resize(object sender, EventArgs e)
         {
-            // Evento do label, se necessário
+            // Fatores de escala
+            float widthScale = (float)this.ClientSize.Width / this.MinimumSize.Width;
+            float heightScale = (float)this.ClientSize.Height / this.MinimumSize.Height;
+
         }
 
+        */
 
-        private void TelaHome_Load(object sender, EventArgs e)
-        {
-            
-        }
+        #endregion
+
+
+        #region PrintarTela
 
         private void PrintarTela(Form form)
         {
@@ -77,6 +104,19 @@ namespace TESTE_GUNA.projeto.window
             this.panelAbrirTela.Controls.Add(form);
             this.panelAbrirTela.Tag = form;
             form.Show();
+        }
+
+        #endregion
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            // Evento do label, se necessário
+        }
+
+
+        private void TelaHome_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void panelAbrirTela_Paint(object sender, PaintEventArgs e)
@@ -93,6 +133,68 @@ namespace TESTE_GUNA.projeto.window
         {
             Teste teste = new Teste();
             PrintarTela(teste);
+        }
+
+        private void btnBarraMeno_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnBarraTelaCheia_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                bool sideBar = true;
+                if (SideBar.Width == 95)
+                {
+                    sideBar = true;
+                }
+                else
+                {
+                    sideBar = false;
+                }
+
+                this.WindowState = FormWindowState.Normal;
+                panelAbrirTela.Size = new Size(1050, 709) ;
+
+                if (sideBar = true)
+                {
+                    SideBar.Width = 95;
+                }
+                else
+                {
+                    SideBar.Width = 256;
+                }
+            }
+            else
+            {
+                bool sideBar = true;
+                if (SideBar.Width == 95)
+                {
+                    sideBar = true;
+                }
+                else
+                {
+                    sideBar = false;
+                }
+
+                panelAbrirTela.Size = new Size(1338,858);
+                this.WindowState = FormWindowState.Maximized;
+                
+                if(sideBar = true)
+                {
+                    SideBar.Width = 95;
+                }
+                else
+                {
+                    SideBar.Width= 256;
+                }
+            }
+        }
+
+        private void btnBarraX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaHome));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBarraX = new Guna.UI2.WinForms.Guna2Button();
             this.btnBarraTelaCheia = new Guna.UI2.WinForms.Guna2Button();
             this.btnBarraMeno = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideBar.SuspendLayout();
@@ -69,6 +68,7 @@
             // 
             // btnBarraX
             // 
+            this.btnBarraX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBarraX.BackColor = System.Drawing.Color.Transparent;
             this.btnBarraX.BackgroundImage = global::TESTE_GUNA.Properties.Resources.x2;
             this.btnBarraX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -83,9 +83,11 @@
             this.btnBarraX.Name = "btnBarraX";
             this.btnBarraX.Size = new System.Drawing.Size(27, 27);
             this.btnBarraX.TabIndex = 2;
+            this.btnBarraX.Click += new System.EventHandler(this.btnBarraX_Click);
             // 
             // btnBarraTelaCheia
             // 
+            this.btnBarraTelaCheia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBarraTelaCheia.BackColor = System.Drawing.Color.Transparent;
             this.btnBarraTelaCheia.BackgroundImage = global::TESTE_GUNA.Properties.Resources.aumentar1;
             this.btnBarraTelaCheia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -100,9 +102,11 @@
             this.btnBarraTelaCheia.Name = "btnBarraTelaCheia";
             this.btnBarraTelaCheia.Size = new System.Drawing.Size(25, 27);
             this.btnBarraTelaCheia.TabIndex = 2;
+            this.btnBarraTelaCheia.Click += new System.EventHandler(this.btnBarraTelaCheia_Click);
             // 
             // btnBarraMeno
             // 
+            this.btnBarraMeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBarraMeno.BackColor = System.Drawing.Color.Transparent;
             this.btnBarraMeno.BackgroundImage = global::TESTE_GUNA.Properties.Resources.iconMenos1;
             this.btnBarraMeno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -117,6 +121,7 @@
             this.btnBarraMeno.Name = "btnBarraMeno";
             this.btnBarraMeno.Size = new System.Drawing.Size(27, 27);
             this.btnBarraMeno.TabIndex = 1;
+            this.btnBarraMeno.Click += new System.EventHandler(this.btnBarraMeno_Click);
             // 
             // pictureBox1
             // 
@@ -128,8 +133,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panelAbrirTela
+            // 
+            this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
+            this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelAbrirTela.Location = new System.Drawing.Point(100, 41);
+            this.panelAbrirTela.Name = "panelAbrirTela";
+            this.panelAbrirTela.ShadowDecoration.Depth = 45;
+            this.panelAbrirTela.Size = new System.Drawing.Size(1050, 709);
+            this.panelAbrirTela.TabIndex = 2;
+            this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAbrirTela_Paint);
+            // 
             // SideBar
             // 
+            this.SideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BorderRadius = 45;
             this.SideBar.Controls.Add(this.btnSideBarMenu);
@@ -140,12 +157,13 @@
             this.SideBar.Controls.Add(this.guna2Panel3);
             this.SideBar.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.SideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
-            this.SideBar.Location = new System.Drawing.Point(6, 45);
+            this.SideBar.Location = new System.Drawing.Point(3, 55);
+            this.SideBar.MaximumSize = new System.Drawing.Size(256, 700);
             this.SideBar.Name = "SideBar";
             this.SideBar.ShadowDecoration.BorderRadius = 45;
-            this.SideBar.ShadowDecoration.Depth = 15;
+            this.SideBar.ShadowDecoration.Depth = 5;
             this.SideBar.ShadowDecoration.Enabled = true;
-            this.SideBar.Size = new System.Drawing.Size(95, 700);
+            this.SideBar.Size = new System.Drawing.Size(95, 683);
             this.SideBar.TabIndex = 1;
             // 
             // btnSideBarMenu
@@ -327,25 +345,18 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // panelAbrirTela
-            // 
-            this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
-            this.panelAbrirTela.Location = new System.Drawing.Point(104, 42);
-            this.panelAbrirTela.Name = "panelAbrirTela";
-            this.panelAbrirTela.Size = new System.Drawing.Size(1046, 707);
-            this.panelAbrirTela.TabIndex = 2;
-            this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAbrirTela_Paint);
-            // 
             // TelaHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._5_Sem_Título_20240714135217;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1150, 750);
-            this.Controls.Add(this.panelAbrirTela);
             this.Controls.Add(this.SideBar);
+            this.Controls.Add(this.panelAbrirTela);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -368,16 +379,16 @@
         private Guna.UI2.WinForms.Guna2Button btnBarraTelaCheia;
         private Guna.UI2.WinForms.Guna2Button btnBarraMeno;
         private Guna.UI2.WinForms.Guna2Button btnBarraX;
+        private Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
         private Guna.UI2.WinForms.Guna2Panel SideBar;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarProdutos;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarCarrinho;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarPerfil;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarMenu;
         private Guna.UI2.WinForms.Guna2Button btnSideBarSair;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarPerfil;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarCarrinho;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarProdutos;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnSideBarMenu;
-        private Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
