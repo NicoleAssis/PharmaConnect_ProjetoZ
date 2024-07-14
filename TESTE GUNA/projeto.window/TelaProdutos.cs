@@ -15,6 +15,13 @@ namespace TESTE_GUNA.projeto.window
         public TelaProdutos()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;//parar de travar a tela
+        }
+
+        private void TelaProdutos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

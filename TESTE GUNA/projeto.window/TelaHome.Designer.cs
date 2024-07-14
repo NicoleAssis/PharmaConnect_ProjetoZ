@@ -190,7 +190,7 @@
             // 
             this.SideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
-            this.SideBar.BorderRadius = 45;
+            this.SideBar.BorderRadius = 25;
             this.SideBar.Controls.Add(this.btnSideBarMenu);
             this.SideBar.Controls.Add(this.btnSideBarSair);
             this.SideBar.Controls.Add(this.btnSideBarPerfil);
@@ -202,7 +202,7 @@
             this.SideBar.Location = new System.Drawing.Point(3, 52);
             this.SideBar.MaximumSize = new System.Drawing.Size(256, 700);
             this.SideBar.Name = "SideBar";
-            this.SideBar.ShadowDecoration.BorderRadius = 45;
+            this.SideBar.ShadowDecoration.BorderRadius = 25;
             this.SideBar.ShadowDecoration.Depth = 5;
             this.SideBar.ShadowDecoration.Enabled = true;
             this.SideBar.Size = new System.Drawing.Size(95, 683);

@@ -25,7 +25,11 @@ namespace TESTE_GUNA.projeto.window
             animationTimer.Tick += AnimationTimer_Tick;
             #endregion
 
+
+            this.DoubleBuffered = true;//parar de travar a tela
         }
+
+
         #region ANIMACAO side bar
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
@@ -95,12 +99,11 @@ namespace TESTE_GUNA.projeto.window
         }
 
 
-
         private void btnSideBarProdutos_Click(object sender, EventArgs e)
         {
-            Teste teste = new Teste();
-            PrintarTela(teste);
-            teste.BringToFront();
+            TelaProdutos tela = new TelaProdutos();
+            PrintarTela(tela);
+            tela.BringToFront();
         }
 
         #region Barra de menos, tela cheia e fechar

@@ -533,6 +533,10 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Sair %282%29.png" />
+    <None Include="Resources\Group 81.png" />
+    <None Include="Resources\Group 8.png" />
+    <None Include="Resources\produtos %282%29.png" />
     <None Include="Resources\Group 7.png" />
     <None Include="Resources\Menu.png" />
     <None Include="Resources\Design sem nome %281%29.jpg" />

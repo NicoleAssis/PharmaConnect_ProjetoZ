@@ -483,6 +483,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_8 {
+            get {
+                object obj = ResourceManager.GetObject("Group 8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_81 {
+            get {
+                object obj = ResourceManager.GetObject("Group 81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAlterarProduto {
             get {
                 object obj = ResourceManager.GetObject("iconAlterarProduto", resourceCulture);
@@ -853,6 +873,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap produtos__2_ {
+            get {
+                object obj = ResourceManager.GetObject("produtos (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Produtos11 {
             get {
                 object obj = ResourceManager.GetObject("Produtos11", resourceCulture);
@@ -886,6 +916,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Sair__1_ {
             get {
                 object obj = ResourceManager.GetObject("Sair (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
