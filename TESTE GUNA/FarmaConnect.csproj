@@ -293,6 +293,12 @@
     <Compile Include="projeto.window\TelaDepartamentoEscolhido.Designer.cs">
       <DependentUpon>TelaDepartamentoEscolhido.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaDepartamentos.Designer.cs">
+      <DependentUpon>TelaDepartamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\TelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -444,6 +450,9 @@
     <EmbeddedResource Include="projeto.window\TelaDepartamentoEscolhido.resx">
       <DependentUpon>TelaDepartamentoEscolhido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaDepartamentos.resx">
+      <DependentUpon>TelaDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaHome.resx">
       <DependentUpon>TelaHome.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -551,6 +560,10 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Suplementos e vitaminas.png" />
+    <None Include="Resources\Hipertensão.png" />
+    <None Include="Resources\PARA diabetes %281%291.png" />
+    <None Include="Resources\PARA diabetes %281%29.png" />
     <None Include="Resources\Remedio User Control %281%29.png" />
     <None Include="Resources\Sair %281%29.png" />
     <None Include="Resources\Remedio User Control.png" />
@@ -580,6 +593,16 @@
     <None Include="Resources\7 Sem Título_20240714171925 %281%292.jpg" />
     <None Include="Resources\2 Sem Título_20240705202725.png" />
     <None Include="Resources\7 Sem Título_20240714171925 %281%293.jpg" />
+    <None Include="Resources\7 Sem Título_20240714171925 %281%294.jpg" />
+    <None Include="Resources\Analgésicos.png" />
+    <None Include="Resources\Analgésicos1.png" />
+    <None Include="Resources\anti-inflamatório.png" />
+    <None Include="Resources\antivirais e antibióticos.png" />
+    <None Include="Resources\dermatológicos.png" />
+    <None Include="Resources\dermatológicos1.png" />
+    <None Include="Resources\Ginecologia.png" />
+    <None Include="Resources\Departamentos.png" />
+    <None Include="Resources\Carrinho.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

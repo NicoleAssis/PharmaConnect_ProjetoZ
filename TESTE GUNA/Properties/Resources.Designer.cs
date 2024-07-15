@@ -193,6 +193,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_4 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar__3_ {
             get {
                 object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
@@ -206,6 +216,26 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap adicionar_ao_carrinho_de_compras {
             get {
                 object obj = ResourceManager.GetObject("adicionar-ao-carrinho-de-compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Analgésicos {
+            get {
+                object obj = ResourceManager.GetObject("Analgésicos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Analgésicos1 {
+            get {
+                object obj = ResourceManager.GetObject("Analgésicos1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,26 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap angulos_para_cima_e_para_baixo {
             get {
                 object obj = ResourceManager.GetObject("angulos-para-cima-e-para-baixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anti_inflamatório {
+            get {
+                object obj = ResourceManager.GetObject("anti-inflamatório", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap antivirais_e_antibióticos {
+            get {
+                object obj = ResourceManager.GetObject("antivirais e antibióticos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +353,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Carrinho1 {
+            get {
+                object obj = ResourceManager.GetObject("Carrinho1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carrinhoComprinha {
             get {
                 object obj = ResourceManager.GetObject("carrinhoComprinha", resourceCulture);
@@ -333,9 +393,39 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Departamentos {
+            get {
+                object obj = ResourceManager.GetObject("Departamentos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap depDermatologicos {
             get {
                 object obj = ResourceManager.GetObject("depDermatologicos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dermatológicos {
+            get {
+                object obj = ResourceManager.GetObject("dermatológicos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dermatológicos1 {
+            get {
+                object obj = ResourceManager.GetObject("dermatológicos1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +496,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap GIFLoading1 {
             get {
                 object obj = ResourceManager.GetObject("GIFLoading1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ginecologia {
+            get {
+                object obj = ResourceManager.GetObject("Ginecologia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,6 +626,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Group_81 {
             get {
                 object obj = ResourceManager.GetObject("Group 81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hipertensão {
+            get {
+                object obj = ResourceManager.GetObject("Hipertensão", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -873,6 +983,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PARA_diabetes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("PARA diabetes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PARA_diabetes__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("PARA diabetes (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Perfil__1_ {
             get {
                 object obj = ResourceManager.GetObject("Perfil (1)", resourceCulture);
@@ -1016,6 +1146,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap smartphone {
             get {
                 object obj = ResourceManager.GetObject("smartphone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Suplementos_e_vitaminas {
+            get {
+                object obj = ResourceManager.GetObject("Suplementos e vitaminas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

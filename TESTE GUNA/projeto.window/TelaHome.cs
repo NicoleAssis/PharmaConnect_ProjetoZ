@@ -52,7 +52,7 @@ namespace TESTE_GUNA.projeto.window
         {
             SideBar.BringToFront();
             // Define a largura alvo baseada na condição atual
-            targetWidth = (SideBar.Width == 95) ? 256 : 95;
+            targetWidth = (SideBar.Width == 95) ? 282 : 95;
 
             // Inicia a animação
             animationTimer.Start();
@@ -173,7 +173,14 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnCompreAgora_Click(object sender, EventArgs e)
         {
-            TelaDepartamentoEscolhido tela = new TelaDepartamentoEscolhido();
+            TelaProdutos tela = new TelaProdutos();
+            PrintarTela(tela);
+            tela.BringToFront();
+        }
+
+        private void btnSideBarDepartamentos_Click(object sender, EventArgs e)
+        {
+            TelaDepartamentos tela = new TelaDepartamentos();
             PrintarTela(tela);
             tela.BringToFront();
         }

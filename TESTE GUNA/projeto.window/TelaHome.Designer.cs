@@ -38,6 +38,7 @@
             this.btnCompreAgora = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSideBarDepartamentos = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarPerfil = new Guna.UI2.WinForms.Guna2Button();
@@ -191,6 +192,7 @@
             this.SideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BorderRadius = 25;
+            this.SideBar.Controls.Add(this.btnSideBarDepartamentos);
             this.SideBar.Controls.Add(this.btnSideBarMenu);
             this.SideBar.Controls.Add(this.btnSideBarSair);
             this.SideBar.Controls.Add(this.btnSideBarPerfil);
@@ -200,13 +202,39 @@
             this.SideBar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(62)))), ((int)(((byte)(250)))));
             this.SideBar.Location = new System.Drawing.Point(3, 52);
-            this.SideBar.MaximumSize = new System.Drawing.Size(256, 700);
+            this.SideBar.MaximumSize = new System.Drawing.Size(282, 700);
             this.SideBar.Name = "SideBar";
             this.SideBar.ShadowDecoration.BorderRadius = 25;
             this.SideBar.ShadowDecoration.Depth = 5;
             this.SideBar.ShadowDecoration.Enabled = true;
             this.SideBar.Size = new System.Drawing.Size(95, 683);
             this.SideBar.TabIndex = 1;
+            // 
+            // btnSideBarDepartamentos
+            // 
+            this.btnSideBarDepartamentos.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarDepartamentos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarDepartamentos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarDepartamentos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarDepartamentos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarDepartamentos.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarDepartamentos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarDepartamentos.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarDepartamentos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarDepartamentos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarDepartamentos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarDepartamentos.Image = global::TESTE_GUNA.Properties.Resources.Carrinho1;
+            this.btnSideBarDepartamentos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarDepartamentos.ImageOffset = new System.Drawing.Point(14, 0);
+            this.btnSideBarDepartamentos.ImageSize = new System.Drawing.Size(42, 42);
+            this.btnSideBarDepartamentos.Location = new System.Drawing.Point(1, 230);
+            this.btnSideBarDepartamentos.Name = "btnSideBarDepartamentos";
+            this.btnSideBarDepartamentos.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarDepartamentos.Size = new System.Drawing.Size(279, 45);
+            this.btnSideBarDepartamentos.TabIndex = 10;
+            this.btnSideBarDepartamentos.Text = "     Departamentos";
+            this.btnSideBarDepartamentos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarDepartamentos.Click += new System.EventHandler(this.btnSideBarDepartamentos_Click);
             // 
             // btnSideBarMenu
             // 
@@ -251,12 +279,12 @@
             this.btnSideBarSair.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarSair.ImageOffset = new System.Drawing.Point(18, 0);
             this.btnSideBarSair.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSideBarSair.Location = new System.Drawing.Point(1, 478);
+            this.btnSideBarSair.Location = new System.Drawing.Point(1, 470);
             this.btnSideBarSair.Name = "btnSideBarSair";
             this.btnSideBarSair.PressedColor = System.Drawing.Color.White;
             this.btnSideBarSair.Size = new System.Drawing.Size(268, 45);
             this.btnSideBarSair.TabIndex = 7;
-            this.btnSideBarSair.Text = "       Sair";
+            this.btnSideBarSair.Text = "     Sair";
             this.btnSideBarSair.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnSideBarPerfil
@@ -276,12 +304,12 @@
             this.btnSideBarPerfil.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarPerfil.ImageOffset = new System.Drawing.Point(15, 0);
             this.btnSideBarPerfil.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSideBarPerfil.Location = new System.Drawing.Point(1, 378);
+            this.btnSideBarPerfil.Location = new System.Drawing.Point(1, 390);
             this.btnSideBarPerfil.Name = "btnSideBarPerfil";
             this.btnSideBarPerfil.PressedColor = System.Drawing.Color.White;
             this.btnSideBarPerfil.Size = new System.Drawing.Size(268, 45);
             this.btnSideBarPerfil.TabIndex = 6;
-            this.btnSideBarPerfil.Text = "       Perfil";
+            this.btnSideBarPerfil.Text = "     Perfil";
             this.btnSideBarPerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnSideBarCarrinho
@@ -301,12 +329,12 @@
             this.btnSideBarCarrinho.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarCarrinho.ImageOffset = new System.Drawing.Point(14, 0);
             this.btnSideBarCarrinho.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSideBarCarrinho.Location = new System.Drawing.Point(1, 278);
+            this.btnSideBarCarrinho.Location = new System.Drawing.Point(1, 310);
             this.btnSideBarCarrinho.Name = "btnSideBarCarrinho";
             this.btnSideBarCarrinho.PressedColor = System.Drawing.Color.White;
             this.btnSideBarCarrinho.Size = new System.Drawing.Size(268, 45);
             this.btnSideBarCarrinho.TabIndex = 5;
-            this.btnSideBarCarrinho.Text = "       Carrinho";
+            this.btnSideBarCarrinho.Text = "     Carrinho";
             this.btnSideBarCarrinho.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnSideBarProdutos
@@ -326,12 +354,12 @@
             this.btnSideBarProdutos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarProdutos.ImageOffset = new System.Drawing.Point(19, 0);
             this.btnSideBarProdutos.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSideBarProdutos.Location = new System.Drawing.Point(1, 178);
+            this.btnSideBarProdutos.Location = new System.Drawing.Point(1, 150);
             this.btnSideBarProdutos.Name = "btnSideBarProdutos";
             this.btnSideBarProdutos.PressedColor = System.Drawing.Color.White;
             this.btnSideBarProdutos.Size = new System.Drawing.Size(268, 45);
             this.btnSideBarProdutos.TabIndex = 4;
-            this.btnSideBarProdutos.Text = "       Produtos";
+            this.btnSideBarProdutos.Text = "     Produtos";
             this.btnSideBarProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarProdutos.Click += new System.EventHandler(this.btnSideBarProdutos_Click);
             // 
@@ -436,5 +464,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnCompreAgora;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarDepartamentos;
     }
 }
