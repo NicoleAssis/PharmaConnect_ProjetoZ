@@ -63,6 +63,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_Sem_Título_20240705202725 {
+            get {
+                object obj = ResourceManager.GetObject("2 Sem Título_20240705202725", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5_Sem_Título {
             get {
                 object obj = ResourceManager.GetObject("5 Sem Título", resourceCulture);
@@ -166,6 +176,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_2 {
             get {
                 object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +506,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Group_8 {
             get {
                 object obj = ResourceManager.GetObject("Group 8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_8__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Group 8 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -853,6 +883,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Perfil__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Perfil (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PHARMACONNECT {
             get {
                 object obj = ResourceManager.GetObject("PHARMACONNECT", resourceCulture);
@@ -903,6 +943,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Remedio_User_Control {
+            get {
+                object obj = ResourceManager.GetObject("Remedio User Control", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Remedio_User_Control__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Remedio User Control (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remedioImagemTeste2 {
             get {
                 object obj = ResourceManager.GetObject("remedioImagemTeste2", resourceCulture);
@@ -916,6 +976,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Sair__1_ {
             get {
                 object obj = ResourceManager.GetObject("Sair (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sair (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

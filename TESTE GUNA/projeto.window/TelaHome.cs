@@ -173,7 +173,9 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnCompreAgora_Click(object sender, EventArgs e)
         {
-
+            TelaDepartamentoEscolhido tela = new TelaDepartamentoEscolhido();
+            PrintarTela(tela);
+            tela.BringToFront();
         }
     }
 

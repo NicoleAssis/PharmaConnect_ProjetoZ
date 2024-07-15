@@ -1,6 +1,6 @@
 ﻿namespace TESTE_GUNA.projeto.window
 {
-    partial class TelaProdutos
+    partial class TelaDepartamentoEscolhido
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaProdutos));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaDepartamentoEscolhido));
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.userControlProduto1 = new TESTE_GUNA.projeto.window.UserControlProduto();
             this.userControlProduto2 = new TESTE_GUNA.projeto.window.UserControlProduto();
@@ -49,46 +48,20 @@
             this.userControlProduto14 = new TESTE_GUNA.projeto.window.UserControlProduto();
             this.userControlProduto15 = new TESTE_GUNA.projeto.window.UserControlProduto();
             this.userControlProduto16 = new TESTE_GUNA.projeto.window.UserControlProduto();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.userControlProduto17 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto18 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto19 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto20 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto21 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto22 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto23 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto24 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto25 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.userControlProduto26 = new TESTE_GUNA.projeto.window.UserControlProduto();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.produtos__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(360, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnIrParaCarrinho
-            // 
-            this.btnIrParaCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIrParaCarrinho.BackColor = System.Drawing.Color.Transparent;
-            this.btnIrParaCarrinho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIrParaCarrinho.BorderRadius = 20;
-            this.btnIrParaCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIrParaCarrinho.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
-            this.btnIrParaCarrinho.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
-            this.btnIrParaCarrinho.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrParaCarrinho.ForeColor = System.Drawing.Color.White;
-            this.btnIrParaCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
-            this.btnIrParaCarrinho.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
-            this.btnIrParaCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_;
-            this.btnIrParaCarrinho.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnIrParaCarrinho.Location = new System.Drawing.Point(702, 12);
-            this.btnIrParaCarrinho.Name = "btnIrParaCarrinho";
-            this.btnIrParaCarrinho.Size = new System.Drawing.Size(303, 55);
-            this.btnIrParaCarrinho.TabIndex = 1;
-            this.btnIrParaCarrinho.Text = "IR PARA O CARRINHO";
             // 
             // txtPesquisa
             // 
@@ -119,7 +92,32 @@
             this.txtPesquisa.PlaceholderText = "Pesquisar";
             this.txtPesquisa.SelectedText = "";
             this.txtPesquisa.Size = new System.Drawing.Size(558, 48);
-            this.txtPesquisa.TabIndex = 2;
+            this.txtPesquisa.TabIndex = 4;
+            // 
+            // btnIrParaCarrinho
+            // 
+            this.btnIrParaCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIrParaCarrinho.BackColor = System.Drawing.Color.Transparent;
+            this.btnIrParaCarrinho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIrParaCarrinho.BorderRadius = 20;
+            this.btnIrParaCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIrParaCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIrParaCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIrParaCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIrParaCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIrParaCarrinho.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
+            this.btnIrParaCarrinho.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
+            this.btnIrParaCarrinho.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrParaCarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnIrParaCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
+            this.btnIrParaCarrinho.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
+            this.btnIrParaCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_;
+            this.btnIrParaCarrinho.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnIrParaCarrinho.Location = new System.Drawing.Point(702, 12);
+            this.btnIrParaCarrinho.Name = "btnIrParaCarrinho";
+            this.btnIrParaCarrinho.Size = new System.Drawing.Size(303, 55);
+            this.btnIrParaCarrinho.TabIndex = 3;
+            this.btnIrParaCarrinho.Text = "IR PARA O CARRINHO";
             // 
             // flowLayoutPanel1
             // 
@@ -144,10 +142,20 @@
             this.flowLayoutPanel1.Controls.Add(this.userControlProduto14);
             this.flowLayoutPanel1.Controls.Add(this.userControlProduto15);
             this.flowLayoutPanel1.Controls.Add(this.userControlProduto16);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto17);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto18);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto19);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto20);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto21);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto22);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto23);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto24);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto25);
+            this.flowLayoutPanel1.Controls.Add(this.userControlProduto26);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 140);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1035, 557);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // userControlProduto1
             // 
@@ -325,32 +333,162 @@
             this.userControlProduto16.Size = new System.Drawing.Size(320, 182);
             this.userControlProduto16.TabIndex = 15;
             // 
-            // TelaProdutos
+            // userControlProduto17
+            // 
+            this.userControlProduto17.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto17.BackgroundImage")));
+            this.userControlProduto17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto17.Location = new System.Drawing.Point(329, 943);
+            this.userControlProduto17.Name = "userControlProduto17";
+            this.userControlProduto17.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto17.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto17.TabIndex = 16;
+            // 
+            // userControlProduto18
+            // 
+            this.userControlProduto18.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto18.BackgroundImage")));
+            this.userControlProduto18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto18.Location = new System.Drawing.Point(655, 943);
+            this.userControlProduto18.Name = "userControlProduto18";
+            this.userControlProduto18.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto18.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto18.TabIndex = 17;
+            // 
+            // userControlProduto19
+            // 
+            this.userControlProduto19.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto19.BackgroundImage")));
+            this.userControlProduto19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto19.Location = new System.Drawing.Point(3, 1131);
+            this.userControlProduto19.Name = "userControlProduto19";
+            this.userControlProduto19.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto19.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto19.TabIndex = 18;
+            // 
+            // userControlProduto20
+            // 
+            this.userControlProduto20.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto20.BackgroundImage")));
+            this.userControlProduto20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto20.Location = new System.Drawing.Point(329, 1131);
+            this.userControlProduto20.Name = "userControlProduto20";
+            this.userControlProduto20.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto20.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto20.TabIndex = 19;
+            // 
+            // userControlProduto21
+            // 
+            this.userControlProduto21.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto21.BackgroundImage")));
+            this.userControlProduto21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto21.Location = new System.Drawing.Point(655, 1131);
+            this.userControlProduto21.Name = "userControlProduto21";
+            this.userControlProduto21.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto21.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto21.TabIndex = 20;
+            // 
+            // userControlProduto22
+            // 
+            this.userControlProduto22.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto22.BackgroundImage")));
+            this.userControlProduto22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto22.Location = new System.Drawing.Point(3, 1319);
+            this.userControlProduto22.Name = "userControlProduto22";
+            this.userControlProduto22.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto22.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto22.TabIndex = 21;
+            // 
+            // userControlProduto23
+            // 
+            this.userControlProduto23.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto23.BackgroundImage")));
+            this.userControlProduto23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto23.Location = new System.Drawing.Point(329, 1319);
+            this.userControlProduto23.Name = "userControlProduto23";
+            this.userControlProduto23.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto23.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto23.TabIndex = 22;
+            // 
+            // userControlProduto24
+            // 
+            this.userControlProduto24.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto24.BackgroundImage")));
+            this.userControlProduto24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto24.Location = new System.Drawing.Point(655, 1319);
+            this.userControlProduto24.Name = "userControlProduto24";
+            this.userControlProduto24.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto24.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto24.TabIndex = 23;
+            // 
+            // userControlProduto25
+            // 
+            this.userControlProduto25.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto25.BackgroundImage")));
+            this.userControlProduto25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto25.Location = new System.Drawing.Point(3, 1507);
+            this.userControlProduto25.Name = "userControlProduto25";
+            this.userControlProduto25.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto25.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto25.TabIndex = 24;
+            // 
+            // userControlProduto26
+            // 
+            this.userControlProduto26.BackColor = System.Drawing.Color.Transparent;
+            this.userControlProduto26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlProduto26.BackgroundImage")));
+            this.userControlProduto26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControlProduto26.Location = new System.Drawing.Point(329, 1507);
+            this.userControlProduto26.Name = "userControlProduto26";
+            this.userControlProduto26.Padding = new System.Windows.Forms.Padding(5);
+            this.userControlProduto26.Size = new System.Drawing.Size(320, 182);
+            this.userControlProduto26.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(136)))));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(393, 37);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "DEPARTAMENTO ESCOLHIDO";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.panel1.Location = new System.Drawing.Point(19, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(386, 6);
+            this.panel1.TabIndex = 8;
+            // 
+            // TelaDepartamentoEscolhido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._7_Sem_Título_20240714171925__1_2;
+            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._7_Sem_Título_20240714171925__1_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnIrParaCarrinho);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TelaProdutos";
-            this.Text = "TelaProdutos";
-            this.Load += new System.EventHandler(this.TelaProdutos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "TelaDepartamentoEscolhido";
+            this.Text = "TelaDepartamentoEscolhido";
+            this.Load += new System.EventHandler(this.TelaDepartamentoEscolhido_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnIrParaCarrinho;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
+        private Guna.UI2.WinForms.Guna2GradientButton btnIrParaCarrinho;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UserControlProduto userControlProduto1;
         private UserControlProduto userControlProduto2;
@@ -368,5 +506,17 @@
         private UserControlProduto userControlProduto14;
         private UserControlProduto userControlProduto15;
         private UserControlProduto userControlProduto16;
+        private UserControlProduto userControlProduto17;
+        private UserControlProduto userControlProduto18;
+        private UserControlProduto userControlProduto19;
+        private UserControlProduto userControlProduto20;
+        private UserControlProduto userControlProduto21;
+        private UserControlProduto userControlProduto22;
+        private UserControlProduto userControlProduto23;
+        private UserControlProduto userControlProduto24;
+        private UserControlProduto userControlProduto25;
+        private UserControlProduto userControlProduto26;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
