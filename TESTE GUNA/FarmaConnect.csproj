@@ -578,6 +578,10 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Sair %285%29.png" />
+    <None Include="Resources\Sair %284%292.png" />
+    <None Include="Resources\Sair %284%291.png" />
+    <None Include="Resources\Sair %283%291.png" />
     <None Include="Resources\noonbrew-ziCb4_EKmak-unsplash1.png" />
     <None Include="Resources\Sair %284%29.png" />
     <None Include="Resources\noonbrew-ziCb4_EKmak-unsplash.png" />
