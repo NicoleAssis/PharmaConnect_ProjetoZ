@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNome = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.Label();
-            this.RSMoeda = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.Label();
             this.btnAdicionarCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,16 +69,16 @@
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "5mg";
             // 
-            // RSMoeda
+            // label
             // 
-            this.RSMoeda.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.RSMoeda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(116)))));
-            this.RSMoeda.Location = new System.Drawing.Point(203, 79);
-            this.RSMoeda.Name = "RSMoeda";
-            this.RSMoeda.Size = new System.Drawing.Size(43, 27);
-            this.RSMoeda.TabIndex = 3;
-            this.RSMoeda.Text = "R$:";
-            this.RSMoeda.Click += new System.EventHandler(this.label2_Click);
+            this.label.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(116)))));
+            this.label.Location = new System.Drawing.Point(203, 79);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(43, 27);
+            this.label.TabIndex = 3;
+            this.label.Text = "R$:";
+            this.label.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPreco
             // 
@@ -135,7 +135,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdicionarCarrinho);
             this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.RSMoeda);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.pictureBox1);
@@ -153,7 +153,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label txtNome;
         private System.Windows.Forms.Label txtDescricao;
-        private System.Windows.Forms.Label RSMoeda;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label txtPreco;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdicionarCarrinho;
         private System.Windows.Forms.Panel panel1;

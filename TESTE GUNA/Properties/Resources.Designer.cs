@@ -203,6 +203,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_5 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar__3_ {
             get {
                 object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
@@ -576,6 +586,26 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Gravando_2024_06_22_1655261 {
             get {
                 object obj = ResourceManager.GetObject("Gravando 2024-06-22 1655261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_12 {
+            get {
+                object obj = ResourceManager.GetObject("Group 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_12__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Group 12 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -983,6 +1013,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap noonbrew_ziCb4_EKmak_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("noonbrew-ziCb4_EKmak-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noonbrew_ziCb4_EKmak_unsplash1 {
+            get {
+                object obj = ResourceManager.GetObject("noonbrew-ziCb4_EKmak-unsplash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PARA_diabetes__1_ {
             get {
                 object obj = ResourceManager.GetObject("PARA diabetes (1)", resourceCulture);
@@ -1126,6 +1176,36 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Sair__2_ {
             get {
                 object obj = ResourceManager.GetObject("Sair (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sair (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

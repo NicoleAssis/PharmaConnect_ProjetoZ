@@ -17,6 +17,18 @@ namespace TESTE_GUNA.projeto.window
             InitializeComponent();
         }
 
+        private void PrintarTela(Form form)
+        {
+            if (this.panelAbrirTela.Controls.Count > 0)
+                this.panelAbrirTela.Controls.RemoveAt(0);
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            this.panelAbrirTela.Controls.Add(form);
+            this.panelAbrirTela.Tag = form;
+            form.Show();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -60,6 +72,13 @@ namespace TESTE_GUNA.projeto.window
         private void pictureBox15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Teste_Load(object sender, EventArgs e)
+        {
+            TelaProdutos tela = new TelaProdutos();
+            PrintarTela(tela);
+            tela.BringToFront();
         }
     }
 }
