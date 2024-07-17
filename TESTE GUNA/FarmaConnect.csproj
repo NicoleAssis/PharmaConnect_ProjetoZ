@@ -305,6 +305,12 @@
     <Compile Include="projeto.window\TelaDepartamentos.Designer.cs">
       <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaFrete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaFrete.Designer.cs">
+      <DependentUpon>TelaFrete.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\TelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -468,6 +474,9 @@
     <EmbeddedResource Include="projeto.window\TelaDepartamentos.resx">
       <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaFrete.resx">
+      <DependentUpon>TelaFrete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaHome.resx">
       <DependentUpon>TelaHome.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -578,6 +587,9 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Sair %287%29.png" />
+    <None Include="Resources\Sair %286%29.png" />
+    <None Include="Resources\mensagem.png" />
     <None Include="Resources\Sair %285%29.png" />
     <None Include="Resources\Sair %284%292.png" />
     <None Include="Resources\Sair %284%291.png" />
@@ -633,6 +645,10 @@
     <None Include="Resources\7 Sem Título_20240714171925 %281%295.jpg" />
     <None Include="Resources\Group 12.png" />
     <None Include="Resources\Group 12 %281%29.png" />
+    <None Include="Resources\Frame 2.png" />
+    <None Include="Resources\Departamentos %282%29.png" />
+    <None Include="Resources\Departamentos %284%29.png" />
+    <None Include="Resources\8 Sem Título_20240717172458.jpg" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

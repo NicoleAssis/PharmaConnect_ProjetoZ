@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCompras));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAbrirTela = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userControlCarrinho1 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
             this.userControlCarrinho2 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
             this.userControlCarrinho3 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
@@ -48,22 +44,27 @@
             this.userControlCarrinho10 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
             this.userControlCarrinho11 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
             this.userControlCarrinho12 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelAbrirTela
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(522, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(528, 709);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelAbrirTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAbrirTela.Location = new System.Drawing.Point(522, 0);
+            this.panelAbrirTela.Name = "panelAbrirTela";
+            this.panelAbrirTela.Size = new System.Drawing.Size(528, 709);
+            this.panelAbrirTela.TabIndex = 6;
+            this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -77,40 +78,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(522, 709);
             this.panel2.TabIndex = 7;
-            // 
-            // btnIrParaCarrinho
-            // 
-            this.btnIrParaCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnIrParaCarrinho.BackColor = System.Drawing.Color.Transparent;
-            this.btnIrParaCarrinho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIrParaCarrinho.BorderRadius = 20;
-            this.btnIrParaCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIrParaCarrinho.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(231)))));
-            this.btnIrParaCarrinho.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(34)))), ((int)(((byte)(160)))));
-            this.btnIrParaCarrinho.Font = new System.Drawing.Font("Segoe UI", 15.5F, System.Drawing.FontStyle.Bold);
-            this.btnIrParaCarrinho.ForeColor = System.Drawing.Color.White;
-            this.btnIrParaCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
-            this.btnIrParaCarrinho.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
-            this.btnIrParaCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_1;
-            this.btnIrParaCarrinho.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnIrParaCarrinho.Location = new System.Drawing.Point(9, 8);
-            this.btnIrParaCarrinho.Name = "btnIrParaCarrinho";
-            this.btnIrParaCarrinho.Size = new System.Drawing.Size(329, 55);
-            this.btnIrParaCarrinho.TabIndex = 4;
-            this.btnIrParaCarrinho.Text = " CONTINUAR COMPRANDO";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnIrParaCarrinho);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 638);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(522, 71);
-            this.panel4.TabIndex = 7;
             // 
             // flowLayoutPanel1
             // 
@@ -130,32 +97,10 @@
             this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho11);
             this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho12);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 76);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 98);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 562);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 518);
             this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(522, 76);
-            this.panel3.TabIndex = 6;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // userControlCarrinho1
             // 
@@ -277,6 +222,72 @@
             this.userControlCarrinho12.Size = new System.Drawing.Size(490, 105);
             this.userControlCarrinho12.TabIndex = 11;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnIrParaCarrinho);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 616);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(522, 93);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnIrParaCarrinho
+            // 
+            this.btnIrParaCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnIrParaCarrinho.BackColor = System.Drawing.Color.Transparent;
+            this.btnIrParaCarrinho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIrParaCarrinho.BorderRadius = 20;
+            this.btnIrParaCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIrParaCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIrParaCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIrParaCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIrParaCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIrParaCarrinho.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnIrParaCarrinho.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnIrParaCarrinho.Font = new System.Drawing.Font("Segoe UI", 15.5F, System.Drawing.FontStyle.Bold);
+            this.btnIrParaCarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnIrParaCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
+            this.btnIrParaCarrinho.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
+            this.btnIrParaCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_1;
+            this.btnIrParaCarrinho.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnIrParaCarrinho.Location = new System.Drawing.Point(4, 34);
+            this.btnIrParaCarrinho.Name = "btnIrParaCarrinho";
+            this.btnIrParaCarrinho.Size = new System.Drawing.Size(329, 47);
+            this.btnIrParaCarrinho.TabIndex = 4;
+            this.btnIrParaCarrinho.Text = " CONTINUAR COMPRANDO";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(522, 98);
+            this.panel3.TabIndex = 6;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(360, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(143)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(522, 0);
+            this.panel1.MinimumSize = new System.Drawing.Size(4, 709);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(4, 709);
+            this.panel1.TabIndex = 8;
+            // 
             // TelaCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,14 +296,15 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelAbrirTela);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaCompras";
             this.Text = "TelaCompras";
             this.Load += new System.EventHandler(this.TelaCompras_Load);
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -300,7 +312,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAbrirTela;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel4;
@@ -319,5 +331,6 @@
         private UserControlCarrinho userControlCarrinho10;
         private UserControlCarrinho userControlCarrinho11;
         private UserControlCarrinho userControlCarrinho12;
+        private System.Windows.Forms.Panel panel1;
     }
 }

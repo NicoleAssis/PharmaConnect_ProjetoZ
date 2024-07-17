@@ -18,9 +18,29 @@ namespace TESTE_GUNA.projeto.window
             this.DoubleBuffered = true;//parar de travar a tela
         }
 
+        #region PrintarTela
+
+        private void PrintarTela(Form form)
+        {
+            if (this.panelAbrirTela.Controls.Count > 0)
+                this.panelAbrirTela.Controls.RemoveAt(0);
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            this.panelAbrirTela.Controls.Add(form);
+            this.panelAbrirTela.Tag = form;
+            form.Show();
+        }
+
+        #endregion
+
         private void TelaCompras_Load(object sender, EventArgs e)
         {
-
+            //criar uma tela antes do frete
+            TelaFrete tela = new TelaFrete();
+           PrintarTela(tela);
+            tela.BringToFront();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
