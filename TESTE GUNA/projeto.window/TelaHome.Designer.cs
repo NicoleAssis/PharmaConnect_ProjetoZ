@@ -336,6 +336,7 @@
             this.btnSideBarCarrinho.TabIndex = 5;
             this.btnSideBarCarrinho.Text = "     Carrinho";
             this.btnSideBarCarrinho.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarCarrinho.Click += new System.EventHandler(this.btnSideBarCarrinho_Click);
             // 
             // btnSideBarProdutos
             // 

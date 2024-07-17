@@ -35,9 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnRemover = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtQtd = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenos = new Guna.UI2.WinForms.Guna2Button();
-            this.txtQtd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,9 +57,9 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPreco.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(193, 30);
+            this.txtPreco.Location = new System.Drawing.Point(182, 29);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(85, 27);
             this.txtPreco.TabIndex = 5;
@@ -67,11 +67,11 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(109, 29);
+            this.label1.Location = new System.Drawing.Point(106, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 27);
+            this.label1.Size = new System.Drawing.Size(79, 27);
             this.label1.TabIndex = 6;
             this.label1.Text = "Unidade :";
             // 
@@ -79,9 +79,9 @@
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(108, 7);
+            this.label3.Location = new System.Drawing.Point(104, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(378, 27);
+            this.label3.Size = new System.Drawing.Size(361, 27);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nome Completo do Remédio";
             // 
@@ -93,13 +93,13 @@
             this.btnRemover.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRemover.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRemover.FillColor = System.Drawing.Color.White;
-            this.btnRemover.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.btnRemover.Font = new System.Drawing.Font("Segoe UI Black", 12.5F, System.Drawing.FontStyle.Bold);
             this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(118)))), ((int)(((byte)(215)))));
             this.btnRemover.Image = global::TESTE_GUNA.Properties.Resources.Sair__3_1;
-            this.btnRemover.ImageSize = new System.Drawing.Size(27, 27);
+            this.btnRemover.ImageSize = new System.Drawing.Size(25, 25);
             this.btnRemover.Location = new System.Drawing.Point(109, 55);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(156, 37);
+            this.btnRemover.Size = new System.Drawing.Size(133, 36);
             this.btnRemover.TabIndex = 8;
             this.btnRemover.Text = "REMOVER";
             // 
@@ -111,10 +111,20 @@
             this.guna2Panel1.Controls.Add(this.txtQtd);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.btnMenos);
-            this.guna2Panel1.Location = new System.Drawing.Point(332, 53);
+            this.guna2Panel1.Location = new System.Drawing.Point(343, 54);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(135, 40);
             this.guna2Panel1.TabIndex = 9;
+            // 
+            // txtQtd
+            // 
+            this.txtQtd.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtd.ForeColor = System.Drawing.Color.White;
+            this.txtQtd.Location = new System.Drawing.Point(56, 3);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(40, 27);
+            this.txtQtd.TabIndex = 11;
+            this.txtQtd.Text = "1";
             // 
             // guna2Button2
             // 
@@ -127,7 +137,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Image = global::TESTE_GUNA.Properties.Resources.Sair__5_;
             this.guna2Button2.ImageSize = new System.Drawing.Size(27, 27);
-            this.guna2Button2.Location = new System.Drawing.Point(90, -3);
+            this.guna2Button2.Location = new System.Drawing.Point(89, -3);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(46, 45);
             this.guna2Button2.TabIndex = 10;
@@ -143,26 +153,16 @@
             this.btnMenos.ForeColor = System.Drawing.Color.White;
             this.btnMenos.Image = global::TESTE_GUNA.Properties.Resources.Sair__4_2;
             this.btnMenos.ImageSize = new System.Drawing.Size(27, 27);
-            this.btnMenos.Location = new System.Drawing.Point(5, -3);
+            this.btnMenos.Location = new System.Drawing.Point(4, -3);
             this.btnMenos.Name = "btnMenos";
             this.btnMenos.Size = new System.Drawing.Size(41, 45);
             this.btnMenos.TabIndex = 0;
             // 
-            // txtQtd
-            // 
-            this.txtQtd.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtd.ForeColor = System.Drawing.Color.White;
-            this.txtQtd.Location = new System.Drawing.Point(57, 3);
-            this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(40, 27);
-            this.txtQtd.TabIndex = 11;
-            this.txtQtd.Text = "1";
-            // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(371, 26);
+            this.label4.Location = new System.Drawing.Point(352, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 27);
             this.label4.TabIndex = 11;
@@ -170,11 +170,11 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(412, 26);
+            this.label5.Location = new System.Drawing.Point(393, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 27);
+            this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 10;
             this.label5.Text = "1200,00";
             // 

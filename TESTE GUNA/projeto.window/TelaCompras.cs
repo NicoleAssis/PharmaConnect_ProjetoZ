@@ -15,6 +15,22 @@ namespace TESTE_GUNA.projeto.window
         public TelaCompras()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;//parar de travar a tela
+        }
+
+        private void TelaCompras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

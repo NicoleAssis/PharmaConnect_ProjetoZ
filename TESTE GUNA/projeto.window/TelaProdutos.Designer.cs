@@ -92,7 +92,7 @@
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
             this.txtPesquisa.BorderRadius = 20;
@@ -332,8 +332,8 @@
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._7_Sem_Título_20240714171925__1_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.txtPesquisa);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnIrParaCarrinho);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

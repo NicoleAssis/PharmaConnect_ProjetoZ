@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelAbrirTela = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // panelAbrirTela
-            // 
-            this.panelAbrirTela.BackColor = System.Drawing.Color.Gray;
-            this.panelAbrirTela.Location = new System.Drawing.Point(340, 75);
-            this.panelAbrirTela.Name = "panelAbrirTela";
-            this.panelAbrirTela.Size = new System.Drawing.Size(449, 558);
-            this.panelAbrirTela.TabIndex = 0;
             // 
             // Teste
             // 
@@ -48,7 +39,6 @@
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._7_Sem_Título_20240714171925__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
-            this.Controls.Add(this.panelAbrirTela);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Teste";
@@ -60,7 +50,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelAbrirTela;
     }
 }
