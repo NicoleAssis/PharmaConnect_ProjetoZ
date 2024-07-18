@@ -329,6 +329,12 @@
     <Compile Include="projeto.window\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaPagamento.Designer.cs">
+      <DependentUpon>TelaPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\TelaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -487,6 +493,9 @@
     <EmbeddedResource Include="projeto.window\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaPagamento.resx">
+      <DependentUpon>TelaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaProdutos.resx">
       <DependentUpon>TelaProdutos.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,6 +596,8 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\mensagem %281%29.png" />
+    <None Include="Resources\Rectangle 33.png" />
     <None Include="Resources\Sair %287%29.png" />
     <None Include="Resources\Sair %286%29.png" />
     <None Include="Resources\mensagem.png" />
@@ -649,6 +660,14 @@
     <None Include="Resources\Departamentos %282%29.png" />
     <None Include="Resources\Departamentos %284%29.png" />
     <None Include="Resources\8 Sem Título_20240717172458.jpg" />
+    <None Include="Resources\8 Sem Título_202407171724581.jpg" />
+    <None Include="Resources\Group 14.png" />
+    <None Include="Resources\Departamentos %284%291.png" />
+    <None Include="Resources\Departamentos %284%292.png" />
+    <None Include="Resources\Departamentos %284%293.png" />
+    <None Include="Resources\Departamentos %284%294.png" />
+    <None Include="Resources\8 Sem Título_202407171724582.jpg" />
+    <None Include="Resources\Departamentos %285%29.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

@@ -37,10 +37,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void TelaCompras_Load(object sender, EventArgs e)
         {
-            //criar uma tela antes do frete
-            TelaFrete tela = new TelaFrete();
-           PrintarTela(tela);
-            tela.BringToFront();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -51,6 +48,14 @@ namespace TESTE_GUNA.projeto.window
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnEfetuarCompra_Click(object sender, EventArgs e)
+        {
+            //criar uma tela antes do frete
+            TelaFrete tela = new TelaFrete();
+            PrintarTela(tela);
+            tela.BringToFront();
         }
     }
 }
