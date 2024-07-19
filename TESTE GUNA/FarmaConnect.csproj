@@ -305,6 +305,12 @@
     <Compile Include="projeto.window\TelaDepartamentos.Designer.cs">
       <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaFinalizarPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaFinalizarPagamento.Designer.cs">
+      <DependentUpon>TelaFinalizarPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\TelaFrete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +486,9 @@
     <EmbeddedResource Include="projeto.window\TelaDepartamentos.resx">
       <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaFinalizarPagamento.resx">
+      <DependentUpon>TelaFinalizarPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaFrete.resx">
       <DependentUpon>TelaFrete.cs</DependentUpon>
     </EmbeddedResource>
@@ -596,6 +605,9 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Sair %2811%29.png" />
+    <None Include="Resources\Sair %2810%29.png" />
+    <None Include="Resources\Sair %289%29.png" />
     <None Include="Resources\Sair %288%29.png" />
     <None Include="Resources\mensagem %281%29.png" />
     <None Include="Resources\Rectangle 33.png" />

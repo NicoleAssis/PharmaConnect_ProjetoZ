@@ -1333,6 +1333,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sair__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sair__2_ {
             get {
                 object obj = ResourceManager.GetObject("Sair (2)", resourceCulture);
@@ -1436,6 +1456,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Sair__8_ {
             get {
                 object obj = ResourceManager.GetObject("Sair (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

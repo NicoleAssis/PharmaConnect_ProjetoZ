@@ -72,9 +72,8 @@
             this.panelAbrirTela.Controls.Add(this.pictureBox2);
             this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAbrirTela.Location = new System.Drawing.Point(554, 0);
-            this.panelAbrirTela.MinimumSize = new System.Drawing.Size(528, 709);
             this.panelAbrirTela.Name = "panelAbrirTela";
-            this.panelAbrirTela.Size = new System.Drawing.Size(528, 709);
+            this.panelAbrirTela.Size = new System.Drawing.Size(496, 709);
             this.panelAbrirTela.TabIndex = 6;
             this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,7 +95,7 @@
             this.btnEfetuarCompra.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
             this.btnEfetuarCompra.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
             this.btnEfetuarCompra.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnEfetuarCompra.Location = new System.Drawing.Point(113, 564);
+            this.btnEfetuarCompra.Location = new System.Drawing.Point(97, 564);
             this.btnEfetuarCompra.Name = "btnEfetuarCompra";
             this.btnEfetuarCompra.Size = new System.Drawing.Size(303, 47);
             this.btnEfetuarCompra.TabIndex = 5;
@@ -109,7 +108,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::TESTE_GUNA.Properties.Resources.Group_14;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 76);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(459, 387);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -404,7 +403,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelAbrirTela;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
@@ -429,5 +427,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2GradientButton btnIrParaCarrinho;
+        public System.Windows.Forms.Panel panelAbrirTela;
     }
 }
