@@ -229,9 +229,6 @@
   <data name="aumentar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.window\img\aumentar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Design sem nome2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design sem nome2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconCredito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconCredito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,6 +247,9 @@
   <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="aumentar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.window\img\aumentar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="8 Sem Título_202407171724582" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8 Sem Título_202407171724582.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -258,6 +258,12 @@
   </data>
   <data name="7 Sem Título_20240714135017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7 Sem Título_20240714135017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sair (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sair (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gravando 2024-06-22 1655261" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gravando 2024-06-22 1655261.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8 Sem Título_202407171724581" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8 Sem Título_202407171724581.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,8 +298,8 @@
   <data name="adicionar (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adicionar (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7 Sem Título_20240714171925 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7 Sem Título_20240714171925 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Frame 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Design sem nome3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Design sem nome3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -318,9 +324,6 @@
   </data>
   <data name="Captura de tela 2024-07-05 193433" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2024-07-05 193433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Frame 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Frame 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6 Sem Título_20240710172213" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6 Sem Título_20240710172213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,11 +367,11 @@
   <data name="Captura de tela 2024-07-02 164547" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2024-07-02 164547.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sair (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sair (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Departamentos (4)4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Departamentos (4)4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7 Sem Título_20240714171925 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7 Sem Título_20240714171925 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.window\img\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -405,6 +408,9 @@
   </data>
   <data name="iconDesligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconDesligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anti-inflamatório" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anti-inflamatório.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconCelular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconCelular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -466,9 +472,6 @@
   <data name="iconMenos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.window\img\iconMenos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sair (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sair (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.window\img\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -520,9 +523,6 @@
   <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconTelefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.view\img\iconTelefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rectangle 33" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -541,11 +541,11 @@
   <data name="Departamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Departamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anti-inflamatório" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anti-inflamatório.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sair (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sair (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="aumentar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\projeto.window\img\aumentar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconTelefone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\projeto.view\img\iconTelefone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\IconLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -556,13 +556,16 @@
   <data name="iconSair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconSair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sair (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sair (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gravando 2024-06-22 1655261" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gravando 2024-06-22 1655261.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sair (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sair (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Departamentos (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Departamentos (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Design sem nome2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design sem nome2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sair (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sair (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

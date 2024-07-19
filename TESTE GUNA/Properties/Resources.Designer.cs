@@ -1433,6 +1433,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sair__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Sair (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seta_para_a_direita {
             get {
                 object obj = ResourceManager.GetObject("seta-para-a-direita", resourceCulture);

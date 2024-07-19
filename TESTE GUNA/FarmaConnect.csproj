@@ -596,6 +596,7 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Sair %288%29.png" />
     <None Include="Resources\mensagem %281%29.png" />
     <None Include="Resources\Rectangle 33.png" />
     <None Include="Resources\Sair %287%29.png" />
