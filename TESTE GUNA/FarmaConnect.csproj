@@ -197,12 +197,6 @@
     <Compile Include="projeto.view\FrmComprasConcluidas.Designer.cs">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="projeto.view\FrmConfirmandoPagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="projeto.view\FrmConfirmandoPagamento.Designer.cs">
-      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="projeto.view\FrmDepartamentoEscolhido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +275,12 @@
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\TelaConfirmandoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaConfirmandoPagamento.Designer.cs">
+      <DependentUpon>TelaConfirmandoPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\TelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +334,12 @@
     </Compile>
     <Compile Include="projeto.window\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projeto.window\TelaMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\TelaMessageBox.Designer.cs">
+      <DependentUpon>TelaMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="projeto.window\TelaPagamento.cs">
       <SubType>Form</SubType>
@@ -431,9 +437,6 @@
     <EmbeddedResource Include="projeto.view\FrmComprasConcluidas.resx">
       <DependentUpon>FrmComprasConcluidas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="projeto.view\FrmConfirmandoPagamento.resx">
-      <DependentUpon>FrmConfirmandoPagamento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmDepartamentoEscolhido.resx">
       <DependentUpon>FrmDepartamentoEscolhido.cs</DependentUpon>
     </EmbeddedResource>
@@ -473,6 +476,9 @@
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaConfirmandoPagamento.resx">
+      <DependentUpon>TelaConfirmandoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaCadastro.resx">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -501,6 +507,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\TelaMessageBox.resx">
+      <DependentUpon>TelaMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\TelaPagamento.resx">
       <DependentUpon>TelaPagamento.cs</DependentUpon>
@@ -687,6 +696,10 @@
     <None Include="Resources\8 Sem Título_202407171724583.jpg" />
     <None Include="Resources\Departamentos %286%29.png" />
     <None Include="Resources\Departamentos %287%29.png" />
+    <None Include="Resources\Gravando 2024-06-22 1655261.gif" />
+    <None Include="Resources\Gravando 2024-06-22 161553.gif" />
+    <None Include="Resources\Gravando 2024-06-22 1631082.gif" />
+    <None Include="Resources\Gravando-2024-06-22-163108-unscreen %281%29.gif" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

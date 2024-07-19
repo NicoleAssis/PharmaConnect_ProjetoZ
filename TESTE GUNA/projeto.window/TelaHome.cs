@@ -62,7 +62,7 @@ namespace TESTE_GUNA.projeto.window
 
         #region PrintarTela
 
-        private void PrintarTela(Form form)
+        public void PrintarTela(Form form)
         {
             if (this.panelAbrirTela.Controls.Count > 0)
                 this.panelAbrirTela.Controls.RemoveAt(0);
@@ -73,6 +73,13 @@ namespace TESTE_GUNA.projeto.window
             this.panelAbrirTela.Controls.Add(form);
             this.panelAbrirTela.Tag = form;
             form.Show();
+        }
+
+        public void PrintarTelaForaDaHome(Form form)
+        {
+            //Form form = new Form();
+            PrintarTela(form);
+            form.BringToFront();
         }
 
         #endregion

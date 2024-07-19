@@ -452,7 +452,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBarraTelaCheia;
         private Guna.UI2.WinForms.Guna2Button btnBarraMeno;
         private Guna.UI2.WinForms.Guna2Button btnBarraX;
-        private Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
         private Guna.UI2.WinForms.Guna2Panel SideBar;
         private Guna.UI2.WinForms.Guna2Button btnSideBarMenu;
         private Guna.UI2.WinForms.Guna2Button btnSideBarSair;
@@ -466,5 +465,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnCompreAgora;
         private Guna.UI2.WinForms.Guna2Button btnSideBarDepartamentos;
+        public Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
     }
 }

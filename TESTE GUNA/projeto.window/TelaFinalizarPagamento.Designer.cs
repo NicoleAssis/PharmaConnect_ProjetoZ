@@ -74,6 +74,7 @@
             this.btnContinuar.Size = new System.Drawing.Size(349, 45);
             this.btnContinuar.TabIndex = 3;
             this.btnContinuar.Text = "FINALIZAR A COMPRA";
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // panel2
             // 
