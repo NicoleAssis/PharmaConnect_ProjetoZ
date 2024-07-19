@@ -243,6 +243,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8_Sem_Título_202407171724583 {
+            get {
+                object obj = ResourceManager.GetObject("8 Sem Título_202407171724583", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adicionar__3_ {
             get {
                 object obj = ResourceManager.GetObject("adicionar (3)", resourceCulture);
@@ -506,6 +516,26 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Departamentos__5_ {
             get {
                 object obj = ResourceManager.GetObject("Departamentos (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Departamentos__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Departamentos (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Departamentos__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Departamentos (7)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1126,6 +1156,36 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap mensagem__1_ {
             get {
                 object obj = ResourceManager.GetObject("mensagem (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mensagem__2_ {
+            get {
+                object obj = ResourceManager.GetObject("mensagem (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mensagem__3_ {
+            get {
+                object obj = ResourceManager.GetObject("mensagem (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mensagem__4_ {
+            get {
+                object obj = ResourceManager.GetObject("mensagem (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

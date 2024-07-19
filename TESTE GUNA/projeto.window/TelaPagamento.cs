@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -43,7 +44,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void checkBoxPIX_CheckedChanged(object sender, EventArgs e)
         {
-            if(panelPagamentoCartao.Visible = true)
+            if (panelPagamentoCartao.Visible = true)
             {
                 panelPagamentoCartao.Visible = false;
                 txtAno.Text = "";
@@ -87,6 +88,11 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
+        }
+
+        private void btnCopiar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

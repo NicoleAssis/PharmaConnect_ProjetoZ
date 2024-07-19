@@ -85,7 +85,7 @@
             this.guna2Panel2.BorderThickness = 3;
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(40, 61);
+            this.guna2Panel2.Location = new System.Drawing.Point(40, 54);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(417, 50);
             this.guna2Panel2.TabIndex = 2;
@@ -104,11 +104,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.mensagem__1_;
+            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.mensagem__2_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(17, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(462, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(462, 43);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -449,6 +449,7 @@
             this.btnCopiar.Size = new System.Drawing.Size(88, 33);
             this.btnCopiar.TabIndex = 114;
             this.btnCopiar.Text = "COPIAR";
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
             // label5
             // 

@@ -605,6 +605,9 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\mensagem %282%29.png" />
+    <None Include="Resources\mensagem %283%29.png" />
+    <None Include="Resources\mensagem %284%29.png" />
     <None Include="Resources\Sair %2811%29.png" />
     <None Include="Resources\Sair %2810%29.png" />
     <None Include="Resources\Sair %289%29.png" />
@@ -681,6 +684,9 @@
     <None Include="Resources\Departamentos %284%294.png" />
     <None Include="Resources\8 Sem Título_202407171724582.jpg" />
     <None Include="Resources\Departamentos %285%29.png" />
+    <None Include="Resources\8 Sem Título_202407171724583.jpg" />
+    <None Include="Resources\Departamentos %286%29.png" />
+    <None Include="Resources\Departamentos %287%29.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />
