@@ -12,10 +12,13 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaFrete : Form
     {
-        public TelaFrete()
+        //printar a proxima tela
+        private TelaCompras _telaCompras;
+        public TelaFrete(TelaCompras telaCompras)
         {
             InitializeComponent();
-            this.DoubleBuffered = true;//parar de travar a tela
+            this.DoubleBuffered = true; // parar de travar a tela
+            _telaCompras = telaCompras;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,6 +44,11 @@ namespace TESTE_GUNA.projeto.window
         private void TelaFrete_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            _telaCompras.PrintarTelaPagamento();
         }
     }
 }

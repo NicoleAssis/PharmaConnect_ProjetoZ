@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TESTE_GUNA.projeto.view
+namespace TESTE_GUNA.projeto.window
 {
-    public partial class FrmConfirmandoPagamento : Form
+    public partial class TelaConfirmandoPagamento : Form
     {
-        public FrmConfirmandoPagamento()
+        public TelaConfirmandoPagamento()
         {
             InitializeComponent();
         }
@@ -31,9 +31,9 @@ namespace TESTE_GUNA.projeto.view
                 timer1.Stop();
                 
 
-                FrmMessageSucess mensagemSucesso = new FrmMessageSucess();
-                mensagemSucesso.MensagemDeSucesso("COMPRA EFETUADA COM SUCESSO!");
-                mensagemSucesso.ShowDialog();
+               // FrmMessageSucess mensagemSucesso = new FrmMessageSucess();
+            //    mensagemSucesso.MensagemDeSucesso("COMPRA EFETUADA COM SUCESSO!");
+               // mensagemSucesso.ShowDialog();
 
                 this.Close();
             }
@@ -55,6 +55,11 @@ namespace TESTE_GUNA.projeto.view
         }
 
         private void progressBar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

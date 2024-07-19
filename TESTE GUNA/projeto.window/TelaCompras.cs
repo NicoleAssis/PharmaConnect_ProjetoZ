@@ -20,7 +20,7 @@ namespace TESTE_GUNA.projeto.window
 
         #region PrintarTela
 
-        private void PrintarTela(Form form)
+        public void PrintarTela(Form form)
         {
             if (this.panelAbrirTela.Controls.Count > 0)
                 this.panelAbrirTela.Controls.RemoveAt(0);
@@ -33,7 +33,21 @@ namespace TESTE_GUNA.projeto.window
             form.Show();
         }
 
+        public void PrintarTelaPagamento()
+        {
+            TelaPagamento telaPagamento = new TelaPagamento(this);
+            PrintarTela(telaPagamento);
+            telaPagamento.BringToFront();
+        }
+        public void PrintarTelaFinalizarPagamento()
+        {
+            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this);
+            PrintarTela(tela);
+            tela.BringToFront();
+        }
+
         #endregion
+
 
         private void TelaCompras_Load(object sender, EventArgs e)
         {
@@ -53,7 +67,7 @@ namespace TESTE_GUNA.projeto.window
         private void btnEfetuarCompra_Click(object sender, EventArgs e)
         {
             //criar uma tela antes do frete
-            TelaFrete tela = new TelaFrete();
+            TelaFrete tela = new TelaFrete(this);
             PrintarTela(tela);
             tela.BringToFront();
         }
