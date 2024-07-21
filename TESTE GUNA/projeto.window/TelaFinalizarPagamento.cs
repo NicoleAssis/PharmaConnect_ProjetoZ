@@ -17,11 +17,14 @@ namespace TESTE_GUNA.projeto.window
     {
         //printar a proxima tela
         private TelaCompras _telaCompras;
-        public TelaFinalizarPagamento(TelaCompras telaCompras)
+        private TelaHome telaHome;
+
+        public TelaFinalizarPagamento(TelaCompras telaCompras, TelaHome home)
         {
             InitializeComponent();
             this.DoubleBuffered = true; // parar de travar a tela
             _telaCompras = telaCompras;
+            telaHome = home;
         }
 
 
@@ -39,17 +42,14 @@ namespace TESTE_GUNA.projeto.window
 
             if (messageBox.btnSimClick == true)
             {
-                this.Close();
-                TelaConfirmandoPagamento tela = new TelaConfirmandoPagamento();
-                tela.ShowDialog();
-                tela.BringToFront();
+                TelaConfirmandoPagamento telaConfirmando = new TelaConfirmandoPagamento(this.telaHome);
+                telaConfirmando.ShowDialog();
             }
             else if (messageBox.btnNaoClick == true)
             {
-                //se nao quer efetuar o pagamento
                 this.Close();
-
-
+                TelaCompras telaCompras = new TelaCompras(this.telaHome);
+                this.telaHome.PrintarTelaForaDaHome(telaCompras);
             }
             else
             {

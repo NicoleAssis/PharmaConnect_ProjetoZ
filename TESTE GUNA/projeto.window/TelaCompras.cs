@@ -44,7 +44,7 @@ namespace TESTE_GUNA.projeto.window
         }
         public void PrintarTelaFinalizarPagamento()
         {
-            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this);
+            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this, this.telaHome);
             PrintarTela(tela);
             tela.BringToFront();
         }

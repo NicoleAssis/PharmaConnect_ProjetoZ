@@ -197,6 +197,13 @@ namespace TESTE_GUNA.projeto.window
             PrintarTela(tela);
             tela.BringToFront();
         }
+
+        private void btnSideBarPerfil_Click(object sender, EventArgs e)
+        {
+            TelaPerfil tela = new TelaPerfil(this);
+            PrintarTela(tela);
+            tela.BringToFront();
+        }
     }
 
 }

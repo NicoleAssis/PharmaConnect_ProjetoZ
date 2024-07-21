@@ -13,10 +13,15 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaConfirmandoPagamento : Form
     {
-        public TelaConfirmandoPagamento()
+        private TelaHome telaHome;
+
+        public TelaConfirmandoPagamento(TelaHome home)
         {
             InitializeComponent();
+            this.telaHome = home;
+            this.DoubleBuffered = true;//parar de travar a tela
         }
+
 
         private void FrmConfirmandoPagamento_Load(object sender, EventArgs e)
         {
@@ -29,13 +34,13 @@ namespace TESTE_GUNA.projeto.window
             if (progressBar.Value == 100)
             {
                 timer1.Stop();
-                
 
-               // FrmMessageSucess mensagemSucesso = new FrmMessageSucess();
-            //    mensagemSucesso.MensagemDeSucesso("COMPRA EFETUADA COM SUCESSO!");
-               // mensagemSucesso.ShowDialog();
+                TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
+                messageBox.Mensagem("COMPRA FEITA COM SUCESSO!");
+                messageBox.ShowDialog();
 
-
+                TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
+                this.telaHome.PrintarTelaForaDaHome(telaProdutos);
 
                 this.Close();
             }

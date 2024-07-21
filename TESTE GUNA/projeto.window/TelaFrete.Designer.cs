@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProcurarCEP = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -189,18 +189,18 @@
             this.guna2TextBox1.TabIndex = 5;
             this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
-            // maskedTextBox1
+            // txtCEP
             // 
-            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.maskedTextBox1.BackColor = System.Drawing.Color.White;
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 5);
-            this.maskedTextBox1.Mask = "00000-000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(115, 27);
-            this.maskedTextBox1.TabIndex = 7;
+            this.txtCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCEP.BackColor = System.Drawing.Color.White;
+            this.txtCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCEP.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.txtCEP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtCEP.Location = new System.Drawing.Point(15, 5);
+            this.txtCEP.Mask = "00000-000";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(115, 27);
+            this.txtCEP.TabIndex = 7;
             // 
             // label3
             // 
@@ -221,7 +221,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 3;
-            this.guna2Panel1.Controls.Add(this.maskedTextBox1);
+            this.guna2Panel1.Controls.Add(this.txtCEP);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(77, 149);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -400,24 +400,24 @@
             this.guna2TextBox5.Size = new System.Drawing.Size(339, 37);
             this.guna2TextBox5.TabIndex = 17;
             // 
-            // guna2Button2
+            // btnProcurarCEP
             // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(143)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.5F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = global::TESTE_GUNA.Properties.Resources.Perfil__2_1;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(238, 149);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(178, 37);
-            this.guna2Button2.TabIndex = 19;
-            this.guna2Button2.Text = "Procurar CEP";
+            this.btnProcurarCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProcurarCEP.BorderRadius = 15;
+            this.btnProcurarCEP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProcurarCEP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProcurarCEP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProcurarCEP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProcurarCEP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(143)))));
+            this.btnProcurarCEP.Font = new System.Drawing.Font("Segoe UI Semibold", 13.5F, System.Drawing.FontStyle.Bold);
+            this.btnProcurarCEP.ForeColor = System.Drawing.Color.White;
+            this.btnProcurarCEP.Image = global::TESTE_GUNA.Properties.Resources.Perfil__2_1;
+            this.btnProcurarCEP.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnProcurarCEP.Location = new System.Drawing.Point(238, 149);
+            this.btnProcurarCEP.Name = "btnProcurarCEP";
+            this.btnProcurarCEP.Size = new System.Drawing.Size(178, 37);
+            this.btnProcurarCEP.TabIndex = 19;
+            this.btnProcurarCEP.Text = "Procurar CEP";
             // 
             // panel1
             // 
@@ -464,7 +464,7 @@
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._8_Sem_Título_20240717172458;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(496, 709);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.btnProcurarCEP);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2TextBox5);
             this.Controls.Add(this.label6);
@@ -506,7 +506,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
@@ -517,7 +517,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnProcurarCEP;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.PictureBox pictureBox2;

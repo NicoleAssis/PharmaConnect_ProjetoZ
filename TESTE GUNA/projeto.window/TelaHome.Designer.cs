@@ -311,6 +311,7 @@
             this.btnSideBarPerfil.TabIndex = 6;
             this.btnSideBarPerfil.Text = "     Perfil";
             this.btnSideBarPerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarPerfil.Click += new System.EventHandler(this.btnSideBarPerfil_Click);
             // 
             // btnSideBarCarrinho
             // 
