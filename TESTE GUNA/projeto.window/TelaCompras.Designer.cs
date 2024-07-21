@@ -33,7 +33,7 @@
             this.btnEfetuarCompra = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnContinuarComprando = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnIrParaCarrinho);
+            this.panel2.Controls.Add(this.btnContinuarComprando);
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.flowLayoutPanel1);
@@ -130,30 +130,31 @@
             this.panel2.Size = new System.Drawing.Size(554, 709);
             this.panel2.TabIndex = 7;
             // 
-            // btnIrParaCarrinho
+            // btnContinuarComprando
             // 
-            this.btnIrParaCarrinho.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnIrParaCarrinho.BackColor = System.Drawing.Color.Transparent;
-            this.btnIrParaCarrinho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIrParaCarrinho.BorderRadius = 20;
-            this.btnIrParaCarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIrParaCarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIrParaCarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIrParaCarrinho.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
-            this.btnIrParaCarrinho.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
-            this.btnIrParaCarrinho.Font = new System.Drawing.Font("Segoe UI", 15.5F, System.Drawing.FontStyle.Bold);
-            this.btnIrParaCarrinho.ForeColor = System.Drawing.Color.White;
-            this.btnIrParaCarrinho.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
-            this.btnIrParaCarrinho.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
-            this.btnIrParaCarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_1;
-            this.btnIrParaCarrinho.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnIrParaCarrinho.Location = new System.Drawing.Point(12, 650);
-            this.btnIrParaCarrinho.Name = "btnIrParaCarrinho";
-            this.btnIrParaCarrinho.Size = new System.Drawing.Size(329, 47);
-            this.btnIrParaCarrinho.TabIndex = 4;
-            this.btnIrParaCarrinho.Text = " CONTINUAR COMPRANDO";
+            this.btnContinuarComprando.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnContinuarComprando.BackColor = System.Drawing.Color.Transparent;
+            this.btnContinuarComprando.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnContinuarComprando.BorderRadius = 20;
+            this.btnContinuarComprando.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnContinuarComprando.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnContinuarComprando.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnContinuarComprando.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnContinuarComprando.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnContinuarComprando.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnContinuarComprando.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnContinuarComprando.Font = new System.Drawing.Font("Segoe UI", 15.5F, System.Drawing.FontStyle.Bold);
+            this.btnContinuarComprando.ForeColor = System.Drawing.Color.White;
+            this.btnContinuarComprando.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(140)))));
+            this.btnContinuarComprando.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(89)))), ((int)(((byte)(241)))));
+            this.btnContinuarComprando.Image = global::TESTE_GUNA.Properties.Resources.Sair__2_1;
+            this.btnContinuarComprando.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnContinuarComprando.Location = new System.Drawing.Point(12, 650);
+            this.btnContinuarComprando.Name = "btnContinuarComprando";
+            this.btnContinuarComprando.Size = new System.Drawing.Size(329, 47);
+            this.btnContinuarComprando.TabIndex = 4;
+            this.btnContinuarComprando.Text = " CONTINUAR COMPRANDO";
+            this.btnContinuarComprando.Click += new System.EventHandler(this.btnIrParaCarrinho_Click);
             // 
             // guna2Panel1
             // 
@@ -426,7 +427,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2GradientButton btnIrParaCarrinho;
+        private Guna.UI2.WinForms.Guna2GradientButton btnContinuarComprando;
         public System.Windows.Forms.Panel panelAbrirTela;
     }
 }

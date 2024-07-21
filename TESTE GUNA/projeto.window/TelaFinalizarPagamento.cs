@@ -32,7 +32,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-           /* //pergunta se deseja efetuar o pagamento ou nao
+            //pergunta se deseja efetuar o pagamento ou nao
             TelaMessageBox messageBox = new TelaMessageBox();
             messageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
             messageBox.ShowDialog();
@@ -55,7 +55,7 @@ namespace TESTE_GUNA.projeto.window
             {
                 messageBox.Mensagem("Selecione SIM ou NAO");
             }
-           */
+           
         }
     }
 }

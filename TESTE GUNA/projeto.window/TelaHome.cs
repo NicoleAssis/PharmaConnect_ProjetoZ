@@ -77,7 +77,6 @@ namespace TESTE_GUNA.projeto.window
 
         public void PrintarTelaForaDaHome(Form form)
         {
-            //Form form = new Form();
             PrintarTela(form);
             form.BringToFront();
         }
@@ -108,7 +107,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarProdutos_Click(object sender, EventArgs e)
         {
-            TelaProdutos tela = new TelaProdutos();
+            TelaProdutos tela = new TelaProdutos(this);
             PrintarTela(tela);
             tela.BringToFront();
         }
@@ -180,21 +179,21 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnCompreAgora_Click(object sender, EventArgs e)
         {
-            TelaProdutos tela = new TelaProdutos();
+            TelaProdutos tela = new TelaProdutos(this);
             PrintarTela(tela);
             tela.BringToFront();
         }
 
         private void btnSideBarDepartamentos_Click(object sender, EventArgs e)
         {
-            TelaDepartamentos tela = new TelaDepartamentos();
+            TelaDepartamentos tela = new TelaDepartamentos(this);
             PrintarTela(tela);
             tela.BringToFront();
         }
 
         private void btnSideBarCarrinho_Click(object sender, EventArgs e)
         {
-            TelaCompras tela = new TelaCompras();
+            TelaCompras tela = new TelaCompras(this);
             PrintarTela(tela);
             tela.BringToFront();
         }

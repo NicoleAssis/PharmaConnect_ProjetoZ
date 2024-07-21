@@ -35,6 +35,8 @@ namespace TESTE_GUNA.projeto.window
             //    mensagemSucesso.MensagemDeSucesso("COMPRA EFETUADA COM SUCESSO!");
                // mensagemSucesso.ShowDialog();
 
+
+
                 this.Close();
             }
             else

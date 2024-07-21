@@ -12,9 +12,12 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaCompras : Form
     {
-        public TelaCompras()
+        private TelaHome telaHome;
+
+        public TelaCompras(TelaHome home)
         {
             InitializeComponent();
+            this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
 
@@ -70,6 +73,13 @@ namespace TESTE_GUNA.projeto.window
             TelaFrete tela = new TelaFrete(this);
             PrintarTela(tela);
             tela.BringToFront();
+        }
+
+        //continuar comprando
+        private void btnIrParaCarrinho_Click(object sender, EventArgs e)
+        {
+            TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
+            this.telaHome.PrintarTelaForaDaHome(telaProdutos);
         }
     }
 }

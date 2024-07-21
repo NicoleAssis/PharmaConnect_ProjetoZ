@@ -12,10 +12,12 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaDepartamentos : Form
     {
-        public TelaDepartamentos()
+        private TelaHome telaHome;
+
+        public TelaDepartamentos(TelaHome home)
         {
             InitializeComponent();
-
+            this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
 
