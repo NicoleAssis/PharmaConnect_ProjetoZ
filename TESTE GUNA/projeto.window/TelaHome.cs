@@ -81,6 +81,12 @@ namespace TESTE_GUNA.projeto.window
             form.BringToFront();
         }
 
+        public void ReiniciarHome()
+        {
+            if (this.panelAbrirTela.Controls.Count > 0)
+                this.panelAbrirTela.Controls.RemoveAt(0);
+        }
+
         #endregion
 
         private void label2_Click(object sender, EventArgs e)

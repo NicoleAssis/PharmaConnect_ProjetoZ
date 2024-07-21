@@ -28,7 +28,33 @@ namespace TESTE_GUNA.projeto.window
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            //pergunta se deseja efetuar o pagamento ou nao
+            TelaMessageBox messageBox = new TelaMessageBox();
+            messageBox.RetornaSimNao("DESEJA SALVAR AS ALTERAÇÕES?");
+            messageBox.ShowDialog();
 
+            if (messageBox.btnSimClick == true)
+            {
+                TelaMessageBoxSucess telaMessageBoxSucess = new TelaMessageBoxSucess();
+                telaMessageBoxSucess.Mensagem("ALTERAÇÕES SALVAS!");
+                telaMessageBoxSucess.ShowDialog();
+            }
+            else if (messageBox.btnNaoClick == true)
+            {
+                this.Close();
+                TelaPerfil telaPerfil = new TelaPerfil(this.telaHome);
+                this.telaHome.PrintarTelaForaDaHome(telaPerfil);
+            }
+            else
+            {
+                messageBox.Mensagem("Selecione SIM ou NAO");
+            }
+        }
+
+        private void btnAlterarSenha_Click(object sender, EventArgs e)
+        {
+            TelaAlterarSenha alterarSenha = new TelaAlterarSenha();
+            alterarSenha.ShowDialog();
         }
     }
 }

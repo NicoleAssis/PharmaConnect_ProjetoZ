@@ -21,5 +21,11 @@ namespace TESTE_GUNA.projeto.window
         {
 
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            //button fechar a tela de pagamento
+            this.Close();
+        }
     }
 }

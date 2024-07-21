@@ -39,8 +39,7 @@ namespace TESTE_GUNA.projeto.window
                 messageBox.Mensagem("COMPRA FEITA COM SUCESSO!");
                 messageBox.ShowDialog();
 
-                TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
-                this.telaHome.PrintarTelaForaDaHome(telaProdutos);
+                this.telaHome.ReiniciarHome();
 
                 this.Close();
             }

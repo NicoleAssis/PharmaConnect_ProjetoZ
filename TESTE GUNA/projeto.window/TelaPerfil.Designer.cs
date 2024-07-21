@@ -386,6 +386,7 @@
             this.btnAlterarSenha.Size = new System.Drawing.Size(184, 40);
             this.btnAlterarSenha.TabIndex = 64;
             this.btnAlterarSenha.Text = "Alterar Senha";
+            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // txtEmail
             // 

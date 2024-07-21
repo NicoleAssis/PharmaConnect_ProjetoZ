@@ -30,7 +30,6 @@
         {
             this.btnX = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMensagem = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBoxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.txtConfirmeSenha = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,6 +39,7 @@
             this.txtSenhaAtual = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
+            this.txtMensagem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.btnX.Text = "x";
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // panel1
             // 
@@ -74,21 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 424);
             this.panel1.TabIndex = 28;
-            // 
-            // txtMensagem
-            // 
-            this.txtMensagem.AutoSize = true;
-            this.txtMensagem.BackColor = System.Drawing.Color.Transparent;
-            this.txtMensagem.Font = new System.Drawing.Font("Century Gothic", 15.5F, System.Drawing.FontStyle.Bold);
-            this.txtMensagem.ForeColor = System.Drawing.Color.White;
-            this.txtMensagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtMensagem.Location = new System.Drawing.Point(95, 11);
-            this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(207, 25);
-            this.txtMensagem.TabIndex = 24;
-            this.txtMensagem.Text = "REDEFINIR A SENHA";
-            this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtMensagem.Click += new System.EventHandler(this.txtMensagem_Click);
             // 
             // label3
             // 
@@ -248,6 +234,21 @@
             this.btnAlterarSenha.TabIndex = 100;
             this.btnAlterarSenha.Text = "ALTERAR SENHA";
             // 
+            // txtMensagem
+            // 
+            this.txtMensagem.AutoSize = true;
+            this.txtMensagem.BackColor = System.Drawing.Color.Transparent;
+            this.txtMensagem.Font = new System.Drawing.Font("Century Gothic", 15.5F, System.Drawing.FontStyle.Bold);
+            this.txtMensagem.ForeColor = System.Drawing.Color.White;
+            this.txtMensagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtMensagem.Location = new System.Drawing.Point(95, 11);
+            this.txtMensagem.Name = "txtMensagem";
+            this.txtMensagem.Size = new System.Drawing.Size(207, 25);
+            this.txtMensagem.TabIndex = 24;
+            this.txtMensagem.Text = "REDEFINIR A SENHA";
+            this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtMensagem.Click += new System.EventHandler(this.txtMensagem_Click);
+            // 
             // TelaAlterarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +260,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaAlterarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaAlterarSenha";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
