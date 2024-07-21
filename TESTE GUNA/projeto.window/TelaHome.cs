@@ -194,7 +194,7 @@ namespace TESTE_GUNA.projeto.window
         private void btnSideBarCarrinho_Click(object sender, EventArgs e)
         {
             TelaCompras tela = new TelaCompras(this);
-            PrintarTela(tela);
+            PrintarTela(tela); 
             tela.BringToFront();
         }
 
