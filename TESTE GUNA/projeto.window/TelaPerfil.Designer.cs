@@ -100,6 +100,7 @@
             this.txtNum.SelectedText = "";
             this.txtNum.Size = new System.Drawing.Size(391, 48);
             this.txtNum.TabIndex = 79;
+            this.txtNum.Visible = false;
             // 
             // label11
             // 
@@ -113,6 +114,7 @@
             this.label11.Size = new System.Drawing.Size(100, 30);
             this.label11.TabIndex = 78;
             this.label11.Text = "Número:";
+            this.label11.Visible = false;
             // 
             // txtComplemento
             // 
@@ -140,6 +142,7 @@
             this.txtComplemento.SelectedText = "";
             this.txtComplemento.Size = new System.Drawing.Size(391, 40);
             this.txtComplemento.TabIndex = 77;
+            this.txtComplemento.Visible = false;
             // 
             // label10
             // 
@@ -153,6 +156,7 @@
             this.label10.Size = new System.Drawing.Size(158, 30);
             this.label10.TabIndex = 76;
             this.label10.Text = "Complemento:";
+            this.label10.Visible = false;
             // 
             // label9
             // 
@@ -166,6 +170,7 @@
             this.label9.Size = new System.Drawing.Size(56, 30);
             this.label9.TabIndex = 75;
             this.label9.Text = "CEP:";
+            this.label9.Visible = false;
             // 
             // txtEstado
             // 
@@ -193,6 +198,7 @@
             this.txtEstado.SelectedText = "";
             this.txtEstado.Size = new System.Drawing.Size(391, 40);
             this.txtEstado.TabIndex = 74;
+            this.txtEstado.Visible = false;
             // 
             // label8
             // 
@@ -206,6 +212,7 @@
             this.label8.Size = new System.Drawing.Size(84, 30);
             this.label8.TabIndex = 73;
             this.label8.Text = "Estado:";
+            this.label8.Visible = false;
             // 
             // txtCidade
             // 
@@ -233,6 +240,7 @@
             this.txtCidade.SelectedText = "";
             this.txtCidade.Size = new System.Drawing.Size(391, 40);
             this.txtCidade.TabIndex = 72;
+            this.txtCidade.Visible = false;
             // 
             // label7
             // 
@@ -246,6 +254,7 @@
             this.label7.Size = new System.Drawing.Size(86, 30);
             this.label7.TabIndex = 71;
             this.label7.Text = "Cidade:";
+            this.label7.Visible = false;
             // 
             // txtEndereco
             // 
@@ -273,6 +282,7 @@
             this.txtEndereco.SelectedText = "";
             this.txtEndereco.Size = new System.Drawing.Size(391, 40);
             this.txtEndereco.TabIndex = 70;
+            this.txtEndereco.Visible = false;
             // 
             // label6
             // 
@@ -286,6 +296,7 @@
             this.label6.Size = new System.Drawing.Size(109, 30);
             this.label6.TabIndex = 69;
             this.label6.Text = "Endereço:";
+            this.label6.Visible = false;
             // 
             // txtSenha
             // 
@@ -354,6 +365,7 @@
             this.txtBairro.SelectedText = "";
             this.txtBairro.Size = new System.Drawing.Size(391, 40);
             this.txtBairro.TabIndex = 66;
+            this.txtBairro.Visible = false;
             // 
             // label4
             // 
@@ -367,6 +379,7 @@
             this.label4.Size = new System.Drawing.Size(78, 30);
             this.label4.TabIndex = 65;
             this.label4.Text = "Bairro:";
+            this.label4.Visible = false;
             // 
             // btnAlterarSenha
             // 
@@ -480,6 +493,7 @@
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(128, 26);
             this.txtCEP.TabIndex = 7;
+            this.txtCEP.Visible = false;
             // 
             // guna2Button2
             // 
@@ -500,6 +514,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(184, 40);
             this.guna2Button2.TabIndex = 82;
             this.guna2Button2.Text = "Procurar CEP";
+            this.guna2Button2.Visible = false;
             // 
             // guna2Panel1
             // 
@@ -514,6 +529,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(159, 37);
             this.guna2Panel1.TabIndex = 81;
+            this.guna2Panel1.Visible = false;
             // 
             // pictureBox2
             // 

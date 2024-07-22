@@ -70,7 +70,11 @@ namespace TESTE_GUNA.projeto.window
         private void btnEfetuarCompra_Click(object sender, EventArgs e)
         {
             //criar uma tela antes do frete
-            TelaFrete tela = new TelaFrete(this);
+            // TelaFrete tela = new TelaFrete(this);
+            //  PrintarTela(tela);
+            //tela.BringToFront();
+
+            TelaPagamento tela = new TelaPagamento(this);
             PrintarTela(tela);
             tela.BringToFront();
         }

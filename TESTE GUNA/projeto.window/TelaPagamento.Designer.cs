@@ -30,7 +30,6 @@
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnContinuar = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,7 +61,6 @@
             this.checkBoxPIX = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -85,7 +83,7 @@
             this.guna2Panel2.BorderThickness = 3;
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(40, 54);
+            this.guna2Panel2.Location = new System.Drawing.Point(40, 35);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(417, 50);
             this.guna2Panel2.TabIndex = 2;
@@ -101,22 +99,10 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.mensagem__2_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(462, 43);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.guna2Panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -641,7 +627,6 @@
             this.Load += new System.EventHandler(this.TelaPagamento_Load);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -665,7 +650,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnContinuar;
         private System.Windows.Forms.Panel panel2;
