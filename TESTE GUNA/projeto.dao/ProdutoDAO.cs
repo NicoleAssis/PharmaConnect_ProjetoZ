@@ -201,8 +201,54 @@ namespace TESTE_GUNA.projeto.dao
         //    }
         //}
         //#endregion
-        #region MétodoLIstarProdutoPorNome
-        public DataTable LIstarProdutosPorNome(string nome)
+        #region TesteTelaVendas
+        public DataTable TesteTelaVendas(string nome)
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable DataGridViewVendas = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"select  id_produto as 'ID Produto' ,nome_produto 'Nome Produto', 
+                                        desc_produto 'Descrição', 
+                                        preco_produto 'Preço', qtd_estoque 'Qtd Estoque', 
+                                        departamento 'Departamentos'  from tb_produto where nome_produto like @nome_produto";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome_produto", nome);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(DataGridViewVendas);//preencher
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return DataGridViewVendas;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+
+
+        }
+
+        #endregion
+
+
+        #region TesteTelaProdutos
+        public DataTable TesteTelaProdutos(string nome)
         {
             try
             {

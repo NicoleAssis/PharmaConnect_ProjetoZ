@@ -169,5 +169,12 @@ namespace TESTE_GUNA.projeto.window
             PrintarTela(tela);
             tela.BringToFront();
         }
+
+        private void btnSideBarProdutos_Click(object sender, EventArgs e)
+        {
+            AdmTelaProdutos tela = new AdmTelaProdutos(this);
+            PrintarTela(tela);
+            tela.BringToFront();
+        }
     }
 }

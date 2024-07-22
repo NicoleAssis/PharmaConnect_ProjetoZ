@@ -281,6 +281,12 @@
     <Compile Include="projeto.window\AdmTelaHome.Designer.cs">
       <DependentUpon>AdmTelaHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\AdmTelaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\AdmTelaProdutos.Designer.cs">
+      <DependentUpon>AdmTelaProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\AdmTelaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -509,6 +515,9 @@
     <EmbeddedResource Include="projeto.window\AdmTelaHome.resx">
       <DependentUpon>AdmTelaHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\AdmTelaProdutos.resx">
+      <DependentUpon>AdmTelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaVendas.resx">
       <DependentUpon>AdmTelaVendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,6 +668,8 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Produtos %288%29.png" />
+    <None Include="Resources\Produtos %287%29.png" />
     <None Include="Resources\Produtos %286%29.png" />
     <None Include="Resources\Produtos %284%29.png" />
     <None Include="Resources\Produtos %281%29.png" />
@@ -758,6 +769,8 @@
     <None Include="Resources\ADMINISTRADOR PHARMACONNECT.png" />
     <None Include="Resources\7 Sem Título_20240714171925 %281%298.jpg" />
     <None Include="Resources\Departamentos %2810%29.png" />
+    <None Include="Resources\7 Sem Título_20240714171925 %281%299.jpg" />
+    <None Include="Resources\Departamentos %2811%29.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

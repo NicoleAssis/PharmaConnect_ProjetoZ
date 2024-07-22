@@ -202,11 +202,14 @@
   <data name="Suplementos e vitaminas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Suplementos e vitaminas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7 Sem Título_20240714171925 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7 Sem Título_20240714171925 (1)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ginecologia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ginecologia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QRcodePIX" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\QRcodePIX.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7 Sem Título_20240714171925 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7 Sem Título_20240714171925 (1)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconAlterarProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconAlterarProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,6 +262,9 @@
   <data name="dermatológicos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dermatológicos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Produtos (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Produtos (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconPix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\iconPix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -283,8 +289,8 @@
   <data name="Group 8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Departamentos (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Departamentos (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Departamentos (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Departamentos (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8 Sem Título_20240717172458" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8 Sem Título_20240717172458.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -312,6 +318,9 @@
   </data>
   <data name="Design sem nome3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Design sem nome3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Departamentos (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Departamentos (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PHARMACONNECT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.window\img\PHARMACONNECT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -493,6 +502,9 @@
   <data name="Analgésicos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Analgésicos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="7 Sem Título_20240714171925 (1)9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7 Sem Título_20240714171925 (1)9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sair (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sair (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -513,9 +525,6 @@
   </data>
   <data name="Gravando 2024-06-22 1615533" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gravando 2024-06-22 1615533.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ginecologia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ginecologia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="7 Sem Título_20240714171925 (1)5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7 Sem Título_20240714171925 (1)5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -570,6 +579,9 @@
   </data>
   <data name="x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Departamentos (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Departamentos (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagemProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\projeto.view\img\imagemProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -643,7 +655,7 @@
   <data name="Gravando 2024-06-22 1655261" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gravando 2024-06-22 1655261.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Departamentos (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Departamentos (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Produtos (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Produtos (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

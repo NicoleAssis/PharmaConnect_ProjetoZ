@@ -162,6 +162,7 @@
             this.btnSideBarProdutos.TabIndex = 10;
             this.btnSideBarProdutos.Text = "     Produtos";
             this.btnSideBarProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarProdutos.Click += new System.EventHandler(this.btnSideBarProdutos_Click);
             // 
             // btnSideBarMenu
             // 

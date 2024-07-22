@@ -32,10 +32,15 @@ namespace TESTE_GUNA.projeto.window
             string nome = "%" + txtPesquisa.Text + "%";
             ProdutoDAO dao = new ProdutoDAO();
 
-            DataGridViewVendas.DataSource = dao.LIstarProdutosPorNome(nome);
+            DataGridViewVendas.DataSource = dao.TesteTelaVendas(nome);
         }
 
         private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
