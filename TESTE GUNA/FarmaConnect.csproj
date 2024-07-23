@@ -281,6 +281,12 @@
     <Compile Include="projeto.window\AdmTelaCadastrar.Designer.cs">
       <DependentUpon>AdmTelaCadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\AdmTelaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\AdmTelaCategoria.Designer.cs">
+      <DependentUpon>AdmTelaCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\AdmTelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -520,6 +526,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaCadastrar.resx">
       <DependentUpon>AdmTelaCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\AdmTelaCategoria.resx">
+      <DependentUpon>AdmTelaCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaHome.resx">
       <DependentUpon>AdmTelaHome.cs</DependentUpon>
@@ -780,6 +789,8 @@
     <None Include="Resources\Departamentos %2810%29.png" />
     <None Include="Resources\7 Sem Título_20240714171925 %281%299.jpg" />
     <None Include="Resources\Departamentos %2811%29.png" />
+    <None Include="Resources\7 Sem Título_20240714171925 %281%2910.jpg" />
+    <None Include="Resources\Departamentos %2812%29.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />

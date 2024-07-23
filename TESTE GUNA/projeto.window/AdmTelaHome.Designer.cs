@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBarraX = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBarraTelaCheia = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBarraMeno = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSideBarProdutos = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarCategoria = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarCadastrarAdm = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarVendas = new Guna.UI2.WinForms.Guna2Button();
-            this.panelAbrirTela = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBarraX = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBarraTelaCheia = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBarraMeno = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,73 +58,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1150, 41);
             this.panel1.TabIndex = 1;
-            // 
-            // btnBarraX
-            // 
-            this.btnBarraX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBarraX.BackColor = System.Drawing.Color.Transparent;
-            this.btnBarraX.BackgroundImage = global::TESTE_GUNA.Properties.Resources.x2;
-            this.btnBarraX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBarraX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraX.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBarraX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBarraX.FillColor = System.Drawing.Color.Transparent;
-            this.btnBarraX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBarraX.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBarraX.Location = new System.Drawing.Point(1100, 7);
-            this.btnBarraX.Name = "btnBarraX";
-            this.btnBarraX.Size = new System.Drawing.Size(27, 27);
-            this.btnBarraX.TabIndex = 2;
-            this.btnBarraX.Click += new System.EventHandler(this.btnBarraX_Click);
-            // 
-            // btnBarraTelaCheia
-            // 
-            this.btnBarraTelaCheia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBarraTelaCheia.BackColor = System.Drawing.Color.Transparent;
-            this.btnBarraTelaCheia.BackgroundImage = global::TESTE_GUNA.Properties.Resources.aumentar1;
-            this.btnBarraTelaCheia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBarraTelaCheia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraTelaCheia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraTelaCheia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBarraTelaCheia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBarraTelaCheia.FillColor = System.Drawing.Color.Transparent;
-            this.btnBarraTelaCheia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBarraTelaCheia.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBarraTelaCheia.Location = new System.Drawing.Point(1050, 7);
-            this.btnBarraTelaCheia.Name = "btnBarraTelaCheia";
-            this.btnBarraTelaCheia.Size = new System.Drawing.Size(25, 27);
-            this.btnBarraTelaCheia.TabIndex = 2;
-            this.btnBarraTelaCheia.Click += new System.EventHandler(this.btnBarraTelaCheia_Click);
-            // 
-            // btnBarraMeno
-            // 
-            this.btnBarraMeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBarraMeno.BackColor = System.Drawing.Color.Transparent;
-            this.btnBarraMeno.BackgroundImage = global::TESTE_GUNA.Properties.Resources.iconMenos1;
-            this.btnBarraMeno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBarraMeno.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraMeno.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBarraMeno.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBarraMeno.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBarraMeno.FillColor = System.Drawing.Color.Transparent;
-            this.btnBarraMeno.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBarraMeno.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBarraMeno.Location = new System.Drawing.Point(1000, 7);
-            this.btnBarraMeno.Name = "btnBarraMeno";
-            this.btnBarraMeno.Size = new System.Drawing.Size(27, 27);
-            this.btnBarraMeno.TabIndex = 1;
-            this.btnBarraMeno.Click += new System.EventHandler(this.btnBarraMeno_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.ADMINISTRADOR_PHARMACONNECT;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(419, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SideBar
             // 
@@ -147,6 +81,16 @@
             this.SideBar.ShadowDecoration.Enabled = true;
             this.SideBar.Size = new System.Drawing.Size(95, 683);
             this.SideBar.TabIndex = 2;
+            // 
+            // panelAbrirTela
+            // 
+            this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
+            this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelAbrirTela.Location = new System.Drawing.Point(100, 41);
+            this.panelAbrirTela.Name = "panelAbrirTela";
+            this.panelAbrirTela.ShadowDecoration.Depth = 45;
+            this.panelAbrirTela.Size = new System.Drawing.Size(1050, 709);
+            this.panelAbrirTela.TabIndex = 3;
             // 
             // btnSideBarProdutos
             // 
@@ -250,6 +194,7 @@
             this.btnSideBarCategoria.TabIndex = 6;
             this.btnSideBarCategoria.Text = "     Categorias";
             this.btnSideBarCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarCategoria.Click += new System.EventHandler(this.btnSideBarCategoria_Click);
             // 
             // btnSideBarCadastrarAdm
             // 
@@ -303,15 +248,72 @@
             this.btnSideBarVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarVendas.Click += new System.EventHandler(this.btnSideBarVendas_Click);
             // 
-            // panelAbrirTela
+            // btnBarraX
             // 
-            this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
-            this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelAbrirTela.Location = new System.Drawing.Point(100, 41);
-            this.panelAbrirTela.Name = "panelAbrirTela";
-            this.panelAbrirTela.ShadowDecoration.Depth = 45;
-            this.panelAbrirTela.Size = new System.Drawing.Size(1050, 709);
-            this.panelAbrirTela.TabIndex = 3;
+            this.btnBarraX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBarraX.BackColor = System.Drawing.Color.Transparent;
+            this.btnBarraX.BackgroundImage = global::TESTE_GUNA.Properties.Resources.x2;
+            this.btnBarraX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBarraX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraX.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBarraX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBarraX.FillColor = System.Drawing.Color.Transparent;
+            this.btnBarraX.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBarraX.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBarraX.Location = new System.Drawing.Point(1100, 7);
+            this.btnBarraX.Name = "btnBarraX";
+            this.btnBarraX.Size = new System.Drawing.Size(27, 27);
+            this.btnBarraX.TabIndex = 2;
+            this.btnBarraX.Click += new System.EventHandler(this.btnBarraX_Click);
+            // 
+            // btnBarraTelaCheia
+            // 
+            this.btnBarraTelaCheia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBarraTelaCheia.BackColor = System.Drawing.Color.Transparent;
+            this.btnBarraTelaCheia.BackgroundImage = global::TESTE_GUNA.Properties.Resources.aumentar1;
+            this.btnBarraTelaCheia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBarraTelaCheia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraTelaCheia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraTelaCheia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBarraTelaCheia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBarraTelaCheia.FillColor = System.Drawing.Color.Transparent;
+            this.btnBarraTelaCheia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBarraTelaCheia.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBarraTelaCheia.Location = new System.Drawing.Point(1050, 7);
+            this.btnBarraTelaCheia.Name = "btnBarraTelaCheia";
+            this.btnBarraTelaCheia.Size = new System.Drawing.Size(25, 27);
+            this.btnBarraTelaCheia.TabIndex = 2;
+            this.btnBarraTelaCheia.Click += new System.EventHandler(this.btnBarraTelaCheia_Click);
+            // 
+            // btnBarraMeno
+            // 
+            this.btnBarraMeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBarraMeno.BackColor = System.Drawing.Color.Transparent;
+            this.btnBarraMeno.BackgroundImage = global::TESTE_GUNA.Properties.Resources.iconMenos1;
+            this.btnBarraMeno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBarraMeno.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraMeno.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBarraMeno.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBarraMeno.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBarraMeno.FillColor = System.Drawing.Color.Transparent;
+            this.btnBarraMeno.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBarraMeno.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBarraMeno.Location = new System.Drawing.Point(1000, 7);
+            this.btnBarraMeno.Name = "btnBarraMeno";
+            this.btnBarraMeno.Size = new System.Drawing.Size(27, 27);
+            this.btnBarraMeno.TabIndex = 1;
+            this.btnBarraMeno.Click += new System.EventHandler(this.btnBarraMeno_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TESTE_GUNA.Properties.Resources.ADMINISTRADOR_PHARMACONNECT;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(419, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AdmTelaHome
             // 
@@ -327,8 +329,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmTelaHome";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

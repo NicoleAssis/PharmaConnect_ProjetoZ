@@ -173,6 +173,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_10 {
+            get {
+                object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7_Sem_Título_20240714171925__1_2 {
             get {
                 object obj = ResourceManager.GetObject("7 Sem Título_20240714171925 (1)2", resourceCulture);
@@ -516,6 +526,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Departamentos__11_ {
             get {
                 object obj = ResourceManager.GetObject("Departamentos (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Departamentos__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Departamentos (12)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

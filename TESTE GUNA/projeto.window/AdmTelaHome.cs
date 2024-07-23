@@ -202,5 +202,17 @@ namespace TESTE_GUNA.projeto.window
             TelaLogin tela = new TelaLogin();
             tela.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSideBarCategoria_Click(object sender, EventArgs e)
+        {
+            AdmTelaCategoria tela = new AdmTelaCategoria(this);
+            PrintarTela(tela);
+            tela.BringToFront();
+        }
     }
 }
