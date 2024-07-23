@@ -113,6 +113,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5_Sem_Título_202407141352171 {
+            get {
+                object obj = ResourceManager.GetObject("5 Sem Título_202407141352171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6_Sem_Título_20240710172213 {
             get {
                 object obj = ResourceManager.GetObject("6 Sem Título_20240710172213", resourceCulture);
@@ -543,6 +553,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Departamentos__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Departamentos (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Departamentos__2_ {
             get {
                 object obj = ResourceManager.GetObject("Departamentos (2)", resourceCulture);
@@ -906,6 +926,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Group_14 {
             get {
                 object obj = ResourceManager.GetObject("Group 14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_15 {
+            get {
+                object obj = ResourceManager.GetObject("Group 15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -136,19 +136,11 @@ namespace TESTE_GUNA.projeto.window
 
         public void ReiniciarHome()
         {
-            // if (this.panelAbrirTela.Controls.Count > 0)
-            //    this.panelAbrirTela.Controls.RemoveAt(0);
+             if (this.panelAbrirTela.Controls.Count > 0)
+                this.panelAbrirTela.Controls.RemoveAt(0);
 
-            // Iterar pelos controles do painel
-            for (int i = panelAbrirTela.Controls.Count - 1; i >= 0; i--)
-            {
-                // Verificar se o controle é do tipo Form
-                if (panelAbrirTela.Controls[i] is Form)
-                {
-                    // Remover o controle do tipo Form
-                    panelAbrirTela.Controls.RemoveAt(i);
-                }
-            }
+             panelPharmaConnect.Visible = true;
+
         }
 
 
@@ -176,6 +168,8 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarVendas_Click(object sender, EventArgs e)
         {
+
+            panelPharmaConnect.Visible = false;
             AdmTelaVendas tela = new AdmTelaVendas(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -183,6 +177,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarProdutos_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             AdmTelaProdutos tela = new AdmTelaProdutos(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -190,6 +185,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarCadastrarAdm_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             this.Hide();//tela de trás desaparece enquanto aparece outra na frente
             AdmTelaCadastrar tela = new AdmTelaCadastrar();
             tela.ShowDialog();
@@ -198,6 +194,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarSair_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             this.Hide();
             TelaLogin tela = new TelaLogin();
             tela.ShowDialog();
@@ -210,9 +207,15 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarCategoria_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             AdmTelaCategoria tela = new AdmTelaCategoria(this);
             PrintarTela(tela);
             tela.BringToFront();
+        }
+
+        private void AdmTelaHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
