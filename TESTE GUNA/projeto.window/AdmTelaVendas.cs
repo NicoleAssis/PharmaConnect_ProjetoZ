@@ -24,15 +24,15 @@ namespace TESTE_GUNA.projeto.window
 
         private void AdmTelaVendas_Load(object sender, EventArgs e)
         {
+            ProdutoDAO dao = new ProdutoDAO();
 
+            DataGridViewVendas.DataSource = dao.Teste();
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            string nome = "%" + txtPesquisa.Text + "%";
-            ProdutoDAO dao = new ProdutoDAO();
 
-            DataGridViewVendas.DataSource = dao.TesteTelaVendas(nome);
+
         }
 
         private void DataGridViewVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -101,6 +101,7 @@
             this.checkBoxMostrarSenha.Size = new System.Drawing.Size(12, 11);
             this.checkBoxMostrarSenha.TabIndex = 107;
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = false;
+            this.checkBoxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBoxMostrarSenha_CheckedChanged);
             // 
             // txtConfirmeSenha
             // 
@@ -115,7 +116,7 @@
             this.txtConfirmeSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtConfirmeSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtConfirmeSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmeSenha.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtConfirmeSenha.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtConfirmeSenha.ForeColor = System.Drawing.Color.DimGray;
             this.txtConfirmeSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmeSenha.Location = new System.Drawing.Point(72, 236);
@@ -153,7 +154,7 @@
             this.txtNovaSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNovaSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNovaSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNovaSenha.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtNovaSenha.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtNovaSenha.ForeColor = System.Drawing.Color.DimGray;
             this.txtNovaSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNovaSenha.Location = new System.Drawing.Point(72, 154);
@@ -191,7 +192,7 @@
             this.txtSenhaAtual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSenhaAtual.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSenhaAtual.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSenhaAtual.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSenhaAtual.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtSenhaAtual.ForeColor = System.Drawing.Color.DimGray;
             this.txtSenhaAtual.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSenhaAtual.Location = new System.Drawing.Point(72, 76);
@@ -233,6 +234,7 @@
             this.btnAlterarSenha.Size = new System.Drawing.Size(234, 43);
             this.btnAlterarSenha.TabIndex = 100;
             this.btnAlterarSenha.Text = "ALTERAR SENHA";
+            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // txtMensagem
             // 

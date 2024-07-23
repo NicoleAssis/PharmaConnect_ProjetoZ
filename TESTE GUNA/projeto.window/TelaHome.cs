@@ -83,6 +83,7 @@ namespace TESTE_GUNA.projeto.window
 
         public void ReiniciarHome()
         {
+            panelPharmaConnect.Visible = true;
             if (this.panelAbrirTela.Controls.Count > 0)
                 this.panelAbrirTela.Controls.RemoveAt(0);
         }
@@ -113,6 +114,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarProdutos_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             TelaProdutos tela = new TelaProdutos(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -185,6 +187,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnCompreAgora_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             TelaProdutos tela = new TelaProdutos(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -192,6 +195,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarDepartamentos_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             TelaDepartamentos tela = new TelaDepartamentos(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -199,6 +203,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarCarrinho_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             TelaCompras tela = new TelaCompras(this);
             PrintarTela(tela);
             tela.BringToFront();
@@ -206,9 +211,17 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnSideBarPerfil_Click(object sender, EventArgs e)
         {
+            panelPharmaConnect.Visible = false;
             TelaPerfil tela = new TelaPerfil(this);
             PrintarTela(tela);
             tela.BringToFront();
+        }
+
+        private void btnSideBarSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TelaLogin tela = new TelaLogin();
+            tela.ShowDialog();
         }
     }
 

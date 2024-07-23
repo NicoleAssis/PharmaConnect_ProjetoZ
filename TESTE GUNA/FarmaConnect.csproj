@@ -275,6 +275,12 @@
     <Compile Include="projeto.view\FrmPerfilAlterarSenha.Designer.cs">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\AdmTelaCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\AdmTelaCadastrar.Designer.cs">
+      <DependentUpon>AdmTelaCadastrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\AdmTelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -511,6 +517,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.view\FrmPerfilAlterarSenha.resx">
       <DependentUpon>FrmPerfilAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\AdmTelaCadastrar.resx">
+      <DependentUpon>AdmTelaCadastrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaHome.resx">
       <DependentUpon>AdmTelaHome.cs</DependentUpon>

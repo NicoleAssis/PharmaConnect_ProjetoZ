@@ -42,8 +42,10 @@ namespace TESTE_GUNA.projeto.window
 
             if (messageBox.btnSimClick == true)
             {
+                this.telaHome.Hide();
                 TelaConfirmandoPagamento telaConfirmando = new TelaConfirmandoPagamento(this.telaHome);
                 telaConfirmando.ShowDialog();
+                this.telaHome.Show();
             }
             else if (messageBox.btnNaoClick == true)
             {

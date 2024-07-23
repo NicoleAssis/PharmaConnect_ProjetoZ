@@ -1783,6 +1783,26 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap telaAdm21 {
+            get {
+                object obj = ResourceManager.GetObject("telaAdm21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaAdm22 {
+            get {
+                object obj = ResourceManager.GetObject("telaAdm22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaCadastro {
             get {
                 object obj = ResourceManager.GetObject("telaCadastro", resourceCulture);
@@ -1806,6 +1826,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap telaFornecedor {
             get {
                 object obj = ResourceManager.GetObject("telaFornecedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaFornecedor1 {
+            get {
+                object obj = ResourceManager.GetObject("telaFornecedor1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

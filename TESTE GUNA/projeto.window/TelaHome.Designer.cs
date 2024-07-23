@@ -48,13 +48,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelPharmaConnect = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelAbrirTela.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SideBar.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelPharmaConnect.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,13 +142,11 @@
             // panelAbrirTela
             // 
             this.panelAbrirTela.BackColor = System.Drawing.Color.Transparent;
-            this.panelAbrirTela.Controls.Add(this.btnCompreAgora);
-            this.panelAbrirTela.Controls.Add(this.pictureBox3);
             this.panelAbrirTela.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelAbrirTela.Location = new System.Drawing.Point(100, 41);
+            this.panelAbrirTela.Location = new System.Drawing.Point(104, 41);
             this.panelAbrirTela.Name = "panelAbrirTela";
             this.panelAbrirTela.ShadowDecoration.Depth = 45;
-            this.panelAbrirTela.Size = new System.Drawing.Size(1050, 709);
+            this.panelAbrirTela.Size = new System.Drawing.Size(1046, 709);
             this.panelAbrirTela.TabIndex = 2;
             this.panelAbrirTela.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAbrirTela_Paint);
             // 
@@ -163,11 +162,11 @@
             this.btnCompreAgora.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(141)))), ((int)(((byte)(255)))));
             this.btnCompreAgora.Font = new System.Drawing.Font("Segoe UI Black", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnCompreAgora.ForeColor = System.Drawing.Color.White;
-            this.btnCompreAgora.Location = new System.Drawing.Point(77, 387);
+            this.btnCompreAgora.Location = new System.Drawing.Point(70, 235);
             this.btnCompreAgora.MaximumSize = new System.Drawing.Size(223, 45);
             this.btnCompreAgora.Name = "btnCompreAgora";
             this.btnCompreAgora.ShadowDecoration.BorderRadius = 20;
-            this.btnCompreAgora.ShadowDecoration.Depth = 15;
+            this.btnCompreAgora.ShadowDecoration.Depth = 1;
             this.btnCompreAgora.ShadowDecoration.Enabled = true;
             this.btnCompreAgora.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4);
             this.btnCompreAgora.Size = new System.Drawing.Size(223, 45);
@@ -179,7 +178,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.Group_7;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 157);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 0);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(489, 229);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(489, 229);
@@ -286,6 +285,7 @@
             this.btnSideBarSair.TabIndex = 7;
             this.btnSideBarSair.Text = "     Sair";
             this.btnSideBarSair.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarSair.Click += new System.EventHandler(this.btnSideBarSair_Click);
             // 
             // btnSideBarPerfil
             // 
@@ -417,6 +417,15 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // panelPharmaConnect
+            // 
+            this.panelPharmaConnect.Controls.Add(this.pictureBox3);
+            this.panelPharmaConnect.Controls.Add(this.btnCompreAgora);
+            this.panelPharmaConnect.Location = new System.Drawing.Point(94, 169);
+            this.panelPharmaConnect.Name = "panelPharmaConnect";
+            this.panelPharmaConnect.Size = new System.Drawing.Size(512, 289);
+            this.panelPharmaConnect.TabIndex = 3;
+            // 
             // TelaHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,6 +435,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1150, 750);
             this.Controls.Add(this.SideBar);
+            this.Controls.Add(this.panelPharmaConnect);
             this.Controls.Add(this.panelAbrirTela);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -435,12 +445,12 @@
             this.Load += new System.EventHandler(this.TelaHome_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelAbrirTela.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.SideBar.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelPharmaConnect.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -467,5 +477,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCompreAgora;
         private Guna.UI2.WinForms.Guna2Button btnSideBarDepartamentos;
         public Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
+        private System.Windows.Forms.Panel panelPharmaConnect;
     }
 }
