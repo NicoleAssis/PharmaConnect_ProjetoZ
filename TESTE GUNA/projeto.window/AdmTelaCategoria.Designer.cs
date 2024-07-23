@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.boxCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.DataGridViewVendas = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -46,7 +46,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.guna2ComboBox1);
+            this.panel1.Controls.Add(this.boxCategoria);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtPesquisa);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,24 +68,24 @@
             this.label1.TabIndex = 113;
             this.label1.Text = "Selecione a Categoria:";
             // 
-            // guna2ComboBox1
+            // boxCategoria
             // 
-            this.guna2ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.BorderRadius = 20;
-            this.guna2ComboBox1.BorderThickness = 3;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 40;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(623, 70);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(244, 46);
-            this.guna2ComboBox1.TabIndex = 112;
+            this.boxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boxCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.boxCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.boxCategoria.BorderRadius = 20;
+            this.boxCategoria.BorderThickness = 3;
+            this.boxCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.boxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.boxCategoria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.boxCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.boxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.boxCategoria.ItemHeight = 40;
+            this.boxCategoria.Location = new System.Drawing.Point(623, 70);
+            this.boxCategoria.Name = "boxCategoria";
+            this.boxCategoria.Size = new System.Drawing.Size(244, 46);
+            this.boxCategoria.TabIndex = 112;
             // 
             // pictureBox1
             // 
@@ -211,7 +211,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox boxCategoria;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridViewVendas;
     }

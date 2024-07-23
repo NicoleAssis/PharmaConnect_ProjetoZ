@@ -67,7 +67,7 @@ namespace TESTE_GUNA.projeto.window
             if (email == "1234" && senha == "1234")
             {
 
-                AdmFrmMenu tela = new AdmFrmMenu();
+                AdmTelaHome tela = new AdmTelaHome();
                 tela.Show();
                 this.Hide();
             }

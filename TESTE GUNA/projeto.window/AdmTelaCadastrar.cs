@@ -12,9 +12,13 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class AdmTelaCadastrar : Form
     {
-        public AdmTelaCadastrar()
+        private AdmTelaHome admHome;
+
+        public AdmTelaCadastrar(AdmTelaHome home)
         {
             InitializeComponent();
+            this.admHome = home;
+            this.DoubleBuffered = true;//parar de travar a tela
         }
 
         private void btnX_Click(object sender, EventArgs e)
@@ -63,6 +67,8 @@ namespace TESTE_GUNA.projeto.window
             TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
             messageBox.Mensagem("ADMINISTRADOR CADASTRADO COM SUCESSO!");
             messageBox.ShowDialog();
+            this.Close();
+            this.admHome.ReiniciarHome();
         }
     }
 }

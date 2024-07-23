@@ -178,7 +178,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::TESTE_GUNA.Properties.Resources.Group_7;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(489, 229);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(489, 229);
@@ -255,7 +255,7 @@
             this.btnSideBarMenu.Location = new System.Drawing.Point(1, 41);
             this.btnSideBarMenu.Name = "btnSideBarMenu";
             this.btnSideBarMenu.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarMenu.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarMenu.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarMenu.TabIndex = 9;
             this.btnSideBarMenu.Text = "       MENU";
             this.btnSideBarMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -281,7 +281,7 @@
             this.btnSideBarSair.Location = new System.Drawing.Point(1, 470);
             this.btnSideBarSair.Name = "btnSideBarSair";
             this.btnSideBarSair.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarSair.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarSair.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarSair.TabIndex = 7;
             this.btnSideBarSair.Text = "     Sair";
             this.btnSideBarSair.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -307,7 +307,7 @@
             this.btnSideBarPerfil.Location = new System.Drawing.Point(1, 390);
             this.btnSideBarPerfil.Name = "btnSideBarPerfil";
             this.btnSideBarPerfil.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarPerfil.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarPerfil.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarPerfil.TabIndex = 6;
             this.btnSideBarPerfil.Text = "     Perfil";
             this.btnSideBarPerfil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -333,7 +333,7 @@
             this.btnSideBarCarrinho.Location = new System.Drawing.Point(1, 310);
             this.btnSideBarCarrinho.Name = "btnSideBarCarrinho";
             this.btnSideBarCarrinho.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarCarrinho.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarCarrinho.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarCarrinho.TabIndex = 5;
             this.btnSideBarCarrinho.Text = "     Carrinho";
             this.btnSideBarCarrinho.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -359,7 +359,7 @@
             this.btnSideBarProdutos.Location = new System.Drawing.Point(1, 150);
             this.btnSideBarProdutos.Name = "btnSideBarProdutos";
             this.btnSideBarProdutos.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarProdutos.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarProdutos.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarProdutos.TabIndex = 4;
             this.btnSideBarProdutos.Text = "     Produtos";
             this.btnSideBarProdutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -419,9 +419,11 @@
             // 
             // panelPharmaConnect
             // 
+            this.panelPharmaConnect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelPharmaConnect.BackColor = System.Drawing.Color.Transparent;
             this.panelPharmaConnect.Controls.Add(this.pictureBox3);
             this.panelPharmaConnect.Controls.Add(this.btnCompreAgora);
-            this.panelPharmaConnect.Location = new System.Drawing.Point(94, 169);
+            this.panelPharmaConnect.Location = new System.Drawing.Point(94, 237);
             this.panelPharmaConnect.Name = "panelPharmaConnect";
             this.panelPharmaConnect.Size = new System.Drawing.Size(512, 289);
             this.panelPharmaConnect.TabIndex = 3;

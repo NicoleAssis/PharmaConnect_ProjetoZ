@@ -73,6 +73,16 @@ namespace TESTE_GUNA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_Sem_Título_202407053202725 {
+            get {
+                object obj = ResourceManager.GetObject("2 Sem Título_202407053202725", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5_Sem_Título {
             get {
                 object obj = ResourceManager.GetObject("5 Sem Título", resourceCulture);
@@ -1546,6 +1556,16 @@ namespace TESTE_GUNA.Properties {
         internal static System.Drawing.Bitmap Produtos__8_ {
             get {
                 object obj = ResourceManager.GetObject("Produtos (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Produtos__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Produtos (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

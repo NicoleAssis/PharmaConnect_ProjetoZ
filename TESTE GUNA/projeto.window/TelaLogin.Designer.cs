@@ -160,7 +160,7 @@ namespace TESTE_GUNA.projeto.window
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Padding = new System.Windows.Forms.Padding(2);
-            this.txtSenha.PasswordChar = '\0';
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.PlaceholderForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtSenha.PlaceholderText = "Senha";
             this.txtSenha.SelectedText = "";

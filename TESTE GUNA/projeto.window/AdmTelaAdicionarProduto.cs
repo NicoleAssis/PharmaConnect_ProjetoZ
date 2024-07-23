@@ -12,9 +12,20 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class AdmTelaAdicionarProduto : Form
     {
-        public AdmTelaAdicionarProduto()
+        private AdmTelaHome admHome;
+
+        public AdmTelaAdicionarProduto(AdmTelaHome home)
         {
             InitializeComponent();
+            this.admHome = home;
+            this.DoubleBuffered = true;//parar de travar a tela
+        }
+
+        private void btnAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            TelaMessageBoxSucess messageBoxSucess = new TelaMessageBoxSucess();
+            messageBoxSucess.Mensagem("PRODUTO ADICIONADO COM SUCESSO!");
+            messageBoxSucess.ShowDialog();
         }
     }
 }

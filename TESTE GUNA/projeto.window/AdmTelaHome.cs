@@ -187,7 +187,7 @@ namespace TESTE_GUNA.projeto.window
         {
             panelPharmaConnect.Visible = false;
             this.Hide();//tela de trás desaparece enquanto aparece outra na frente
-            AdmTelaCadastrar tela = new AdmTelaCadastrar();
+            AdmTelaCadastrar tela = new AdmTelaCadastrar(this);
             tela.ShowDialog();
             this.Show();
         }
@@ -216,6 +216,14 @@ namespace TESTE_GUNA.projeto.window
         private void AdmTelaHome_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSideBarAdicionar_Click(object sender, EventArgs e)
+        {
+            panelPharmaConnect.Visible = false;
+            AdmTelaAdicionarProduto tela = new AdmTelaAdicionarProduto(this);
+            PrintarTela(tela);
+            tela.BringToFront();
         }
     }
 }

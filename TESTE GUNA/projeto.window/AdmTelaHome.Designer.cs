@@ -34,6 +34,7 @@
             this.btnBarraMeno = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSideBarAdicionar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarProdutos = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnSideBarSair = new Guna.UI2.WinForms.Guna2Button();
@@ -138,6 +139,7 @@
             this.SideBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.SideBar.BackColor = System.Drawing.Color.Transparent;
             this.SideBar.BorderRadius = 25;
+            this.SideBar.Controls.Add(this.btnSideBarAdicionar);
             this.SideBar.Controls.Add(this.btnSideBarProdutos);
             this.SideBar.Controls.Add(this.btnSideBarMenu);
             this.SideBar.Controls.Add(this.btnSideBarSair);
@@ -154,6 +156,32 @@
             this.SideBar.ShadowDecoration.Enabled = true;
             this.SideBar.Size = new System.Drawing.Size(95, 683);
             this.SideBar.TabIndex = 2;
+            // 
+            // btnSideBarAdicionar
+            // 
+            this.btnSideBarAdicionar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSideBarAdicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarAdicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSideBarAdicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSideBarAdicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSideBarAdicionar.FillColor = System.Drawing.Color.Transparent;
+            this.btnSideBarAdicionar.Font = new System.Drawing.Font("Segoe UI", 15.5F, System.Drawing.FontStyle.Bold);
+            this.btnSideBarAdicionar.ForeColor = System.Drawing.Color.White;
+            this.btnSideBarAdicionar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarAdicionar.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarAdicionar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(78)))), ((int)(((byte)(255)))));
+            this.btnSideBarAdicionar.Image = global::TESTE_GUNA.Properties.Resources.Produtos__9_;
+            this.btnSideBarAdicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarAdicionar.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnSideBarAdicionar.ImageSize = new System.Drawing.Size(49, 49);
+            this.btnSideBarAdicionar.Location = new System.Drawing.Point(1, 470);
+            this.btnSideBarAdicionar.Name = "btnSideBarAdicionar";
+            this.btnSideBarAdicionar.PressedColor = System.Drawing.Color.White;
+            this.btnSideBarAdicionar.Size = new System.Drawing.Size(281, 45);
+            this.btnSideBarAdicionar.TabIndex = 11;
+            this.btnSideBarAdicionar.Text = "    Adicionar Produto";
+            this.btnSideBarAdicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSideBarAdicionar.Click += new System.EventHandler(this.btnSideBarAdicionar_Click);
             // 
             // btnSideBarProdutos
             // 
@@ -201,7 +229,7 @@
             this.btnSideBarMenu.Location = new System.Drawing.Point(1, 41);
             this.btnSideBarMenu.Name = "btnSideBarMenu";
             this.btnSideBarMenu.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarMenu.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarMenu.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarMenu.TabIndex = 9;
             this.btnSideBarMenu.Text = "       MENU";
             this.btnSideBarMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -224,10 +252,10 @@
             this.btnSideBarSair.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSideBarSair.ImageOffset = new System.Drawing.Point(18, 0);
             this.btnSideBarSair.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSideBarSair.Location = new System.Drawing.Point(1, 470);
+            this.btnSideBarSair.Location = new System.Drawing.Point(0, 550);
             this.btnSideBarSair.Name = "btnSideBarSair";
             this.btnSideBarSair.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarSair.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarSair.Size = new System.Drawing.Size(282, 45);
             this.btnSideBarSair.TabIndex = 7;
             this.btnSideBarSair.Text = "     Sair";
             this.btnSideBarSair.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -253,7 +281,7 @@
             this.btnSideBarCategoria.Location = new System.Drawing.Point(1, 390);
             this.btnSideBarCategoria.Name = "btnSideBarCategoria";
             this.btnSideBarCategoria.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarCategoria.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarCategoria.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarCategoria.TabIndex = 6;
             this.btnSideBarCategoria.Text = "     Categorias";
             this.btnSideBarCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -279,7 +307,7 @@
             this.btnSideBarCadastrarAdm.Location = new System.Drawing.Point(1, 310);
             this.btnSideBarCadastrarAdm.Name = "btnSideBarCadastrarAdm";
             this.btnSideBarCadastrarAdm.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarCadastrarAdm.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarCadastrarAdm.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarCadastrarAdm.TabIndex = 5;
             this.btnSideBarCadastrarAdm.Text = "     Cadastrar Adm";
             this.btnSideBarCadastrarAdm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -305,7 +333,7 @@
             this.btnSideBarVendas.Location = new System.Drawing.Point(1, 150);
             this.btnSideBarVendas.Name = "btnSideBarVendas";
             this.btnSideBarVendas.PressedColor = System.Drawing.Color.White;
-            this.btnSideBarVendas.Size = new System.Drawing.Size(268, 45);
+            this.btnSideBarVendas.Size = new System.Drawing.Size(281, 45);
             this.btnSideBarVendas.TabIndex = 4;
             this.btnSideBarVendas.Text = "     Vendas";
             this.btnSideBarVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -364,9 +392,9 @@
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._5_Sem_Título_202407141352171;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1150, 750);
+            this.Controls.Add(this.SideBar);
             this.Controls.Add(this.panelPharmaConnect);
             this.Controls.Add(this.panelAbrirTela);
-            this.Controls.Add(this.SideBar);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -402,5 +430,6 @@
         private System.Windows.Forms.Panel panelPharmaConnect;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2Button btnSideBarAdicionar;
     }
 }

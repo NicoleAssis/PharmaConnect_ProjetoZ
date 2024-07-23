@@ -695,6 +695,7 @@
     <Content Include="projeto.window\img\Produtos.png" />
     <Content Include="projeto.window\img\Sair %281%29.png" />
     <Content Include="projeto.window\img\x.png" />
+    <None Include="Resources\Produtos %289%29.png" />
     <None Include="Resources\Produtos %288%29.png" />
     <None Include="Resources\Produtos %287%29.png" />
     <None Include="Resources\Produtos %286%29.png" />
@@ -804,6 +805,7 @@
     <None Include="Resources\Group 15.png" />
     <None Include="Resources\7 Sem Título_20240714171925 %281%2911.jpg" />
     <None Include="Resources\Departamentos %2813%29.png" />
+    <None Include="Resources\2 Sem Título_202407053202725.png" />
     <Content Include="Resources\Group 6.png" />
     <Content Include="projeto.window\img\Produtos11.png" />
     <None Include="Resources\TelaHome2.png" />
