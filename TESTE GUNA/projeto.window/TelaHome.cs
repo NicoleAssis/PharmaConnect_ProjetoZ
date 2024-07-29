@@ -205,7 +205,7 @@ namespace TESTE_GUNA.projeto.window
         {
             panelPharmaConnect.Visible = false;
             TelaCompras tela = new TelaCompras(this);
-            PrintarTela(tela);
+            PrintarTela(tela); 
             tela.BringToFront();
         }
 
