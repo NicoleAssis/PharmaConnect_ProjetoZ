@@ -120,16 +120,18 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisar.BorderColor = System.Drawing.Color.Transparent;
             this.btnPesquisar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPesquisar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPesquisar.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPesquisar.FillColor = System.Drawing.Color.Transparent;
             this.btnPesquisar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPesquisar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPesquisar.Location = new System.Drawing.Point(248, 78);
+            this.btnPesquisar.Location = new System.Drawing.Point(230, 73);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(53, 48);
+            this.btnPesquisar.Size = new System.Drawing.Size(10, 48);
             this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "guna2Button1";
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
