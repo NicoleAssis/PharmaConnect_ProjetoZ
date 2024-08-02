@@ -26,7 +26,7 @@ namespace TESTE_GUNA.projeto.window
         {
             ProdutoDAO dao = new ProdutoDAO();
 
-            DataGridViewVendas.DataSource = dao.Teste();
+            //DataGridViewVendas.DataSource = dao.Teste();
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)

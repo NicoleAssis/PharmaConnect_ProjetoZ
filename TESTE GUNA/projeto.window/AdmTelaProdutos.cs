@@ -131,7 +131,7 @@ namespace TESTE_GUNA.projeto.window
         {
             ProdutoDAO dao = new ProdutoDAO();
 
-            DataGridViewVendas.DataSource = dao.Teste();
+            //DataGridViewVendas.DataSource = dao.Teste();
 
             AdicionandoColunaExcluir(DataGridViewVendas);
             AdicionandoColunaEditar(DataGridViewVendas);

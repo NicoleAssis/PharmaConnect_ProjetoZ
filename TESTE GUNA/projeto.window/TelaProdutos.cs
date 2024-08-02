@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
@@ -19,9 +20,9 @@ namespace TESTE_GUNA.projeto.window
     {
 
         public static List<Produto> listaProdutosEnter = new List<Produto>();
+        private TelaHome telaHome;
 
-
-        public TelaProdutos()
+        public TelaProdutos(TelaHome home)
         {
             InitializeComponent();
             this.telaHome = home;
@@ -29,21 +30,35 @@ namespace TESTE_GUNA.projeto.window
         }
 
 
+        //public TelaProdutos()
+        //{
+        //    InitializeComponent();
+            
+        //    this.DoubleBuffered = true;//parar de travar a tela
+        //}
+
+
+
+
+
+
         private void TelaProdutos_Load(object sender, EventArgs e)
         {
             
             
            
-                populateItems();
-            
+             populateItems();
 
-            
-           
-            
-            
+
+
+
+
 
         }
         public int vt;
+
+        public object Application { get; private set; }
+
         public void populateItems()
         {
             ProdutoDAO dao = new ProdutoDAO();
@@ -52,7 +67,7 @@ namespace TESTE_GUNA.projeto.window
             //MessageBox.Show(valor.ToString());
             List<UserControlProduto> listProdutos = new List<UserControlProduto>();
 
-            for (int i = 0; i < vt; i++)
+            for (int i = 0; i < 50; i++)
             {
                 dao.GetDetails(i + 1);
                 UserControlProduto userControlProduto = new UserControlProduto
@@ -110,10 +125,15 @@ namespace TESTE_GUNA.projeto.window
 
                 loadDetails();
             }
-            
-            
-       
-            
+
+            if (String.IsNullOrWhiteSpace(txtPesquisa.Text))
+            {
+                populateItems();
+                return;  // isso faz com que você saia do método e não execute os próximos processamentos
+            }
+
+
+
         }
     }
 }
