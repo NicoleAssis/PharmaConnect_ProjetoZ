@@ -25,7 +25,7 @@ namespace TESTE_GUNA.projeto.window
         public TelaProdutos(TelaHome home)
         {
             InitializeComponent();
-           // this.telaHome = home;
+            this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
 

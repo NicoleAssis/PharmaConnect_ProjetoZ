@@ -678,7 +678,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCompras";
+            this.Text = "k";
             this.Load += new System.EventHandler(this.FrmCompras_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -77,7 +77,7 @@ namespace TESTE_GUNA.projeto.window
 
             CarrinhoDAO dao = new CarrinhoDAO();
 
-            CarrinhoB obj = new CarrinhoB
+            CarrinhoDAO obj = new CarrinhoDAO
             {
                 id_produtoCarrinho = Convert.ToInt32(Codigo),
                 id_cliente = id_Conexao,
@@ -92,7 +92,7 @@ namespace TESTE_GUNA.projeto.window
 
         }
 
-        public void DetailsB(ProdutoDAO d)
+        public void DetailsB(Produto d)
         {
             Produto = d.nomeProduto;
             Descricao = d.descProduto;

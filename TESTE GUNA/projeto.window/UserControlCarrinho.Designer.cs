@@ -38,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblvalortotal = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtCodigo = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRemover = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
@@ -120,6 +122,7 @@
             this.btnaddcarrinho.Name = "btnaddcarrinho";
             this.btnaddcarrinho.Size = new System.Drawing.Size(30, 30);
             this.btnaddcarrinho.TabIndex = 10;
+            this.btnaddcarrinho.Click += new System.EventHandler(this.btnaddcarrinho_Click);
             // 
             // btnMenos
             // 
@@ -138,6 +141,7 @@
             this.btnMenos.Name = "btnMenos";
             this.btnMenos.Size = new System.Drawing.Size(30, 30);
             this.btnMenos.TabIndex = 0;
+            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
             // 
             // label4
             // 
@@ -164,6 +168,8 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BorderRadius = 40;
+            this.guna2Panel2.Controls.Add(this.txtCodigo);
+            this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.pictureBox1);
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
@@ -172,6 +178,29 @@
             this.guna2Panel2.Size = new System.Drawing.Size(490, 102);
             this.guna2Panel2.TabIndex = 12;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.AutoSize = true;
+            this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.ForeColor = System.Drawing.Color.Black;
+            this.txtCodigo.Location = new System.Drawing.Point(44, 77);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(13, 13);
+            this.txtCodigo.TabIndex = 11;
+            this.txtCodigo.Text = "1";
+            this.txtCodigo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(203, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 27);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "1200,00";
             // 
             // pictureBox1
             // 
@@ -219,6 +248,7 @@
             this.Size = new System.Drawing.Size(490, 105);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -244,5 +274,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblvalortotal;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label txtCodigo;
+        private System.Windows.Forms.Label label5;
     }
 }

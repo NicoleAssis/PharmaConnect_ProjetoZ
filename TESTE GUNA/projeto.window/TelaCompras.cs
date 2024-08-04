@@ -1,18 +1,26 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
+using static System.Net.Mime.MediaTypeNames;
+
 
 namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaCompras : Form
     {
         private TelaHome telaHome;
+        public static List<Produto> listaProdutosEnter = new List<Produto>();
 
         public TelaCompras(TelaHome home)
         {
@@ -20,7 +28,7 @@ namespace TESTE_GUNA.projeto.window
             this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
-
+        
         #region PrintarTela
 
         public void PrintarTela(Form form)
@@ -54,7 +62,23 @@ namespace TESTE_GUNA.projeto.window
 
         private void TelaCompras_Load(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Controls.Clear();
 
+            UserControlCarrinho res = new UserControlCarrinho();
+            int key = ClienteDAO.id_conectado;
+            res.searchResult(key);
+
+            loadDetails();
+        }
+        private void loadDetails()
+        {
+
+            foreach (CarrinhoDAO p in CarrinhoDAO.list)
+            {
+                UserControlCarrinho res = new UserControlCarrinho();
+                res.DetailsC(p);
+                flowLayoutPanel1.Controls.Add(res);
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

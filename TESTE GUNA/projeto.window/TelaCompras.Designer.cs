@@ -37,28 +37,15 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbltotalCarrinho = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControlCarrinho1 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho2 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho3 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho4 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho5 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho6 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho7 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho8 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho9 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho10 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho11 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
-            this.userControlCarrinho12 = new TESTE_GUNA.projeto.window.UserControlCarrinho();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelAbrirTela.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -165,7 +152,7 @@
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label5);
+            this.guna2Panel1.Controls.Add(this.lbltotalCarrinho);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(205)))));
             this.guna2Panel1.Location = new System.Drawing.Point(80, 533);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -195,17 +182,17 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "R$ :";
             // 
-            // label5
+            // lbltotalCarrinho
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(205)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(279, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 30);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "1200,00";
+            this.lbltotalCarrinho.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltotalCarrinho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(205)))));
+            this.lbltotalCarrinho.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
+            this.lbltotalCarrinho.ForeColor = System.Drawing.Color.White;
+            this.lbltotalCarrinho.Location = new System.Drawing.Point(279, 8);
+            this.lbltotalCarrinho.Name = "lbltotalCarrinho";
+            this.lbltotalCarrinho.Size = new System.Drawing.Size(109, 30);
+            this.lbltotalCarrinho.TabIndex = 2;
+            this.lbltotalCarrinho.Text = "1200,00";
             // 
             // panel1
             // 
@@ -221,142 +208,10 @@
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho1);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho2);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho3);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho4);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho5);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho6);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho7);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho8);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho9);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho10);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho11);
-            this.flowLayoutPanel1.Controls.Add(this.userControlCarrinho12);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 158);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 335);
             this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // userControlCarrinho1
-            // 
-            this.userControlCarrinho1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho1.BackgroundImage")));
-            this.userControlCarrinho1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho1.Location = new System.Drawing.Point(3, 3);
-            this.userControlCarrinho1.Name = "userControlCarrinho1";
-            this.userControlCarrinho1.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho1.TabIndex = 0;
-            // 
-            // userControlCarrinho2
-            // 
-            this.userControlCarrinho2.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho2.BackgroundImage")));
-            this.userControlCarrinho2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho2.Location = new System.Drawing.Point(3, 114);
-            this.userControlCarrinho2.Name = "userControlCarrinho2";
-            this.userControlCarrinho2.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho2.TabIndex = 1;
-            // 
-            // userControlCarrinho3
-            // 
-            this.userControlCarrinho3.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho3.BackgroundImage")));
-            this.userControlCarrinho3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho3.Location = new System.Drawing.Point(3, 225);
-            this.userControlCarrinho3.Name = "userControlCarrinho3";
-            this.userControlCarrinho3.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho3.TabIndex = 2;
-            // 
-            // userControlCarrinho4
-            // 
-            this.userControlCarrinho4.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho4.BackgroundImage")));
-            this.userControlCarrinho4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho4.Location = new System.Drawing.Point(3, 336);
-            this.userControlCarrinho4.Name = "userControlCarrinho4";
-            this.userControlCarrinho4.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho4.TabIndex = 3;
-            // 
-            // userControlCarrinho5
-            // 
-            this.userControlCarrinho5.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho5.BackgroundImage")));
-            this.userControlCarrinho5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho5.Location = new System.Drawing.Point(3, 447);
-            this.userControlCarrinho5.Name = "userControlCarrinho5";
-            this.userControlCarrinho5.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho5.TabIndex = 4;
-            // 
-            // userControlCarrinho6
-            // 
-            this.userControlCarrinho6.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho6.BackgroundImage")));
-            this.userControlCarrinho6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho6.Location = new System.Drawing.Point(3, 558);
-            this.userControlCarrinho6.Name = "userControlCarrinho6";
-            this.userControlCarrinho6.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho6.TabIndex = 5;
-            // 
-            // userControlCarrinho7
-            // 
-            this.userControlCarrinho7.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho7.BackgroundImage")));
-            this.userControlCarrinho7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho7.Location = new System.Drawing.Point(3, 669);
-            this.userControlCarrinho7.Name = "userControlCarrinho7";
-            this.userControlCarrinho7.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho7.TabIndex = 6;
-            // 
-            // userControlCarrinho8
-            // 
-            this.userControlCarrinho8.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho8.BackgroundImage")));
-            this.userControlCarrinho8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho8.Location = new System.Drawing.Point(3, 780);
-            this.userControlCarrinho8.Name = "userControlCarrinho8";
-            this.userControlCarrinho8.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho8.TabIndex = 7;
-            // 
-            // userControlCarrinho9
-            // 
-            this.userControlCarrinho9.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho9.BackgroundImage")));
-            this.userControlCarrinho9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho9.Location = new System.Drawing.Point(3, 891);
-            this.userControlCarrinho9.Name = "userControlCarrinho9";
-            this.userControlCarrinho9.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho9.TabIndex = 8;
-            // 
-            // userControlCarrinho10
-            // 
-            this.userControlCarrinho10.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho10.BackgroundImage")));
-            this.userControlCarrinho10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho10.Location = new System.Drawing.Point(3, 1002);
-            this.userControlCarrinho10.Name = "userControlCarrinho10";
-            this.userControlCarrinho10.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho10.TabIndex = 9;
-            // 
-            // userControlCarrinho11
-            // 
-            this.userControlCarrinho11.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho11.BackgroundImage")));
-            this.userControlCarrinho11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho11.Location = new System.Drawing.Point(3, 1113);
-            this.userControlCarrinho11.Name = "userControlCarrinho11";
-            this.userControlCarrinho11.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho11.TabIndex = 10;
-            // 
-            // userControlCarrinho12
-            // 
-            this.userControlCarrinho12.BackColor = System.Drawing.Color.Transparent;
-            this.userControlCarrinho12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlCarrinho12.BackgroundImage")));
-            this.userControlCarrinho12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControlCarrinho12.Location = new System.Drawing.Point(3, 1224);
-            this.userControlCarrinho12.Name = "userControlCarrinho12";
-            this.userControlCarrinho12.Size = new System.Drawing.Size(490, 105);
-            this.userControlCarrinho12.TabIndex = 11;
             // 
             // panel3
             // 
@@ -396,7 +251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -408,25 +262,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private UserControlCarrinho userControlCarrinho1;
-        private UserControlCarrinho userControlCarrinho2;
-        private UserControlCarrinho userControlCarrinho3;
-        private UserControlCarrinho userControlCarrinho4;
-        private UserControlCarrinho userControlCarrinho5;
-        private UserControlCarrinho userControlCarrinho6;
-        private UserControlCarrinho userControlCarrinho7;
-        private UserControlCarrinho userControlCarrinho8;
-        private UserControlCarrinho userControlCarrinho9;
-        private UserControlCarrinho userControlCarrinho10;
-        private UserControlCarrinho userControlCarrinho11;
-        private UserControlCarrinho userControlCarrinho12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton btnEfetuarCompra;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbltotalCarrinho;
         private Guna.UI2.WinForms.Guna2GradientButton btnContinuarComprando;
         public System.Windows.Forms.Panel panelAbrirTela;
     }

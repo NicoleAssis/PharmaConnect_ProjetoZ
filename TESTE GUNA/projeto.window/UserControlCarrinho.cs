@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -29,9 +31,10 @@ namespace TESTE_GUNA.projeto.window
         #region Propriedades
 
         private string _nomeProduto;
-        private string _preco;
-        private string _descProduto;
+        private string _precoUnit;
+        private string _precoTotal;
         private string _idcodigo;
+        private string _quantidade;
 
         [Category("Custom Pro")]
         public string Produto
@@ -44,52 +47,61 @@ namespace TESTE_GUNA.projeto.window
         public string Codigo
         {
             get { return _idcodigo; }
-            set { _idcodigo = value; txtcodigo.Text = value; }
+            set { _idcodigo = value; txtCodigo.Text = value; }
         }
 
 
         [Category("Custom Pro")]
-        public string Descricao
+        public string PrecoUnitario
         {
-            get { return _descProduto; }
-            set { _descProduto = value; txtDescricao.Text = value; }
+            get { return _precoUnit; }
+            set { _precoUnit = value; txtPreco.Text = value; }
         }
 
 
 
         [Category("Custom Pro")]
-        public string PrecoProduto
+        public string PrecoTotal
         {
-            get { return _preco; }
-            set { _preco = value; txtPreco.Text = value; }
+            get { return _precoTotal; }
+            set { _precoTotal = value; lblvalortotal.Text = value; }
         }
-
-
 
         #endregion
 
 
+       [Category("Custom Pro")]
+        public string Quantidade
+        {
+            get { return _quantidade; }
+            set { _quantidade = value; txtQtd.Text = value; }
+        }
+
+        
 
 
 
 
+        public void DetailsC(CarrinhoDAO d)
+        {
+            Codigo = d.id_produtoCarrinho.ToString();
+            PrecoUnitario = d.subtotalCarrinho.ToString();
+            Quantidade = d.qtd_Carrinho.ToString() ;
+            PrecoTotal = d.totalCarrinho.ToString();
+            
 
+        }
 
+        public void searchResult(int key)
+        {
+            CarrinhoDAO get = new CarrinhoDAO();
+            get.Search(key);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            Codigo = get.id_produtoCarrinho.ToString();
+            PrecoUnitario = get.subtotalCarrinho.ToString();
+            Quantidade = get.qtd_Carrinho.ToString();
+            PrecoTotal = get.totalCarrinho.ToString();
+        }
 
         private void RSMoeda_Click(object sender, EventArgs e)
         {
@@ -112,6 +124,33 @@ namespace TESTE_GUNA.projeto.window
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMenos_Click(object sender, EventArgs e)
+        {
+            //int con = Convert.ToInt32(Quantidade);
+            //if(con > 0)
+            //{
+
+            //    CarrinhoDAO dao = new CarrinhoDAO();
+
+            //    CarrinhoDAO obj = new CarrinhoDAO
+            //    {
+            //        id_produtoCarrinho = Convert.ToInt32(Codigo),
+            //        qtd_Carrinho = Convert.ToInt32(Quantidade) - 1,
+                    
+
+            //    };
+            //    Quantidade = (Convert.ToInt32(Quantidade) - 1).ToString();
+            //    dao.AlterarProdutoCarrinho(obj);
+            //}
+
+
+        }
+
+        private void btnaddcarrinho_Click(object sender, EventArgs e)
         {
 
         }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TESTE_GUNA.projeto.model
 {
-    class CarrinhoB
+    public class CarrinhoB
     {
+        public int id_carrinho { get; set; }
         public int id_produtoCarrinho { get; set; }
         public int qtd_Carrinho { get; set; }
         public decimal subtotalCarrinho { get; set; }
