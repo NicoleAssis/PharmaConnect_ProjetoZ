@@ -33,13 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtQtd = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnRemover = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnaddcarrinho = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenos = new Guna.UI2.WinForms.Guna2Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblvalortotal = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRemover = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +77,7 @@
             this.label3.Size = new System.Drawing.Size(361, 27);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nome Completo do Remédio";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // guna2Panel1
             // 
@@ -85,7 +86,7 @@
             this.guna2Panel1.BorderRadius = 17;
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.txtQtd);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
+            this.guna2Panel1.Controls.Add(this.btnaddcarrinho);
             this.guna2Panel1.Controls.Add(this.btnMenos);
             this.guna2Panel1.Location = new System.Drawing.Point(330, 57);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -103,6 +104,41 @@
             this.txtQtd.TabIndex = 11;
             this.txtQtd.Text = "1";
             // 
+            // btnaddcarrinho
+            // 
+            this.btnaddcarrinho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnaddcarrinho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddcarrinho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnaddcarrinho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnaddcarrinho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnaddcarrinho.FillColor = System.Drawing.Color.Transparent;
+            this.btnaddcarrinho.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnaddcarrinho.ForeColor = System.Drawing.Color.White;
+            this.btnaddcarrinho.Image = global::TESTE_GUNA.Properties.Resources.Sair__5_;
+            this.btnaddcarrinho.ImageSize = new System.Drawing.Size(27, 27);
+            this.btnaddcarrinho.Location = new System.Drawing.Point(90, 4);
+            this.btnaddcarrinho.Name = "btnaddcarrinho";
+            this.btnaddcarrinho.Size = new System.Drawing.Size(30, 30);
+            this.btnaddcarrinho.TabIndex = 10;
+            // 
+            // btnMenos
+            // 
+            this.btnMenos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.btnMenos.BorderRadius = 20;
+            this.btnMenos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenos.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMenos.ForeColor = System.Drawing.Color.White;
+            this.btnMenos.Image = global::TESTE_GUNA.Properties.Resources.Sair__4_2;
+            this.btnMenos.ImageSize = new System.Drawing.Size(27, 27);
+            this.btnMenos.Location = new System.Drawing.Point(14, 4);
+            this.btnMenos.Name = "btnMenos";
+            this.btnMenos.Size = new System.Drawing.Size(30, 30);
+            this.btnMenos.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
@@ -114,16 +150,16 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "R$ :";
             // 
-            // label5
+            // lblvalortotal
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(393, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 21);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "1200,00";
+            this.lblvalortotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
+            this.lblvalortotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalortotal.ForeColor = System.Drawing.Color.White;
+            this.lblvalortotal.Location = new System.Drawing.Point(393, 30);
+            this.lblvalortotal.Name = "lblvalortotal";
+            this.lblvalortotal.Size = new System.Drawing.Size(85, 21);
+            this.lblvalortotal.TabIndex = 10;
+            this.lblvalortotal.Text = "1200,00";
             // 
             // guna2Panel2
             // 
@@ -135,6 +171,18 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(490, 102);
             this.guna2Panel2.TabIndex = 12;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.noonbrew_ziCb4_EKmak_unsplash1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnRemover
             // 
@@ -155,58 +203,12 @@
             this.btnRemover.TabIndex = 8;
             this.btnRemover.Text = "REMOVER";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::TESTE_GUNA.Properties.Resources.noonbrew_ziCb4_EKmak_unsplash1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = global::TESTE_GUNA.Properties.Resources.Sair__5_;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(27, 27);
-            this.guna2Button2.Location = new System.Drawing.Point(90, 4);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(30, 30);
-            this.guna2Button2.TabIndex = 10;
-            // 
-            // btnMenos
-            // 
-            this.btnMenos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
-            this.btnMenos.BorderRadius = 20;
-            this.btnMenos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenos.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMenos.ForeColor = System.Drawing.Color.White;
-            this.btnMenos.Image = global::TESTE_GUNA.Properties.Resources.Sair__4_2;
-            this.btnMenos.ImageSize = new System.Drawing.Size(27, 27);
-            this.btnMenos.Location = new System.Drawing.Point(14, 4);
-            this.btnMenos.Name = "btnMenos";
-            this.btnMenos.Size = new System.Drawing.Size(30, 30);
-            this.btnMenos.TabIndex = 0;
-            // 
             // UserControlCarrinho
             // 
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblvalortotal);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -237,10 +239,10 @@
         private Guna.UI2.WinForms.Guna2Button btnRemover;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnMenos;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnaddcarrinho;
         private System.Windows.Forms.Label txtQtd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblvalortotal;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

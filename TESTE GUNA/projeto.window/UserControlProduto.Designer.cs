@@ -69,6 +69,7 @@
             this.txtDescricao.Size = new System.Drawing.Size(213, 23);
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "5mg";
+            this.txtDescricao.Click += new System.EventHandler(this.txtDescricao_Click);
             // 
             // label
             // 

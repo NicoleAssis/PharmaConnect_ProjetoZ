@@ -73,13 +73,18 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnAdicionarCarrinho_Click(object sender, EventArgs e)
         {
+            int id_Conexao = ClienteDAO.id_conectado;
+
             CarrinhoDAO dao = new CarrinhoDAO();
+
             CarrinhoB obj = new CarrinhoB
             {
                 id_produtoCarrinho = Convert.ToInt32(Codigo),
-                nome_produtoCarrinho = Produto,
-                preco_produtoCarrinho = Convert.ToDecimal(PrecoProduto),
-                desc_produtoCarrinho = Descricao
+                id_cliente = id_Conexao,
+                qtd_Carrinho = 1,
+                subtotalCarrinho = Convert.ToDecimal(PrecoProduto),
+                totalCarrinho = (1 * Convert.ToDecimal(PrecoProduto)),
+
             };
 
             dao.CadastrarProdutoCarrinho(obj);
@@ -106,8 +111,9 @@ namespace TESTE_GUNA.projeto.window
             Codigo = get.Id_Produto.ToString();
         }
 
+        private void txtDescricao_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

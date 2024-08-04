@@ -42,8 +42,8 @@ namespace TESTE_GUNA.projeto.dao
             {
 
                 //Definindo comando SQL
-                string sql = @"insert into tb_carrinho (id_produtoCarrinho, nome_produtoCarrinho,desc_produtoCarrinho,preco_produtoCarrinho,qtd_Carrinho)
-                            values(@id_produtoCarrinho,@nome_produtoCarrinho,@desc_produtoCarrinho,@preco_produtoCarrinho,@qtd_Carrinho)";
+                string sql = @"insert into tb_carrinho (id_produtoCarrinho, qtd_Carrinho,subtotalCarrinho,totalCarrinho,id_cliente)
+                            values(@id_produtoCarrinho,@qtd_Carrinho,@subtotalCarrinho,@totalCarrinho,@id_cliente)";
 
 
                 //Organizando comando SQL
@@ -51,10 +51,10 @@ namespace TESTE_GUNA.projeto.dao
 
                 int qtdInicial = 1;
                 executacmd.Parameters.AddWithValue("@id_produtoCarrinho", obj.id_produtoCarrinho);
-                executacmd.Parameters.AddWithValue("@nome_produtoCarrinho", obj.nome_produtoCarrinho);
-                executacmd.Parameters.AddWithValue("@desc_produtoCarrinho", obj.desc_produtoCarrinho);
-                executacmd.Parameters.AddWithValue("@preco_produtoCarrinho", obj.preco_produtoCarrinho);
-                executacmd.Parameters.AddWithValue("qtd_Carrinho", qtdInicial);
+                executacmd.Parameters.AddWithValue("@qtd_Carrinho", obj.qtd_Carrinho);
+                executacmd.Parameters.AddWithValue("@subtotalCarrinho", obj.subtotalCarrinho);
+                executacmd.Parameters.AddWithValue("@totalCarrinho", obj.totalCarrinho);
+                executacmd.Parameters.AddWithValue("id_cliente", obj.id_cliente );
 
 
 

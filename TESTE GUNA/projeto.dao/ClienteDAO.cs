@@ -16,6 +16,8 @@ namespace TESTE_GUNA.projeto.dao
 
         //Conecta com o Banco de dados
         private MySqlConnection conexao;
+
+        public static int id_conectado;
               //retorna como TABELA
         public DataTable listarClientes()
         {
@@ -288,7 +290,7 @@ namespace TESTE_GUNA.projeto.dao
                     int nivel =  reader.GetInt32(14);
                     long cpf = reader.GetInt64(1);
                     string nome = MyStringConvert(reader[2]);
-
+                    id_conectado =  MyIntonverter(reader[0]);
                     string telefone = MyStringConvert(reader[4]);
                     string celular = MyStringConvert(reader[5]);
                     string cep = MyStringConvert(reader[6]);
