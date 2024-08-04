@@ -19,8 +19,9 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaCompras : Form
     {
-        private TelaHome telaHome;
+       
         public static List<Produto> listaProdutosEnter = new List<Produto>();
+        private TelaHome telaHome;
 
         public TelaCompras(TelaHome home)
         {
@@ -28,7 +29,7 @@ namespace TESTE_GUNA.projeto.window
             this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
-        
+
         #region PrintarTela
 
         public void PrintarTela(Form form)
