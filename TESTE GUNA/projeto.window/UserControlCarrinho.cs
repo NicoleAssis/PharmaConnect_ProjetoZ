@@ -130,29 +130,62 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnMenos_Click(object sender, EventArgs e)
         {
-            //int con = Convert.ToInt32(Quantidade);
-            //if(con > 0)
-            //{
+            int con = Convert.ToInt32(Quantidade);
+            if (con > 0)
+            {
 
-            //    CarrinhoDAO dao = new CarrinhoDAO();
+                CarrinhoDAO dao = new CarrinhoDAO();
 
-            //    CarrinhoDAO obj = new CarrinhoDAO
-            //    {
-            //        id_produtoCarrinho = Convert.ToInt32(Codigo),
-            //        qtd_Carrinho = Convert.ToInt32(Quantidade) - 1,
-                    
+                CarrinhoDAO obj = new CarrinhoDAO
+                {
+                    id_produtoCarrinho = Convert.ToInt32(Codigo),
+                    qtd_Carrinho = Convert.ToInt32(Quantidade) - 1,
+                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
 
-            //    };
-            //    Quantidade = (Convert.ToInt32(Quantidade) - 1).ToString();
-            //    dao.AlterarProdutoCarrinho(obj);
-            //}
+
+                };
+                Quantidade = (Convert.ToInt32(Quantidade) - 1).ToString();
+                PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString() ;
+                dao.AlterarProdutoCarrinho(obj);
+            }
 
 
         }
 
         private void btnaddcarrinho_Click(object sender, EventArgs e)
         {
+            
 
+                CarrinhoDAO dao = new CarrinhoDAO();
+
+                CarrinhoDAO obj = new CarrinhoDAO
+                {
+                    id_produtoCarrinho = Convert.ToInt32(Codigo),
+                    qtd_Carrinho = Convert.ToInt32(Quantidade) + 1,
+                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
+
+
+                };
+                Quantidade = (Convert.ToInt32(Quantidade) + 1).ToString();
+                PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString();
+                dao.AlterarProdutoCarrinho(obj);
+            
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            CarrinhoDAO dao = new CarrinhoDAO();
+
+            CarrinhoDAO obj = new CarrinhoDAO
+            {
+                id_produtoCarrinho = Convert.ToInt32(Codigo),
+                
+            };
+            
+            dao.Delete(obj);
+
+           
+            
         }
     }
 }

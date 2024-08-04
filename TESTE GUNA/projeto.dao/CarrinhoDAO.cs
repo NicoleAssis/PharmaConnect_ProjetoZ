@@ -130,49 +130,89 @@ namespace TESTE_GUNA.projeto.dao
 
         #endregion
 
-        //#region Update
-
-      
-       // public void AlterarProdutoCarrinho(CarrinhoDAO obj)
-       // {
-       //     try
-       //     {
-
-       //         //Definindo comando SQL
-       //         string sql = @"UPDATE tb_carrinho 
-       //                         SET qtd_carrinho = @qtd_Carrinho 
-       //                         WHERE id_cliente = @id_cliente  AND id_produtoCarrinho = @id_produtoCarrinho;";
+        #region Update
 
 
-       //         //Organizando comando SQL
-       //         MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+        public void AlterarProdutoCarrinho(CarrinhoDAO obj)
+        {
+            try
+            {
 
-       //         //int qtdInicial = 1;
-       //         executacmd.Parameters.AddWithValue("@id_produtoCarrinho", obj.id_produtoCarrinho);
-       //         executacmd.Parameters.AddWithValue("@qtd_Carrinho", obj.qtd_Carrinho);
-       //         int id_conectado = ClienteDAO.id_conectado;
-       //         executacmd.Parameters.AddWithValue("id_cliente", id_conectado);
-
-
-
-
-       //         //Abrindo conexao e aplicando sql
-       //         conexao.Open();
-       //         executacmd.ExecuteNonQuery();
-
-       //         //fechando conexao
-       //         conexao.Close();
-
-       //     }
-       //     catch (Exception erro)
-       //     {
-
-       //         MessageBox.Show("Erro Identificado:" + erro);
-       //     }
-       // }
-       //#endregion
+                //Definindo comando SQL
+                string sql = @"UPDATE tb_carrinho 
+                                SET qtd_carrinho = @qtd_Carrinho, totalCarrinho = @totaCarrinho
+                                WHERE id_cliente = @id_cliente  AND id_produtoCarrinho = @id_produtoCarrinho;";
 
 
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                //int qtdInicial = 1;
+                executacmd.Parameters.AddWithValue("@id_produtoCarrinho", obj.id_produtoCarrinho);
+                executacmd.Parameters.AddWithValue("@qtd_Carrinho", obj.qtd_Carrinho);
+                executacmd.Parameters.AddWithValue("@totaCarrinho", obj.totalCarrinho);
+                int id_conectado = ClienteDAO.id_conectado;
+                executacmd.Parameters.AddWithValue("id_cliente", id_conectado);
+
+
+
+
+                //Abrindo conexao e aplicando sql
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //fechando conexao
+                conexao.Close();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+        #endregion
+
+
+        #region Deletar
+
+
+        public void Delete(CarrinhoDAO obj)
+        {
+            try
+            {
+
+                //Definindo comando SQL
+                string sql = @"delete  from tb_carrinho 
+                                where id_produtoCarrinho = @id_produtoCarrinho and id_cliente = @id_cliente";
+
+
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                int id_conectado = ClienteDAO.id_conectado;
+                //int qtdInicial = 1;
+                executacmd.Parameters.AddWithValue("@id_produtoCarrinho", obj.id_produtoCarrinho);
+                executacmd.Parameters.AddWithValue("id_cliente", id_conectado);
+
+
+
+
+                //Abrindo conexao e aplicando sql
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //fechando conexao
+                conexao.Close();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+        #endregion
 
 
     }

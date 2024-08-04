@@ -231,6 +231,7 @@
             this.btnRemover.Size = new System.Drawing.Size(133, 36);
             this.btnRemover.TabIndex = 8;
             this.btnRemover.Text = "REMOVER";
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // UserControlCarrinho
             // 
