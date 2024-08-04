@@ -36,6 +36,7 @@
             this.txtPreco = new System.Windows.Forms.Label();
             this.btnAdicionarCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcodigo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +117,7 @@
             this.btnAdicionarCarrinho.Size = new System.Drawing.Size(208, 53);
             this.btnAdicionarCarrinho.TabIndex = 5;
             this.btnAdicionarCarrinho.Text = "        ADICIONAR AO CARRINHO";
+            this.btnAdicionarCarrinho.Click += new System.EventHandler(this.btnAdicionarCarrinho_Click);
             // 
             // panel1
             // 
@@ -125,6 +127,16 @@
             this.panel1.Size = new System.Drawing.Size(4, 170);
             this.panel1.TabIndex = 6;
             // 
+            // txtcodigo
+            // 
+            this.txtcodigo.AutoSize = true;
+            this.txtcodigo.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcodigo.Location = new System.Drawing.Point(34, 150);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(14, 15);
+            this.txtcodigo.TabIndex = 7;
+            this.txtcodigo.Text = "n";
+            // 
             // UserControlProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +144,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::TESTE_GUNA.Properties.Resources.Remedio_User_Control__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdicionarCarrinho);
             this.Controls.Add(this.txtPreco);
@@ -145,17 +158,19 @@
             this.Size = new System.Drawing.Size(320, 182);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label txtNome;
-        private System.Windows.Forms.Label txtDescricao;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label txtPreco;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAdicionarCarrinho;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label txtNome;
+        public System.Windows.Forms.Label txtDescricao;
+        public System.Windows.Forms.Label txtPreco;
+        public Guna.UI2.WinForms.Guna2GradientButton btnAdicionarCarrinho;
+        private System.Windows.Forms.Label txtcodigo;
     }
 }

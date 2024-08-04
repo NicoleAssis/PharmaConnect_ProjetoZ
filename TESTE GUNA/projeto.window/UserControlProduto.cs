@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.model;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -17,9 +19,95 @@ namespace TESTE_GUNA.projeto.window
             InitializeComponent();
         }
 
+        
+        #region Propriedades
+        
+        private string _nomeProduto;
+        private string _preco;
+        private string _descProduto;
+        private string _idcodigo;
+
+        [Category("Custom Pro")]
+        public string Produto
+        {
+            get { return _nomeProduto; }
+            set { _nomeProduto = value; txtNome.Text = value; }
+        }
+
+        [Category("Custom Pro")]
+        public string Codigo
+        {
+            get { return _idcodigo; }
+            set { _idcodigo = value; txtcodigo.Text = value; }
+        }
+
+
+        [Category("Custom Pro")]
+        public string Descricao
+        {
+            get { return _descProduto; }
+            set { _descProduto = value; txtDescricao.Text = value; }
+        }
+
+
+
+        [Category("Custom Pro")]
+        public string PrecoProduto
+        {
+            get { return _preco; }
+            set { _preco = value; txtPreco.Text = value; }
+        }
+
+
+
+        #endregion
+
+
+
+
+
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnAdicionarCarrinho_Click(object sender, EventArgs e)
+        {
+            CarrinhoDAO dao = new CarrinhoDAO();
+            CarrinhoB obj = new CarrinhoB
+            {
+                id_produtoCarrinho = Convert.ToInt32(Codigo),
+                nome_produtoCarrinho = Produto,
+                preco_produtoCarrinho = Convert.ToDecimal(PrecoProduto),
+                desc_produtoCarrinho = Descricao
+            };
+
+            dao.CadastrarProdutoCarrinho(obj);
+
+
+        }
+
+        public void DetailsB(ProdutoDAO d)
+        {
+            Produto = d.nomeProduto;
+            Descricao = d.descProduto;
+            PrecoProduto = d.precoProduto.ToString();
+            Codigo = d.Id_Produto.ToString();
+        }
+
+        public void searchResult(string key)
+        {
+            ProdutoDAO get = new ProdutoDAO();
+            get.Search(key);
+
+            Produto = get.nomeProduto;
+            Descricao = get.descProduto;
+            PrecoProduto = get.precoProduto.ToString();
+            Codigo = get.Id_Produto.ToString();
+        }
+
+
+
+
     }
 }
