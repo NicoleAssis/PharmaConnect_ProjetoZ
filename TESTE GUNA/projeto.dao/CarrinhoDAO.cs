@@ -214,6 +214,43 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
+        #region TotalCarrinho
+        public int TotalCarrinho()
+        {
+            try
+            {
+                int count = 0;
+                string sql = "SELECT SUM(totalCarrinho) AS totalGeral FROM tb_carrinho;";
 
+
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+
+                conexao.Open();
+                MySqlDataReader reader = executacmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    count = reader.GetInt32(0);
+                    conexao.Close();
+                }
+
+                return count;
+
+
+
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+                throw;
+            }
+
+
+        }
+        #endregion
     }
 }

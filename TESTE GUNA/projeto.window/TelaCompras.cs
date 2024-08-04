@@ -60,6 +60,14 @@ namespace TESTE_GUNA.projeto.window
 
         #endregion
 
+        private string _totalCarrinho;
+
+        public string TotalCarrinho
+        {
+            get { return _totalCarrinho; }
+            set { _totalCarrinho = lbltotalCarrinho.Text; }
+        }
+
 
         private void TelaCompras_Load(object sender, EventArgs e)
         {
@@ -80,6 +88,9 @@ namespace TESTE_GUNA.projeto.window
                 res.DetailsC(p);
                 flowLayoutPanel1.Controls.Add(res);
             }
+           //CarrinhoDAO dao = new CarrinhoDAO();
+           //TotalCarrinho = dao.totalCarrinho.ToString();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
