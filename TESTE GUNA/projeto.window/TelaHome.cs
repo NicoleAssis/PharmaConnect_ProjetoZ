@@ -187,10 +187,10 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnCompreAgora_Click(object sender, EventArgs e)
         {
-            panelPharmaConnect.Visible = false;
-            TelaProdutos tela = new TelaProdutos(this);
-            PrintarTela(tela);
-            tela.BringToFront();
+            //panelPharmaConnect.Visible = false;
+            //TelaProdutos tela = new TelaProdutos(this);
+            //PrintarTela(tela);
+            //tela.BringToFront();
         }
 
         private void btnSideBarDepartamentos_Click(object sender, EventArgs e)

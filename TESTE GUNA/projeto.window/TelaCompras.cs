@@ -82,8 +82,8 @@ namespace TESTE_GUNA.projeto.window
         //continuar comprando
         private void btnIrParaCarrinho_Click(object sender, EventArgs e)
         {
-            TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
-            this.telaHome.PrintarTelaForaDaHome(telaProdutos);
+            //TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
+            //this.telaHome.PrintarTelaForaDaHome(telaProdutos);
         }
     }
 }

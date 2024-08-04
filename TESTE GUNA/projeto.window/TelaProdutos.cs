@@ -17,9 +17,9 @@ namespace TESTE_GUNA.projeto.window
 {
     public partial class TelaProdutos : Form
     {
-        private TelaHome telaHome;
+        //private TelaHome telaHome;
 
-        public TelaProdutos(TelaHome home)
+        //public TelaProdutos(TelaHome home);
 
         public static List<Produto> listaProdutosEnter = new List<Produto>();
 
@@ -27,7 +27,7 @@ namespace TESTE_GUNA.projeto.window
         public TelaProdutos()
         {
             InitializeComponent();
-            this.telaHome = home;
+           // this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
         }
 
