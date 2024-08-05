@@ -198,7 +198,7 @@ namespace TESTE_GUNA.projeto.dao
 
                 //Definindo comando SQL
                 string sql = @"UPDATE tb_carrinho 
-                                SET qtd_carrinho = @qtd_Carrinho, totalCarrinho = @totaCarrinho
+                                SET qtd_carrinho = @qtd_Carrinho, totalCarrinho = @totalCarrinho
                                 WHERE id_cliente = @id_cliente  AND id_produtoCarrinho = @id_produtoCarrinho;";
 
 
@@ -208,7 +208,7 @@ namespace TESTE_GUNA.projeto.dao
                 //int qtdInicial = 1;
                 executacmd.Parameters.AddWithValue("@id_produtoCarrinho", obj.id_produtoCarrinho);
                 executacmd.Parameters.AddWithValue("@qtd_Carrinho", obj.qtd_Carrinho);
-                executacmd.Parameters.AddWithValue("@totaCarrinho", obj.totalCarrinho);
+                executacmd.Parameters.AddWithValue("@totalCarrinho", obj.totalCarrinho);
                 int id_conectado = ClienteDAO.id_conectado;
                 executacmd.Parameters.AddWithValue("id_cliente", id_conectado);
 

@@ -153,7 +153,10 @@ namespace TESTE_GUNA.projeto.window
                 dao.AlterarProdutoCarrinho(obj);
             }
 
-
+            //recarregar
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
         }
 
         private void btnaddcarrinho_Click(object sender, EventArgs e)
@@ -173,7 +176,11 @@ namespace TESTE_GUNA.projeto.window
                 Quantidade = (Convert.ToInt32(Quantidade) + 1).ToString();
                 PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString();
                 dao.AlterarProdutoCarrinho(obj);
-            
+
+            //recarregar
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
