@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.window
@@ -60,6 +61,14 @@ namespace TESTE_GUNA.projeto.window
                 panelPagamentoPIX.Visible = true;
             }
 
+            VendaDAO dao = new VendaDAO
+            {
+                total_venda = Convert.ToDecimal(TelaCompras.totalCarrinho)
+            };
+
+            dao.CadastroPagamentoPix(dao);
+
+            
         }
 
         private void checkBoxDebito_CheckedChanged(object sender, EventArgs e)

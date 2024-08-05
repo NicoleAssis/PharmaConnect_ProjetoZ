@@ -35,12 +35,13 @@ namespace TESTE_GUNA.projeto.window
         private string _precoTotal;
         private string _idcodigo;
         private string _quantidade;
+        
 
         [Category("Custom Pro")]
         public string Produto
         {
             get { return _nomeProduto; }
-            set { _nomeProduto = value; txtNome.Text = value; }
+            set { _nomeProduto = value; label3.Text = value; }
         }
 
         [Category("Custom Pro")]
@@ -88,6 +89,7 @@ namespace TESTE_GUNA.projeto.window
             PrecoUnitario = d.subtotalCarrinho.ToString();
             Quantidade = d.qtd_Carrinho.ToString() ;
             PrecoTotal = d.totalCarrinho.ToString();
+            Produto = d.NomeProduto;
             
 
         }
@@ -101,6 +103,7 @@ namespace TESTE_GUNA.projeto.window
             PrecoUnitario = get.subtotalCarrinho.ToString();
             Quantidade = get.qtd_Carrinho.ToString();
             PrecoTotal = get.totalCarrinho.ToString();
+            Produto = get.NomeProduto;
         }
 
         private void RSMoeda_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
 using TESTE_GUNA.projeto.model;
+
 using static System.Net.Mime.MediaTypeNames;
 
 
@@ -28,6 +30,7 @@ namespace TESTE_GUNA.projeto.window
             InitializeComponent();
             this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
+           
         }
 
         #region PrintarTela
@@ -60,14 +63,7 @@ namespace TESTE_GUNA.projeto.window
 
         #endregion
 
-        private string _totalCarrinho;
-
-        public string TotalCarrinho
-        {
-            get { return _totalCarrinho; }
-            set { _totalCarrinho = lbltotalCarrinho.Text; }
-        }
-
+        public static string totalCarrinho;
 
         private void TelaCompras_Load(object sender, EventArgs e)
         {
@@ -78,6 +74,10 @@ namespace TESTE_GUNA.projeto.window
             res.searchResult(key);
 
             loadDetails();
+            CarrinhoDAO dao = new CarrinhoDAO();
+            totalCarrinho = (dao.TotalCarrinho()).ToString("F2", CultureInfo.InvariantCulture);
+            lbltotalCarrinho.Text = totalCarrinho;
+            
         }
         private void loadDetails()
         {

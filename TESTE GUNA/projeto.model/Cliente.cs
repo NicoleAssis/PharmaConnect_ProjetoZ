@@ -25,5 +25,6 @@ namespace TESTE_GUNA.projeto.model
         public string senha { get; set; }
         public int nivel { get; set; }
 
+
     }
 }

@@ -84,43 +84,61 @@ namespace TESTE_GUNA.projeto.dao
         #region Search
         public void Search(int key)
         {
-
-            string sql = "select * from tb_carrinho where  id_cliente = @idCliente;";
-
-            //organizar o comando e executar
-            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-            executacmd.Parameters.AddWithValue("@idCliente", key );
-            conexao.Open();
-
-            //responsavel por executar o comando e armazenar os dados do PRODUTO
-            MySqlDataReader reader = executacmd.ExecuteReader();
-
-
-
-            list.Clear();
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                string sql = @"SELECT 
+                            c.id_carrinho, 
+                            c.id_produtoCarrinho, 
+                            c.qtd_Carrinho, 
+                            c.subtotalCarrinho, 
+                            c.totalCarrinho, 
+                            p.nome_produto AS nomeCompleto
+                        FROM 
+                            tb_carrinho c
+                        JOIN 
+                            tb_produto p ON c.id_produtoCarrinho = p.id_produto and id_cliente = @idCliente;";
+
+                //organizar o comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@idCliente", key);
+                conexao.Open();
+
+                //responsavel por executar o comando e armazenar os dados do PRODUTO
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+
+
+                list.Clear();
+                if (reader.HasRows)
                 {
-                    CarrinhoDAO p = new CarrinhoDAO
+                    while (reader.Read())
                     {
-                        id_carrinho = reader.GetInt32(0),
-                        id_produtoCarrinho = reader.GetInt32(1),
-                        
-                        qtd_Carrinho = reader.GetInt32(2),
-                        subtotalCarrinho = reader.GetDecimal(3),
-                        totalCarrinho = reader.GetDecimal(4)
+                        CarrinhoDAO p = new CarrinhoDAO
+                        {
+                            id_carrinho = reader.GetInt32(0),
+                            id_produtoCarrinho = reader.GetInt32(1),
+
+                            qtd_Carrinho = reader.GetInt32(2),
+                            subtotalCarrinho = reader.GetDecimal(3),
+                            totalCarrinho = reader.GetDecimal(4),
+                            NomeProduto = reader.GetString(5)
 
 
-                    };
+                        };
 
-                    list.Add(p);
+                        list.Add(p);
+                    }
                 }
+                reader.Dispose();
+                executacmd.Dispose();
+                conexao.Close();
             }
-            reader.Dispose();
-            executacmd.Dispose();
-            conexao.Close();
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro " + erro);
+            }
+           
 
 
 
@@ -215,11 +233,13 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
         #region TotalCarrinho
-        public int TotalCarrinho()
+
+        
+        public decimal TotalCarrinho()
         {
             try
             {
-                int count = 0;
+                decimal soma = (decimal)0.0;
                 string sql = "SELECT SUM(totalCarrinho) AS totalGeral FROM tb_carrinho;";
 
 
@@ -231,11 +251,11 @@ namespace TESTE_GUNA.projeto.dao
                 MySqlDataReader reader = executacmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    count = reader.GetInt32(0);
+                    soma = reader.GetInt32(0);
                     conexao.Close();
                 }
 
-                return count;
+                return soma;
 
 
 

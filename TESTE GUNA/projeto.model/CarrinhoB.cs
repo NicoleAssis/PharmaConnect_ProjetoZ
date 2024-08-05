@@ -14,7 +14,9 @@ namespace TESTE_GUNA.projeto.model
         public decimal subtotalCarrinho { get; set; }
         public decimal totalCarrinho { get; set; }
         public int id_cliente { get; set; }
-       
+
+        public string NomeProduto { get; set; }
+
 
     }
 }
