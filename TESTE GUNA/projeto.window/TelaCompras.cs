@@ -101,7 +101,7 @@ namespace TESTE_GUNA.projeto.window
             foreach (CarrinhoDAO p in CarrinhoDAO.list)
             {
                 UserControlCarrinho res = new UserControlCarrinho(this.telaHome);
-                res.DetailsC(p);
+                res.DetailsC(p); 
                 decimal tot = p.totalCarrinho;
                 flowLayoutPanel1.Controls.Add(res);
             }
