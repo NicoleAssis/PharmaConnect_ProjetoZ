@@ -43,7 +43,17 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            _telaCompras.PrintarTelaFinalizarPagamento();
+            ano = txtAno.Text;
+            cvv = txtCVV.Text;
+            mes = txtMes.Text;
+            nomeCartao = txtNomeCartao.Text;
+            numeroCartao = txtNumeroCartao.Text;
+            _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
+        }
+
+        private void txtNomeCartao_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void checkBoxPIX_CheckedChanged(object sender, EventArgs e)
