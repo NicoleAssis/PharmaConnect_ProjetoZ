@@ -22,13 +22,13 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region Cadastro Venda
+        #region Cadastro Pagamento PIX
         public void CadastroPagamentoPix(VendaDAO obj)
         {
 
             //Definindo comando SQL
             string sql = @"INSERT INTO tb_vendas (cliente_id, total_venda, id_pagamento, tipo_pag, num_cartao, mes, ano, cvv) 
-                               VALUES (6, @total, 1, 'Pix', NULL, NULL, NULL, NULL);";
+                               VALUES (@cliente_id, @total, 1, 'Pix', NULL, NULL, NULL, NULL);";
 
 
             //Organizando comando SQL
@@ -43,6 +43,70 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
+            //Abrindo conexao e aplicando sql
+            conexao.Open();
+            executacmd.ExecuteNonQuery();
+
+            //fechando conexao
+            conexao.Close();
+
+        }
+
+
+
+        #endregion
+
+        #region Cadastro Pagamento Debito
+        public void CadastroPagamentoDebito(VendaDAO obj)
+        {
+
+            //Definindo comando SQL
+            string sql = @"INSERT INTO tb_vendas (cliente_id, total_venda, id_pagamento, tipo_pag, num_cartao, mes, ano, cvv) 
+                               VALUES (@cliente_id, @total, 2, 'Débito', @numCartao,@mes, @ano, @cvv);";
+
+
+            //Organizando comando SQL
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+            int id_conectado = ClienteDAO.id_conectado;
+            //int qtdInicial = 1;
+            executacmd.Parameters.AddWithValue("@cliente_id", id_conectado);
+            executacmd.Parameters.AddWithValue("@total", obj.total_venda);
+            executacmd.Parameters.AddWithValue("@numCartao", obj.num_cartao);
+            executacmd.Parameters.AddWithValue("@mes", obj.mes);
+            executacmd.Parameters.AddWithValue("@ano", obj.ano);
+            executacmd.Parameters.AddWithValue("@cvv", obj.cvv);
+            //Abrindo conexao e aplicando sql
+            conexao.Open();
+            executacmd.ExecuteNonQuery();
+
+            //fechando conexao
+            conexao.Close();
+
+        }
+
+
+
+        #endregion
+
+        #region Cadastro Pagamento Credito
+        public void CadastroPagamentoCredito(VendaDAO obj)
+        {
+
+            //Definindo comando SQL
+            string sql = @"INSERT INTO tb_vendas (cliente_id, total_venda, id_pagamento, tipo_pag, num_cartao, mes, ano, cvv) 
+                               VALUES (@cliente_id, @total, 3, 'Crédito', @numCartao,@mes, @ano, @cvv);";
+
+
+            //Organizando comando SQL
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+            int id_conectado = ClienteDAO.id_conectado;
+            //int qtdInicial = 1;
+            executacmd.Parameters.AddWithValue("@cliente_id", id_conectado);
+            executacmd.Parameters.AddWithValue("@total", obj.total_venda);
+            executacmd.Parameters.AddWithValue("@numCartao", obj.num_cartao);
+            executacmd.Parameters.AddWithValue("@mes", obj.mes);
+            executacmd.Parameters.AddWithValue("@ano", obj.ano);
+            executacmd.Parameters.AddWithValue("@cvv", obj.cvv);
             //Abrindo conexao e aplicando sql
             conexao.Open();
             executacmd.ExecuteNonQuery();

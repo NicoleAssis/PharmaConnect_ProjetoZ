@@ -51,33 +51,111 @@ namespace TESTE_GUNA.projeto.window
                 this.telaHome.Show();
 
                 decimal vt= CarrinhoDAO.totalCarrinhoEstatico;
-                VendaDAO dao = new VendaDAO
+
+                int recebimento = TelaPagamento.FormaPagamento;
+
+                if (recebimento == 1)
                 {
-                    total_venda = vt
-                };
+                    VendaDAO dao = new VendaDAO
+                    {
+                        total_venda = vt
+                    };
+                    dao.CadastroPagamentoPix(dao);
+                    ProdutoDAO produto = new ProdutoDAO();
 
-                dao.CadastroPagamentoPix(dao);
-                ProdutoDAO produto = new ProdutoDAO();
-               
-                foreach (CarrinhoDAO p  in CarrinhoDAO.list)
+                    foreach (CarrinhoDAO p in CarrinhoDAO.list)
+                    {
+                        ItemVendaDAO res = new ItemVendaDAO();
+                        res.venda_id = dao.RetornaIdUltimaVenda();
+                        res.produto_id = p.id_produtoCarrinho;
+                        res.quantidade = p.qtd_Carrinho;
+                        res.subtotal = p.subtotalCarrinho;
+
+
+                        res.CadastrarItem(res);
+
+                      
+
+                        qtd_estoque = produto.RetornaEstoqueAtual(p.id_produtoCarrinho);
+                        qtdComprada = p.qtd_Carrinho;
+                        estoqueAtualizado = qtd_estoque - qtdComprada;
+
+                        produto.BaixaEstoque(p.id_produtoCarrinho, estoqueAtualizado);
+                        p.Limpar();
+
+                    }
+
+                }else if(recebimento == 2)
                 {
-                    ItemVendaDAO res = new ItemVendaDAO();
-                    res.venda_id = dao.RetornaIdUltimaVenda();
-                    res.produto_id = p.id_produtoCarrinho;
-                    res.quantidade = p.qtd_Carrinho;
-                    res.subtotal = p.subtotalCarrinho;
+                    VendaDAO dao = new VendaDAO
+                    {
+                        total_venda = vt,
+                        num_cartao = TelaPagamento.numeroCartao,
+                        mes = TelaPagamento.mes,
+                        ano = TelaPagamento.ano,
+                        cvv = TelaPagamento.cvv
 
-                    res.CadastrarItem(res);
+                    };
+                    dao.CadastroPagamentoDebito(dao);
+                    ProdutoDAO produto = new ProdutoDAO();
 
-                    p.Limpar();
+                    foreach (CarrinhoDAO p in CarrinhoDAO.list)
+                    {
+                        ItemVendaDAO res = new ItemVendaDAO();
+                        res.venda_id = dao.RetornaIdUltimaVenda();
+                        res.produto_id = p.id_produtoCarrinho;
+                        res.quantidade = p.qtd_Carrinho;
+                        res.subtotal = p.subtotalCarrinho;
+                        
 
-                    qtd_estoque = produto.RetornaEstoqueAtual(p.id_produtoCarrinho);
-                    qtdComprada = p.qtd_Carrinho;
-                    estoqueAtualizado = qtd_estoque - qtdComprada;
+                        res.CadastrarItem(res);
 
-                    produto.BaixaEstoque(p.id_produtoCarrinho,estoqueAtualizado);
+                        
 
+                        qtd_estoque = produto.RetornaEstoqueAtual(p.id_produtoCarrinho);
+                        qtdComprada = p.qtd_Carrinho;
+                        estoqueAtualizado = qtd_estoque - qtdComprada;
+
+                        produto.BaixaEstoque(p.id_produtoCarrinho, estoqueAtualizado);
+                        p.Limpar();
+                    }
                 }
+                else if (recebimento == 3)
+                {
+                    VendaDAO dao = new VendaDAO
+                    {
+                        total_venda = vt,
+                        num_cartao = TelaPagamento.numeroCartao,
+                        mes = TelaPagamento.mes,
+                        ano = TelaPagamento.ano,
+                        cvv = TelaPagamento.cvv
+
+                    };
+                    dao.CadastroPagamentoCredito(dao);
+                    ProdutoDAO produto = new ProdutoDAO();
+
+                    foreach (CarrinhoDAO p in CarrinhoDAO.list)
+                    {
+                        ItemVendaDAO res = new ItemVendaDAO();
+                        res.venda_id = dao.RetornaIdUltimaVenda();
+                        res.produto_id = p.id_produtoCarrinho;
+                        res.quantidade = p.qtd_Carrinho;
+                        res.subtotal = p.subtotalCarrinho;
+
+
+                        res.CadastrarItem(res);
+
+
+
+                        qtd_estoque = produto.RetornaEstoqueAtual(p.id_produtoCarrinho);
+                        qtdComprada = p.qtd_Carrinho;
+                        estoqueAtualizado = qtd_estoque - qtdComprada;
+
+                        produto.BaixaEstoque(p.id_produtoCarrinho, estoqueAtualizado);
+                        p.Limpar();
+                    }
+                }
+
 
 
 

@@ -24,7 +24,8 @@ namespace TESTE_GUNA.projeto.window
         }
 
         public static int FormaPagamento;
-        public static 
+        public static string ano, cvv, mes, nomeCartao, numeroCartao;
+    
         private void txtCVV_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
@@ -65,7 +66,7 @@ namespace TESTE_GUNA.projeto.window
 
             FormaPagamento = 1;
 
-            Numerguna2Panel1 
+           
 
             
         }
@@ -75,7 +76,12 @@ namespace TESTE_GUNA.projeto.window
             if (panelPagamentoPIX.Visible = true)
             {
                 panelPagamentoPIX.Visible = false;
-
+                FormaPagamento = 3;
+                ano = txtAno.Text;
+                cvv = txtCVV.Text;
+                mes = txtMes.Text;
+                nomeCartao = txtNomeCartao.Text;
+                numeroCartao = txtNumeroCartao.Text;
                 panelPagamentoCartao.Visible = true;
             }
             else
@@ -84,7 +90,8 @@ namespace TESTE_GUNA.projeto.window
             }
 
             FormaPagamento = 2;
-          
+
+
         }
 
         private void checkBoxCredito_CheckedChanged(object sender, EventArgs e)
@@ -92,14 +99,19 @@ namespace TESTE_GUNA.projeto.window
             if (panelPagamentoPIX.Visible = true)
             {
                 panelPagamentoPIX.Visible = false;
-
+                FormaPagamento = 3;
+                ano = txtAno.Text;
+                cvv = txtCVV.Text;
+                mes = txtMes.Text;
+                nomeCartao = txtNomeCartao.Text;
+                numeroCartao = txtNumeroCartao.Text;
                 panelPagamentoCartao.Visible = true;
             }
             else
             {
                 panelPagamentoCartao.Visible = true;
             }
-            FormaPagamento = 3;
+
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)
