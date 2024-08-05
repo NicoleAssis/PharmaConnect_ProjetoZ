@@ -14,16 +14,20 @@ namespace TESTE_GUNA.projeto.window
     public partial class TelaDepartamentoEscolhido : Form
     {
         private TelaHome telaHome;
+        private string Departamento;
 
-        public TelaDepartamentoEscolhido(TelaHome home)
+        public TelaDepartamentoEscolhido(TelaHome home, string Departamento)
         {
             InitializeComponent();
             this.telaHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
+            this.Departamento = Departamento;
         }
 
         private void TelaDepartamentoEscolhido_Load(object sender, EventArgs e)
         {
+            txtDepartamento.Text = Departamento.ToString();
+
             flowLayoutPanel1.Controls.Clear();
 
             UserControlProduto res = new UserControlProduto();

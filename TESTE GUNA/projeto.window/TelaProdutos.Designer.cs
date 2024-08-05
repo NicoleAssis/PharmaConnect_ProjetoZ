@@ -72,6 +72,7 @@
             this.btnIrParaCarrinho.Size = new System.Drawing.Size(303, 55);
             this.btnIrParaCarrinho.TabIndex = 1;
             this.btnIrParaCarrinho.Text = "IR PARA O CARRINHO";
+            this.btnIrParaCarrinho.Click += new System.EventHandler(this.btnIrParaCarrinho_Click);
             // 
             // txtPesquisa
             // 

@@ -30,7 +30,7 @@
         {
             this.btnIrParaCarrinho = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtPesquisa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
@@ -91,17 +91,17 @@
             this.txtPesquisa.Size = new System.Drawing.Size(558, 48);
             this.txtPesquisa.TabIndex = 4;
             // 
-            // label1
+            // txtDepartamento
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(136)))));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 37);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "DEPARTAMENTO ESCOLHIDO";
+            this.txtDepartamento.AutoSize = true;
+            this.txtDepartamento.BackColor = System.Drawing.Color.White;
+            this.txtDepartamento.Font = new System.Drawing.Font("Trebuchet MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(136)))));
+            this.txtDepartamento.Location = new System.Drawing.Point(12, 12);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(393, 37);
+            this.txtDepartamento.TabIndex = 7;
+            this.txtDepartamento.Text = "DEPARTAMENTO ESCOLHIDO";
             // 
             // panel1
             // 
@@ -132,7 +132,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDepartamento);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnIrParaCarrinho);
@@ -149,7 +149,7 @@
 
         private Guna.UI2.WinForms.Guna2GradientButton btnIrParaCarrinho;
         private Guna.UI2.WinForms.Guna2TextBox txtPesquisa;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtDepartamento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }

@@ -139,5 +139,13 @@ namespace TESTE_GUNA.projeto.window
         {
 
         }
+
+        private void btnIrParaCarrinho_Click(object sender, EventArgs e)
+        {
+
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
+        }
     }
 }
