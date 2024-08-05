@@ -54,9 +54,9 @@ namespace TESTE_GUNA.projeto.window
             PrintarTela(telaPagamento);
             telaPagamento.BringToFront();
         }
-        public void PrintarTelaFinalizarPagamento()
+        public void PrintarTelaFinalizarPagamento(string ano, string cvv, string mes, string nomeCartao, string numeroCartao)
         {
-            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this, this.telaHome);
+            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this, this.telaHome, ano, cvv, mes, nomeCartao, numeroCartao);
             PrintarTela(tela);
             tela.BringToFront();
         }

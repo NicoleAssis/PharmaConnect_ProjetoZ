@@ -19,13 +19,20 @@ namespace TESTE_GUNA.projeto.window
         //printar a proxima tela
         private TelaCompras _telaCompras;
         private TelaHome telaHome;
+        private string ano, cvv, mes, nomeCartao, numeroCartao;
 
-        public TelaFinalizarPagamento(TelaCompras telaCompras, TelaHome home)
+        public TelaFinalizarPagamento(TelaCompras telaCompras, TelaHome home,string ano1, string cvv1, string mes1,string nomeCartao1,string numeroCartao1)
         {
             InitializeComponent();
             this.DoubleBuffered = true; // parar de travar a tela
             _telaCompras = telaCompras;
             telaHome = home;
+            ano = ano1;
+            cvv = cvv1;
+            mes = mes1; 
+            nomeCartao = nomeCartao1;
+            numeroCartao = numeroCartao1;
+
         }
 
 
@@ -90,10 +97,10 @@ namespace TESTE_GUNA.projeto.window
                     VendaDAO dao = new VendaDAO
                     {
                         total_venda = vt,
-                        num_cartao = TelaPagamento.numeroCartao,
-                        mes = TelaPagamento.mes,
-                        ano = TelaPagamento.ano,
-                        cvv = TelaPagamento.cvv
+                        num_cartao = numeroCartao,
+                        mes = mes,
+                        ano = ano,
+                        cvv = cvv
 
                     };
                     dao.CadastroPagamentoDebito(dao);
@@ -125,10 +132,10 @@ namespace TESTE_GUNA.projeto.window
                     VendaDAO dao = new VendaDAO
                     {
                         total_venda = vt,
-                        num_cartao = TelaPagamento.numeroCartao,
-                        mes = TelaPagamento.mes,
-                        ano = TelaPagamento.ano,
-                        cvv = TelaPagamento.cvv
+                        num_cartao = numeroCartao,
+                        mes = mes,
+                        ano = ano,
+                        cvv = cvv
 
                     };
                     dao.CadastroPagamentoCredito(dao);
