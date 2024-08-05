@@ -110,6 +110,16 @@ namespace TESTE_GUNA.projeto.window
             PrecoProduto = get.precoProduto.ToString();
             Codigo = get.Id_Produto.ToString();
         }
+        public void searchResultDEP(string key)
+        {
+            ProdutoDAO get = new ProdutoDAO();
+            get.SearchDepartamento(key);
+
+            Produto = get.nomeProduto;
+            Descricao = get.descProduto;
+            PrecoProduto = get.precoProduto.ToString();
+            Codigo = get.Id_Produto.ToString();
+        }
 
         private void txtDescricao_Click(object sender, EventArgs e)
         {

@@ -35,9 +35,9 @@
             this.btnSuplementos = new System.Windows.Forms.PictureBox();
             this.btnHipertensao = new System.Windows.Forms.PictureBox();
             this.btnGinecologia = new System.Windows.Forms.PictureBox();
-            this.btnParaDiabetes = new System.Windows.Forms.PictureBox();
             this.btnAnalgesicos = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnParaDiabetes = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDermatologicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAntivirais)).BeginInit();
@@ -45,9 +45,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSuplementos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHipertensao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGinecologia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnParaDiabetes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAnalgesicos)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnParaDiabetes)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -75,6 +75,7 @@
             this.btnDermatologicos.Size = new System.Drawing.Size(200, 210);
             this.btnDermatologicos.TabIndex = 3;
             this.btnDermatologicos.TabStop = false;
+            this.btnDermatologicos.Click += new System.EventHandler(this.btnDermatologicos_Click);
             // 
             // btnAntivirais
             // 
@@ -90,6 +91,7 @@
             this.btnAntivirais.Size = new System.Drawing.Size(200, 210);
             this.btnAntivirais.TabIndex = 2;
             this.btnAntivirais.TabStop = false;
+            this.btnAntivirais.Click += new System.EventHandler(this.btnAntivirais_Click);
             // 
             // btnAntiinflamatorios
             // 
@@ -105,6 +107,7 @@
             this.btnAntiinflamatorios.Size = new System.Drawing.Size(200, 210);
             this.btnAntiinflamatorios.TabIndex = 1;
             this.btnAntiinflamatorios.TabStop = false;
+            this.btnAntiinflamatorios.Click += new System.EventHandler(this.btnAntiinflamatorios_Click);
             // 
             // btnSuplementos
             // 
@@ -120,6 +123,7 @@
             this.btnSuplementos.Size = new System.Drawing.Size(200, 210);
             this.btnSuplementos.TabIndex = 7;
             this.btnSuplementos.TabStop = false;
+            this.btnSuplementos.Click += new System.EventHandler(this.btnSuplementos_Click);
             // 
             // btnHipertensao
             // 
@@ -135,6 +139,7 @@
             this.btnHipertensao.Size = new System.Drawing.Size(200, 210);
             this.btnHipertensao.TabIndex = 6;
             this.btnHipertensao.TabStop = false;
+            this.btnHipertensao.Click += new System.EventHandler(this.btnHipertensao_Click);
             // 
             // btnGinecologia
             // 
@@ -150,21 +155,7 @@
             this.btnGinecologia.Size = new System.Drawing.Size(200, 210);
             this.btnGinecologia.TabIndex = 5;
             this.btnGinecologia.TabStop = false;
-            // 
-            // btnParaDiabetes
-            // 
-            this.btnParaDiabetes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnParaDiabetes.BackColor = System.Drawing.Color.Transparent;
-            this.btnParaDiabetes.BackgroundImage = global::TESTE_GUNA.Properties.Resources.PARA_diabetes__1_1;
-            this.btnParaDiabetes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnParaDiabetes.Location = new System.Drawing.Point(40, 255);
-            this.btnParaDiabetes.Margin = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnParaDiabetes.MaximumSize = new System.Drawing.Size(200, 210);
-            this.btnParaDiabetes.MinimumSize = new System.Drawing.Size(200, 210);
-            this.btnParaDiabetes.Name = "btnParaDiabetes";
-            this.btnParaDiabetes.Size = new System.Drawing.Size(200, 210);
-            this.btnParaDiabetes.TabIndex = 4;
-            this.btnParaDiabetes.TabStop = false;
+            this.btnGinecologia.Click += new System.EventHandler(this.btnGinecologia_Click);
             // 
             // btnAnalgesicos
             // 
@@ -180,6 +171,7 @@
             this.btnAnalgesicos.Size = new System.Drawing.Size(200, 210);
             this.btnAnalgesicos.TabIndex = 0;
             this.btnAnalgesicos.TabStop = false;
+            this.btnAnalgesicos.Click += new System.EventHandler(this.btnAnalgesicos_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -199,6 +191,22 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(939, 464);
             this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // btnParaDiabetes
+            // 
+            this.btnParaDiabetes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnParaDiabetes.BackColor = System.Drawing.Color.Transparent;
+            this.btnParaDiabetes.BackgroundImage = global::TESTE_GUNA.Properties.Resources.PARA_diabetes__1_1;
+            this.btnParaDiabetes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnParaDiabetes.Location = new System.Drawing.Point(40, 255);
+            this.btnParaDiabetes.Margin = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnParaDiabetes.MaximumSize = new System.Drawing.Size(200, 210);
+            this.btnParaDiabetes.MinimumSize = new System.Drawing.Size(200, 210);
+            this.btnParaDiabetes.Name = "btnParaDiabetes";
+            this.btnParaDiabetes.Size = new System.Drawing.Size(200, 210);
+            this.btnParaDiabetes.TabIndex = 4;
+            this.btnParaDiabetes.TabStop = false;
+            this.btnParaDiabetes.Click += new System.EventHandler(this.btnParaDiabetes_Click);
             // 
             // TelaDepartamentos
             // 
@@ -220,9 +228,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSuplementos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHipertensao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGinecologia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnParaDiabetes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAnalgesicos)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnParaDiabetes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,8 +243,8 @@
         private System.Windows.Forms.PictureBox btnSuplementos;
         private System.Windows.Forms.PictureBox btnHipertensao;
         private System.Windows.Forms.PictureBox btnGinecologia;
-        private System.Windows.Forms.PictureBox btnParaDiabetes;
         private System.Windows.Forms.PictureBox btnAnalgesicos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox btnParaDiabetes;
     }
 }

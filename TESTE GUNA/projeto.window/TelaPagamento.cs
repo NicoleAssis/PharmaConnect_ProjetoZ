@@ -24,6 +24,7 @@ namespace TESTE_GUNA.projeto.window
         }
 
         public static int FormaPagamento;
+        public static 
         private void txtCVV_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
@@ -64,6 +65,8 @@ namespace TESTE_GUNA.projeto.window
 
             FormaPagamento = 1;
 
+            Numerguna2Panel1 
+
             
         }
 
@@ -81,6 +84,7 @@ namespace TESTE_GUNA.projeto.window
             }
 
             FormaPagamento = 2;
+          
         }
 
         private void checkBoxCredito_CheckedChanged(object sender, EventArgs e)

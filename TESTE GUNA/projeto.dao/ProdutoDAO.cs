@@ -84,6 +84,52 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
+        #region Search
+        public void SearchDepartamento(string key)
+        {
+
+            string sql = "select * from tb_produto where  departamento = @dep;";
+
+            //organizar o comando e executar
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+            executacmd.Parameters.AddWithValue("@dep", key);
+            conexao.Open();
+
+            //responsavel por executar o comando e armazenar os dados do PRODUTO
+            MySqlDataReader reader = executacmd.ExecuteReader();
+
+
+
+            list.Clear();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ProdutoDAO p = new ProdutoDAO
+                    {
+                        Id_Produto = reader.GetInt32(0),
+                        nomeProduto = reader.GetString(1),
+                        descProduto = reader.GetString(2),
+                        precoProduto = reader.GetDecimal(3),
+                        qtdEstoque = reader.GetInt32(4),
+                        departamento = reader.GetString(5)
+                    };
+                    list.Add(p);
+                }
+            }
+            reader.Dispose();
+            executacmd.Dispose();
+            conexao.Close();
+
+
+
+        }
+
+
+
+        #endregion
+
         #region Retorna
 
         public int RetornaEstoqueAtual(int idproduto)
