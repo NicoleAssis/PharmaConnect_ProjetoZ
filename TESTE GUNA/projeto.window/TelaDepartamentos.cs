@@ -24,7 +24,7 @@ namespace TESTE_GUNA.projeto.window
         public static string departamento;
         private void TelaDepartamentos_Load(object sender, EventArgs e)
         {
-            
+             
         }
 
 
