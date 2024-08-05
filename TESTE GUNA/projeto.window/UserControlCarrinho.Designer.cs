@@ -161,7 +161,7 @@
             this.lblvalortotal.ForeColor = System.Drawing.Color.White;
             this.lblvalortotal.Location = new System.Drawing.Point(393, 30);
             this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(85, 21);
+            this.lblvalortotal.Size = new System.Drawing.Size(94, 21);
             this.lblvalortotal.TabIndex = 10;
             this.lblvalortotal.Text = "1200,00";
             // 

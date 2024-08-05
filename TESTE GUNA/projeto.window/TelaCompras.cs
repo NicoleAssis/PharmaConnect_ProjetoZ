@@ -74,7 +74,7 @@ namespace TESTE_GUNA.projeto.window
 
             if (contador> 0)
             {
-                UserControlCarrinho res = new UserControlCarrinho();
+                UserControlCarrinho res = new UserControlCarrinho(this.telaHome);
                 int key = ClienteDAO.id_conectado;
                 res.searchResult(key);
 
@@ -100,7 +100,7 @@ namespace TESTE_GUNA.projeto.window
 
             foreach (CarrinhoDAO p in CarrinhoDAO.list)
             {
-                UserControlCarrinho res = new UserControlCarrinho();
+                UserControlCarrinho res = new UserControlCarrinho(this.telaHome);
                 res.DetailsC(p);
                 decimal tot = p.totalCarrinho;
                 flowLayoutPanel1.Controls.Add(res);
