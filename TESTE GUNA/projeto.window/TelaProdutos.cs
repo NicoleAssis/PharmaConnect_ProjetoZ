@@ -45,9 +45,8 @@ namespace TESTE_GUNA.projeto.window
         private void TelaProdutos_Load(object sender, EventArgs e)
         {
             
-            
-           
-             populateItems();
+
+            populateItems();
 
 
 
@@ -133,6 +132,11 @@ namespace TESTE_GUNA.projeto.window
             }
 
 
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

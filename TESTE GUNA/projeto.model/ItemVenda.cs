@@ -11,7 +11,8 @@ namespace TESTE_GUNA.projeto.model
         public int venda_id { get; set; }
         public int produto_id { get; set; }
         public int quantidade { get; set; }
-        public int subtotal { get; set; }
+        public decimal subtotal { get; set; }
+        
 
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void TelaFinalizarPagamento_Load(object sender, EventArgs e)
         {
-
+            lblTotal.Text = TelaCompras.totalCarrinho;
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
@@ -40,12 +41,46 @@ namespace TESTE_GUNA.projeto.window
             messageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
             messageBox.ShowDialog();
 
+            int qtd_estoque, qtdComprada, estoqueAtualizado;
+
             if (messageBox.btnSimClick == true)
             {
                 this.telaHome.Hide();
                 TelaConfirmandoPagamento telaConfirmando = new TelaConfirmandoPagamento(this.telaHome);
                 telaConfirmando.ShowDialog();
                 this.telaHome.Show();
+
+                decimal vt= CarrinhoDAO.totalCarrinhoEstatico;
+                VendaDAO dao = new VendaDAO
+                {
+                    total_venda = vt
+                };
+
+                dao.CadastroPagamentoPix(dao);
+                ProdutoDAO produto = new ProdutoDAO();
+               
+                foreach (CarrinhoDAO p  in CarrinhoDAO.list)
+                {
+                    ItemVendaDAO res = new ItemVendaDAO();
+                    res.venda_id = dao.RetornaIdUltimaVenda();
+                    res.produto_id = p.id_produtoCarrinho;
+                    res.quantidade = p.qtd_Carrinho;
+                    res.subtotal = p.subtotalCarrinho;
+
+                    res.CadastrarItem(res);
+
+                    p.Limpar();
+
+                    qtd_estoque = produto.RetornaEstoqueAtual(p.id_produtoCarrinho);
+                    qtdComprada = p.qtd_Carrinho;
+                    estoqueAtualizado = qtd_estoque - qtdComprada;
+
+                    produto.BaixaEstoque(p.id_produtoCarrinho,estoqueAtualizado);
+
+                }
+
+
+
             }
             else if (messageBox.btnNaoClick == true)
             {

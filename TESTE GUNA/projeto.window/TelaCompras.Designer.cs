@@ -116,6 +116,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(554, 709);
             this.panel2.TabIndex = 7;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnContinuarComprando
             // 
@@ -192,7 +193,6 @@
             this.lbltotalCarrinho.Name = "lbltotalCarrinho";
             this.lbltotalCarrinho.Size = new System.Drawing.Size(109, 30);
             this.lbltotalCarrinho.TabIndex = 2;
-            this.lbltotalCarrinho.Text = "1200,00";
             // 
             // panel1
             // 
@@ -212,6 +212,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 335);
             this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel3
             // 

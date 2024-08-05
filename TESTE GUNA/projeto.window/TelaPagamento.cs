@@ -23,6 +23,7 @@ namespace TESTE_GUNA.projeto.window
             _telaCompras = telaCompras;
         }
 
+        public static int FormaPagamento;
         private void txtCVV_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
@@ -61,12 +62,7 @@ namespace TESTE_GUNA.projeto.window
                 panelPagamentoPIX.Visible = true;
             }
 
-            VendaDAO dao = new VendaDAO
-            {
-                total_venda = Convert.ToDecimal(TelaCompras.totalCarrinho)
-            };
-
-            dao.CadastroPagamentoPix(dao);
+            FormaPagamento = 1;
 
             
         }
@@ -83,6 +79,8 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
+
+            FormaPagamento = 2;
         }
 
         private void checkBoxCredito_CheckedChanged(object sender, EventArgs e)
@@ -97,6 +95,7 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
+            FormaPagamento = 3;
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)

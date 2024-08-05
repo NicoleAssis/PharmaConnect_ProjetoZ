@@ -68,15 +68,31 @@ namespace TESTE_GUNA.projeto.window
         private void TelaCompras_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-
-            UserControlCarrinho res = new UserControlCarrinho();
-            int key = ClienteDAO.id_conectado;
-            res.searchResult(key);
-
-            loadDetails();
             CarrinhoDAO dao = new CarrinhoDAO();
-            totalCarrinho = (dao.TotalCarrinho()).ToString("F2", CultureInfo.InvariantCulture);
-            lbltotalCarrinho.Text = totalCarrinho;
+            int contador = dao.contValores();
+            
+
+            if (contador> 0)
+            {
+                UserControlCarrinho res = new UserControlCarrinho();
+                int key = ClienteDAO.id_conectado;
+                res.searchResult(key);
+
+                loadDetails();
+                
+                totalCarrinho = (dao.TotalCarrinho()).ToString("F2", CultureInfo.InvariantCulture);
+                lbltotalCarrinho.Text = totalCarrinho;
+
+            }
+            else
+            {
+
+            }
+
+
+
+
+
             
         }
         private void loadDetails()
@@ -86,6 +102,7 @@ namespace TESTE_GUNA.projeto.window
             {
                 UserControlCarrinho res = new UserControlCarrinho();
                 res.DetailsC(p);
+                decimal tot = p.totalCarrinho;
                 flowLayoutPanel1.Controls.Add(res);
             }
            //CarrinhoDAO dao = new CarrinhoDAO();
@@ -120,6 +137,16 @@ namespace TESTE_GUNA.projeto.window
         {
             //TelaProdutos telaProdutos = new TelaProdutos(this.telaHome);
             //this.telaHome.PrintarTelaForaDaHome(telaProdutos);
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

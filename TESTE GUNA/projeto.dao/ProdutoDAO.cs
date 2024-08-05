@@ -84,10 +84,90 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
+        #region Retorna
+
+        public int RetornaEstoqueAtual(int idproduto)
+        {
+            try
+            {
+                int qtd_estoque = 0;
+
+                string sql = @"select qtd_estoque from tb_produto where id_produto = @id";
+
+                //2 passo organizar comando sql 
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@id", idproduto);
+
+                conexao.Open();
+
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+
+                if (rs.Read())
+                {
+                    //variavel criada recebe a qtd do estoque do banco de dados
+                    qtd_estoque = rs.GetInt32("qtd_estoque");
+                    conexao.Close();
+                }
+
+                return qtd_estoque;
+
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro: " + erro);
+                return 0;
+            }
+        }
 
 
 
 
+        #endregion
+
+
+        #region BaixaEstoque
+
+        public void BaixaEstoque(int idproduto, int qtdestoque)
+        {
+            try
+            {
+                //1 passo definir comando sql - insert into
+
+                string sql = @"update tb_produto set qtd_estoque=@qtd_estoque where id_produto = @id";
+
+                //2 passo organizar comando sql 
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@qtd_estoque", qtdestoque);
+
+                executacmd.Parameters.AddWithValue("@id", idproduto);
+
+
+                //3 passo abrir a conexao e abrir o comando sql
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro (BaixaEstoque): " + erro);
+                conexao.Close();
+            }
+        }
+
+        #endregion  
 
 
         #region TotalProdutosCadastrados

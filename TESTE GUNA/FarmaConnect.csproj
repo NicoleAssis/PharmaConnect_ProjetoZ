@@ -114,6 +114,7 @@
     <Compile Include="projeto.dao\AdministradorDAO.cs" />
     <Compile Include="projeto.dao\CarrinhoDAO.cs" />
     <Compile Include="projeto.dao\ClienteDAO.cs" />
+    <Compile Include="projeto.dao\ItemVendaDAO.cs" />
     <Compile Include="projeto.dao\PagamentoDAO.cs" />
     <Compile Include="projeto.dao\ProdutoDAO.cs" />
     <Compile Include="projeto.dao\SenhaDAO.cs" />

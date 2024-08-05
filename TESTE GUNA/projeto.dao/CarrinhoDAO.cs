@@ -17,6 +17,7 @@ using System.Data;
 using Guna.UI2.WinForms;
 using System.Data.SqlClient;
 using TESTE_GUNA.projeto.window;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -80,6 +81,45 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
+        #region TotalCarrinhoContador
+       
+        public int contValores()
+        {
+            try
+            {
+                int count = 0;
+                string sql = "SELECT COUNT(id_carrinho) As total FROM tb_carrinho;";
+
+
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+
+                conexao.Open();
+                MySqlDataReader reader = executacmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    count = reader.GetInt32(0);
+                    conexao.Close();
+                }
+              
+                return count;
+
+
+
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+                throw;
+            }
+
+
+        }
+        #endregion
 
         #region Search
         public void Search(int key)
@@ -232,14 +272,51 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-        #region TotalCarrinho
 
+
+        #region Limpar
+
+
+        public void Limpar()
+        {
+            try
+            {
+
+                //Definindo comando SQL
+                string sql = @"delete from tb_carrinho 
+                                where  id_cliente = @id_cliente";
+
+
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                int id_conectado = ClienteDAO.id_conectado;
+                //int qtdInicial = 1;
+                 executacmd.Parameters.AddWithValue("id_cliente", id_conectado);
+                //Abrindo conexao e aplicando sql
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //fechando conexao
+                conexao.Close();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+        #endregion
+
+
+        #region TotalCarrinho
+        public static decimal totalCarrinhoEstatico;
         
         public decimal TotalCarrinho()
         {
             try
             {
-                decimal soma = (decimal)0.0;
+                decimal soma = 0;
                 string sql = "SELECT SUM(totalCarrinho) AS totalGeral FROM tb_carrinho;";
 
 
@@ -254,7 +331,7 @@ namespace TESTE_GUNA.projeto.dao
                     soma = reader.GetInt32(0);
                     conexao.Close();
                 }
-
+                totalCarrinhoEstatico = soma;
                 return soma;
 
 
