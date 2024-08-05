@@ -17,15 +17,16 @@ namespace TESTE_GUNA.projeto.window
 
         static int addDiminuitMaleavel;
 
-       
+
+        private TelaHome telaHome;
 
 
-        public UserControlCarrinho()
+        public UserControlCarrinho(TelaHome home)
         {
             InitializeComponent();
+            this.telaHome = home;
+            this.DoubleBuffered = true;//parar de travar a tela
         }
-
-
 
 
         #region Propriedades
@@ -187,8 +188,10 @@ namespace TESTE_GUNA.projeto.window
             
             dao.Delete(obj);
 
-           
-            
+
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
         }
     }
 }
