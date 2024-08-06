@@ -44,7 +44,25 @@ namespace TESTE_GUNA.projeto.window
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             //se for debito ou credito
-            if(FormaPagamento == 2)
+            if (FormaPagamento == 3)
+            {
+                if (txtAno.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "" || txtNumeroCartao.Text == "")
+                {
+                    TelaMessageBox mensagem = new TelaMessageBox();
+                    mensagem.Mensagem("PREENCHA CORRETAMENTE TODOS OS CAMPOS!");
+                    mensagem.ShowDialog();
+                }
+                else
+                {
+                    ano = txtAno.Text;
+                    cvv = txtCVV.Text;
+                    mes = txtMes.Text;
+                    nomeCartao = txtNomeCartao.Text;
+                    numeroCartao = txtNumeroCartao.Text;
+                    _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
+                }
+            }
+            if (FormaPagamento == 2)
             {
                 if (txtAno.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "" || txtNumeroCartao.Text == "")
                 {
@@ -72,12 +90,6 @@ namespace TESTE_GUNA.projeto.window
                     nomeCartao = txtNomeCartao.Text;
                     numeroCartao = txtNumeroCartao.Text;
                     _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
-                }
-                else
-                {
-                    TelaMessageBox mes = new TelaMessageBox();
-                    mes.Mensagem("ESCOLHA O TIPO DE PAGAMENTO!");
-                    mes.ShowDialog();
                 }
             }
             
@@ -157,7 +169,7 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
-
+            FormaPagamento = 3;
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)
