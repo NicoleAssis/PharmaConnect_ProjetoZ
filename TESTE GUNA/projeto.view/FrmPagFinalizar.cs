@@ -66,11 +66,11 @@ namespace TESTE_GUNA.projeto.view
             //Button finalizar o pagamento
             
             //pergunta se deseja efetuar o pagamento ou nao
-            FrmMessageBox frmMessageBox = new FrmMessageBox();
-            frmMessageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
-            frmMessageBox.ShowDialog();
+            TelaMessageBox TelaMessageBox = new TelaMessageBox();
+            TelaMessageBox.RetornaSimNao("DESEJA EFETUAR O PAGAMENTO?");
+            TelaMessageBox.ShowDialog();
 
-            if(frmMessageBox.btnSimClick == true)
+            if(TelaMessageBox.btnSimClick == true)
             {
 
                 FormaPagamento obj = new FormaPagamento();
@@ -99,7 +99,7 @@ namespace TESTE_GUNA.projeto.view
                // loadingPagamento.ShowDialog();
                 this.Hide();
             }
-            else if(frmMessageBox.btnNaoClick == true)
+            else if(TelaMessageBox.btnNaoClick == true)
             {
                 //se nao quer efetuar o pagamento
                 this.Close();
@@ -108,7 +108,7 @@ namespace TESTE_GUNA.projeto.view
             }
             else
             {
-                frmMessageBox.Mensagem("Selecione SIM ou NAO");
+                TelaMessageBox.Mensagem("Selecione SIM ou NAO");
             }
 
             

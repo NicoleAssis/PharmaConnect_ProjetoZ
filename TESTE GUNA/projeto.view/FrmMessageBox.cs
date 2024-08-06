@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TESTE_GUNA.projeto.view
 {
-    public partial class FrmMessageBox : Form
+    public partial class TelaMessageBox : Form
     {
-        public FrmMessageBox()
+        public TelaMessageBox()
         {
             InitializeComponent();
         }
@@ -88,7 +88,7 @@ namespace TESTE_GUNA.projeto.view
 
         }
 
-        private void FrmMessageBox_Load(object sender, EventArgs e)
+        private void TelaMessageBox_Load(object sender, EventArgs e)
         {
 
         }
