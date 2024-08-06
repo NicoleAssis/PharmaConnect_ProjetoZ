@@ -26,6 +26,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void TelaDepartamentoEscolhido_Load(object sender, EventArgs e)
         {
+
             txtDepartamento.Text = Departamento.ToString();
 
             flowLayoutPanel1.Controls.Clear();
@@ -46,6 +47,19 @@ namespace TESTE_GUNA.projeto.window
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnIrParaCarrinho_Click(object sender, EventArgs e)
+        {
+
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
 
         }

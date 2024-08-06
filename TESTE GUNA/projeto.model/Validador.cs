@@ -34,7 +34,7 @@ namespace TESTE_GUNA.projeto.model
             }
             catch (Exception)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem($"Email Inválido {email} ");
                 message.ShowDialog();
                 return false;

@@ -195,12 +195,12 @@
             this.panelPagamentoCartao.Controls.Add(this.guna2Panel3);
             this.panelPagamentoCartao.Controls.Add(this.label2);
             this.panelPagamentoCartao.Controls.Add(this.label4);
-            this.panelPagamentoCartao.Controls.Add(this.txtNomeCartao);
             this.panelPagamentoCartao.Controls.Add(this.txtMes);
             this.panelPagamentoCartao.Controls.Add(this.label8);
             this.panelPagamentoCartao.Controls.Add(this.label3);
             this.panelPagamentoCartao.Controls.Add(this.txtAno);
             this.panelPagamentoCartao.Controls.Add(this.guna2Panel1);
+            this.panelPagamentoCartao.Controls.Add(this.txtNomeCartao);
             this.panelPagamentoCartao.Location = new System.Drawing.Point(83, 271);
             this.panelPagamentoCartao.Name = "panelPagamentoCartao";
             this.panelPagamentoCartao.Size = new System.Drawing.Size(330, 309);
@@ -227,7 +227,7 @@
             this.txtCVV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCVV.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.txtCVV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtCVV.Location = new System.Drawing.Point(13, 3);
+            this.txtCVV.Location = new System.Drawing.Point(16, 4);
             this.txtCVV.Mask = "000";
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.Size = new System.Drawing.Size(120, 27);
@@ -287,6 +287,7 @@
             this.txtNomeCartao.SelectedText = "";
             this.txtNomeCartao.Size = new System.Drawing.Size(320, 37);
             this.txtNomeCartao.TabIndex = 118;
+            this.txtNomeCartao.TextChanged += new System.EventHandler(this.txtNomeCartao_TextChanged);
             // 
             // txtMes
             // 
@@ -410,7 +411,7 @@
             this.txtNumeroCartao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroCartao.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.txtNumeroCartao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtNumeroCartao.Location = new System.Drawing.Point(13, 5);
+            this.txtNumeroCartao.Location = new System.Drawing.Point(15, 5);
             this.txtNumeroCartao.Mask = "0000-0000-0000-0000";
             this.txtNumeroCartao.Name = "txtNumeroCartao";
             this.txtNumeroCartao.Size = new System.Drawing.Size(235, 27);
@@ -612,7 +613,6 @@
             this.Controls.Add(this.checkBoxCredito);
             this.Controls.Add(this.checkBoxDebito);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.panelPagamentoPIX);
             this.Controls.Add(this.panelPagamentoCartao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
@@ -620,6 +620,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPagamentoPIX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(496, 709);
             this.Name = "TelaPagamento";

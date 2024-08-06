@@ -35,7 +35,7 @@ namespace TESTE_GUNA.projeto.view
 
         private void btnSalvarAlteracoes_Click(object sender, EventArgs e)
         {
-            FrmMessageBox mensagem = new FrmMessageBox();
+            TelaMessageBox mensagem = new TelaMessageBox();
             mensagem.Mensagem("ALTERAÇÕES SALVAS COM SUCESSO!");
             mensagem.ShowDialog();
             this.Close();

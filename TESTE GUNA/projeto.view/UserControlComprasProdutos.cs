@@ -68,11 +68,11 @@ namespace TESTE_GUNA.projeto.view
             if(valorAtual <= 0)
             {
                 //pergunta se deseja efetuar o pagamento ou nao
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.RetornaSimNao("DESEJA DELETAR O PRODUTO?");
-                frmMessageBox.ShowDialog();
+                TelaMessageBox TelaMessageBox = new TelaMessageBox();
+                TelaMessageBox.RetornaSimNao("DESEJA DELETAR O PRODUTO?");
+                TelaMessageBox.ShowDialog();
 
-                if (frmMessageBox.btnSimClick == true)
+                if (TelaMessageBox.btnSimClick == true)
                 {
                     //se confirmou que deseja deletar o produto
                     FrmCompras telaCompras = new FrmCompras();
@@ -81,10 +81,10 @@ namespace TESTE_GUNA.projeto.view
                     panel10.Size = new Size(1, 1);
                     panel10.Visible= false;
 
-                    frmMessageBox.Mensagem("PRODUTO DELETADO COM SUCESSO!");
-                    frmMessageBox.ShowDialog();
+                    TelaMessageBox.Mensagem("PRODUTO DELETADO COM SUCESSO!");
+                    TelaMessageBox.ShowDialog();
                 }
-                else if (frmMessageBox.btnNaoClick == true)
+                else if (TelaMessageBox.btnNaoClick == true)
                 {
                     //se nao quer efetuar o pagamento
                     valorAtual = 1;
@@ -92,7 +92,7 @@ namespace TESTE_GUNA.projeto.view
                 }
                 else
                 {
-                    frmMessageBox.Mensagem("Selecione SIM ou NAO");
+                    TelaMessageBox.Mensagem("Selecione SIM ou NAO");
                 }
             }
             
