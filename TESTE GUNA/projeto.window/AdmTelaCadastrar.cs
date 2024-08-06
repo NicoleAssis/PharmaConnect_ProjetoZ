@@ -133,7 +133,7 @@ namespace TESTE_GUNA.projeto.window
 
                 // Chama o método de cadastro com o objeto completo
                 AdministradorDAO dao = new AdministradorDAO();
-                dao.CadastrarAdministador(admin);
+                dao.CadastrarAdministador1(admin);
 
                 TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
                 messageBox.Mensagem("ADMINISTRADOR CADASTRADO COM SUCESSO!");
