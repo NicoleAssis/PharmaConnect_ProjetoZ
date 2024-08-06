@@ -105,10 +105,11 @@ namespace TESTE_GUNA.projeto.window
             string email = txtEmail.Text;
 
             // 1° Validação: CPF
-            bool validacaoCPF = ClienteDAO.isCpf((cpf_string));
+            bool validacaoCPF = ClienteDAO.isCpf(cpf_string);
 
             //2° Validação: Email
             bool validacaoEmail = Validador.ValidarEmail(email);
+
 
 
             #region Validando Email e CPF
@@ -138,26 +139,46 @@ namespace TESTE_GUNA.projeto.window
                 telaLogin.Show();
                 this.Hide();
             }
-            else if (validacaoEmail == true && validacaoCPF == false || validacaoEmail == false && validacaoCPF == true)
+            else if (txtCPF.Text == "" || txtEmail.Text == "" || txtNome.Text == "" || txtSenha.Text == "")
             {
                 TelaMessageBox message = new TelaMessageBox();
-                message.Mensagem("CPF Inválido");
-                message.ShowDialog();
-            }
-            else if (validacaoEmail == false && validacaoCPF == false)
-            {
-                TelaMessageBox message = new TelaMessageBox();
-                message.Mensagem("Email e senha inválidos!");
+                message.Mensagem("Preencha todos os campos!");
                 message.ShowDialog();
             }
             else
             {
-                TelaMessageBox message = new TelaMessageBox();
-                message.Mensagem("Email Inválido");
-                message.ShowDialog();
-            }
+                if (txtNome.Text.Length < 6)
+                {
+                    TelaMessageBox message = new TelaMessageBox();
+                    message.Mensagem("Insira seu nome completo!");
+                    message.ShowDialog();
+                }
+                if (validacaoEmail == false)
+                {
+                }
+                if (validacaoCPF == false)
+                {
+                    TelaMessageBox message = new TelaMessageBox();
+                    message.Mensagem("Insira um CPF válido!");
+                    message.ShowDialog();
+                }
+                if (txtSenha.Text.Length < 6)
+                {
+                    TelaMessageBox message = new TelaMessageBox();
+                    message.Mensagem("Insira uma Senha de no mínimo 6 caracteres!");
+                    message.ShowDialog();
+                }
 
-            #endregion
+
+            }
+        
+
+                
+               
+
+                #endregion
+
+            
 
 
 

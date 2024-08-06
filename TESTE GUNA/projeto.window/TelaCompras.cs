@@ -148,5 +148,10 @@ namespace TESTE_GUNA.projeto.window
         {
 
         }
+
+        private void lbltotalCarrinho_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
