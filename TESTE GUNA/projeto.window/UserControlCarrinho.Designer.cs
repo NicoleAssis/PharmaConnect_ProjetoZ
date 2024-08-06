@@ -202,6 +202,7 @@
             this.label5.Size = new System.Drawing.Size(85, 27);
             this.label5.TabIndex = 10;
             this.label5.Text = "1200,00";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox1
             // 

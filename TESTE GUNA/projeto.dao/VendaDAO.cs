@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -160,7 +161,49 @@ namespace TESTE_GUNA.projeto.dao
             }
 
         }
-        #endregion  
+        #endregion
+
+
+        #region Listar  vendas
+        public DataTable ListarVendas()
+        {
+            try
+            {
+                //criar o datatable e o comando sql
+                DataTable tabelaHistorico = new DataTable();
+                string sql = @"SELECT
+                                tb_vendas.id_venda AS 'Codigo',
+                                tb_vendas.tipo_pag AS 'Forma Pagamento',
+                                tb_vendas.total_venda AS 'Total'
+                            FROM
+                                tb_vendas;";
+
+
+                //executar e organizar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o mysqldataadapter para preencher os dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaHistorico);
+
+                conexao.Close();
+
+                return tabelaHistorico;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro (ListarVendas) : " + erro);
+                return null;
+            }
+        }
+
+
+
+        #endregion
+
 
 
     }
