@@ -42,13 +42,13 @@
             this.txtCVV = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNomeCartao = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAno = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtNumeroCartao = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomeCartao = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCopiar = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -227,7 +227,7 @@
             this.txtCVV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCVV.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.txtCVV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtCVV.Location = new System.Drawing.Point(16, 4);
+            this.txtCVV.Location = new System.Drawing.Point(19, 5);
             this.txtCVV.Mask = "000";
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.Size = new System.Drawing.Size(120, 27);
@@ -257,37 +257,6 @@
             this.label4.Size = new System.Drawing.Size(182, 30);
             this.label4.TabIndex = 108;
             this.label4.Text = "Nome no Cartão:";
-            // 
-            // txtNomeCartao
-            // 
-            this.txtNomeCartao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNomeCartao.BackColor = System.Drawing.Color.Transparent;
-            this.txtNomeCartao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.BorderRadius = 15;
-            this.txtNomeCartao.BorderThickness = 3;
-            this.txtNomeCartao.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomeCartao.DefaultText = "";
-            this.txtNomeCartao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNomeCartao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNomeCartao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeCartao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomeCartao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.Font = new System.Drawing.Font("Segoe UI", 14.5F);
-            this.txtNomeCartao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtNomeCartao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomeCartao.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtNomeCartao.IconLeftSize = new System.Drawing.Size(33, 33);
-            this.txtNomeCartao.Location = new System.Drawing.Point(8, 112);
-            this.txtNomeCartao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtNomeCartao.MaximumSize = new System.Drawing.Size(507, 44);
-            this.txtNomeCartao.Name = "txtNomeCartao";
-            this.txtNomeCartao.PasswordChar = '\0';
-            this.txtNomeCartao.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtNomeCartao.PlaceholderText = "Nome no Cartão";
-            this.txtNomeCartao.SelectedText = "";
-            this.txtNomeCartao.Size = new System.Drawing.Size(320, 37);
-            this.txtNomeCartao.TabIndex = 118;
-            this.txtNomeCartao.TextChanged += new System.EventHandler(this.txtNomeCartao_TextChanged);
             // 
             // txtMes
             // 
@@ -411,11 +380,42 @@
             this.txtNumeroCartao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroCartao.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.txtNumeroCartao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtNumeroCartao.Location = new System.Drawing.Point(15, 5);
+            this.txtNumeroCartao.Location = new System.Drawing.Point(19, 5);
             this.txtNumeroCartao.Mask = "0000-0000-0000-0000";
             this.txtNumeroCartao.Name = "txtNumeroCartao";
             this.txtNumeroCartao.Size = new System.Drawing.Size(235, 27);
             this.txtNumeroCartao.TabIndex = 118;
+            // 
+            // txtNomeCartao
+            // 
+            this.txtNomeCartao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNomeCartao.BackColor = System.Drawing.Color.Transparent;
+            this.txtNomeCartao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.txtNomeCartao.BorderRadius = 16;
+            this.txtNomeCartao.BorderThickness = 3;
+            this.txtNomeCartao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNomeCartao.DefaultText = "";
+            this.txtNomeCartao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNomeCartao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNomeCartao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeCartao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeCartao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeCartao.Font = new System.Drawing.Font("Segoe UI", 14.5F);
+            this.txtNomeCartao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtNomeCartao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNomeCartao.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtNomeCartao.IconLeftSize = new System.Drawing.Size(33, 33);
+            this.txtNomeCartao.Location = new System.Drawing.Point(8, 112);
+            this.txtNomeCartao.Margin = new System.Windows.Forms.Padding(1);
+            this.txtNomeCartao.MaximumSize = new System.Drawing.Size(507, 44);
+            this.txtNomeCartao.Name = "txtNomeCartao";
+            this.txtNomeCartao.PasswordChar = '\0';
+            this.txtNomeCartao.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtNomeCartao.PlaceholderText = "Nome no Cartão";
+            this.txtNomeCartao.SelectedText = "";
+            this.txtNomeCartao.Size = new System.Drawing.Size(320, 37);
+            this.txtNomeCartao.TabIndex = 118;
+            this.txtNomeCartao.TextChanged += new System.EventHandler(this.txtNomeCartao_TextChanged);
             // 
             // btnCopiar
             // 

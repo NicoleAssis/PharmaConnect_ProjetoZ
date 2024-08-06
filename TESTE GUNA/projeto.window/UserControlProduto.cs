@@ -17,6 +17,7 @@ namespace TESTE_GUNA.projeto.window
         public UserControlProduto()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;//parar de travar a tela
         }
 
         

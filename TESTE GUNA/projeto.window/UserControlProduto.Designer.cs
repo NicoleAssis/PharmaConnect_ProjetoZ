@@ -137,6 +137,7 @@
             this.txtcodigo.Size = new System.Drawing.Size(14, 15);
             this.txtcodigo.TabIndex = 7;
             this.txtcodigo.Text = "n";
+            this.txtcodigo.Visible = false;
             // 
             // UserControlProduto
             // 
