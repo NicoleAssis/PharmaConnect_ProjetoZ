@@ -328,7 +328,7 @@ namespace TESTE_GUNA.projeto.dao
                 MySqlDataReader reader = executacmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    soma = reader.GetInt32(0);
+                    soma = reader.GetDecimal(0);
                     conexao.Close();
                 }
                 totalCarrinhoEstatico = soma;

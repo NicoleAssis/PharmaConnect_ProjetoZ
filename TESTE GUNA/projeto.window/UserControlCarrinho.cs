@@ -145,7 +145,7 @@ namespace TESTE_GUNA.projeto.window
                 {
                     id_produtoCarrinho = Convert.ToInt32(Codigo),
                     qtd_Carrinho = Convert.ToInt32(Quantidade),
-                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
+                    totalCarrinho = Convert.ToDecimal(Quantidade) * Convert.ToDecimal(PrecoUnitario),
 
 
                 };
@@ -170,7 +170,7 @@ namespace TESTE_GUNA.projeto.window
                 {
                     id_produtoCarrinho = Convert.ToInt32(Codigo),
                     qtd_Carrinho = Convert.ToInt32(Quantidade),
-                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
+                    totalCarrinho = Convert.ToDecimal(Quantidade) * Convert.ToDecimal(PrecoUnitario),
 
 
                 };
@@ -200,6 +200,11 @@ namespace TESTE_GUNA.projeto.window
             TelaCompras tela = new TelaCompras(this.telaHome);
             this.telaHome.PrintarTela(tela);
             tela.BringToFront();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -26,7 +26,8 @@ namespace TESTE_GUNA.projeto.window
         {
             ProdutoDAO dao = new ProdutoDAO();
 
-            //DataGridViewVendas.DataSource = dao.Teste();
+            VendaDAO v = new VendaDAO();
+            DataGridViewVendas.DataSource = v.ListarVendas();
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
@@ -41,6 +42,11 @@ namespace TESTE_GUNA.projeto.window
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DataGridViewVendas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
