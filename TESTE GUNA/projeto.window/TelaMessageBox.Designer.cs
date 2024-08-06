@@ -102,7 +102,7 @@
             this.txtMensagem.ForeColor = System.Drawing.Color.White;
             this.txtMensagem.Location = new System.Drawing.Point(0, 0);
             this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(405, 99);
+            this.txtMensagem.Size = new System.Drawing.Size(405, 104);
             this.txtMensagem.TabIndex = 0;
             this.txtMensagem.Text = "Mensagem Aqui";
             this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
