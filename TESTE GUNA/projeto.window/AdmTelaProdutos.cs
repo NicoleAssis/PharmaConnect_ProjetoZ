@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -42,7 +43,7 @@ namespace TESTE_GUNA.projeto.window
         // Desenhar o botão na célula
         private void btnExcluirColuna(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.ColumnIndex == DataGridViewVendas.Columns["Excluir"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == DataGridViewProdutos.Columns["Excluir"].Index && e.RowIndex >= 0)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -91,7 +92,7 @@ namespace TESTE_GUNA.projeto.window
         // Desenhar o botão na célula
         private void btnEditarColuna(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.ColumnIndex == DataGridViewVendas.Columns["Editar"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == DataGridViewProdutos.Columns["Editar"].Index && e.RowIndex >= 0)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -130,11 +131,12 @@ namespace TESTE_GUNA.projeto.window
         private void AdmTelaProdutos_Load(object sender, EventArgs e)
         {
             ProdutoDAO dao = new ProdutoDAO();
+            DataGridViewProdutos.DataSource = dao.ListarProdutos();
 
-            //DataGridViewVendas.DataSource = dao.Teste();
+            AdicionandoColunaExcluir(DataGridViewProdutos);
+            AdicionandoColunaEditar(DataGridViewProdutos);
 
-            AdicionandoColunaExcluir(DataGridViewVendas);
-            AdicionandoColunaEditar(DataGridViewVendas);
+
 
         }
 
@@ -143,5 +145,22 @@ namespace TESTE_GUNA.projeto.window
 
 
         }
-    }
+
+        private void dataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(DataGridViewProdutos.Columns[e.ColumnIndex].Name == "btnExcluir")
+            {
+                //Dim dr As DataGridViewRow
+            }
+        }
+        private void DataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+
+
+
+        } 
 }
