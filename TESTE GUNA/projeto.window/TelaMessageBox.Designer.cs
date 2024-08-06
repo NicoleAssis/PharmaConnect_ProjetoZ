@@ -97,13 +97,13 @@
             // txtMensagem
             // 
             this.txtMensagem.BackColor = System.Drawing.Color.Transparent;
+            this.txtMensagem.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtMensagem.Font = new System.Drawing.Font("Century Gothic", 15.5F, System.Drawing.FontStyle.Bold);
             this.txtMensagem.ForeColor = System.Drawing.Color.White;
-            this.txtMensagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtMensagem.Location = new System.Drawing.Point(3, 0);
+            this.txtMensagem.Location = new System.Drawing.Point(0, 0);
             this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(402, 99);
-            this.txtMensagem.TabIndex = 23;
+            this.txtMensagem.Size = new System.Drawing.Size(405, 99);
+            this.txtMensagem.TabIndex = 0;
             this.txtMensagem.Text = "Mensagem Aqui";
             this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

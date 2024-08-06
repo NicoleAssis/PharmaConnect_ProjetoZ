@@ -97,7 +97,7 @@ namespace TESTE_GUNA.projeto.view
             else if (click == true)
             {
                 //insert
-                FrmMessageBox messageBoxTela = new FrmMessageBox();
+                TelaMessageBox messageBoxTela = new TelaMessageBox();
                 messageBoxTela.Mensagem("ALTERADO COM SUCESSO!");
                 messageBoxTela.ShowDialog();
                 

@@ -44,14 +44,14 @@ namespace TESTE_GUNA.projeto.view
             {
                 // Copiar o texto da TextBox para a área de transferência
                 Clipboard.SetText(txtPix.Text);
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Texto copiado para a área de transferência!");
                 message.ShowDialog();
 
             }
             else
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("A TextBox está vazia, nada para copiar.");
                 message.ShowDialog();
             }

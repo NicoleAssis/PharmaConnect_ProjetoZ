@@ -35,7 +35,7 @@ namespace TESTE_GUNA.projeto.view
         {
             if(txtAno.Text == "" || txtCartao.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "")
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("PREENCHA TODOS OS CAMPOS!");
                 message.ShowDialog();
             }

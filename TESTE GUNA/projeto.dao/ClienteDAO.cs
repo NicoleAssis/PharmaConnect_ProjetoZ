@@ -363,9 +363,9 @@ namespace TESTE_GUNA.projeto.dao
                          * 
                          * */
 
-                    FrmMessageBox message  = new FrmMessageBox();
-                    message.Mensagem("Email ou senha Incorretos!");
-                    message.ShowDialog();
+                    window.TelaMessageBox telaMessageBox = new window.TelaMessageBox();
+                    telaMessageBox.Mensagem("Email ou senha Incorretos!");
+                    telaMessageBox.ShowDialog();
 
                     Helpers limparTela = new Helpers();
 

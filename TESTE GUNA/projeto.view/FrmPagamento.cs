@@ -54,9 +54,9 @@ namespace TESTE_GUNA.projeto.view
             else
             {
                 //caso nao seja selecionado nenhum pagamento
-                FrmMessageBox frmMessageBox = new FrmMessageBox();
-                frmMessageBox.Mensagem("SELECIONE O TIPO DE PAGAMENTO");
-                frmMessageBox.ShowDialog();
+                TelaMessageBox TelaMessageBox = new TelaMessageBox();
+                TelaMessageBox.Mensagem("SELECIONE O TIPO DE PAGAMENTO");
+                TelaMessageBox.ShowDialog();
             }
         }
 

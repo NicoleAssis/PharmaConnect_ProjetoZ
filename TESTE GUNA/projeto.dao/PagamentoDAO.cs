@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TESTE_GUNA.projet.conexao;
 using TESTE_GUNA.projeto.model;
-using TESTE_GUNA.projeto.view;
 using TESTE_GUNA.projeto.window;
 using TESTE_GUNA.projeto.dao;
 
@@ -68,8 +67,9 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception Erro)
             {
-                FrmMessageBox message = new FrmMessageBox();
-                message.Mensagem("ERRO RETORNA ID CLIENTE:  " + Erro);
+                TelaMessageBox mensagem = new TelaMessageBox();
+                mensagem.Mensagem("ERRO RETORNA ID CLIENTE:  " + Erro);
+                mensagem.Show();
                 throw;
             }
             
@@ -118,7 +118,7 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception erro)
             {
-                FrmMessageBox messageBox = new FrmMessageBox();
+                TelaMessageBox messageBox = new TelaMessageBox();
                 messageBox.Mensagem("Aconteceu o erro:" + erro);
                 messageBox.ShowDialog();
             }

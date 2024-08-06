@@ -125,8 +125,8 @@ namespace TESTE_GUNA.projeto.window
                 };
 
                 dao.CadastrarClienteC1(obj);
-                FrmMessageSucess mensagem = new FrmMessageSucess();
-                mensagem.MensagemDeSucesso("Cadastro Efetuado com Sucesso!");
+                TelaMessageBoxSucess mensagem = new TelaMessageBoxSucess();
+                mensagem.Mensagem("Cadastro Efetuado com Sucesso!");
                 mensagem.ShowDialog();
 
 
@@ -140,19 +140,19 @@ namespace TESTE_GUNA.projeto.window
             }
             else if (validacaoEmail == true && validacaoCPF == false || validacaoEmail == false && validacaoCPF == true)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("CPF Inválido");
                 message.ShowDialog();
             }
             else if (validacaoEmail == false && validacaoCPF == false)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Email e senha inválidos!");
                 message.ShowDialog();
             }
             else
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Email Inválido");
                 message.ShowDialog();
             }

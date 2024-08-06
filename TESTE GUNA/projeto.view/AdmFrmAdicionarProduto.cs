@@ -113,7 +113,7 @@ namespace TESTE_GUNA.projeto.view
             }
             if(e.KeyChar == 44)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por gentileza insira apenas números inteiros");
                 message.ShowDialog();
             }
