@@ -120,7 +120,7 @@
             this.txtConfirmeSenha.ForeColor = System.Drawing.Color.DimGray;
             this.txtConfirmeSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmeSenha.Location = new System.Drawing.Point(72, 236);
-            this.txtConfirmeSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmeSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmeSenha.Name = "txtConfirmeSenha";
             this.txtConfirmeSenha.PasswordChar = '*';
             this.txtConfirmeSenha.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -158,7 +158,7 @@
             this.txtNovaSenha.ForeColor = System.Drawing.Color.DimGray;
             this.txtNovaSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNovaSenha.Location = new System.Drawing.Point(72, 154);
-            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.PasswordChar = '*';
             this.txtNovaSenha.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -196,7 +196,7 @@
             this.txtSenhaAtual.ForeColor = System.Drawing.Color.DimGray;
             this.txtSenhaAtual.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSenhaAtual.Location = new System.Drawing.Point(72, 76);
-            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenhaAtual.Name = "txtSenhaAtual";
             this.txtSenhaAtual.PasswordChar = '*';
             this.txtSenhaAtual.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -255,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(396, 480);
             this.Controls.Add(this.txtMensagem);
             this.Controls.Add(this.btnX);

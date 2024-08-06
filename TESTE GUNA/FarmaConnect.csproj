@@ -297,6 +297,12 @@
     <Compile Include="projeto.window\AdmTelaCategoria.Designer.cs">
       <DependentUpon>AdmTelaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="projeto.window\AdmTelaEditarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projeto.window\AdmTelaEditarProduto.Designer.cs">
+      <DependentUpon>AdmTelaEditarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="projeto.window\AdmTelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaCategoria.resx">
       <DependentUpon>AdmTelaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projeto.window\AdmTelaEditarProduto.resx">
+      <DependentUpon>AdmTelaEditarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="projeto.window\AdmTelaHome.resx">
       <DependentUpon>AdmTelaHome.cs</DependentUpon>
