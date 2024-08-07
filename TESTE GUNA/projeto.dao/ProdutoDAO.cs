@@ -106,23 +106,24 @@ namespace TESTE_GUNA.projeto.dao
 
 
                 list.Clear();
-                if (reader.HasRows)
+            if (reader.HasRows)
+            {
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    ProdutoDAO p = new ProdutoDAO
                     {
-                        ProdutoDAO p = new ProdutoDAO
-                        {
-                            Id_Produto = reader.GetInt32(0),
-                            nomeProduto = reader.GetString(1),
-                            descProduto = reader.GetString(2),
-                            precoProduto = reader.GetDecimal(3),
-                            qtdEstoque = reader.GetInt32(4),
-                            departamento = reader.GetString(5)
-                        };
-                        list.Add(p);
-                    }
+                        Id_Produto = reader.IsDBNull(0) ? default : reader.GetInt32(0),
+                        nomeProduto = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        descProduto = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                        precoProduto = reader.IsDBNull(3) ? default : reader.GetDecimal(3),
+                        qtdEstoque = reader.IsDBNull(4) ? default : reader.GetInt32(4),
+                        departamento = reader.IsDBNull(5) ? string.Empty : reader.GetString(5)
+                    };
+                    list.Add(p);
                 }
-                reader.Dispose();
+            }
+
+            reader.Dispose();
                 executacmd.Dispose();
                 conexao.Close();
             
@@ -692,7 +693,7 @@ namespace TESTE_GUNA.projeto.dao
                 conexao.Close();
                 //MessageBox.Show("Produto excluido com sucesso!");
                 TelaMessageBoxSucess mensagem = new TelaMessageBoxSucess();
-                mensagem.Mensagem("Produto cadastrado com sucesso!");
+                mensagem.Mensagem("PRODUTO EDITADO COM SUCESSO!");
                 mensagem.ShowDialog();
 
             }

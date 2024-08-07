@@ -427,9 +427,9 @@
         private Guna.UI2.WinForms.Guna2Button btnSideBarCadastrarAdm;
         private Guna.UI2.WinForms.Guna2Button btnSideBarVendas;
         public Guna.UI2.WinForms.Guna2Panel panelAbrirTela;
-        private System.Windows.Forms.Panel panelPharmaConnect;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnSideBarAdicionar;
+        public System.Windows.Forms.Panel panelPharmaConnect;
     }
 }

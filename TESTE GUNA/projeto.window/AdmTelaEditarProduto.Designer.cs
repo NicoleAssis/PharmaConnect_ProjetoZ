@@ -1,6 +1,6 @@
 ﻿namespace TESTE_GUNA.projeto.window
 {
-    partial class txtQtdEstoque
+    partial class AdmTelaEditarProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.btnX = new System.Windows.Forms.Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtQtd = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.Label();
             this.btnAlterarProduto = new Guna.UI2.WinForms.Guna2Button();
-            this.boxCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtDep = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // btnX
@@ -59,33 +58,33 @@
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
-            // guna2TextBox1
+            // txtQtd
             // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.BorderThickness = 3;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 14.5F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(116, 408);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(391, 40);
-            this.guna2TextBox1.TabIndex = 131;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtQtd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQtd.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.txtQtd.BorderRadius = 15;
+            this.txtQtd.BorderThickness = 3;
+            this.txtQtd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtd.DefaultText = "";
+            this.txtQtd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQtd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQtd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQtd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQtd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQtd.Font = new System.Drawing.Font("Segoe UI", 14.5F);
+            this.txtQtd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtQtd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQtd.Location = new System.Drawing.Point(116, 340);
+            this.txtQtd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.PasswordChar = '\0';
+            this.txtQtd.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtQtd.PlaceholderText = "";
+            this.txtQtd.SelectedText = "";
+            this.txtQtd.Size = new System.Drawing.Size(391, 40);
+            this.txtQtd.TabIndex = 131;
+            this.txtQtd.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // label4
             // 
@@ -94,7 +93,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(111, 373);
+            this.label4.Location = new System.Drawing.Point(111, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(250, 30);
             this.label4.TabIndex = 130;
@@ -117,7 +116,7 @@
             this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 14.5F);
             this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtDescricao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescricao.Location = new System.Drawing.Point(116, 166);
+            this.txtDescricao.Location = new System.Drawing.Point(116, 180);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.PasswordChar = '\0';
@@ -134,7 +133,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(111, 131);
+            this.label3.Location = new System.Drawing.Point(111, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 30);
             this.label3.TabIndex = 128;
@@ -157,7 +156,7 @@
             this.txtPreco.Font = new System.Drawing.Font("Segoe UI", 14.5F);
             this.txtPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtPreco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreco.Location = new System.Drawing.Point(116, 328);
+            this.txtPreco.Location = new System.Drawing.Point(116, 260);
             this.txtPreco.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.PasswordChar = '\0';
@@ -174,24 +173,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(111, 293);
+            this.label2.Location = new System.Drawing.Point(111, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 30);
             this.label2.TabIndex = 126;
             this.label2.Text = "Preço:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(111, 211);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 30);
-            this.label1.TabIndex = 125;
-            this.label1.Text = "Categoria:";
             // 
             // txtNome
             // 
@@ -210,7 +196,7 @@
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 14.5F);
             this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtNome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNome.Location = new System.Drawing.Point(116, 86);
+            this.txtNome.Location = new System.Drawing.Point(116, 100);
             this.txtNome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
@@ -227,7 +213,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(111, 51);
+            this.label8.Location = new System.Drawing.Point(111, 65);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 30);
             this.label8.TabIndex = 122;
@@ -260,54 +246,61 @@
             this.btnAlterarProduto.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
             this.btnAlterarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this.btnAlterarProduto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
-            this.btnAlterarProduto.Location = new System.Drawing.Point(184, 472);
+            this.btnAlterarProduto.Location = new System.Drawing.Point(184, 447);
             this.btnAlterarProduto.Name = "btnAlterarProduto";
             this.btnAlterarProduto.Size = new System.Drawing.Size(251, 43);
             this.btnAlterarProduto.TabIndex = 133;
             this.btnAlterarProduto.Text = "SALVAR ALTERAÇÕES";
             this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
-            // boxCategoria
+            // txtDep
             // 
-            this.boxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.boxCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.boxCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.boxCategoria.BorderRadius = 15;
-            this.boxCategoria.BorderThickness = 3;
-            this.boxCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.boxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.boxCategoria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.boxCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.boxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.boxCategoria.ItemHeight = 40;
-            this.boxCategoria.Location = new System.Drawing.Point(116, 244);
-            this.boxCategoria.Name = "boxCategoria";
-            this.boxCategoria.Size = new System.Drawing.Size(391, 46);
-            this.boxCategoria.TabIndex = 124;
-            this.boxCategoria.SelectedIndexChanged += new System.EventHandler(this.boxCategoria_SelectedIndexChanged);
+            this.txtDep.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDep.BackColor = System.Drawing.Color.Transparent;
+            this.txtDep.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.txtDep.BorderRadius = 15;
+            this.txtDep.BorderThickness = 3;
+            this.txtDep.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDep.DefaultText = "";
+            this.txtDep.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDep.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDep.Font = new System.Drawing.Font("Segoe UI", 14.5F);
+            this.txtDep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtDep.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDep.Location = new System.Drawing.Point(14, 433);
+            this.txtDep.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDep.Name = "txtDep";
+            this.txtDep.PasswordChar = '\0';
+            this.txtDep.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtDep.PlaceholderText = "";
+            this.txtDep.SelectedText = "";
+            this.txtDep.Size = new System.Drawing.Size(51, 40);
+            this.txtDep.TabIndex = 134;
+            this.txtDep.Visible = false;
             // 
-            // txtQtdEstoque
+            // AdmTelaEditarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(619, 540);
+            this.Controls.Add(this.txtDep);
             this.Controls.Add(this.btnAlterarProduto);
             this.Controls.Add(this.txtMensagem);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.boxCategoria);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "txtQtdEstoque";
+            this.Name = "AdmTelaEditarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmTelaEditarProduto";
             this.ResumeLayout(false);
@@ -318,17 +311,16 @@
         #endregion
 
         private System.Windows.Forms.Button btnX;
-        public Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        public Guna.UI2.WinForms.Guna2TextBox txtQtd;
         private System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2TextBox txtDescricao;
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2TextBox txtPreco;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox txtNome;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label txtMensagem;
         private Guna.UI2.WinForms.Guna2Button btnAlterarProduto;
-        private Guna.UI2.WinForms.Guna2ComboBox boxCategoria;
+        public Guna.UI2.WinForms.Guna2TextBox txtDep;
     }
 }

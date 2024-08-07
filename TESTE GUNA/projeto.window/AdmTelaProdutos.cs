@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
-using TESTE_GUNA.projeto.view;
+
+using TESTE_GUNA.projeto.window;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -152,6 +153,22 @@ namespace TESTE_GUNA.projeto.window
             DataGridViewProdutos.DataSource = d.PerformSearch(txtPesquisa.Text);
 
         }
+
+        private AdmTelaEditarProduto telaEdicao;
+
+        private void AbrirTelaEdicao(int idProduto, string nomeProduto, string descricaoProduto, decimal precoProduto, int quantidadeProduto, string departamentoProduto)
+        {
+            if (telaEdicao == null || telaEdicao.IsDisposed)
+            {
+                telaEdicao = new AdmTelaEditarProduto(idProduto, nomeProduto, descricaoProduto, precoProduto, quantidadeProduto, departamentoProduto, this.admHome);
+                telaEdicao.ShowDialog();
+            }
+            else
+            {
+                telaEdicao.BringToFront(); // Traz a tela para frente se ela já estiver aberta
+            }
+        }
+
         public static int idProduto;
         private void DataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -175,10 +192,15 @@ namespace TESTE_GUNA.projeto.window
             {
                 // Obtém o id do produto a partir da linha selecionada
                 idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["ID"].Value);
+                string nomeProduto = DataGridViewProdutos.Rows[e.RowIndex].Cells["Nome"].Value.ToString();
+                string descricaoProduto = DataGridViewProdutos.Rows[e.RowIndex].Cells["Descrição"].Value.ToString();
+                decimal precoProduto = Convert.ToDecimal(DataGridViewProdutos.Rows[e.RowIndex].Cells["Preço"].Value);
+                int quantidadeProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["Quantidade"].Value);
+                string departamentoProduto = DataGridViewProdutos.Rows[e.RowIndex].Cells["Departamento"].Value.ToString();
 
-                
+                AbrirTelaEdicao(idProduto, nomeProduto, descricaoProduto, precoProduto, quantidadeProduto, departamentoProduto);
 
-                
+
             }
 
         }
