@@ -118,7 +118,7 @@ namespace TESTE_GUNA.projeto.window
                 return;
             }
 
-            if (txtCelular.Text != "" && txtCNPJ.Text != "" && txtEmail.Text != "" && txtNome.Text != "" && txtSenha.Text != "" && txtTelefone.Text != "")
+            if (txtCelular.Text != "" && txtCNPJ.Text != "" && txtEmail.Text != "" && txtNome.Text != "" && txtSenha.Text != "" )
             {
                 //se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
                 Administrador admin = new Administrador
@@ -128,6 +128,7 @@ namespace TESTE_GUNA.projeto.window
                     email = txtEmail.Text,
                     celular = txtCelular.Text,
                     senha = txtSenha.Text,
+                    nivel = 1
                 };
 
 
@@ -143,8 +144,9 @@ namespace TESTE_GUNA.projeto.window
             }
         }
 
-           
+        private void AdmTelaCadastrar_Load(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

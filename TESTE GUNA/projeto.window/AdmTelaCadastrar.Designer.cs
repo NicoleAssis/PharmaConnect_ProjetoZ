@@ -357,6 +357,7 @@
             this.Name = "AdmTelaCadastrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmTelaCadastrarF1";
+            this.Load += new System.EventHandler(this.AdmTelaCadastrar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -157,7 +157,7 @@ namespace TESTE_GUNA.projeto.window
             if (e.RowIndex >= 0 && DataGridViewProdutos.Columns[e.ColumnIndex].Name == "Excluir")
             {
                 // Obtém o id do produto a partir da linha selecionada
-                int idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["id"].Value);
+                int idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["ID"].Value);
 
                 // Remove a linha do DataGridView
                 DataGridViewProdutos.Rows.RemoveAt(e.RowIndex);
@@ -166,11 +166,11 @@ namespace TESTE_GUNA.projeto.window
                 ProdutoDAO dao = new ProdutoDAO();
                 dao.excluirProduto(idProduto);
 
-                MessageBox.Show("Produto excluído com sucesso.");
-                DataGridViewProdutos.DataSource = dao.ListarProdutos();
+                //MessageBox.Show("Produto excluído com sucesso.");
+                ProdutoDAO d = new ProdutoDAO();
+                DataGridViewProdutos.DataSource = d.ListarProdutos();
             }
 
-            MessageBox.Show("oi");
         }
         private void DataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {

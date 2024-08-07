@@ -476,7 +476,9 @@ namespace TESTE_GUNA.projeto.dao
             {
                 //1 passo definir comando sql - insert into
 
-                string sql = @"delete from tb_produto where id_produto = @id";
+                string sql = @"SET FOREIGN_KEY_CHECKS = 0;
+                                delete from tb_produto where id_produto = @id;
+                            SET FOREIGN_KEY_CHECKS = 1;";
 
                 //2 passo organizar comando sql 
 
@@ -490,11 +492,11 @@ namespace TESTE_GUNA.projeto.dao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Produto excluido com sucesso!");
+                
 
                 //fechar a conexao com o banco de dados
                 conexao.Close();
-
+                //MessageBox.Show("Produto excluido com sucesso!");
 
             }
             catch (Exception erro)
