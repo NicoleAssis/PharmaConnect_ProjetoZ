@@ -8,6 +8,7 @@ using TESTE_GUNA.projeto.window;
 using System.Diagnostics.Eventing.Reader;
 using System.Data;
 using System.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -58,7 +59,51 @@ namespace TESTE_GUNA.projeto.dao
         }
 
 
-       
+        public int RetornaIdCliente()
+        {
+            int clienteId = -1;
+
+            try
+            {
+                string email = TelaLogin.TelaPagamento.Email;
+                string senha = TelaLogin.TelaPagamento.Senha;
+
+
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "SELECT id FROM tb_clientes WHERE email_cliente = @Email AND senha_cliente = @Senha";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@Email", email);
+                executacmd.Parameters.AddWithValue("@Senha", senha);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                object result = executacmd.ExecuteScalar();
+
+
+                if (result != null)
+                {
+                    clienteId = Convert.ToInt32(result);
+                }
+
+
+
+                conexao.Close();
+
+                return clienteId;
+
+            }
+            catch (Exception Erro)
+            {
+                //TelaMessageBox message = new TelaMessageBox();
+               // message.Mensagem("ERRO RETORNA ID CLIENTE:  " + Erro);
+                throw;
+            }
+
+        }
 
 
         //Construtor
@@ -262,6 +307,42 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
+        public void BuscarClientesPorId(int clienteID, TelaPerfil telaPerfil)
+        {
+            try
+            {
+                string sql = "SELECT nome_cliente, email_cliente FROM tb_clientes WHERE id=@clienteId";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@clienteId", clienteID);
+
+                conexao.Open();
+                MySqlDataReader reader = executacmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string nome_cliente = reader["nome_cliente"].ToString();
+                    string email_cliente = reader["email_cliente"].ToString();
+
+                    telaPerfil.txtNome.Text = nome_cliente;
+                    telaPerfil.txtEmail.Text = email_cliente;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado.");
+                }
+
+                reader.Close();
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro.Message);
+            }
+        }
+
+
+        #endregion
+
         #region Login
         public bool EfetuarLogin(string email, string senha, TelaLogin telaLogin)
         {
@@ -386,9 +467,38 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
-      
 
-        #endregion
+        public void AtualizarCliente(int clienteID, string novoNome, string novoEmail)
+        {
+            try
+            {
+                string sql = "UPDATE tb_clientes SET nome_cliente=@novoNome, email_cliente=@novoEmail WHERE id=@clienteId";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@novoNome", novoNome);
+                executacmd.Parameters.AddWithValue("@novoEmail", novoEmail);
+                executacmd.Parameters.AddWithValue("@clienteId", clienteID);
+
+                conexao.Open();
+                int rowsAffected = executacmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+
+                }
+                else
+                {
+ 
+                }
+
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao atualizar o cliente: " + erro.Message);
+            }
+        }
+
+
 
     }
 }
