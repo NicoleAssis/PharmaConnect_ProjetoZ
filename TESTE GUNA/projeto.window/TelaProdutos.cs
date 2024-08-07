@@ -60,33 +60,39 @@ namespace TESTE_GUNA.projeto.window
 
         public void populateItems()
         {
-            ProdutoDAO dao = new ProdutoDAO();
-            
-            vt = dao.contValores();
-            //MessageBox.Show(valor.ToString());
-            List<UserControlProduto> listProdutos = new List<UserControlProduto>();
+            //ProdutoDAO dao = new ProdutoDAO();
 
-            for (int i = 0; i < 50; i++)
-            {
-                dao.GetDetails(i + 1);
-                UserControlProduto userControlProduto = new UserControlProduto
-                {
+            //vt = dao.contValores();
+            ////MessageBox.Show(valor.ToString());
+            //List<UserControlProduto> listProdutos = new List<UserControlProduto>();
 
-                    Produto = dao.nomeProduto,
-                    Descricao = dao.descProduto,
-                    PrecoProduto = dao.precoProduto.ToString(),
-                    Codigo = dao.Id_Produto.ToString(),
-                };
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    dao.GetDetails(i + 1);
+            //    UserControlProduto userControlProduto = new UserControlProduto
+            //    {
 
-                listProdutos.Add(userControlProduto);
-            }
+            //        Produto = dao.nomeProduto,
+            //        Descricao = dao.descProduto,
+            //        PrecoProduto = dao.precoProduto.ToString(),
+            //        Codigo = dao.Id_Produto.ToString(),
+            //    };
 
-            flowLayoutPanel1.Controls.Clear(); // Limpar controles antigos antes de adicionar novos
-            foreach (var produtoControl in listProdutos)
-            {
-                flowLayoutPanel1.Controls.Add(produtoControl);
-            }
+            //    listProdutos.Add(userControlProduto);
+            //}
 
+            //flowLayoutPanel1.Controls.Clear(); // Limpar controles antigos antes de adicionar novos
+            //foreach (var produtoControl in listProdutos)
+            //{
+            //    flowLayoutPanel1.Controls.Add(produtoControl);
+            //}
+
+            flowLayoutPanel1.Controls.Clear();
+
+            UserControlProduto res = new UserControlProduto();
+            res.selectResult();
+
+            loadDetails();
 
         }
 

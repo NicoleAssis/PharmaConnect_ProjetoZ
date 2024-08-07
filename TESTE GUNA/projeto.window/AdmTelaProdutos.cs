@@ -148,7 +148,8 @@ namespace TESTE_GUNA.projeto.window
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-
+            ProdutoDAO d = new ProdutoDAO();
+            DataGridViewProdutos.DataSource = d.PerformSearch(txtPesquisa.Text);
 
         }
         public static int idProduto;

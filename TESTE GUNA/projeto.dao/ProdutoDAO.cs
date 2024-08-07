@@ -129,6 +129,48 @@ namespace TESTE_GUNA.projeto.dao
            
 
         }
+        #endregion
+        #region Select
+        public void Select()
+        {
+
+            string sql = "select * from tb_produto;";
+
+            //organizar o comando e executar
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+            
+            conexao.Open();
+
+            //responsavel por executar o comando e armazenar os dados do PRODUTO
+            MySqlDataReader reader = executacmd.ExecuteReader();
+
+
+
+            list.Clear();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ProdutoDAO p = new ProdutoDAO
+                    {
+                        Id_Produto = reader.GetInt32(0),
+                        nomeProduto = reader.GetString(1),
+                        descProduto = reader.GetString(2),
+                        precoProduto = reader.GetDecimal(3),
+                        qtdEstoque = reader.GetInt32(4),
+                        departamento = reader.GetString(5)
+                    };
+                    list.Add(p);
+                }
+            }
+            reader.Dispose();
+            executacmd.Dispose();
+            conexao.Close();
+
+
+
+        }
 
 
 
@@ -566,7 +608,16 @@ namespace TESTE_GUNA.projeto.dao
 
                 DataTable TabelaProdutos = new DataTable();
                 //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
-                string sql = "select * from tb_produto where nome_produto like @nome";
+                string sql = @"SELECT 
+                                id_produto AS ID, 
+                                nome_produto AS Nome, 
+                                desc_produto AS Descrição, 
+                                preco_produto AS Preço, 
+                                qtd_estoque AS Quantidade, 
+                                departamento
+                            FROM tb_produto
+                            WHERE nome_produto LIKE @nome;
+                            ";
 
                 //2 passo organizar comando e executar
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
@@ -654,6 +705,65 @@ namespace TESTE_GUNA.projeto.dao
 
 
 
+
+
+        #endregion
+
+
+        #region PerfomeSearch
+        public DataTable PerformSearch(string searchTerm)
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaPesquisa = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"SELECT 
+                        tb_produto.id_produto AS ID,
+                        tb_produto.nome_produto AS Nome,
+                        tb_produto.desc_produto AS Descrição,
+                        tb_produto.preco_produto AS Preço,
+                        tb_produto.qtd_estoque AS Quantidade,
+                        tb_produto.departamento AS Departamento
+                    FROM 
+                        tb_produto
+                    WHERE 
+                        tb_produto.id_produto LIKE @searchTerm OR
+                        tb_produto.nome_produto LIKE @searchTerm OR
+                        tb_produto.desc_produto LIKE @searchTerm OR
+                        tb_produto.preco_produto LIKE @searchTerm OR
+                        tb_produto.qtd_estoque LIKE @searchTerm OR
+                        tb_produto.departamento LIKE @searchTerm;";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaPesquisa);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaPesquisa;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
 
 
         #endregion
