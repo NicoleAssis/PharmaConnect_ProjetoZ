@@ -57,44 +57,40 @@ namespace TESTE_GUNA.projeto.window
         public int vt;
 
         public object Application { get; private set; }
-
         public void populateItems()
         {
-            //ProdutoDAO dao = new ProdutoDAO();
+            ProdutoDAO dao = new ProdutoDAO();
+            vt = dao.contValores();
+            List<UserControlProduto> listProdutos = new List<UserControlProduto>();
 
-            //vt = dao.contValores();
-            ////MessageBox.Show(valor.ToString());
-            //List<UserControlProduto> listProdutos = new List<UserControlProduto>();
+            for (int i = 0; i < 50; i++)
+            {
+                dao.GetDetails(i + 1);
 
-            //for (int i = 0; i < 50; i++)
-            //{
-            //    dao.GetDetails(i + 1);
-            //    UserControlProduto userControlProduto = new UserControlProduto
-            //    {
+                // Verifica se o nome do produto é nulo, vazio ou contém apenas espaços em branco
+                if (string.IsNullOrWhiteSpace(dao.nomeProduto))
+                {
+                    continue;
+                }
 
-            //        Produto = dao.nomeProduto,
-            //        Descricao = dao.descProduto,
-            //        PrecoProduto = dao.precoProduto.ToString(),
-            //        Codigo = dao.Id_Produto.ToString(),
-            //    };
+                UserControlProduto userControlProduto = new UserControlProduto
+                {
+                    Produto = dao.nomeProduto,
+                    Descricao = dao.descProduto,
+                    PrecoProduto = dao.precoProduto.ToString(),
+                    Codigo = dao.Id_Produto.ToString(),
+                };
 
-            //    listProdutos.Add(userControlProduto);
-            //}
+                listProdutos.Add(userControlProduto);
+            }
 
-            //flowLayoutPanel1.Controls.Clear(); // Limpar controles antigos antes de adicionar novos
-            //foreach (var produtoControl in listProdutos)
-            //{
-            //    flowLayoutPanel1.Controls.Add(produtoControl);
-            //}
-
-            flowLayoutPanel1.Controls.Clear();
-
-            UserControlProduto res = new UserControlProduto();
-            res.selectResult();
-
-            loadDetails();
-
+            flowLayoutPanel1.Controls.Clear(); // Limpar controles antigos antes de adicionar novos
+            foreach (var produtoControl in listProdutos)
+            {
+                flowLayoutPanel1.Controls.Add(produtoControl);
+            }
         }
+
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -102,15 +98,15 @@ namespace TESTE_GUNA.projeto.window
 
         private void loadDetails()
         {
-            foreach(ProdutoDAO p in ProdutoDAO.list)
+            foreach (ProdutoDAO p in ProdutoDAO.list)
             {
                 UserControlProduto res = new UserControlProduto();
                 res.DetailsB(p);
                 flowLayoutPanel1.Controls.Add(res);
             }
         }
- 
-        
+
+
 
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
