@@ -164,19 +164,23 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
-        #region Listar  vendas
+        #region ListarVendas
         public DataTable ListarVendas()
         {
             try
             {
                 //criar o datatable e o comando sql
                 DataTable tabelaHistorico = new DataTable();
-                string sql = @"SELECT
-                                tb_vendas.id_venda AS 'Codigo',
-                                tb_vendas.tipo_pag AS 'Forma Pagamento',
-                                tb_vendas.total_venda AS 'Total'
-                            FROM
-                                tb_vendas;";
+                string sql = @"SELECT 
+                                tb_vendas.id_venda AS venda, 
+                                tb_vendas.tipo_pag AS pagamentos, 
+                                tb_vendas.total_venda AS Total, 
+                                tb_vendas.cliente_id AS Cliente,
+                                tb_clientes.nome_cliente AS NomeCliente
+                            FROM 
+                                tb_vendas
+                            INNER JOIN 
+                                tb_clientes ON tb_vendas.cliente_id = tb_clientes.id";
 
 
                 //executar e organizar o comando sql
@@ -204,7 +208,64 @@ namespace TESTE_GUNA.projeto.dao
 
         #endregion
 
+        #region Pesquisar Venda
+        public DataTable PerformSearch(string searchTerm)
+        {
+            try
+            {
 
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaPesquisa = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"
+                                SELECT 
+                                    tb_vendas.id_venda AS venda, 
+                                    tb_vendas.tipo_pag AS pagamentos, 
+                                    tb_vendas.total_venda AS Total, 
+                                    tb_vendas.cliente_id AS Cliente,
+                                    tb_clientes.nome_cliente AS NomeCliente
+                                FROM 
+                                    tb_vendas
+                                INNER JOIN 
+                                    tb_clientes ON tb_vendas.cliente_id = tb_clientes.id
+                                WHERE 
+                                    tb_vendas.id_venda LIKE @searchTerm OR
+                                    tb_vendas.tipo_pag LIKE @searchTerm OR
+                                    tb_vendas.total_venda LIKE @searchTerm OR
+                                    tb_vendas.cliente_id LIKE @searchTerm OR
+                                    tb_clientes.nome_cliente LIKE @searchTerm";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaPesquisa);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaPesquisa;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+
+
+        #endregion
 
     }
 }

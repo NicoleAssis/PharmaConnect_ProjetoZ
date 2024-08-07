@@ -467,6 +467,50 @@ namespace TESTE_GUNA.projeto.dao
 
 
         #endregion
+
+
+        #region Listar  Produtos
+        public DataTable ListarVendasCategoria(string dep)
+        {
+            try
+            {
+                //criar o datatable e o comando sql
+                DataTable tabelaProdutos = new DataTable();
+                string sql = @"SELECT 
+                                        id_produto AS id, 
+                                        nome_produto AS nome, 
+                                        desc_produto AS descrição, 
+                                        preco_produto AS Preço, 
+                                        qtd_estoque AS quantidade,
+                                        departamento
+                                    FROM tb_produto
+                                    WHERE departamento like @dep; ";
+
+
+                //executar e organizar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@dep", dep);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o mysqldataadapter para preencher os dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos);
+
+                conexao.Close();
+
+                return tabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro (listagem produto) : " + erro);
+                return null;
+            }
+        }
+
+
+
+        #endregion
         #region Excluir Produto
 
 
@@ -512,6 +556,46 @@ namespace TESTE_GUNA.projeto.dao
 
         #endregion
 
+        #region BuscarProdutoPorNome
+        public DataTable BuscarProdutoPorNome(string nome)
+        {
+            try
+            {
+                
+                //1 passo criar datatable e comando sql
+
+                DataTable TabelaProdutos = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = "select * from tb_produto where nome_produto like @nome";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nome", nome + "%");
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(TabelaProdutos);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return TabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+        #endregion
 
     }
 

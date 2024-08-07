@@ -120,27 +120,49 @@ namespace TESTE_GUNA.projeto.window
 
             if (txtCelular.Text != "" && txtCNPJ.Text != "" && txtEmail.Text != "" && txtNome.Text != "" && txtSenha.Text != "" )
             {
-                //se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
-                Administrador admin = new Administrador
+
+                if(string.IsNullOrWhiteSpace(txtTelefone.Text))
                 {
-                    cnpj = Convert.ToInt64(txtCNPJ.Text),
-                    nome = txtNome.Text,
-                    email = txtEmail.Text,
-                    celular = txtCelular.Text,
-                    senha = txtSenha.Text,
-                    nivel = 1
-                };
+                    //se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+                    Administrador admin = new Administrador
+                    {
+                        cnpj = Convert.ToInt64(txtCNPJ.Text),
+                        nome = txtNome.Text,
+                        email = txtEmail.Text,
+                        celular = txtCelular.Text,
+                        senha = txtSenha.Text,
+                        nivel = 1,
+                        telefone = txtTelefone.Text
+                    };
+                   
+                    //Chama o método de cadastro com o objeto completo
+                    AdministradorDAO dao = new AdministradorDAO();
+                    dao.CadastrarAdministador1(admin);
+                    return;
+                }
+                else
+                {
+                    //se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+                    Administrador admin = new Administrador
+                    {
+                        cnpj = Convert.ToInt64(txtCNPJ.Text),
+                        nome = txtNome.Text,
+                        email = txtEmail.Text,
+                        celular = txtCelular.Text,
+                        senha = txtSenha.Text,
+                        nivel = 1,
+                        
+                    };
 
+                    //Chama o método de cadastro com o objeto completo
+                    AdministradorDAO dao = new AdministradorDAO();
+                    dao.CadastrarAdministadorSemtel(admin);
+                }
 
-                //Chama o método de cadastro com o objeto completo
-                AdministradorDAO dao = new AdministradorDAO();
-                dao.CadastrarAdministador1(admin);
-
-                TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
-                messageBox.Mensagem("ADMINISTRADOR CADASTRADO COM SUCESSO!");
-                messageBox.ShowDialog();
                 this.Close();
                 this.admHome.ReiniciarHome();
+
+
             }
         }
 
