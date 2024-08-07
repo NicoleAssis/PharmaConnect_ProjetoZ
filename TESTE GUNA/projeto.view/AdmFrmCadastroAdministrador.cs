@@ -114,15 +114,17 @@ namespace TESTE_GUNA.projeto.view
                 return;
             }
 
-            // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+            //Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
             Administrador admin = new Administrador
             {
-                cnpj = txtCNPJ.Text,
+                cnpj = Convert.ToInt64(txtCNPJ.Text),
                 nome = txtNome.Text,
                 email = txtEmail.Text,
                 celular = txtCelular.Text,
                 senha = txtSenha.Text,
             };
+            AdministradorDAO dao = new AdministradorDAO();
+            dao.CadastrarAdministador1(admin);
 
             // Passa o objeto admin para a próxima tela (Form2)
             AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);

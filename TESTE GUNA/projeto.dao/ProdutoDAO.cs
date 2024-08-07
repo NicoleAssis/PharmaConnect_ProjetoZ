@@ -467,48 +467,48 @@ namespace TESTE_GUNA.projeto.dao
 
 
         #endregion
-        //#region Excluir Produto
+        #region Excluir Produto
 
 
-        //public void excluirProduto(Produto obj)
-        //{
-        //    try
-        //    {
-        //        //1 passo definir comando sql - insert into
+        public void excluirProduto(Produto obj)
+        {
+            try
+            {
+                //1 passo definir comando sql - insert into
 
-        //        string sql = @"delete from tb_produtos where id = @id";
+                string sql = @"delete from tb_produtos where id = @id";
 
-        //        //2 passo organizar comando sql 
+                //2 passo organizar comando sql 
 
-        //        MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-        //        executacmd.Parameters.AddWithValue("@id", obj.id);
-
-
-        //        //3 passo abrir a conexao e abrir o comando sql
-
-        //        conexao.Open();
-        //        executacmd.ExecuteNonQuery();
-
-        //        MessageBox.Show("Produto excluido com sucesso!");
-
-        //        //fechar a conexao com o banco de dados
-        //        conexao.Close();
+                executacmd.Parameters.AddWithValue("@id", obj.id);
 
 
-        //    }
-        //    catch (Exception erro)
-        //    {
+                //3 passo abrir a conexao e abrir o comando sql
 
-        //        MessageBox.Show("Aconteceu o erro: " + erro);
-        //    }
-        //}
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MessageBox.Show("Produto excluido com sucesso!");
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
 
 
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+            }
+        }
 
 
 
-        //#endregion
+
+
+        #endregion
 
 
     }
