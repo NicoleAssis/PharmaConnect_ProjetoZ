@@ -59,10 +59,11 @@
             this.btnIrParaCarrinho.Size = new System.Drawing.Size(303, 55);
             this.btnIrParaCarrinho.TabIndex = 3;
             this.btnIrParaCarrinho.Text = "IR PARA O CARRINHO";
+            this.btnIrParaCarrinho.Click += new System.EventHandler(this.btnIrParaCarrinho_Click);
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
             this.txtPesquisa.BorderRadius = 20;
@@ -90,6 +91,7 @@
             this.txtPesquisa.SelectedText = "";
             this.txtPesquisa.Size = new System.Drawing.Size(558, 48);
             this.txtPesquisa.TabIndex = 4;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // txtDepartamento
             // 
@@ -128,13 +130,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TESTE_GUNA.Properties.Resources._7_Sem_Título_20240714171925__1_3;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1050, 709);
+            this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDepartamento);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnIrParaCarrinho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaDepartamentoEscolhido";

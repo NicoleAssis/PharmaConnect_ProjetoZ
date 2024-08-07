@@ -26,12 +26,16 @@ namespace TESTE_GUNA.projeto.window
         {
             ProdutoDAO dao = new ProdutoDAO();
 
-            //DataGridViewVendas.DataSource = dao.Teste();
+            VendaDAO v = new VendaDAO();
+            DataGridViewVendas.DataSource = v.ListarVendas();
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
 
+            VendaDAO dao = new VendaDAO();
+            DataGridViewVendas.DataSource = dao.PerformSearch(txtPesquisa.Text);
+           
 
         }
 
@@ -43,6 +47,21 @@ namespace TESTE_GUNA.projeto.window
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DataGridViewVendas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) // Executa a busca ao pressionar Enter
+            {
+                VendaDAO dao = new VendaDAO();
+                DataGridViewVendas.DataSource = dao.PerformSearch(txtPesquisa.Text);
+                e.Handled = true; // Impede o som do "ding" ao pressionar Enter
+            }
         }
     }
 }

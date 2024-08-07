@@ -80,49 +80,51 @@ namespace TESTE_GUNA.projeto.view
             // Validação dos campos
             if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por favor, preencha o campo CNPJ.");
                 message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtNome.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por favor, preencha o campo Nome.");
                 message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por favor, preencha um email válido.");
                 message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtCelular.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por favor, preencha o campo Celular.");
                 message.ShowDialog();
                 return;
             }
             if (string.IsNullOrWhiteSpace(txtSenha.Text))
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("Por favor, preencha o campo Senha.");
                 message.ShowDialog();
                 return;
             }
 
-            // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+            //Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
             Administrador admin = new Administrador
             {
-                cnpj = txtCNPJ.Text,
+                cnpj = Convert.ToInt64(txtCNPJ.Text),
                 nome = txtNome.Text,
                 email = txtEmail.Text,
                 celular = txtCelular.Text,
                 senha = txtSenha.Text,
             };
+            AdministradorDAO dao = new AdministradorDAO();
+            dao.CadastrarAdministador1(admin);
 
             // Passa o objeto admin para a próxima tela (Form2)
             AdmFrmCadastroAdministradorC2 form2 = new AdmFrmCadastroAdministradorC2(admin);
@@ -175,7 +177,7 @@ namespace TESTE_GUNA.projeto.view
             };
 
             dao.CadastrarAdministador1(obj);
-            FrmMessageBox mensagem = new FrmMessageBox();
+            TelaMessageBox mensagem = new TelaMessageBox();
             mensagem.Mensagem("Cadastro Efetuado");
             txtNome.Clear();
             txtEmail.Clear();

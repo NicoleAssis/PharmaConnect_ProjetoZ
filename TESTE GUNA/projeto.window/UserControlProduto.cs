@@ -17,6 +17,7 @@ namespace TESTE_GUNA.projeto.window
         public UserControlProduto()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;//parar de travar a tela
         }
 
         
@@ -73,22 +74,36 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnAdicionarCarrinho_Click(object sender, EventArgs e)
         {
-            int id_Conexao = ClienteDAO.id_conectado;
+            //pergunta se deseja efetuar o pagamento ou nao
+            TelaMessageBox messageBox = new TelaMessageBox();
+            messageBox.RetornaSimNao("DESEJA ADICIONAR "+ _nomeProduto +" AO CARRINHO?");
+            messageBox.ShowDialog();
 
-            CarrinhoDAO dao = new CarrinhoDAO();
+            int qtd_estoque, qtdComprada, estoqueAtualizado;
 
-            CarrinhoDAO obj = new CarrinhoDAO
+            if (messageBox.btnSimClick == true)
             {
-                id_produtoCarrinho = Convert.ToInt32(Codigo),
-                id_cliente = id_Conexao,
-                qtd_Carrinho = 1,
-                subtotalCarrinho = Convert.ToDecimal(PrecoProduto),
-                totalCarrinho = (1 * Convert.ToDecimal(PrecoProduto)),
 
-            };
+                int id_Conexao = ClienteDAO.id_conectado;
 
-            dao.CadastrarProdutoCarrinho(obj);
-           
+                CarrinhoDAO dao = new CarrinhoDAO();
+
+                CarrinhoDAO obj = new CarrinhoDAO
+                {
+                    id_produtoCarrinho = Convert.ToInt32(Codigo),
+                    id_cliente = id_Conexao,
+                    qtd_Carrinho = 1,
+                    subtotalCarrinho = Convert.ToDecimal(PrecoProduto),
+                    totalCarrinho = (1 * Convert.ToDecimal(PrecoProduto)),
+
+                };
+
+                dao.CadastrarProdutoCarrinho(obj);
+            }
+            else
+            {
+                messageBox.Close();
+            }
 
         }
 
@@ -110,6 +125,17 @@ namespace TESTE_GUNA.projeto.window
             PrecoProduto = get.precoProduto.ToString();
             Codigo = get.Id_Produto.ToString();
         }
+
+        public void selectResult()
+        {
+            ProdutoDAO get = new ProdutoDAO();
+            get.Select();
+
+            Produto = get.nomeProduto;
+            Descricao = get.descProduto;
+            PrecoProduto = get.precoProduto.ToString();
+            Codigo = get.Id_Produto.ToString();
+        }
         public void searchResultDEP(string key)
         {
             ProdutoDAO get = new ProdutoDAO();
@@ -122,6 +148,11 @@ namespace TESTE_GUNA.projeto.window
         }
 
         private void txtDescricao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
         {
 
         }

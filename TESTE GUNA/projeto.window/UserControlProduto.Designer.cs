@@ -59,6 +59,7 @@
             this.txtNome.Size = new System.Drawing.Size(215, 52);
             this.txtNome.TabIndex = 1;
             this.txtNome.Text = "Nome Completo do Remédio";
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             // 
             // txtDescricao
             // 
@@ -137,6 +138,7 @@
             this.txtcodigo.Size = new System.Drawing.Size(14, 15);
             this.txtcodigo.TabIndex = 7;
             this.txtcodigo.Text = "n";
+            this.txtcodigo.Visible = false;
             // 
             // UserControlProduto
             // 

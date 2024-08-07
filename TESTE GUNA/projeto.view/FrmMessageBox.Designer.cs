@@ -1,6 +1,6 @@
 ﻿namespace TESTE_GUNA.projeto.view
 {
-    partial class FrmMessageBox
+    partial class TelaMessageBox
     {
         /// <summary>
         /// Required designer variable.
@@ -120,7 +120,7 @@
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
-            // FrmMessageBox
+            // TelaMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,10 +129,10 @@
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmMessageBox";
+            this.Name = "TelaMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMessageBox";
-            this.Load += new System.EventHandler(this.FrmMessageBox_Load);
+            this.Text = "TelaMessageBox";
+            this.Load += new System.EventHandler(this.TelaMessageBox_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

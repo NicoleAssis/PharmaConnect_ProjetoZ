@@ -37,6 +37,57 @@ namespace TESTE_GUNA.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
+
+
+        #region CadastroProduto
+
+        public void CadastrarProduto(Produto obj)
+        {
+            try
+            {
+
+                //Definindo comando SQL
+                string sql = @"insert into tb_produto (nome_produto, desc_produto, preco_produto, qtd_estoque, departamento)
+                            values(@nomeProduto,@descProduto,@precoProduto,@qtdEstoque,@departamento)";
+
+
+                //Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nomeProduto", obj.nomeProduto);
+                executacmd.Parameters.AddWithValue("@descProduto", obj.descProduto);
+                executacmd.Parameters.AddWithValue("@precoProduto", obj.precoProduto);
+                executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
+                executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
+
+
+
+
+                //Abrindo conexao e aplicando sql
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //fechando conexao
+                conexao.Close();
+
+
+
+            }
+            catch (Exception erro)
+            {
+
+
+                MessageBox.Show(erro.Message);
+            }
+
+
+
+
+
+
+        }
+        #endregion
+
         #region Search
         public void Search(string key)
         {
@@ -76,6 +127,48 @@ namespace TESTE_GUNA.projeto.dao
                 conexao.Close();
             
            
+
+        }
+        #endregion
+        #region Select
+        public void Select()
+        {
+
+            string sql = "select * from tb_produto;";
+
+            //organizar o comando e executar
+            MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+            
+            conexao.Open();
+
+            //responsavel por executar o comando e armazenar os dados do PRODUTO
+            MySqlDataReader reader = executacmd.ExecuteReader();
+
+
+
+            list.Clear();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    ProdutoDAO p = new ProdutoDAO
+                    {
+                        Id_Produto = reader.GetInt32(0),
+                        nomeProduto = reader.GetString(1),
+                        descProduto = reader.GetString(2),
+                        precoProduto = reader.GetDecimal(3),
+                        qtdEstoque = reader.GetInt32(4),
+                        departamento = reader.GetString(5)
+                    };
+                    list.Add(p);
+                }
+            }
+            reader.Dispose();
+            executacmd.Dispose();
+            conexao.Close();
+
+
 
         }
 
@@ -256,53 +349,6 @@ namespace TESTE_GUNA.projeto.dao
         #endregion
 
 
-        #region CadastroProduto
-
-        public void CadastrarProduto(Produto obj)
-        {
-            try
-            {
-
-                //Definindo comando SQL
-                string sql = @"insert into tb_produtos (nome_produto, desc_produto, preco_produto, qtd_estoque, departamento)
-                            values(@nomeProduto,@descProduto,@precoProduto,@qtdEstoque,@departamento)";
-
-
-                //Organizando comando SQL
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-                executacmd.Parameters.AddWithValue("@nomeProduto", obj.nomeProduto);
-                executacmd.Parameters.AddWithValue("@descProduto", obj.descProduto);
-                executacmd.Parameters.AddWithValue("@precoProduto", obj.precoProduto);
-                executacmd.Parameters.AddWithValue("@qtdEstoque", obj.qtdEstoque);
-                executacmd.Parameters.AddWithValue("@departamento", obj.departamento);
-
-
-                
-
-                //Abrindo conexao e aplicando sql
-                conexao.Open();
-                executacmd.ExecuteNonQuery();
-
-                //fechando conexao
-                conexao.Close();
-
-                FrmMessageSucess mensagem = new FrmMessageSucess();
-                mensagem.MensagemDeSucesso("PRODUTO CRIADO COM SUCESSO!");
-                mensagem.ShowDialog();
-
-
-
-            }
-            catch (Exception erro)
-            {
-
-
-                MessageBox.Show(erro.Message);
-            }
-        }
-        #endregion
-
         
 
 
@@ -418,8 +464,309 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
-       
 
+
+        #region Listar  Produtos
+        public DataTable ListarVendas()
+        {
+            try
+            {
+                //criar o datatable e o comando sql
+                DataTable tabelaProdutos = new DataTable();
+                string sql = @"SELECT 
+                                  id_produto AS id, 
+                                  nome_produto AS nome, 
+                                  desc_produto AS descrição, 
+                                  preco_produto AS Preço, 
+                                  qtd_estoque AS quantidade, 
+                                  departamento
+                                FROM 
+                                  tb_produto;
+                                ";
+
+
+                //executar e organizar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o mysqldataadapter para preencher os dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos);
+
+                conexao.Close();
+
+                return tabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro (ListarVendas) : " + erro);
+                return null;
+            }
+        }
+
+
+
+        #endregion
+
+
+        #region Listar  Produtos
+        public DataTable ListarVendasCategoria(string dep)
+        {
+            try
+            {
+                //criar o datatable e o comando sql
+                DataTable tabelaProdutos = new DataTable();
+                string sql = @"SELECT 
+                                        id_produto AS id, 
+                                        nome_produto AS nome, 
+                                        desc_produto AS descrição, 
+                                        preco_produto AS Preço, 
+                                        qtd_estoque AS quantidade,
+                                        departamento
+                                    FROM tb_produto
+                                    WHERE departamento like @dep; ";
+
+
+                //executar e organizar o comando sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@dep", dep);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o mysqldataadapter para preencher os dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaProdutos);
+
+                conexao.Close();
+
+                return tabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o erro (listagem produto) : " + erro);
+                return null;
+            }
+        }
+
+
+
+        #endregion
+        #region Excluir Produto
+
+
+        public void excluirProduto(int id)
+        {
+            try
+            {
+                //1 passo definir comando sql - insert into
+
+                string sql = @"SET FOREIGN_KEY_CHECKS = 0;
+                                delete from tb_produto where id_produto = @id;
+                            SET FOREIGN_KEY_CHECKS = 1;";
+
+                //2 passo organizar comando sql 
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id",id);
+
+
+                //3 passo abrir a conexao e abrir o comando sql
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+                //MessageBox.Show("Produto excluido com sucesso!");
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+            }
+        }
+
+
+
+
+
+        #endregion
+
+        #region BuscarProdutoPorNome
+        public DataTable BuscarProdutoPorNome(string nome)
+        {
+            try
+            {
+                
+                //1 passo criar datatable e comando sql
+
+                DataTable TabelaProdutos = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"SELECT 
+                                id_produto AS ID, 
+                                nome_produto AS Nome, 
+                                desc_produto AS Descrição, 
+                                preco_produto AS Preço, 
+                                qtd_estoque AS Quantidade, 
+                                departamento
+                            FROM tb_produto
+                            WHERE nome_produto LIKE @nome;
+                            ";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nome", nome + "%");
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(TabelaProdutos);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return TabelaProdutos;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+        #endregion
+
+
+        #region AlterarProduto
+
+        public void updateProduct(Produto p )
+        {
+            try
+            {
+                //1 passo definir comando sql - insert into
+
+                string sql = @"SET FOREIGN_KEY_CHECKS = 0;
+                                UPDATE tb_produto
+                                SET 
+                                nome_produto = @nome_produto, 
+                                desc_produto = @desc_produto, 
+                                preco_produto = @preco_produto, 
+                                qtd_estoque = @qtd_estoque,
+                                departamento = @departamento
+                            WHERE id_produto = @id;
+
+                            SET FOREIGN_KEY_CHECKS = 1;";
+
+                //2 passo organizar comando sql 
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id", p.Id_Produto);
+                executacmd.Parameters.AddWithValue("@nome_produto", p.nomeProduto);
+                executacmd.Parameters.AddWithValue("@desc_produto", p.descProduto);
+                executacmd.Parameters.AddWithValue("@preco_produto",p.precoProduto);
+                executacmd.Parameters.AddWithValue("@qtd_estoque", p.qtdEstoque);
+                executacmd.Parameters.AddWithValue("@departamento",p.departamento);
+
+
+                //3 passo abrir a conexao e abrir o comando sql
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+                //MessageBox.Show("Produto excluido com sucesso!");
+                TelaMessageBoxSucess mensagem = new TelaMessageBoxSucess();
+                mensagem.Mensagem("Produto cadastrado com sucesso!");
+                mensagem.ShowDialog();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+            }
+        }
+
+
+
+
+
+        #endregion
+
+
+        #region PerfomeSearch
+        public DataTable PerformSearch(string searchTerm)
+        {
+            try
+            {
+
+                //1 passo criar datatable e comando sql
+
+                DataTable tabelaPesquisa = new DataTable();
+                //PRIMEIRO TESTAR COMANDO NO SQL DEPOIS COLOCAR NO C#
+                string sql = @"SELECT 
+                        tb_produto.id_produto AS ID,
+                        tb_produto.nome_produto AS Nome,
+                        tb_produto.desc_produto AS Descrição,
+                        tb_produto.preco_produto AS Preço,
+                        tb_produto.qtd_estoque AS Quantidade,
+                        tb_produto.departamento AS Departamento
+                    FROM 
+                        tb_produto
+                    WHERE 
+                        tb_produto.id_produto LIKE @searchTerm OR
+                        tb_produto.nome_produto LIKE @searchTerm OR
+                        tb_produto.desc_produto LIKE @searchTerm OR
+                        tb_produto.preco_produto LIKE @searchTerm OR
+                        tb_produto.qtd_estoque LIKE @searchTerm OR
+                        tb_produto.departamento LIKE @searchTerm;";
+
+                //2 passo organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+                //3 passo criar mysqldataapter para preencher dados no datatable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaPesquisa);//preencher
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+
+
+                return tabelaPesquisa;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao executar o comando sql: " + erro);
+                return null;
+            }
+        }
+
+
+        #endregion
 
     }
 

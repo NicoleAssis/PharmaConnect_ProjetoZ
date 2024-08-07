@@ -11,6 +11,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Windows;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using TESTE_GUNA.projeto.window;
 
 namespace TESTE_GUNA.projeto.dao
 {
@@ -102,8 +103,10 @@ namespace TESTE_GUNA.projeto.dao
             try
             {
                 // Definindo comando SQL
-                string sql = @"insert into tb_administrador (cnpj_administrador ,nome_administrador ,email_administrador ,telefone_administrador ,celular_administrador, cep_administrador, endereco_administrador, numero_administrador,complemento_administrador, bairro_administrador, cidade_administrador, estado_administrador,senha_administrador,nivel_acesso)
-                    values(@cnpj_administrador,@nome_administrador,@email_administrador,@telefone_administrador,@celular_administrador,@cep_administrador,@endereco_administrador,@numero_administrador,@complemento_administrador,@bairro_administrador,@cidade_administrador,@estado_administrador,@senha_administrador,@nivel_acesso)";
+                string sql = @"INSERT INTO tb_administrador 
+                                (cnpj_administrador, nome_administrador, email_administrador, celular_administrador, nivel_acesso, senha_administrador,@telefone_administrador)
+                                VALUES
+                                (@cnpj_administrador, @nome_administrador, @email_administrador, @celular_administrador, @nivel, @senha_administrador,@tel);";
 
                 // Organizando comando SQL
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
@@ -111,17 +114,13 @@ namespace TESTE_GUNA.projeto.dao
                 executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
                 executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
                 executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
-                executacmd.Parameters.AddWithValue("@telefone_administrador", obj.telefone);
-                executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
-                executacmd.Parameters.AddWithValue("@cep_administrador", obj.cep);
-                executacmd.Parameters.AddWithValue("@endereco_administrador", obj.endereco);
-                executacmd.Parameters.AddWithValue("@numero_administrador", obj.numero);
-                executacmd.Parameters.AddWithValue("@complemento_administrador", obj.complemento);
-                executacmd.Parameters.AddWithValue("@bairro_administrador", obj.bairro);
-                executacmd.Parameters.AddWithValue("@cidade_administrador", obj.cidade);
-                executacmd.Parameters.AddWithValue("@estado_administrador", obj.estado);
-                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
                
+                executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
+                executacmd.Parameters.AddWithValue("@nivel", obj.nivel);
+
+                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
+                executacmd.Parameters.AddWithValue("@tel", obj.telefone);
+
 
                 // Abrindo conexão e aplicando SQL
                 conexao.Open();
@@ -129,6 +128,52 @@ namespace TESTE_GUNA.projeto.dao
 
                 // Fechando conexão
                 conexao.Close();
+                TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
+                messageBox.Mensagem("ADMINISTRADOR CADASTRADO COM SUCESSO!");
+                messageBox.ShowDialog();
+
+            }
+            catch (Exception erro)
+            {
+                System.Windows.Forms.MessageBox.Show("Erro Identificado:" + erro);
+            }
+        }
+
+        #endregion
+        #region CadastroAdministrador1
+
+        public void CadastrarAdministadorSemtel(Administrador obj)
+        {
+            try
+            {
+                // Definindo comando SQL
+                string sql = @"INSERT INTO tb_administrador 
+                                (cnpj_administrador, nome_administrador, email_administrador, celular_administrador, nivel_acesso, senha_administrador)
+                                VALUES
+                                (@cnpj_administrador, @nome_administrador, @email_administrador, @celular_administrador, @nivel, @senha_administrador);";
+
+                // Organizando comando SQL
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@cnpj_administrador", obj.cnpj);
+                executacmd.Parameters.AddWithValue("@nome_administrador", obj.nome);
+                executacmd.Parameters.AddWithValue("@email_administrador", obj.email);
+
+                executacmd.Parameters.AddWithValue("@celular_administrador", obj.celular);
+                executacmd.Parameters.AddWithValue("@nivel", obj.nivel);
+
+                executacmd.Parameters.AddWithValue("@senha_administrador", obj.senha);
+                
+
+                // Abrindo conexão e aplicando SQL
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                // Fechando conexão
+                conexao.Close();
+                TelaMessageBoxSucess messageBox = new TelaMessageBoxSucess();
+                messageBox.Mensagem("ADMINISTRADOR CADASTRADO COM SUCESSO!");
+                messageBox.ShowDialog();
             }
             catch (Exception erro)
             {

@@ -71,7 +71,7 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception Erro)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("ERRO confirmar senha:  " + Erro);
                 throw;
             }
@@ -116,7 +116,7 @@ namespace TESTE_GUNA.projeto.dao
             }
             catch (Exception Erro)
             {
-                FrmMessageBox message = new FrmMessageBox();
+                TelaMessageBox message = new TelaMessageBox();
                 message.Mensagem("ERRO alterar senha:  " + Erro);
                 throw;
             }

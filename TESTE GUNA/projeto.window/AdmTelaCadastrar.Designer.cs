@@ -50,7 +50,7 @@
             this.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCelular.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtCelular.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtCelular.Location = new System.Drawing.Point(570, 317);
+            this.txtCelular.Location = new System.Drawing.Point(556, 317);
             this.txtCelular.Mask = "00 0 0000-9999";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(178, 25);
@@ -107,7 +107,7 @@
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefone.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtTelefone.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtTelefone.Location = new System.Drawing.Point(570, 267);
+            this.txtTelefone.Location = new System.Drawing.Point(556, 267);
             this.txtTelefone.Mask = "0000-9999";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(178, 25);
@@ -149,7 +149,7 @@
             this.txtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCNPJ.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtCNPJ.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtCNPJ.Location = new System.Drawing.Point(565, 168);
+            this.txtCNPJ.Location = new System.Drawing.Point(554, 168);
             this.txtCNPJ.Mask = "00.000.000/0000-00";
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.Size = new System.Drawing.Size(183, 25);
@@ -357,6 +357,7 @@
             this.Name = "AdmTelaCadastrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmTelaCadastrarF1";
+            this.Load += new System.EventHandler(this.AdmTelaCadastrar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

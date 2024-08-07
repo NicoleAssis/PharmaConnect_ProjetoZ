@@ -54,9 +54,9 @@ namespace TESTE_GUNA.projeto.window
             PrintarTela(telaPagamento);
             telaPagamento.BringToFront();
         }
-        public void PrintarTelaFinalizarPagamento()
+        public void PrintarTelaFinalizarPagamento(string ano, string cvv, string mes, string nomeCartao, string numeroCartao)
         {
-            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this, this.telaHome);
+            TelaFinalizarPagamento tela = new TelaFinalizarPagamento(this, this.telaHome, ano, cvv, mes, nomeCartao, numeroCartao);
             PrintarTela(tela);
             tela.BringToFront();
         }
@@ -74,7 +74,7 @@ namespace TESTE_GUNA.projeto.window
 
             if (contador> 0)
             {
-                UserControlCarrinho res = new UserControlCarrinho();
+                UserControlCarrinho res = new UserControlCarrinho(this.telaHome);
                 int key = ClienteDAO.id_conectado;
                 res.searchResult(key);
 
@@ -100,8 +100,8 @@ namespace TESTE_GUNA.projeto.window
 
             foreach (CarrinhoDAO p in CarrinhoDAO.list)
             {
-                UserControlCarrinho res = new UserControlCarrinho();
-                res.DetailsC(p);
+                UserControlCarrinho res = new UserControlCarrinho(this.telaHome);
+                res.DetailsC(p); 
                 decimal tot = p.totalCarrinho;
                 flowLayoutPanel1.Controls.Add(res);
             }
@@ -122,14 +122,20 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnEfetuarCompra_Click(object sender, EventArgs e)
         {
-            //criar uma tela antes do frete
-            // TelaFrete tela = new TelaFrete(this);
-            //  PrintarTela(tela);
-            //tela.BringToFront();
+            if(lbltotalCarrinho.Text == "")
+            {
+                TelaMessageBox message = new TelaMessageBox();
+                message.Mensagem("ADICIONE ALGUM PRODUTO AO CARRINHO!");
+                message.ShowDialog();
+            }
+            else
+            {
 
-            TelaPagamento tela = new TelaPagamento(this);
-            PrintarTela(tela);
-            tela.BringToFront();
+                TelaPagamento tela = new TelaPagamento(this);
+                PrintarTela(tela);
+                tela.BringToFront();
+            }
+
         }
 
         //continuar comprando
@@ -145,6 +151,11 @@ namespace TESTE_GUNA.projeto.window
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbltotalCarrinho_Click(object sender, EventArgs e)
         {
 
         }

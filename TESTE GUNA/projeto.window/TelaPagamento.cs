@@ -43,7 +43,46 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            _telaCompras.PrintarTelaFinalizarPagamento();
+            if (FormaPagamento == 2 || FormaPagamento == 3)
+            {
+                if (txtAno.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "" || txtNumeroCartao.Text == "")
+                {
+                    TelaMessageBox mensagem = new TelaMessageBox();
+                    mensagem.Mensagem("PREENCHA CORRETAMENTE TODOS OS CAMPOS!");
+                    mensagem.ShowDialog();
+                }
+                else
+                {
+                    ano = txtAno.Text;
+                    cvv = txtCVV.Text;
+                    mes = txtMes.Text;
+                    nomeCartao = txtNomeCartao.Text;
+                    numeroCartao = txtNumeroCartao.Text;
+                    _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
+                }
+            }
+            else
+            {
+                if (FormaPagamento == 1)
+                {
+                    ano = txtAno.Text;
+                    cvv = txtCVV.Text;
+                    mes = txtMes.Text;
+                    nomeCartao = txtNomeCartao.Text;
+                    numeroCartao = txtNumeroCartao.Text;
+                    _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
+                }
+            }
+            
+
+            
+            
+
+        }
+
+        private void txtNomeCartao_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void checkBoxPIX_CheckedChanged(object sender, EventArgs e)
@@ -111,7 +150,6 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
-
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)

@@ -17,15 +17,16 @@ namespace TESTE_GUNA.projeto.window
 
         static int addDiminuitMaleavel;
 
-       
+
+        private TelaHome telaHome;
 
 
-        public UserControlCarrinho()
+        public UserControlCarrinho(TelaHome home)
         {
             InitializeComponent();
+            this.telaHome = home;
+            this.DoubleBuffered = true;//parar de travar a tela
         }
-
-
 
 
         #region Propriedades
@@ -134,49 +135,57 @@ namespace TESTE_GUNA.projeto.window
         private void btnMenos_Click(object sender, EventArgs e)
         {
             int con = Convert.ToInt32(Quantidade);
-            if (con > 0)
+            if (con > 1)
             {
-
+                Quantidade = (Convert.ToInt32(Quantidade) - 1).ToString();
+                PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString();
                 CarrinhoDAO dao = new CarrinhoDAO();
 
                 CarrinhoDAO obj = new CarrinhoDAO
                 {
                     id_produtoCarrinho = Convert.ToInt32(Codigo),
-                    qtd_Carrinho = Convert.ToInt32(Quantidade) - 1,
-                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
+                    qtd_Carrinho = Convert.ToInt32(Quantidade),
+                    totalCarrinho = Convert.ToDecimal(Quantidade) * Convert.ToDecimal(PrecoUnitario),
 
 
                 };
-                Quantidade = (Convert.ToInt32(Quantidade) - 1).ToString();
-                PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString() ;
+
                 dao.AlterarProdutoCarrinho(obj);
             }
 
-
+            //recarregar
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
         }
 
         private void btnaddcarrinho_Click(object sender, EventArgs e)
         {
-            
 
-                CarrinhoDAO dao = new CarrinhoDAO();
+            Quantidade = (Convert.ToInt32(Quantidade) + 1).ToString();
+            PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString();
+            CarrinhoDAO dao = new CarrinhoDAO();
 
                 CarrinhoDAO obj = new CarrinhoDAO
                 {
                     id_produtoCarrinho = Convert.ToInt32(Codigo),
-                    qtd_Carrinho = Convert.ToInt32(Quantidade) + 1,
-                    totalCarrinho = Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario),
+                    qtd_Carrinho = Convert.ToInt32(Quantidade),
+                    totalCarrinho = Convert.ToDecimal(Quantidade) * Convert.ToDecimal(PrecoUnitario),
 
 
                 };
-                Quantidade = (Convert.ToInt32(Quantidade) + 1).ToString();
-                PrecoTotal = (Convert.ToInt32(Quantidade) * Convert.ToDecimal(PrecoUnitario)).ToString();
+
                 dao.AlterarProdutoCarrinho(obj);
-            
+
+            //recarregar
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            
             CarrinhoDAO dao = new CarrinhoDAO();
 
             CarrinhoDAO obj = new CarrinhoDAO
@@ -187,8 +196,15 @@ namespace TESTE_GUNA.projeto.window
             
             dao.Delete(obj);
 
-           
-            
+
+            TelaCompras tela = new TelaCompras(this.telaHome);
+            this.telaHome.PrintarTela(tela);
+            tela.BringToFront();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

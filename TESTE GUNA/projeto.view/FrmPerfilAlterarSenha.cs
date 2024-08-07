@@ -28,13 +28,13 @@ namespace TESTE_GUNA.projeto.view
         {
             if (txtSenhaAtual.Text == "" || txtConfirmeSenha.Text == "" || txtNovaSenha.Text == "")
             {
-                FrmMessageBox mensagem = new FrmMessageBox();
+                TelaMessageBox mensagem = new TelaMessageBox();
                 mensagem.Mensagem("Preencha todos os campos!");
                 mensagem.ShowDialog();
             }
             else if (txtNovaSenha.Text != txtConfirmeSenha.Text)
             {
-                FrmMessageBox mensagem = new FrmMessageBox();
+                TelaMessageBox mensagem = new TelaMessageBox();
                 mensagem.Mensagem("Senhas diferentes!");
                 mensagem.ShowDialog();
             }
@@ -45,11 +45,11 @@ namespace TESTE_GUNA.projeto.view
                 if((senhaDAO.ConfirmarSenha(txtSenhaAtual.Text)) == true)
                 { 
                     //pergunta se deseja efetuar o pagamento ou nao
-                    FrmMessageBox frmMessageBox = new FrmMessageBox();
-                    frmMessageBox.RetornaSimNao("DESEJA ALTERAR A SENHA?");
-                    frmMessageBox.ShowDialog();
+                    TelaMessageBox TelaMessageBox = new TelaMessageBox();
+                    TelaMessageBox.RetornaSimNao("DESEJA ALTERAR A SENHA?");
+                    TelaMessageBox.ShowDialog();
 
-                    if (frmMessageBox.btnSimClick == true)
+                    if (TelaMessageBox.btnSimClick == true)
                     {
 
                         senhaDAO.AlterarSenha(txtNovaSenha.Text);
@@ -61,7 +61,7 @@ namespace TESTE_GUNA.projeto.view
                         frmMessageSucess.ShowDialog();
                         this.Close();
                     }
-                    else if (frmMessageBox.btnNaoClick == true)
+                    else if (TelaMessageBox.btnNaoClick == true)
                     {
                         //se nao quer efetuar o pagamento
                         this.Close();
@@ -70,12 +70,12 @@ namespace TESTE_GUNA.projeto.view
                     }
                     else
                     {
-                        frmMessageBox.Mensagem("Selecione SIM ou NAO");
+                        TelaMessageBox.Mensagem("Selecione SIM ou NAO");
                     }
                 }
                 else
                 {
-                    FrmMessageBox mensagem = new FrmMessageBox();
+                    TelaMessageBox mensagem = new TelaMessageBox();
                     mensagem.Mensagem("Senha atual incorreta!");
                     mensagem.ShowDialog();
                 }

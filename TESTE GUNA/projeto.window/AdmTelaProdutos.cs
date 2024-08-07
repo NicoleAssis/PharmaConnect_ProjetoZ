@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TESTE_GUNA.projeto.dao;
+using TESTE_GUNA.projeto.view;
 
 namespace TESTE_GUNA.projeto.window
 {
@@ -21,6 +22,7 @@ namespace TESTE_GUNA.projeto.window
             InitializeComponent();
             this.admHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
+
         }
 
 
@@ -32,6 +34,7 @@ namespace TESTE_GUNA.projeto.window
             buttonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             buttonColumn.Name = "Excluir";
             buttonColumn.HeaderText = "Excluir";
+            buttonColumn.UseColumnTextForButtonValue = true;
             buttonColumn.Width = 90;
             dataGridView.Columns.Add(buttonColumn);
 
@@ -42,7 +45,7 @@ namespace TESTE_GUNA.projeto.window
         // Desenhar o botão na célula
         private void btnExcluirColuna(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.ColumnIndex == DataGridViewVendas.Columns["Excluir"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == DataGridViewProdutos.Columns["Excluir"].Index && e.RowIndex >= 0)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -83,6 +86,7 @@ namespace TESTE_GUNA.projeto.window
             buttonColumn.HeaderText = "Editar";
             buttonColumn.Width = 90;
             dataGridView.Columns.Add(buttonColumn);
+            buttonColumn.UseColumnTextForButtonValue = true;
 
             // Configurar eventos para desenhar o botão e lidar com o clique
             dataGridView.CellPainting += btnEditarColuna;
@@ -91,7 +95,7 @@ namespace TESTE_GUNA.projeto.window
         // Desenhar o botão na célula
         private void btnEditarColuna(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.ColumnIndex == DataGridViewVendas.Columns["Editar"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == DataGridViewProdutos.Columns["Editar"].Index && e.RowIndex >= 0)
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
@@ -130,18 +134,63 @@ namespace TESTE_GUNA.projeto.window
         private void AdmTelaProdutos_Load(object sender, EventArgs e)
         {
             ProdutoDAO dao = new ProdutoDAO();
+            DataGridViewProdutos.DataSource = dao.ListarProdutos();
 
-            //DataGridViewVendas.DataSource = dao.Teste();
+            AdicionandoColunaExcluir(DataGridViewProdutos);
+            AdicionandoColunaEditar(DataGridViewProdutos);
 
-            AdicionandoColunaExcluir(DataGridViewVendas);
-            AdicionandoColunaEditar(DataGridViewVendas);
+            DataGridViewProdutos.CellContentClick += DataGridViewProdutos_CellContentClick;
+
 
         }
 
+      
+
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            ProdutoDAO d = new ProdutoDAO();
+            DataGridViewProdutos.DataSource = d.PerformSearch(txtPesquisa.Text);
+
+        }
+        public static int idProduto;
+        private void DataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && DataGridViewProdutos.Columns[e.ColumnIndex].Name == "Excluir")
+            {
+                // Obtém o id do produto a partir da linha selecionada
+                idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["ID"].Value);
+
+                // Remove a linha do DataGridView
+                DataGridViewProdutos.Rows.RemoveAt(e.RowIndex);
+
+                // Remove a linha do banco de dados
+                ProdutoDAO dao = new ProdutoDAO();
+                dao.excluirProduto(idProduto);
+
+                //MessageBox.Show("Produto excluído com sucesso.");
+                ProdutoDAO d = new ProdutoDAO();
+                DataGridViewProdutos.DataSource = d.ListarProdutos();
+            }
+            if (e.RowIndex >= 0 && DataGridViewProdutos.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                // Obtém o id do produto a partir da linha selecionada
+                idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["ID"].Value);
+
+                
+
+                
+            }
+
+        }
+        private void DataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
 
         }
-    }
+
+        private void DataGridViewProdutos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    } 
 }
