@@ -22,6 +22,7 @@ namespace TESTE_GUNA.projeto.window
             InitializeComponent();
             this.admHome = home;
             this.DoubleBuffered = true;//parar de travar a tela
+
         }
 
 
@@ -33,6 +34,7 @@ namespace TESTE_GUNA.projeto.window
             buttonColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             buttonColumn.Name = "Excluir";
             buttonColumn.HeaderText = "Excluir";
+            buttonColumn.UseColumnTextForButtonValue = true;
             buttonColumn.Width = 90;
             dataGridView.Columns.Add(buttonColumn);
 
@@ -84,6 +86,7 @@ namespace TESTE_GUNA.projeto.window
             buttonColumn.HeaderText = "Editar";
             buttonColumn.Width = 90;
             dataGridView.Columns.Add(buttonColumn);
+            buttonColumn.UseColumnTextForButtonValue = true;
 
             // Configurar eventos para desenhar o botão e lidar com o clique
             dataGridView.CellPainting += btnEditarColuna;
@@ -136,9 +139,12 @@ namespace TESTE_GUNA.projeto.window
             AdicionandoColunaExcluir(DataGridViewProdutos);
             AdicionandoColunaEditar(DataGridViewProdutos);
 
+            DataGridViewProdutos.CellContentClick += DataGridViewProdutos_CellContentClick;
 
 
         }
+
+      
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
@@ -146,12 +152,25 @@ namespace TESTE_GUNA.projeto.window
 
         }
 
-        private void dataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(DataGridViewProdutos.Columns[e.ColumnIndex].Name == "btnExcluir")
+            if (e.RowIndex >= 0 && DataGridViewProdutos.Columns[e.ColumnIndex].Name == "Excluir")
             {
-                //Dim dr As DataGridViewRow
+                // Obtém o id do produto a partir da linha selecionada
+                int idProduto = Convert.ToInt32(DataGridViewProdutos.Rows[e.RowIndex].Cells["id"].Value);
+
+                // Remove a linha do DataGridView
+                DataGridViewProdutos.Rows.RemoveAt(e.RowIndex);
+
+                // Remove a linha do banco de dados
+                ProdutoDAO dao = new ProdutoDAO();
+                dao.excluirProduto(idProduto);
+
+                MessageBox.Show("Produto excluído com sucesso.");
+                DataGridViewProdutos.DataSource = dao.ListarProdutos();
             }
+
+            MessageBox.Show("oi");
         }
         private void DataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -159,8 +178,9 @@ namespace TESTE_GUNA.projeto.window
 
         }
 
+        private void DataGridViewProdutos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
-        } 
+        }
+    } 
 }
