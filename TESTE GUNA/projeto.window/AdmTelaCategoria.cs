@@ -79,10 +79,10 @@ namespace TESTE_GUNA.projeto.window
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string nome = txtPesquisa.Text;
+           // string nome = txtPesquisa.Text;
 
-            ProdutoDAO dao = new ProdutoDAO();
-            DataGridViewProdutos.DataSource = dao.BuscarProdutoPorNome(nome);
+         //   ProdutoDAO dao = new ProdutoDAO();
+           // DataGridViewProdutos.DataSource = dao.BuscarProdutoPorNome(nome);
 
           
         }
