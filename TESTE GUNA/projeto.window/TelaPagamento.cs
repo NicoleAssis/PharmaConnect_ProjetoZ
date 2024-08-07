@@ -61,17 +61,22 @@ namespace TESTE_GUNA.projeto.window
                     _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
                 }
             }
-            else
+            else if (FormaPagamento == 1)
             {
-                if (FormaPagamento == 1)
-                {
+
                     ano = txtAno.Text;
                     cvv = txtCVV.Text;
                     mes = txtMes.Text;
                     nomeCartao = txtNomeCartao.Text;
                     numeroCartao = txtNumeroCartao.Text;
                     _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
-                }
+                
+            }
+            else
+            {
+                TelaMessageBox menssage = new TelaMessageBox();
+                menssage.Mensagem("SELECIONE UM TIPO DE PAGAMENTO!");
+                menssage.ShowDialog();
             }
             
 
