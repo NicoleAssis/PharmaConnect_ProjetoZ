@@ -118,12 +118,12 @@ namespace TESTE_GUNA.projeto.window
                 return;
             }
 
-            if(txtCelular.Text != "" && txtCNPJ.Text != "" && txtEmail.Text != "" && txtNome.Text != "" && txtSenha.Text != "" && txtTelefone.Text != "")
+            if (txtCelular.Text != "" && txtCNPJ.Text != "" && txtEmail.Text != "" && txtNome.Text != "" && txtSenha.Text != "" && txtTelefone.Text != "")
             {
-                // Se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
+                //se todos os campos estiverem preenchidos corretamente, cria o objeto Administrador
                 Administrador admin = new Administrador
                 {
-                    cnpj = txtCNPJ.Text,
+                    cnpj = Convert.ToInt64(txtCNPJ.Text),
                     nome = txtNome.Text,
                     email = txtEmail.Text,
                     celular = txtCelular.Text,
@@ -131,7 +131,7 @@ namespace TESTE_GUNA.projeto.window
                 };
 
 
-                // Chama o método de cadastro com o objeto completo
+                //Chama o método de cadastro com o objeto completo
                 AdministradorDAO dao = new AdministradorDAO();
                 dao.CadastrarAdministador1(admin);
 
@@ -141,9 +141,10 @@ namespace TESTE_GUNA.projeto.window
                 this.Close();
                 this.admHome.ReiniciarHome();
             }
+        }
 
            
 
-        }
+        
     }
 }

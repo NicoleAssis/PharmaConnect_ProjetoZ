@@ -18,7 +18,7 @@ namespace TESTE_GUNA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaLoading());
+            Application.Run(new TelaLogin());
         }
     }
 }
