@@ -597,6 +597,67 @@ namespace TESTE_GUNA.projeto.dao
         }
         #endregion
 
+
+        #region AlterarProduto
+
+        public void updateProduct(Produto p )
+        {
+            try
+            {
+                //1 passo definir comando sql - insert into
+
+                string sql = @"SET FOREIGN_KEY_CHECKS = 0;
+                                UPDATE tb_produto
+                                SET 
+                                nome_produto = @nome_produto, 
+                                desc_produto = @desc_produto, 
+                                preco_produto = @preco_produto, 
+                                qtd_estoque = @qtd_estoque,
+                                departamento = @departamento
+                            WHERE id_produto = @id;
+
+                            SET FOREIGN_KEY_CHECKS = 1;";
+
+                //2 passo organizar comando sql 
+
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id", p.Id_Produto);
+                executacmd.Parameters.AddWithValue("@nome_produto", p.nomeProduto);
+                executacmd.Parameters.AddWithValue("@desc_produto", p.descProduto);
+                executacmd.Parameters.AddWithValue("@preco_produto",p.precoProduto);
+                executacmd.Parameters.AddWithValue("@qtd_estoque", p.qtdEstoque);
+                executacmd.Parameters.AddWithValue("@departamento",p.departamento);
+
+
+                //3 passo abrir a conexao e abrir o comando sql
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+
+
+                //fechar a conexao com o banco de dados
+                conexao.Close();
+                //MessageBox.Show("Produto excluido com sucesso!");
+                TelaMessageBoxSucess mensagem = new TelaMessageBoxSucess();
+                mensagem.Mensagem("Produto cadastrado com sucesso!");
+                mensagem.ShowDialog();
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+            }
+        }
+
+
+
+
+
+        #endregion
+
     }
 
 }

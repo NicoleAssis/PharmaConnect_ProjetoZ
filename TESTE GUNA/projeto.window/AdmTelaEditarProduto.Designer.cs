@@ -1,6 +1,6 @@
 ﻿namespace TESTE_GUNA.projeto.window
 {
-    partial class AdmTelaEditarProduto
+    partial class txtQtdEstoque
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +36,11 @@
             this.txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.boxCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.Label();
-            this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAlterarProduto = new Guna.UI2.WinForms.Guna2Button();
+            this.boxCategoria = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // btnX
@@ -85,6 +85,7 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(391, 40);
             this.guna2TextBox1.TabIndex = 131;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // label4
             // 
@@ -192,25 +193,6 @@
             this.label1.TabIndex = 125;
             this.label1.Text = "Categoria:";
             // 
-            // boxCategoria
-            // 
-            this.boxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.boxCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.boxCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.boxCategoria.BorderRadius = 15;
-            this.boxCategoria.BorderThickness = 3;
-            this.boxCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.boxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.boxCategoria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.boxCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.boxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.boxCategoria.ItemHeight = 40;
-            this.boxCategoria.Location = new System.Drawing.Point(116, 244);
-            this.boxCategoria.Name = "boxCategoria";
-            this.boxCategoria.Size = new System.Drawing.Size(391, 46);
-            this.boxCategoria.TabIndex = 124;
-            // 
             // txtNome
             // 
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -266,32 +248,52 @@
             this.txtMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtMensagem.Click += new System.EventHandler(this.txtMensagem_Click);
             // 
-            // btnAlterarSenha
+            // btnAlterarProduto
             // 
-            this.btnAlterarSenha.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlterarSenha.BorderRadius = 20;
-            this.btnAlterarSenha.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarSenha.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAlterarSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
-            this.btnAlterarSenha.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
-            this.btnAlterarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
-            this.btnAlterarSenha.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
-            this.btnAlterarSenha.Location = new System.Drawing.Point(184, 472);
-            this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(251, 43);
-            this.btnAlterarSenha.TabIndex = 133;
-            this.btnAlterarSenha.Text = "SALVAR ALTERAÇÕES";
-            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
+            this.btnAlterarProduto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlterarProduto.BorderRadius = 20;
+            this.btnAlterarProduto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlterarProduto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlterarProduto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlterarProduto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlterarProduto.FillColor = System.Drawing.Color.White;
+            this.btnAlterarProduto.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAlterarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
+            this.btnAlterarProduto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
+            this.btnAlterarProduto.Location = new System.Drawing.Point(184, 472);
+            this.btnAlterarProduto.Name = "btnAlterarProduto";
+            this.btnAlterarProduto.Size = new System.Drawing.Size(251, 43);
+            this.btnAlterarProduto.TabIndex = 133;
+            this.btnAlterarProduto.Text = "SALVAR ALTERAÇÕES";
+            this.btnAlterarProduto.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
-            // AdmTelaEditarProduto
+            // boxCategoria
+            // 
+            this.boxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boxCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.boxCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.boxCategoria.BorderRadius = 15;
+            this.boxCategoria.BorderThickness = 3;
+            this.boxCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.boxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.boxCategoria.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.boxCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.boxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.boxCategoria.ItemHeight = 40;
+            this.boxCategoria.Location = new System.Drawing.Point(116, 244);
+            this.boxCategoria.Name = "boxCategoria";
+            this.boxCategoria.Size = new System.Drawing.Size(391, 46);
+            this.boxCategoria.TabIndex = 124;
+            this.boxCategoria.SelectedIndexChanged += new System.EventHandler(this.boxCategoria_SelectedIndexChanged);
+            // 
+            // txtQtdEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(619, 540);
-            this.Controls.Add(this.btnAlterarSenha);
+            this.Controls.Add(this.btnAlterarProduto);
             this.Controls.Add(this.txtMensagem);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label4);
@@ -305,7 +307,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdmTelaEditarProduto";
+            this.Name = "txtQtdEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmTelaEditarProduto";
             this.ResumeLayout(false);
@@ -323,10 +325,10 @@
         public Guna.UI2.WinForms.Guna2TextBox txtPreco;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox boxCategoria;
         public Guna.UI2.WinForms.Guna2TextBox txtNome;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label txtMensagem;
-        private Guna.UI2.WinForms.Guna2Button btnAlterarSenha;
+        private Guna.UI2.WinForms.Guna2Button btnAlterarProduto;
+        private Guna.UI2.WinForms.Guna2ComboBox boxCategoria;
     }
 }
