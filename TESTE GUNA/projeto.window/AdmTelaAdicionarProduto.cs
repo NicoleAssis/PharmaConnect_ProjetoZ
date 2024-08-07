@@ -53,6 +53,13 @@ namespace TESTE_GUNA.projeto.window
                 TelaMessageBoxSucess messageBoxSucess = new TelaMessageBoxSucess();
                 messageBoxSucess.Mensagem("PRODUTO ADICIONADO COM SUCESSO!");
                 messageBoxSucess.ShowDialog();
+
+                txtDescricao.Text = "";
+                txtNome.Text = "";
+                txtPreco.Text = "";
+                txtQtd.Text = "";
+                boxCategoria.Text = "";
+               
             }
             catch (Exception)
             {
