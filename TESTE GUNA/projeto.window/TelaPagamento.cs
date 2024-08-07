@@ -43,8 +43,7 @@ namespace TESTE_GUNA.projeto.window
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            //se for debito ou credito
-            if(FormaPagamento == 2)
+            if (FormaPagamento == 2 || FormaPagamento == 3)
             {
                 if (txtAno.Text == "" || txtCVV.Text == "" || txtMes.Text == "" || txtNomeCartao.Text == "" || txtNumeroCartao.Text == "")
                 {
@@ -72,12 +71,6 @@ namespace TESTE_GUNA.projeto.window
                     nomeCartao = txtNomeCartao.Text;
                     numeroCartao = txtNumeroCartao.Text;
                     _telaCompras.PrintarTelaFinalizarPagamento(ano, cvv, mes, nomeCartao, numeroCartao);
-                }
-                else
-                {
-                    TelaMessageBox mes = new TelaMessageBox();
-                    mes.Mensagem("ESCOLHA O TIPO DE PAGAMENTO!");
-                    mes.ShowDialog();
                 }
             }
             
@@ -157,7 +150,6 @@ namespace TESTE_GUNA.projeto.window
             {
                 panelPagamentoCartao.Visible = true;
             }
-
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)

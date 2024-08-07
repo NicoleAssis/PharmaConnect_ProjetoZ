@@ -193,6 +193,7 @@
             this.lbltotalCarrinho.Name = "lbltotalCarrinho";
             this.lbltotalCarrinho.Size = new System.Drawing.Size(109, 30);
             this.lbltotalCarrinho.TabIndex = 2;
+            this.lbltotalCarrinho.Click += new System.EventHandler(this.lbltotalCarrinho_Click);
             // 
             // panel1
             // 

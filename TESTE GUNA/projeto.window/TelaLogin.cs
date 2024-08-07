@@ -55,14 +55,6 @@ namespace TESTE_GUNA.projeto.window
             ClienteDAO dao = new ClienteDAO();
             AdministradorDAO daoADM = new AdministradorDAO();
 
-            if ((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
-            {
-
-            }
-            else
-            {
-
-            }
 
             if (email == "1234" && senha == "1234")
             {
@@ -71,6 +63,12 @@ namespace TESTE_GUNA.projeto.window
                 tela.Show();
                 this.Hide();
             }
+            else if ((dao.EfetuarLogin(email, senha, this)) || daoADM.EfetuarLoginAdministrador(email, senha))
+            {
+
+            }
+
+
 
 
         }

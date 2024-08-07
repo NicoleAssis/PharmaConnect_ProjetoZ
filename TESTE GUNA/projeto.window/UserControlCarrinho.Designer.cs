@@ -148,9 +148,9 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(352, 26);
+            this.label4.Location = new System.Drawing.Point(345, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 27);
+            this.label4.Size = new System.Drawing.Size(49, 27);
             this.label4.TabIndex = 11;
             this.label4.Text = "R$ :";
             // 
@@ -159,9 +159,9 @@
             this.lblvalortotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(96)))), ((int)(((byte)(226)))));
             this.lblvalortotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvalortotal.ForeColor = System.Drawing.Color.White;
-            this.lblvalortotal.Location = new System.Drawing.Point(393, 30);
+            this.lblvalortotal.Location = new System.Drawing.Point(395, 31);
             this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(94, 21);
+            this.lblvalortotal.Size = new System.Drawing.Size(86, 21);
             this.lblvalortotal.TabIndex = 10;
             this.lblvalortotal.Text = "1200,00";
             // 
@@ -169,6 +169,7 @@
             // 
             this.guna2Panel2.BorderRadius = 40;
             this.guna2Panel2.Controls.Add(this.txtCodigo);
+            this.guna2Panel2.Controls.Add(this.lblvalortotal);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.pictureBox1);
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
@@ -239,7 +240,6 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblvalortotal);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
