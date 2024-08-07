@@ -15,6 +15,7 @@ namespace TESTE_GUNA.projeto.window
         public TelaMessageBox()
         {
             InitializeComponent();
+            AdicionarInstancia(this);
         }
 
         #region FUNCOES
@@ -76,6 +77,14 @@ namespace TESTE_GUNA.projeto.window
             //button fechar a tela de pagamento
             this.Close();
             FecharTodasInstancias();
+            FecharInstanciaAtual();
+        }
+
+        public void FecharInstanciaAtual()
+        {
+            // Remove a instância da lista e fecha o formulário
+            _instanciasAbertas.Remove(this);
+            this.Close();
         }
 
         public static List<TelaMessageBox> _instanciasAbertas = new List<TelaMessageBox>();
@@ -100,6 +109,7 @@ namespace TESTE_GUNA.projeto.window
             btnNaoClick = true;
             this.Close();
             FecharTodasInstancias();
+            FecharInstanciaAtual();
         }
     }
 }

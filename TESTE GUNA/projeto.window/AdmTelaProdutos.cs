@@ -203,7 +203,7 @@ namespace TESTE_GUNA.projeto.window
                         ProdutoDAO d = new ProdutoDAO();
                         DataGridViewProdutos.DataSource = d.ListarProdutos();
 
-
+                        messageBox.FecharInstanciaAtual();
 
                         TelaMessageBoxSucess mensagem = new TelaMessageBoxSucess();
                         mensagem.Mensagem("PRODUTO EXCLUÍDO COM SUCESSO!");
@@ -216,12 +216,10 @@ namespace TESTE_GUNA.projeto.window
                     else if (messageBox.btnNaoClick == true)
                     {
                         TelaMessageBox.FecharTodasInstancias();
-                        messageBox.Close();
                     }
                     else
                     {
-                        messageBox.Close();
-
+                        TelaMessageBox.FecharTodasInstancias();
                     }
 
 
